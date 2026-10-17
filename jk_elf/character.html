@@ -1,0 +1,258 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャラクター紹介 | 留学生は同棲JKエルフちゃん</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --sakura: #fda4af;
+      --sky: #fda4af;
+      --gold: #fbbf24;
+      --border: rgba(253, 164, 175, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 3rem 1rem 4rem;
+    }
+
+    a {
+      color: var(--sakura);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: rgba(253, 164, 175, 0.12);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--sakura);
+    }
+
+    .back-link:hover {
+      background: rgba(253, 164, 175, 0.2);
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 2.2rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(253, 164, 175, 0.4);
+    }
+
+    .cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0c1222;
+      padding: 1.2rem;
+    }
+
+    .work-card img {
+      max-width: 100%;
+      max-height: 420px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .work-info {
+      padding: 1.3rem 1.5rem 1.5rem;
+    }
+
+    .work-info h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+      color: var(--gold);
+    }
+
+    .work-info p {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    p.nickname {
+      color: var(--sakura);
+      font-size: 0.88rem;
+      margin-bottom: 0.6rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.45rem; }
+      body { padding: 2rem 0.8rem 3rem; }
+      .work-card img { max-height: 340px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>キャラクター紹介</h1>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;">留学生は同棲JKエルフちゃん</p>
+      <a href="index.html" class="back-link">戻る</a>
+    </header>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/keito.jpg">
+      </div>
+      <div class="work-info">
+        <h3>ケート(山女　景都)</h3>
+        <p class="nickname">主人公／男子高校生</p>
+        <p>諸事情から一人暮らし状態だった男子高校生。ララが居候することに。</p>
+        <p>妹エリカも病院を退院して合流し、三人で暮らしだす。</p>
+        <p>寂しい生活から一転、にぎやかな学園生活を送ることになる。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/rara.jpg">
+      </div>
+      <div class="work-info">
+        <h3>ララ</h3>
+        <p class="nickname">逆転移のエルフの少女</p>
+        <p>エルフ族で本名は「ラーラミン・ハイッペロット・トワイライト」。</p>
+        <p>異世界から逆転移してきた。どこの国も受け入れずケートの父親が日本のケートの家に住まわせることに。</p>
+        <p>明るい性格で、いつも楽しそうにふるまう。地球と異世界の常識は違う様で、ぐいぐいくる。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/haruka.jpg">
+      </div>
+      <div class="work-info">
+        <h3>ハルカ(遠国　春香)</h3>
+        <p class="nickname">ケートの幼馴染み</p>
+        <p>近所に住んでおり、ケートの古くからの知り合い。何かと世話を焼いてくれ、エリカの病院の世話もしている。</p>
+        <p>男であるケートでは相談できないようなこともエリカと話ができることをケートも把握しており、感謝している。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/erika.jpg">
+      </div>
+      <div class="work-info">
+        <h3>エリカ(山女　絵理加)</h3>
+        <p class="nickname">ケートの妹</p>
+        <p>病気で入院していたが、ララの活躍で退院できるまでに回復、新年度から同じ高校へ進学する。</p>
+        <p>ケートとハルカ、ララの三人が大好き。エリカは病院でのことで三人に感謝している。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/akira.jpg">
+      </div>
+      <div class="work-info">
+        <h3>アキラ(山川　彰)</h3>
+        <p class="nickname">ケートの友達</p>
+        <p>クラス委員。眼鏡はしていない。親は教育熱心だが、本人は真面目というよりもフレンドリー。</p>
+        <p>ケートと一緒に遊んだり出かけたりする。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>父さん</h3>
+        <p class="nickname">ケートの父親</p>
+        <p>国家公務員で、安全保障周りを担当している防衛省の職員。今は出向により外務省で海外勤務をしている。</p>
+        <p>宇宙人や異世界人などを極秘に扱っているらしく、ララの担当職員でもある。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>母さん</h3>
+        <p class="nickname">ケートの母親</p>
+        <p>父親と一緒に海外赴任についていったので、日本国内にいない。結果、ケートは一人暮らし状態だった。</p>
+        <p>カレーや唐揚げなど、家庭料理は得意で、そのDNAはケートも受け継いでいる。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>灯里(あかり)ちゃん先生</h3>
+        <p class="nickname">ケートの担任</p>
+        <p>高校の担任。まだ若く、生徒から親しまれている。なんやかんや涙もろいところも。</p>
+        <p>ララの担任でもあり、外部からのあれやこれを裏で処理している苦労人でもあるらしい。</p>
+      </div>
+    </div>
+
+    <footer>
+      <a href="index.html" class="back-link">戻る</a>
+      <p>© 2026 takigawa ebiro</p>
+    </footer>
+  </div>
+</body>
+</html>
