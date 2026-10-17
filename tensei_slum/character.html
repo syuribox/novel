@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャラクター紹介 | 異世界転生スラム街からの成り上がり</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --sakura: #fda4af;
+      --gold: #fbbf24;
+      --border: rgba(253, 164, 175, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 3rem 1rem 4rem;
+    }
+
+    a {
+      color: var(--sakura);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: rgba(253, 164, 175, 0.12);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--sakura);
+    }
+
+    .back-link:hover {
+      background: rgba(253, 164, 175, 0.2);
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 2.2rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(253, 164, 175, 0.4);
+    }
+
+    .cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0c1222;
+      padding: 1.2rem;
+    }
+
+    .work-card img {
+      max-width: 100%;
+      max-height: 420px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .work-info {
+      padding: 1.3rem 1.5rem 1.5rem;
+    }
+
+    .work-info h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+      color: var(--gold);
+    }
+
+    .work-info p {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .nickname {
+      color: var(--sakura);
+      font-size: 0.88rem;
+      margin-bottom: 0.6rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.45rem; }
+      body { padding: 2rem 0.8rem 3rem; }
+      .work-card img { max-height: 340px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>キャラクター紹介</h1>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;">異世界転生スラム街からの成り上がり</p>
+      <a href="index.html" class="back-link">戻る</a>
+    </header>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>エド</h3>
+        <p class="nickname">主人公／人族の6歳の男の子</p>
+        <p>スラム街「ラニエルダ」に住む、元気な男の子。石に躓いて転んだことで、前世を思い出した転生者。</p>
+        <p>黒髪、黒目の珍しい見た目で、他のスラムの子から敬遠されていた。</p>
+        <p>元の世界の知識に加え、覚醒した「鑑定」と「アイテムボックス」で、貧しい生活から這い上がっていく。</p>
+        <p>料理、釣り、小物づくりなど生産活動にいそしんで、生活改善を目指す。</p>
+        <p>母親「トマリア」はエドとミーニャ一家を置いて行方不明に。父親は物心ついた時から不明。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ミーニャ・サルバキア</h3>
+        <p class="nickname">居候の娘／エルフの6歳</p>
+        <p>エドの家に転がり込んできた一家の娘。エルフの血を引いていて、なにやら訳アリらしい。</p>
+        <p>明るい性格でエドが好きなのを隠さない陽気さのムードメーカー。中盤以降、回復魔法が使えるように。ついでに本人は無自覚なものの祝福も使える。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ラニア・エスフィス</h3>
+        <p class="nickname">幼馴染みの娘／マギ族の6歳</p>
+        <p>エドの家の近所に住んでいる、幼馴染み。マギ族は魔法が得意らしく、ゴブリンなんてイチコロと強気。</p>
+        <p>普段は冷静沈着だけど、感極まると泣いてしまうところも。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ギード・サルバキア</h3>
+        <p class="nickname">ミーニャの父親</p>
+        <p>事情がおありのミーニャ父。エルフの貴族らしく、スラム街に潜伏している。</p>
+        <p>警戒から日雇い労働していたが、まったく性格に合わず、エドのススメでスプーン作りの内職に転向する。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>メルン・サルバキア</h3>
+        <p class="nickname">ミーニャの母親</p>
+        <p>昔は出るところに出ればお姫様だったらしい。</p>
+        <p>スラム街のエドの家で診療所をしており、回復魔法や薬学に詳しい。そのかわり料理は微妙。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ドリドン</h3>
+        <p class="nickname">雑貨店店主</p>
+        <p>スラム街の隅にある雑貨店。ラニエルダのスポンサーでもある。</p>
+        <p>エドと商売の相手をしたり、エドたちを支援してくれる、人格者。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ハリス</h3>
+        <p class="nickname">近所のガキ大将</p>
+        <p>スラム街の子供たちのまとめ役。頬に傷がある。</p>
+        <p>エドとはやや不仲だったが、和解した。エドの仕事の一部ハーブティーをもらい受け、作業に当たる。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ビーエスト</h3>
+        <p class="nickname">トライエ騎士団の兵士</p>
+        <p>エドたちに同行したり、剣を教えてくれたりする兵士。</p>
+        <p>エクスプローラー流剣術の使い手で、そこそこ強いらしい。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>エレノア・ゼッケンバウアー</h3>
+        <p class="nickname">トライエ領主の次女6歳</p>
+        <p>コミカライズ版でも活躍中。エドに興味を持ち、接近してくる。</p>
+        <p>案外活動的で、町に出てきてはエドの料理を食べたり、なにやら指揮をとったり強い女の子。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>シエル・モールライト</h3>
+        <p class="nickname">猫耳族の6歳の少女</p>
+        <p>2巻から登場、コミカライズ版ではゲスト出演。</p>
+        <p>近くの村で売られそうだったところを逃げてきた少女。</p>
+        <p>猫耳と猫尻尾がかわいらしい。トマト農家の実家には思うところもあるようで、トマトが好き。</p>
+        <p>エドに家の前で拾われ、食事を貰ったことをきっかけに、居ついてしまった。</p>
+      </div>
+    </div>
+
+    <footer>
+      <a href="index.html" class="back-link">戻る</a>
+      <p>© 2026 takigawa ebiro</p>
+    </footer>
+  </div>
+</body>
+</html>
