@@ -1,0 +1,275 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャラクター紹介 | 元貧乏エルフの錬金術調薬店</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --sakura: #fda4af;
+      --gold: #fbbf24;
+      --border: rgba(253, 164, 175, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 3rem 1rem 4rem;
+    }
+
+    a {
+      color: var(--sakura);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: rgba(253, 164, 175, 0.12);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--sakura);
+    }
+
+    .back-link:hover {
+      background: rgba(253, 164, 175, 0.2);
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 2.2rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(253, 164, 175, 0.4);
+    }
+
+    .cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0c1222;
+      padding: 1.2rem;
+    }
+
+    .work-card img {
+      max-width: 100%;
+      max-height: 420px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .work-info {
+      padding: 1.3rem 1.5rem 1.5rem;
+    }
+
+    .work-info h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+      color: var(--gold);
+    }
+
+    .work-info p {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .nickname {
+      color: var(--sakura);
+      font-size: 0.88rem;
+      margin-bottom: 0.6rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.45rem; }
+      body { padding: 2rem 0.8rem 3rem; }
+      .work-card img { max-height: 340px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>キャラクター紹介</h1>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;">元貧乏エルフの錬金術調薬店</p>
+      <a href="index.html" class="back-link">戻る</a>
+    </header>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/mireyu.jpg" alt="ミレーユ・バリスタット">
+      </div>
+      <div class="work-info">
+        <h3>ミレーユ・バリスタット</h3>
+        <p class="nickname">主人公／13歳</p>
+        <p>ハシユリ村の貧乏な錬金術師の家に生まれた少女。わずかにエルフの血を引く金髪碧眼で、少し尖った耳が特徴。年中式を終え、兄に家を譲って憧れの王都へ。結果的に王都では世界最高水準の錬金術師であることが判明する。</p>
+        <p>露店から始まり、ホーランド商業ギルドに加盟して「ミレーユ錬金術調薬店」を開業。ポムとともに王都の生活を楽しむ。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/pom.jpg" alt="ポム">
+      </div>
+      <div class="work-info">
+        <h3>ポム</h3>
+        <p class="nickname">相棒／スライム</p>
+        <p>半透明の緑色のスライム。ミレーユが薬草採取中に出会い、それ以来ずっと一緒にいる。薬草が大好物で、特にヒール効果の高いものを好む。</p>
+        <p>雌雄同体で性別はなく、女の子が好き。ミレーユの膝の上やお風呂でくつろぐのが日常。集客や癒し担当としても活躍する。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/mary.jpg" alt="マリー">
+      </div>
+      <div class="work-info">
+        <h3>マリー</h3>
+        <p class="nickname">通いメイド／13歳</p>
+        <p>ホーランド商業ギルドから派遣されたメイド。黒髪ツヤツヤのセミロングで、胸が大きいのが特徴。ミレーユと同い年。</p>
+        <p>畑仕事や仕入れ、接客を手伝う。メイド服を「戦闘服」と誇らしく思っており、明るくしっかり者。お風呂やクッキー作りでもミレーユと仲良くなる。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/charlotte.jpg" alt="シャーロット">
+      </div>
+      <div class="work-info">
+        <h3>シャーロット（シャロ）</h3>
+        <p class="nickname">内弟子／13歳</p>
+        <p>メホリック商業ギルドから来た弟子。ピンク髪のふわふわツインテールが可愛らしい。選抜試験で集中力と安定感を見せて選ばれた。</p>
+        <p>ミレーユの家に住み込み、料理や調薬を手伝う。少しお嬢様気質だが素直で、ミレーユに「お姉さん」と呼ばれて喜ぶ。お風呂やグラノーラでよく甘える。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/meira.png" alt="メイラ・ホーランド">
+      </div>
+      <div class="work-info">
+        <h3>メイラ・ホーランド</h3>
+        <p class="nickname">ホーランド商業ギルド副会長</p>
+        <p>茶色髪ロングの若き副会長。父親とともに新興のホーランド商業ギルドを牽引する。露店でポーションを売るミレーユに目をつけ、頭金なしで店舗を貸し出す条件で勧誘した。</p>
+        <p>薬草卸問屋の出身で知識が豊富。ミレーユの才能を高く評価し、対等な関係を築こうとする。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/bororan.png" alt="ボロラン・ロッドギン">
+      </div>
+      <div class="work-info">
+        <h3>ボロラン・ロッドギン</h3>
+        <p class="nickname">メホリック商業ギルド・ナンバースリー</p>
+        <p>老紳士。伝統あるメホリック商業ギルドの実力者。若い女の子が好き（いわゆる「萌え」）で、美少女メイドを多く雇っているが、やましいことはないと主張する。</p>
+        <p>ユグドラシルの木を所有しており、ミレーユの技術を高く評価。弟子の派遣や葉の提供を約束するなど、独特の存在感を放つ。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>エミル・シーランド</h3>
+        <p class="nickname">2人目の弟子／魔道具担当</p>
+        <p>書籍版2巻オリジナルキャラクター。13、4歳で、オレンジの短めの髪に緑色の瞳をしている。</p>
+        <p>ミレーユを尊敬して、魔道具の製作を頑張る。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ランダーソン</h3>
+        <p class="nickname">王立騎士団の魔術師部隊の隊長</p>
+        <p>イケメンの男性。魔法が使えるエリート部隊を率いる。水魔法を使い火事の消化作業を行なった。</p>
+        <p>書籍版2巻では、マリーとランダーソンのちょっとした閑話も収録。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>メホリックNo1／メホリックNo2</h3>
+        <p class="nickname">メホリック商業ギルド・ナンバー1・2</p>
+        <p>ボロランより上の立場にいる古いギルド役員。裏で暗躍したりと、暗い影を落とす。</p>
+        <p>No1の会長がゲイドルドでNo2の副会長がバーモントという名前らしい。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ルクシリス・ド・ミルド・トラスティア</h3>
+        <p class="nickname">トラスティア王国の国王</p>
+        <p>国王として、国の政治をつかさどっている。国の重大事件においてはその判断をする重要人物となる。</p>
+      </div>
+    </div>
+
+    <footer>
+      <a href="index.html" class="back-link">戻る</a>
+      <p>© 2026 takigawa ebiro</p>
+    </footer>
+  </div>
+</body>
+</html>
