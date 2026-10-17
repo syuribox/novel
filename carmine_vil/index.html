@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[カーマイン村]異世界スキル【スローライフ】</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon-tarlya.png">
+  <link rel="apple-touch-icon" href="images/favicon-tarlya.png">
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="[カーマイン村]異世界スキル【スローライフ】">
+  <meta property="og:description" content="貴族三男マハムが辺境村で始める、のんびりほのぼのスローライフ。公式ポータルサイト。">
+  <meta property="og:image" content="https://syubibox.github.io/novel/carmine_village/images/village_hero.jpg">
+  <meta property="og:url" content="https://syubibox.github.io/novel/carmine_village/">
+  <meta property="og:site_name" content="[カーマイン村]スローライフ">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[カーマイン村]異世界スキル【スローライフ】">
+  <meta name="twitter:description" content="貴族三男マハムが辺境村で始める、のんびりほのぼのスローライフ。公式ポータルサイト。">
+  <meta name="twitter:image" content="https://syubibox.github.io/novel/carmine_village/village_hero.jpg">
+  <meta name="twitter:site" content="@syuribox">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --sakura: #fda4af;
+      --sakura-deep: #fb7185;
+      --gold: #fbbf24;
+      --sky: #7dd3fc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: var(--sakura); text-decoration: none; }
+    a:hover { color: var(--gold); }
+
+    /* Header */
+    header {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(253, 164, 175, 0.2);
+    }
+    nav {
+      max-width: 1200px; margin: 0 auto; padding: 0.8rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo { font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { font-size: 0.95rem; }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh; display: flex; align-items: center; justify-content: center;
+      text-align: center; position: relative;
+      background: url('images/hero.jpg') center/cover no-repeat;
+    }
+    .hero::before {
+      content: ""; position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(15,23,42,0.3), rgba(15,23,42,0.75));
+    }
+    .hero-content { position: relative; z-index: 2; padding: 2rem; max-width: 900px; }
+    .hero h1 {
+      font-size: clamp(1.8rem, 5vw, 3.2rem); color: var(--gold);
+      text-shadow: 0 2px 12px rgba(0,0,0,0.6); margin-bottom: 0.8rem; line-height: 1.3;
+    }
+    .hero .subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.3rem); color: var(--sakura); margin-bottom: 1.5rem;
+    }
+    .catch {
+      font-size: 1.1rem; color: var(--text-muted); margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block; background: var(--sakura-deep); color: white;
+      padding: 0.8rem 2rem; border-radius: 999px; font-weight: 600;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: var(--gold); color: #1e293b; }
+
+    /* Sections */
+    section { max-width: 1100px; margin: 0 auto; padding: 5rem 1.5rem; }
+    h2 {
+      font-size: 1.8rem; text-align: center; margin-bottom: 2rem; color: var(--gold);
+      position: relative;
+    }
+    h2::after {
+      content: ""; display: block; width: 60px; height: 3px;
+      background: var(--sakura); margin: 0.6rem auto 0; border-radius: 2px;
+    }
+
+    /* Synopsis */
+    .synopsis { background: var(--bg-card); border-radius: 16px; padding: 2.5rem; }
+    .synopsis p { margin-bottom: 1rem; color: var(--text-muted); }
+
+    /* Characters */
+    .char-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+    }
+    .char-card {
+      background: var(--bg-card); border-radius: 16px; overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+      border: 1px solid rgba(253,164,175,0.15);
+    }
+    .char-card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .char-card img { width: 100%; height: 280px; object-fit: cover; }
+    .char-info { padding: 1.2rem; }
+    .char-info h3 { color: var(--sakura); margin-bottom: 0.3rem; }
+    .char-info .role { font-size: 0.85rem; color: var(--sky); margin-bottom: 0.6rem; }
+    .char-info p { font-size: 0.9rem; color: var(--text-muted); }
+
+    /* Footer */
+    footer {
+      text-align: center; padding: 3rem 1rem; color: var(--text-muted);
+      border-top: 1px solid rgba(255,255,255,0.08); font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links { display: none; } /* 簡易対応。必要ならハンバーガー追加 */
+      .hero { min-height: 80vh; }
+      section { padding: 3.5rem 1rem; }
+    }
+  </style>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">[カーマイン村]スローライフ</div>
+      <div class="nav-links">
+        <a href="#synopsis">あらすじ</a>
+        <a href="characters.html">キャラクター</a>
+        <a href="chapter.html">各話</a>
+        <a href="news.html">ニュース</a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>[カーマイン村]<br>異世界スキル【スローライフ】</h1>
+      <div class="subtitle">～貴族三男、ほのぼのの辺境村で悠々自適の左遷生活～</div>
+      <p class="catch">「始まりの村に暮らす『異世界日常系』」</p>
+      <a href="#synopsis" class="btn">あらすじを読む</a>
+    </div>
+  </section>
+
+  <section id="synopsis">
+    <h2>あらすじ</h2>
+    <div class="synopsis">
+      <p>異世界貴族社会。5歳でスキル鑑定の儀を受けたマハムは、「スローライフ」というハズレスキルを持っていた。</p>
+      <p>6歳になったマハムは、妹ミリアとともに「ハズレスキル兄妹」として王都ハインリヒ侯爵家から辺境カーマイン村へ、領主代行として左遷される。</p>
+      <p>しかし村に入った瞬間、スキルが活性化。鑑定やアイテムボックスなどの便利なサブスキルが目覚める。</p>
+      <p>メイドのシータ、元気いっぱいの村娘ターリャ、温かい村人たちに囲まれながら、庭の手入れや食事、村の散策といった穏やかな毎日を送る。</p>
+      <p>戦闘や冒険ではなく、「何もしない」ことで世界の裏側が見えてくる——ほのぼのとした異世界日常系。</p>
+      <p style="text-align:center; margin-top:1.5rem; color:var(--sakura); font-weight:600;">今日も、スローライフ、はじまります。</p>
+    </div>
+  </section>
+
+  <section id="characters">
+    <h2>キャラクター</h2>
+    <div class="char-grid">
+      <div class="char-card">
+        <img src="images/maham.jpg" alt="マハム">
+        <div class="char-info">
+          <h3>マハム</h3>
+          <div class="role">6歳 / 貴族三男</div>
+          <p>スキル「スローライフ」。カーマイン村に左遷された主人公。のんびりと村での生活を楽しむ。</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="images/miria.jpg" alt="ミリア">
+        <div class="char-info">
+          <h3>ミリア</h3>
+          <div class="role">マハムの妹</div>
+          <p>スキル「裁縫」。優しくて少し心配性な妹。兄と一緒に村での新しい生活を始める。</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="images/tarya.jpg" alt="ターリャ">
+        <div class="char-info">
+          <h3>ターリャ</h3>
+          <div class="role">元気な村娘</div>
+          <p>村長の娘。明るく元気いっぱいで、村を案内してくれるマハムたちの最初の友達。</p>
+        </div>
+      </div>
+      <div class="char-card">
+        <img src="images/seeta.jpg" alt="シータ">
+        <div class="char-info">
+          <h3>シータ</h3>
+          <div class="role">16歳 / 優しいメイド</div>
+          <p>マハムとミリアを支えるメイド。優しくてしっかり者。村でも二人のお世話を続ける。</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 2.5rem;">
+      <a href="characters.html" class="btn">キャラクター 一覧</a>
+    </div>
+  </section>
+
+  <section id="links">
+    <h2>リンク</h2>
+    <div class="synopsis">
+      <p>・カクヨム：[カーマイン村]異世界スキル【スローライフ】(準備中)<br>
+      <br>
+      ・小説家になろう：[カーマイン村]異世界スキル【スローライフ】(準備中) <br>
+      <br>
+      ・<a href="https://x.com/syuribox">X(Twitter) / 滝川海老郎@syuribox</a></p>
+    </div>
+  </section>
+
+  <section id="chapter">
+    <h2>各話</h2>
+    <div class="synopsis">
+      <p>web小説版、1話から15話までの、あらすじを紹介。</p>
+    </div>
+    <div style="text-align: center; margin-top: 2.5rem;">
+      <a href="chapter.html" class="btn">各話を紹介</a>
+    </div>
+  </section>
+
+  <section id="news">
+    <h2>ニュース</h2>
+    <div class="synopsis">
+      <p>最新ニュースから、履歴まで、カーマイン村の軌跡をご紹介。</p>
+    </div>
+    <div style="text-align: center; margin-top: 2.5rem;">
+      <a href="news.html" class="btn">NEWSを紹介</a>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>ギャラリー</h2>
+    <div class="synopsis">
+      <p>カーマイン村のギャラリーを紹介。</p>
+    </div>
+    <div style="text-align: center; margin-top: 2.5rem;">
+      <a href="gallery.html" class="btn">ギャラリーを紹介</a>
+    </div>
+  </section>
+
+  <footer>
+    <nav class="footer-nav">
+      <a href="index.html">ホーム</a>
+      <a href="characters.html">キャラクター</a>
+      <a href="chapter.html">各話</a>
+      <a href="news.html">ニュース</a>
+      <a href="gallery.html">ギャラリー</a>
+    </nav>
+    <p>[カーマイン村]異世界スキル【スローライフ】</p>
+    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ——</p>
+    <p style="margin-top:0.5rem;">© 2026 takigawa ebiro</p>
+  </footer>
+
+</body>
+</html>
