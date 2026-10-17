@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>元貧乏エルフの錬金術調薬店 | 滝川海老郎</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --sakura: #fda4af;
+      --gold: #fbbf24;
+      --border: rgba(253, 164, 175, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 3rem 1rem 4rem;
+    }
+
+    a {
+      color: var(--sakura);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--sakura);
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .author {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .description {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+    }
+
+    .description strong {
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 2.2rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.2rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(253, 164, 175, 0.4);
+    }
+
+    .cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0c1222;
+      padding: 1.2rem;
+    }
+
+    .work-card img {
+      max-width: 100%;
+      max-height: 380px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .work-info {
+      padding: 1.2rem 1.4rem;
+    }
+
+    .work-info h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      display: inline-block;
+      background: rgba(253, 164, 175, 0.1);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      color: var(--sakura);
+    }
+
+    .links a:hover {
+      background: rgba(253, 164, 175, 0.18);
+      color: var(--gold);
+    }
+
+    .comic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .comic-item {
+      text-align: center;
+    }
+
+    .comic-item img {
+      max-width: 100%;
+      max-height: 280px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto 0.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.45rem; }
+      body { padding: 2rem 0.8rem 3rem; }
+      .work-card img { max-height: 320px; }
+      .comic-item img { max-height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>元貧乏エルフの錬金術調薬店</h1>
+      <p class="author">滝川海老郎</p>
+    </header>
+
+    <div class="description">
+      <strong>【100万PV突破・書籍化・コミカライズ】</strong><br>
+      田舎では貧乏な錬金術師のミレーユ。彼女は13歳で憧れの王都に来てみれば錬金術は衰退していた。結果的にミレーユは世界最高水準の錬金術師だったことが判明する。<br>
+      まずは露店でのポーション販売から始めて、どちらの商業ギルドに加入するかで一悶着する。お店をレンタル契約し錬金術調薬店を開業する。新商品が売れすぎて困ったり、ペットのスライムが忘れたころに活躍したり、火事が起きて大混乱したり、ユグドラシルの木の葉っぱ、世界樹をめぐって騒動があったり、楽しくも忙しい毎日を送ることになる。<br>
+      相棒のスライムとともに二人で王都の生活を満喫しつつ、弟子の美少女と同棲して通いのメイドさんも加えて、錬金術調薬店を経営していく。<br>
+    </div>
+
+    <h2>小説</h2>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/binelf_novel1.jpg" alt="表紙：元貧乏エルフの錬金術調薬店 1巻">
+      </div>
+      <div class="work-info">
+        <h3>元貧乏エルフの錬金術調薬店 1</h3>
+        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
+          滝川海老郎／イラスト：にもし／KADOKAWA／ドラゴンノベルス
+        </p>
+        <div class="links">
+          <a href="https://www.kadokawa.co.jp/product/322304000544/">KADOKAWA</a>
+          <a href="https://www.amazon.co.jp/dp/4040750837">Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/binelf_novel2.jpg" alt="表紙：元貧乏エルフの錬金術調薬店 2巻">
+      </div>
+      <div class="work-info">
+        <h3>元貧乏エルフの錬金術調薬店 2</h3>
+        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
+          滝川海老郎／イラスト：にもし／KADOKAWA／ドラゴンノベルス
+        </p>
+        <div class="links">
+          <a href="https://www.kadokawa.co.jp/product/322401000179/">KADOKAWA</a>
+          <a href="https://www.amazon.co.jp/dp/4040754247">Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>コミカライズ</h2>
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/binelf_comic_bun.jpg" alt="表紙：コミカライズ(分冊版)">
+      </div>
+      <div class="work-info">
+        <h3>元貧乏エルフの錬金術調薬店(漫画)</h3>
+        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
+          漫画：露木彩／原作：滝川海老郎／キャラクター原案：にもし／　FWコミックス／ピッコマで先行連載
+        </p>
+        <h3>分冊版</h3>
+        <div class="links" style="margin-bottom:1rem;">
+          <a href="https://fwcomics.jp/books/about_binbouelf-all/">FWコミックス</a>
+          <a href="https://piccoma.com/web/product/189875">ピッコマ</a>
+        </div>
+        <div class="links" style="margin-bottom:1rem;">
+          <a href="https://www.cmoa.jp/title/333671/">コミックシーモア</a>
+          <a href="https://bookwalker.jp/series/543945/">BookWalker</a>
+          <a href="https://www.amazon.co.jp/dp/B0FP3TYX8P">Amazon</a>
+        </div>
+      </div>
+    </div>
+
+    <h2>Web版</h2>
+    <div class="work-card">
+      <div class="work-info">
+        <h3>元貧乏エルフの錬金術調薬店(web版)</h3>
+        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
+          滝川海老郎／web版から書籍版は、かなり加筆されており、web版は約半分となっています。
+        </p>
+        <div class="links">
+          <a href="https://kakuyomu.jp/works/16816927862953378978">カクヨム</a>
+          <a href="https://ncode.syosetu.com/n6902lp/">小説家になろう</a>
+          <a href="https://kakuyomu.jp/works/16818093082121570296">カクヨム(総ルビ)</a>
+        </div>
+      </div>
+    </div>
+    <h2>BOOTH版</h2>
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/binelf_booth.jpg" alt="BOOTH版表紙">
+      </div>
+      <div class="work-info">
+        <h3>元貧乏エルフの錬金術調薬店(Web/BOOTH版)</h3>
+        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
+          滝川海老郎／　中身はweb版準拠です。縦書きPDF/epub3仕様
+        </p>
+        <div class="links">
+          <a href="https://takigawa-ebirou.booth.pm/items/3916116">BOOTH(無料DL)</a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 takigawa ebiro</p>
+    </footer>
+  </div>
+</body>
+</html>
