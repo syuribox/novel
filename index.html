@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>滝川海老郎 webノベル一覧</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --sakura: #fda4af;
+      --gold: #fbbf24;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 640px;
+      width: 100%;
+    }
+    h1 {
+      text-align: center;
+      color: var(--gold);
+      font-size: 1.8rem;
+      margin-bottom: 0.4rem;
+    }
+    .subtitle {
+      text-align: center;
+      color: var(--sakura);
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+    }
+    ul {
+      list-style: none;
+    }
+    li {
+      background: var(--bg-card);
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(253, 164, 175, 0.15);
+      overflow: hidden;
+    }
+    li a {
+      display: block;
+      padding: 1.2rem 1.5rem;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 1.05rem;
+      transition: background 0.2s;
+    }
+    li a:hover {
+      background: rgba(253, 164, 175, 0.08);
+      color: var(--gold);
+    }
+    .no-link {
+      padding: 1.2rem 1.5rem;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h1>滝川海老郎</h1>
+    <p class="subtitle">webノベル一覧</p>
+
+    <ul>
+      <li>
+        <div class="no-link">異世界転生スラム街からの成り上がり</div>
+      </li>
+      <li>
+        <div class="no-link">元貧乏エルフの錬金術調薬店</div>
+      </li>
+      <li>
+        <a href="carmine_vil/index.html">[カーマイン村]異世界スキル【スローライフ】</a>
+      </li>
+    </ul>
+
+    <footer>
+      <p>© 2026 takigawa ebiro</p>
+    </footer>
+  </div>
+
+</body>
+</html>
