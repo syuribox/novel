@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>転生幼女の異世界 孤児院ライフ | 滝川海老郎</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --sakura: #fda4af;
+      --gold: #fbbf24;
+      --border: rgba(253, 164, 175, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 3rem 1rem 4rem;
+    }
+
+    a {
+      color: var(--sakura);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: var(--sakura);
+      font-size: 0.95rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .author {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .description {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 2.5rem;
+      font-size: 0.95rem;
+      color: #e2e8f0;
+    }
+
+    .description strong {
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 2.2rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.2rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(253, 164, 175, 0.4);
+    }
+
+    .cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0c1222;
+      padding: 1.2rem;
+    }
+
+    .work-card img {
+      max-width: 100%;
+      max-height: 380px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .work-info {
+      padding: 1.2rem 1.4rem;
+    }
+
+    .work-info h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.6rem;
+      color: var(--text);
+    }
+
+    .links {
+      display: flex;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+
+    .links a {
+      display: inline-block;
+      background: rgba(253, 164, 175, 0.1);
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      color: var(--sakura);
+    }
+
+    .links a:hover {
+      background: rgba(253, 164, 175, 0.18);
+      color: var(--gold);
+    }
+
+    .comic-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    .comic-item {
+      text-align: center;
+    }
+
+    .comic-item img {
+      max-width: 100%;
+      max-height: 280px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      margin: 0 auto 0.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.45rem; }
+      body { padding: 2rem 0.8rem 3rem; }
+      .work-card img { max-height: 320px; }
+      .comic-item img { max-height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>転生幼女の異世界 孤児院ライフ</h1>
+      <p class="author">滝川海老郎</p>
+    </header>
+    <div class="description">
+      <strong>【コミカライズ】</strong><br>
+      領主一家の貴族だった私は異端児として孤児院に入れられてしまう。<br>
+      しかしそこは女の子の楽園だった。<br>
+      周りには広い庭から森まで続いていた。そうだここで採取とかしてスローライフして過ごそう。ついでに生活も改善していこう。女の子たちは立ち上がる。<br>
+      まずは裏庭の薬草、続いて裏の森からキノコ、苺、一角ウサギ、スライムの核などを採取してくる。そうしているうちに院長先生から冒険者をやってみないかと誘われる。<br>
+      冒険者ギルドへ行き森探索などをすすめ、夏ミカンなど新たな食べモノをゲットし、魔法を覚え、ついにウルフを狩るまでになるのだった。
+      女の子だってたくましい。冒険はまだまだ続く。
+    </div>
+    <h2>コミカライズ</h2>
+    <div class="work-card">
+      <div class="cover-wrap">
+        <img src="images/youjyo_comic_soon.jpg" alt="表紙：Coming Soon">
+      </div>
+      <div class="work-info">
+        <h3>転生幼女の異世界 孤児院ライフ（漫画）</h3>
+        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
+          原作：滝川海老郎／製作中
+        </p>
+      </div>
+    </div>
+    <h2>Web版</h2>
+    <div class="work-card">
+      <div class="work-info">
+        <h3>転生幼女の異世界 孤児院ライフ（Web版）</h3>
+        <div class="links">
+          <a href="https://kakuyomu.jp/works/16817330652210434716">カクヨム</a>
+          <a href="https://ncode.syosetu.com/n3546mh/">小説家になろう</a>
+          <a href="https://kakuyomu.jp/works/16818093085867000741">カクヨム(総ルビ)</a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>© 2026 takigawa ebiro</p>
+    </footer>
+  </div>
+</body>
+</html>
