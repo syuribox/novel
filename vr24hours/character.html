@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>キャラクター紹介 | 私たちだけ24時間オンライン生産生活</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --sakura: #fda4af;
+      --sky: #fda4af;
+      --gold: #fbbf24;
+      --border: rgba(253, 164, 175, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 3rem 1rem 4rem;
+    }
+
+    a {
+      color: var(--sakura);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: rgba(253, 164, 175, 0.12);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--sakura);
+    }
+
+    .back-link:hover {
+      background: rgba(253, 164, 175, 0.2);
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 2.2rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(253, 164, 175, 0.4);
+    }
+
+    .cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0c1222;
+      padding: 1.2rem;
+    }
+
+    .work-card img {
+      max-width: 100%;
+      max-height: 420px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .work-info {
+      padding: 1.3rem 1.5rem 1.5rem;
+    }
+
+    .work-info h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+      color: var(--gold);
+    }
+
+    .work-info p {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    p.nickname {
+      color: var(--sakura);
+      font-size: 0.88rem;
+      margin-bottom: 0.6rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.45rem; }
+      body { padding: 2rem 0.8rem 3rem; }
+      .work-card img { max-height: 340px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>キャラクター紹介</h1>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;">私たちだけ24時間オンライン生産生活</p>
+      <a href="index.html" class="back-link">戻る</a>
+    </header>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ミケ</h3>
+        <p class="nickname">主人公</p>
+        <p>本名は大野　真美(おおの　まみ)。魔法使い。金髪碧眼の猫耳キャラクター。</p>
+        <p>夏休み中の予備校生で、医療実験に参加した。攻撃魔法と回復魔法を切り替えて戦闘するスタイル。</p>
+        <p>料理と調薬を中心に生産活動にも精を出す。パーティーリーダーを務める。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>クルミ</h3>
+        <p class="nickname">槍使い</p>
+        <p>本名は安達みくる。真美の友人。</p>
+        <p>明るい性格でムードメーカー。VRゲーム内では槍で攻撃して、木工職人を名乗り木工細工のアクセサリーを作ったりしている。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>サクラ</h3>
+        <p class="nickname">大盾使い</p>
+        <p>本名は春巻桜。真美の友人。</p>
+        <p>いつでも丁寧語でしゃべり、お嬢様風。盾による守りを固めて、パーティーの防御を担当する。</p>
+        <p>鍛冶にちょっと興味があるらしく、加工品を作ったりしている。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>アブダヒデ</h3>
+        <p class="nickname">東村、村長</p>
+        <p>プレイヤーにクエストを与えたりするNPC。薬草採取、キノコ採取、そして調薬も教えてくれる。</p>
+        <p>奥さんと二人暮らし。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>パーティー「警ら隊」</h3>
+        <p class="nickname">プレイヤー・パーティー</p>
+        <p>リーダー「アルク」。「シロガネ」「アリクイ」「イシバシ」の成人男性4人。</p>
+        <p>ミケたちに声をかけ、一緒にボス討伐などを行う。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ヒカリ</h3>
+        <p class="nickname">パーティー「お米券」／白魔法師</p>
+        <p>お嬢様の少女。ウサギのマイケルを所有する、サーバー内でも能力の高い白魔法師。</p>
+        <p>ぬいぐるみ、帽子などを作成するクラフターでもある。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>コマチ</h3>
+        <p class="nickname">パーティー「お米券」／エルフのダガー使い</p>
+        <p>ヒカリの保護者。短剣による鋭い攻撃でヒカリを守る守護者。メイドさん。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>イナホ</h3>
+        <p class="nickname">パーティー「お米券」／ヒューマンの老師</p>
+        <p>白髪の短髪、ローブをまとうヒカリの執事。</p>
+      </div>
+    </div>
+
+    <footer>
+      <a href="index.html" class="back-link">戻る</a>
+      <p>© 2026 takigawa ebiro</p>
+    </footer>
+  </div>
+</body>
+</html>
