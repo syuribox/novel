@@ -81,6 +81,9 @@
       padding: 0.8rem 2rem; border-radius: 999px; font-weight: 600;
       transition: all 0.2s;
     }
+    span.btn-disable {
+      background: gray; color: white;
+    }
     .btn:hover { background: var(--gold); color: #1e293b; }
 
     /* Sections */
@@ -97,6 +100,7 @@
     /* Synopsis */
     .synopsis { background: var(--bg-card); border-radius: 16px; padding: 2.5rem; }
     .synopsis p { margin-bottom: 1rem; color: var(--text-muted); }
+    h3.sub-title { color: var(--gold); }
 
     /* Characters */
     .char-grid {
@@ -138,9 +142,11 @@
       <div class="logo">[カーマイン村]スローライフ</div>
       <div class="nav-links">
         <a href="#synopsis">あらすじ</a>
-        <a href="characters.html">キャラクター</a>
+        <a href="characters.html">キャラ</a>
+        <a href="world_words.html">用語集</a>
         <a href="chapter.html">各話</a>
         <a href="news.html">ニュース</a>
+        <a href="gallery.html">ギャラリー</a>
       </div>
     </nav>
   </header>
@@ -210,11 +216,28 @@
   <section id="links">
     <h2>リンク</h2>
     <div class="synopsis">
-      <p>・カクヨム：[カーマイン村]異世界スキル【スローライフ】(準備中)<br>
-      <br>
-      ・小説家になろう：[カーマイン村]異世界スキル【スローライフ】(準備中) <br>
-      <br>
-      ・<a href="https://x.com/syuribox">X(Twitter) / 滝川海老郎@syuribox</a></p>
+      <div style="text-align: center; margin-top: 0;">
+        <h3 class="sub-title">[カーマイン村]異世界スキル【スローライフ】(web版)</h3>
+      </div>
+      <div style="text-align: center; margin-top: 1.5em;">
+        <p>
+          (準備中)<br>
+          <span class="btn btn-disable">カクヨム</span>　<span class="btn btn-disable">小説家になろう</span><br>
+          <br>
+          滝川海老郎@syuribox<br>
+          <a href="https://x.com/syuribox"  class="btn">X(Twitter)</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="chapter">
+    <h2>世界観＆用語集</h2>
+    <div class="synopsis">
+      <p>村町、スキル、動物＆魔物などの用語を紹介。</p>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="world_words.html" class="btn">世界観＆用語集</a>
+      </div>
     </div>
   </section>
 
@@ -222,9 +245,9 @@
     <h2>各話</h2>
     <div class="synopsis">
       <p>web小説版、1話から15話までの、あらすじを紹介。</p>
-    </div>
-    <div style="text-align: center; margin-top: 2.5rem;">
-      <a href="chapter.html" class="btn">各話を紹介</a>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="chapter.html" class="btn">各話を紹介</a>
+      </div>
     </div>
   </section>
 
@@ -232,9 +255,10 @@
     <h2>ニュース</h2>
     <div class="synopsis">
       <p>最新ニュースから、履歴まで、カーマイン村の軌跡をご紹介。</p>
-    </div>
-    <div style="text-align: center; margin-top: 2.5rem;">
-      <a href="news.html" class="btn">NEWSを紹介</a>
+        <div style="text-align: center; margin-top: 2.5rem;">
+          <a href="news.html" class="btn">NEWSを紹介</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -242,16 +266,19 @@
     <h2>ギャラリー</h2>
     <div class="synopsis">
       <p>カーマイン村のギャラリーを紹介。</p>
-    </div>
-    <div style="text-align: center; margin-top: 2.5rem;">
-      <a href="gallery.html" class="btn">ギャラリーを紹介</a>
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="gallery.html" class="btn">ギャラリーを紹介</a>
+      </div>
     </div>
   </section>
 
   <footer>
     <nav class="footer-nav">
       <a href="index.html">ホーム</a>
-      <a href="characters.html">キャラクター</a>
+      <a href="characters.html">キャラ</a>
+      <a href="world_words.html">世界観＆用語集</a>
+    </nav>
+    <nav class="footer-nav">
       <a href="chapter.html">各話</a>
       <a href="news.html">ニュース</a>
       <a href="gallery.html">ギャラリー</a>

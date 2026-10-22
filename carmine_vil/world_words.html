@@ -1,0 +1,369 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界観＆用語集 | [カーマイン村]異世界スキル【スローライフ】</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon-tarlya.png">
+  <link rel="apple-touch-icon" href="images/favicon-tarlya.png">
+  <!-- Open Graph / Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="[カーマイン村]異世界スキル【スローライフ】">
+  <meta property="og:description" content="貴族三男マハムが辺境村で始める、のんびりほのぼのスローライフ。公式ポータルサイト。">
+  <meta property="og:image" content="https://syuribox.github.io/novel/carmine_vil/images/village_hero.jpg">
+  <meta property="og:url" content="https://syuribox.github.io/novel/carmine_village/">
+  <meta property="og:site_name" content="[カーマイン村]スローライフ">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="[カーマイン村]異世界スキル【スローライフ】">
+  <meta name="twitter:description" content="貴族三男マハムが辺境村で始める、のんびりほのぼのスローライフ。公式ポータルサイト。">
+  <meta name="twitter:image" content="https://syuribox.github.io/novel/carmine_vil/images/village_hero.jpg">
+  <meta name="twitter:site" content="@syuribox">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #cbd5e1;
+      --sakura: #fda4af;
+      --sakura-deep: #fb7185;
+      --gold: #fbbf24;
+      --sky: #7dd3fc;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+    a { color: var(--sakura); text-decoration: none; }
+    a:hover { color: var(--gold); }
+
+    /* Header（index.htmlと共通） */
+    header {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(253, 164, 175, 0.2);
+    }
+    nav {
+      max-width: 1200px; margin: 0 auto; padding: 0.8rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .logo { font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+    .nav-links { display: flex; gap: 1.5rem; }
+    .nav-links a { font-size: 0.95rem; }
+    .nav-links a.active { color: var(--gold); }
+
+    /* Page */
+    .page {
+      padding-top: 80px;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+      padding-bottom: 4rem;
+    }
+    .page-title {
+      text-align: center;
+      margin: 2rem 0 1rem;
+      font-size: 2rem;
+      color: var(--gold);
+    }
+    .page-title span {
+      display: block;
+      font-size: 1rem;
+      color: var(--sakura);
+      margin-top: 0.4rem;
+      font-weight: 400;
+    }
+
+    /* Main characters */
+    .main-char {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2rem;
+      background: var(--bg-card);
+      border-radius: 16px;
+      padding: 1.8rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(253, 164, 175, 0.15);
+    }
+    .main-char img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+    .main-char h3 {
+      color: var(--sakura);
+      font-size: 1.6rem;
+      margin-bottom: 0.3rem;
+    }
+    .mainchar h3 small {
+      font-size: 0.8rem;
+    }
+    .main-char .role {
+      color: var(--sky);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .main-char p {
+      color: var(--text-muted);
+      margin-bottom: 0.8rem;
+      font-size: 0.98rem;
+    }
+
+    /* Small characters */
+    h2.section-title {
+      text-align: center;
+      color: var(--gold);
+      margin: 3.5rem 0 1.5rem;
+      font-size: 1.5rem;
+    }
+    .small-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.2rem;
+    }
+    .small-card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 1.2rem;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .small-card h4 {
+      color: var(--sakura);
+      margin-bottom: 0.3rem;
+      font-size: 1.1rem;
+    }
+    .small-card .role {
+      color: var(--sky);
+      font-size: 0.82rem;
+      margin-bottom: 0.6rem;
+    }
+    .small-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-muted);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .main-char { grid-template-columns: 1fr; }
+      .main-char img { height: 280px; }
+      .page { padding-left: 1rem; padding-right: 1rem; }
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="logo">[カーマイン村]スローライフ</div>
+      <div class="nav-links">
+        <a href="index.html">ホーム</a>
+        <a href="characters.html">キャラ</a>
+        <a href="world_words.html" class="active">用語集</a>
+        <a href="chapter.html">各話</a>
+        <a href="news.html">ニュース</a>
+        <a href="gallery.html">ギャラリー</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1 class="page-title">
+      世界観＆用語集
+      <span>のんびり、ほのぼの、ゆるりと</span>
+    </h1>
+
+    <!-- 主要キャラクター -->
+    <h2 class="section-title">地理</h2>
+    <div class="main-char">
+      <img src="images/carmine.jpg" alt="カーマイン村">
+      <div>
+        <h3>カーマイン村</h3>
+        <div class="role">ハインリヒ領の辺境村</div>
+        <p>50軒200人ほどが住む小さな山間の村。王都から馬車で5日。高級ポーションと野菜の漬物を出荷している。</p>
+        <p>ハインリヒ領の西の果て近くにある。自然豊かで、住民はのびのび生活している。</p>
+        <p>ポーション輸出により比較的裕福で、生活には余裕がある。まさにスローライフにうってつけ。</p>
+        <p>領主館、村長宅、雑貨屋、ポーション店、宿屋、漬物屋、喫茶店三軒、皮なめし屋、いくつかの農家などがある。</p>
+      </div>
+    </div>
+    <div class="small-grid">
+      <div class="small-card">
+        <h4>王都</h4>
+        <div class="role">シエルフィーダ王国、王都</div>
+        <p>王国の最大都市。王宮があり政治経済の中心を担う。</p>
+        <p>ハインリヒ侯爵家のタウンハウスがある。
+        <p>特に長男カインが頻繁に開かれるパーティーや晩餐会で、婚約する相手の令嬢を探す舞台になる。</p>
+        <p>食料品は農村部、地方都市を経由して輸入しているため、物価が高い。</p>
+      </div>
+      <div class="small-card">
+        <h4>ブルーストーン町</h4>
+        <div class="role">ハインリヒ領の町</div>
+        <p>カーマイン村に行く途中にある、隣町。カーマイン村から狼煙(のろし)が見える。</p>
+        <p>領主はカエサル・クライド男爵。</p>
+        <p>簡易城塞都市で城門がある。バザール、教会支部、錬金術教会などを有する。</p>
+      </div>
+      <div class="small-card">
+        <h4>領都ハインリヒ</h4>
+        <div class="role">ハインリヒ領の領都</div>
+        <p>カントリーハウスがある。マハムたちはお呼ばれして一日滞在する。</p>
+        <p>本当の実家ではあるが、あまりここが自分の家だという実感はない。</p>
+      </div>
+      <div class="small-card">
+        <h4>ベドラウィン</h4>
+        <div class="role">第二都市</div>
+        <p>王国第二位の規模の都市、飛空艇の運用基地があり、商工業が発達している。</p>
+        <p>外国からの輸入品も扱っており、かなり栄えている。</p>
+      </div>
+      <div class="small-card">
+        <h4>奥の村</h4>
+        <div class="role">ハインリヒ領の村</div>
+        <p>カーマイン村の裏山を登った上にある廃村。かなり昔、鉱石を採掘していた。</p>
+        <p>飛空艇発着場跡もあり、鉱石を空輸していた痕跡がある。</p>
+      </div>
+      <div class="small-card">
+        <h4>ミラクシル村</h4>
+        <div class="role">温泉村</div>
+        <p>ハインリヒ領にある温泉村。旅館があり、温泉と食事などが楽しめる。</p>
+        <p>寒い冬には温かい温泉に浸かって温まりたい。</p>
+        <p>カーマイン村と違い平野部にあり、長閑な田舎村。</p>
+      </div>
+      
+    </div>
+
+    <h2 class="section-title">スキル</h2>
+    <div class="main-char">
+      <img src="images/maham.jpg" alt="マハム">
+      <div>
+        <h3><small>スキル</small>【スローライフ】</h3>
+        <div class="role">マハムの固有スキル</div>
+        <p>マハムが5歳の鑑定の儀で取得したスキルだが、スキル本体の技能は不明。</p>
+        <p>スローライフして生活するのを支援するスキルとなっているが、隠された最強の能力……とかもなく、普通に生活する。</p>
+        <p>カーマイン村に到着すると、サブスキルが覚醒する。</p>
+        <p>事実上は「何もしない」スキルともいえる。やはりハズレスキルと言われても仕方がない側面がある。</p>
+      </div>
+    </div>
+    <div class="small-grid">
+      <div class="small-card">
+        <h4>鑑定初級</h4>
+        <div class="role">マハムのサブスキル</div>
+        <p>マハムが現物を見て意識することで頭の中に情報が流れ込んでくるスキル。</p>
+        <p>ただし詳細が分かるわけではなく、概要程度であまり役に立たない。</p>
+        <p>薬草やキノコなどの識別には使える。</p>
+      </div>
+      <div class="small-card">
+        <h4>アイテムボックス小</h4>
+        <div class="role">マハムのサブスキル</div>
+        <p>マハムの意思で出し入れできる異次元倉庫。</p>
+        <p>かなりの容量で、マハムが試したところ、500リットルくらいは入りそうだ。</p>
+        <p>普段は、半分を非常用水、携帯食料、おやつ、ショートソードなどを入れている。</p>
+      </div>
+      <div class="small-card">
+        <h4>植物・魔物図鑑知識初級</h4>
+        <div class="role">マハムのサブスキル</div>
+        <p>マハムが現物を見て意識することで頭の中に情報が流れ込んでくるスキル。</p>
+        <p>簡単な植物・魔物に関する情報を得られる。基本的なことのみなので、有用ではあるが使いどころが限られる。</p>
+        <p>全知識がインストールされるわけではなく、都度情報が分かるタイプ。</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">動物＆魔物</h2>
+    <div class="small-grid">
+      <div class="small-card">
+        <h4>スライム</h4>
+        <div class="role">最弱のモンスター</div>
+        <p>平原などに生息。グリーンスライム、ブルースライムなどの種類がある。</p>
+        <p>スライムの魔核1個10ギリム(鉄貨1枚)。</p>
+      </div>
+      <div class="small-card">
+        <h4>角ウサギ</h4>
+        <div class="role">ホーンラビット</div>
+        <p>森などに生息。すばしっこい。角が売れる。肉も食料として食べられる。</p>
+        <p>弱いモンスターの代表格だが、機動力は侮れない。</p>
+      </div>
+      <div class="small-card">
+        <h4>ワイルドボア</h4>
+        <div class="role">野生のイノシシ</div>
+        <p>牙が強力で、かなりの巨体で強い。肉が多く、最高の獲物だ。</p>
+      </div>
+      <div class="small-card">
+        <h4>ワイルドディア</h4>
+        <div class="role">野生のシカ</div>
+        <p>草食性でおとなしいので危険は少ない。角が硬いので注意は必要。</p>
+        <p>肉はとても美味しく、ごちそうの一つだ。</p>
+      </div>
+      <div class="small-card">
+        <h4>ワイルドウルフ</h4>
+        <div class="role">野生のオオカミ</div>
+        <p>肉食で集団で襲い掛かってくると危険な魔物。</p>
+        <p>肉は食用にもなる。</p>
+      </div>
+      <div class="small-card">
+        <h4>ワイルドホーン</h4>
+        <div class="role">野生のオオシカ</div>
+        <p>大きな角を持つ大鹿。体も普通のディアよりも巨体だ。</p>
+        <p>肉は食用になり、食べ応えがありそうだ。</p>
+      </div>
+      <div class="small-card">
+        <h4>ワタリワイバーン</h4>
+        <div class="role">渡りをするワイバーンの一種</div>
+        <p>非常に危険な上位魔物。カーマイン村の上空を飛んでいくだけだが……。</p>
+        <p>マハムたちは空を飛ぶワイバーンを目撃して、右往左往する。</p>
+      </div>
+      <div class="small-card">
+        <h4>ゴブリン</h4>
+        <div class="role">魔の森に生息</div>
+        <p>弱い人型の魔物。カーマイン村の近くには出没しない。</p>
+      </div>
+      <div class="small-card">
+        <h4>コボルト</h4>
+        <div class="role">魔の森に生息</div>
+        <p>弱い犬人型の魔物。カーマイン村の近くには出没しない。</p>
+      </div>
+      <div class="small-card">
+        <h4>オーク</h4>
+        <div class="role">魔の森に生息</div>
+        <p>強い豚人型の魔物。カーマイン村の近くには出没しない。</p>
+      </div>
+      <div class="small-card">
+        <h4>オーガ</h4>
+        <div class="role">魔の森に生息</div>
+        <p>強い鬼人型の魔物。カーマイン村の近くには出没しない。</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <nav class="footer-nav">
+      <a href="index.html">ホーム</a>
+      <a href="characters.html">キャラ</a>
+      <a href="world_words.html">世界観＆用語集</a>
+    </nav>
+    <nav class="footer-nav">
+      <a href="chapter.html">各話</a>
+      <a href="news.html">ニュース</a>
+      <a href="gallery.html">ギャラリー</a>
+    </nav>
+    <p>[カーマイン村]異世界スキル【スローライフ】</p>
+    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ——</p>
+    <a href="../index.html">上へ戻る</a>
+    <p style="margin-top:0.5rem;">© 2026 takigawa ebiro</p>
+  </footer>
+
+</body>
+</html>
