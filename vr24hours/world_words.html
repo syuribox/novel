@@ -31,6 +31,16 @@
       min-height: 100vh;
       padding: 3rem 1rem 4rem;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+      z-index: 10;
+    }
 
     a {
       color: var(--sakura);
@@ -160,48 +170,49 @@
     }
   </style>
 </head>
-<body>
+<body class="ruby-off">
   <div class="container">
     <header>
-      <h1>世界観＆用語集</h1>
-      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;">私たちだけ24時間オンライン生産生活</p>
-      <a href="index.html" class="back-link">戻る</a>
+      <h1><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></h1>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;"><ruby>私<rt>わたし</rt></ruby>たちだけ24<ruby>時間<rt>じかん</rt></ruby>オンライン<ruby>生産<rt>せいさん</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby></p>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
     </header>
+    <button type="button" id="toggle-ruby">ルビON/OFF</button>
 
-    <h2>世界観</h2>
+    <h2><ruby>世界観<rt>せかいかん</rt></ruby></h2>
     <div class="work-card">
       <div class="cover-wrap">
-        <img src="images/village.jpg" alt="東村">
+        <img src="images/village.jpg" alt="<ruby>東村<rt>ひがしむら</rt></ruby>">
       </div>
       <div class="work-info">
         <h3>Wonderland Virtual Reality Online</h3>
-        <p class="nickname">20xx年7月</p>
-          <p>通称WVROは、剣と魔法の中世ヨーロッパ風ファンタジー世界を舞台にしたフルダイブVRMMORPG。</p>
-          <p>ゲーム内時間は現実の6倍速で進行し、一般プレイヤーには1日8時間のログイン制限があるが、医療実験の被験者は24時間連続ダイブが可能になっている。プレイヤーはリアルの性別とリアルの容姿をベースにしたアバターを作成し、冒険・戦闘・生産（薬草採取、ポーション調合、料理、木工、鍛冶など）を自由に楽しめる。</p>
-          <p>世界は太陽神ウクレレと月女神アクレレによって統治され、村・町・森・平原・ダンジョンが広がる穏やかなファンタジー世界。スキル制で成長し、PKは不可、痛覚は50%に抑えられ、安全地帯でのログアウトも配慮されている。オープンベータから月額制の本サービスへ移行する、没入感を重視したVR世界となっている。</p>
+        <p class="nickname">20xx<ruby>年<rt>ねん</rt></ruby>7<ruby>月<rt>がつ</rt></ruby></p>
+          <p><ruby>通称<rt>つうしょう</rt></ruby>WVROは、<ruby>剣<rt>けん</rt></ruby>と<ruby>魔法<rt>まほう</rt></ruby>の<ruby>中世<rt>ちゅうせい</rt></ruby>ヨーロッパ<ruby>風<rt>ふう</rt></ruby>ファンタジー<ruby>世界<rt>せかい</rt></ruby>を<ruby>舞台<rt>ぶたい</rt></ruby>にしたフルダイブVRMMORPG。</p>
+          <p>ゲーム<ruby>内<rt>ない</rt></ruby><ruby>時間<rt>じかん</rt></ruby>は<ruby>現実<rt>げんじつ</rt></ruby>の6<ruby>倍速<rt>ばいそく</rt></ruby>で<ruby>進行<rt>しんこう</rt></ruby>し、<ruby>一般<rt>いっぱん</rt></ruby>プレイヤーには1<ruby>日<rt>にち</rt></ruby>8<ruby>時間<rt>じかん</rt></ruby>のログイン<ruby>制限<rt>せいげん</rt></ruby>があるが、<ruby>医療<rt>いりょう</rt></ruby><ruby>実験<rt>じっけん</rt></ruby>の<ruby>被験者<rt>ひけんしゃ</rt></ruby>は24<ruby>時間<rt>じかん</rt></ruby><ruby>連続<rt>れんぞく</rt></ruby>ダイブが<ruby>可能<rt>かのう</rt></ruby>になっている。プレイヤーはリアルの<ruby>性別<rt>せいべつ</rt></ruby>とリアルの<ruby>容姿<rt>ようし</rt></ruby>をベースにしたアバターを<ruby>作成<rt>さくせい</rt></ruby>し、<ruby>冒険<rt>ぼうけん</rt></ruby>・<ruby>戦闘<rt>せんとう</rt></ruby>・<ruby>生産<rt>せいさん</rt></ruby>（<ruby>薬草<rt>やくそう</rt></ruby><ruby>採取<rt>さいしゅ</rt></ruby>、ポーション<ruby>調合<rt>ちょうごう</rt></ruby>、<ruby>料理<rt>りょうり</rt></ruby>、<ruby>木工<rt>もっこう</rt></ruby>、<ruby>鍛冶<rt>かじ</rt></ruby>など）を<ruby>自由<rt>じゆう</rt></ruby>に<ruby>楽<rt>たの</rt></ruby>しめる。</p>
+          <p><ruby>世界<rt>せかい</rt></ruby>は<ruby>太陽神<rt>たいようしん</rt></ruby>ウクレレと<ruby>月<rt>つき</rt></ruby><ruby>女神<rt>めがみ</rt></ruby>アクレレによって<ruby>統治<rt>とうち</rt></ruby>され、<ruby>村<rt>むら</rt></ruby>・<ruby>町<rt>まち</rt></ruby>・<ruby>森<rt>もり</rt></ruby>・<ruby>平原<rt>へいげん</rt></ruby>・ダンジョンが<ruby>広<rt>ひろ</rt></ruby>がる<ruby>穏<rt>おだ</rt></ruby>やかなファンタジー<ruby>世界<rt>せかい</rt></ruby>。スキル<ruby>制<rt>せい</rt></ruby>で<ruby>成長<rt>せいちょう</rt></ruby>し、PKは<ruby>不可<rt>ふか</rt></ruby>、<ruby>痛覚<rt>つうかく</rt></ruby>は50%に<ruby>抑<rt>おさ</rt></ruby>えられ、<ruby>安全<rt>あんぜん</rt></ruby><ruby>地帯<rt>ちたい</rt></ruby>でのログアウトも<ruby>配慮<rt>はいりょ</rt></ruby>されている。オープンベータから<ruby>月額<rt>げつがく</rt></ruby><ruby>制<rt>せい</rt></ruby>の<ruby>本<rt>ほん</rt></ruby>サービスへ<ruby>移行<rt>いこう</rt></ruby>する、<ruby>没入<rt>ぼつにゅう</rt></ruby><ruby>感<rt>かん</rt></ruby>を<ruby>重視<rt>じゅうし</rt></ruby>したVR<ruby>世界<rt>せかい</rt></ruby>となっている。</p>
       </div>
     </div>
 
-    <h2>用語集</h2>
+    <h2><ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></h2>
     <div class="work-card">
       <div class="cover-wrap">
-        <img class="item-middle" src="images/city_gate.jpg" alt="城門">
+        <img class="item-middle" src="images/city_gate.jpg" alt="<ruby>城門<rt>じょうもん</rt></ruby>">
       </div>
       <div class="work-info">
-        <h3>東村</h3>
-        <p>ミケたちが最初に降り立つ村。初期地点は東西南北と4か所から選べ、内容はほぼ同一になっていて、負荷分散を意図している。</p>
-        <p>宿屋、雑貨屋、村長宅、元鍛冶屋など必要最低限の機能しかないので、本格的な冒険をするには先を目指す必要がある。</p>
-        <h3>デルタ町</h3>
-        <p>初期フィールドの中央にある町。城塞都市で、中規模な町。</p>
-        <p>最初の目標として、このデルタ町を目指すことになる。冒険者ギルド、鍛冶屋、教会など、一通りの設備がそろっている。</p>
-        <h3>デルタ町ダンジョン</h3>
-        <p>デルタ町の地下にあるダンジョン。</p>
-        <p>第一章の最終ボスが待ち構える、比較的難易度の高いコンテンツ。</p>
-        <h3>サークル地方</h3>
-        <p>地理としては、世界「レポリダイ」。カーディス大陸。</p>
-        <p>アデレイス王国、首都はファインティア。</p>
-        <p>第一章のデルタ町周辺の村を含めてサークル地方と呼ぶ。</p>
-        <p>サークル地方は、大きなカルデラの内側にあり、四方を山が囲んでいる閉鎖された地。</p>
+        <h3><ruby>東村<rt>ひがしむら</rt></ruby></h3>
+        <p>ミケたちが<ruby>最初<rt>さいしょ</rt></ruby>に<ruby>降<rt>お</rt></ruby>り<ruby>立<rt>た</rt></ruby>つ<ruby>村<rt>むら</rt></ruby>。<ruby>初期<rt>しょき</rt></ruby><ruby>地点<rt>ちてん</rt></ruby>は<ruby>東西<rt>とうざい</rt></ruby><ruby>南北<rt>なんぼく</rt></ruby>と4か<ruby>所<rt>しょ</rt></ruby>から<ruby>選<rt>えら</rt></ruby>べ、<ruby>内容<rt>ないよう</rt></ruby>はほぼ<ruby>同一<rt>どういつ</rt></ruby>になっていて、<ruby>負荷<rt>ふか</rt></ruby><ruby>分散<rt>ぶんさん</rt></ruby>を<ruby>意図<rt>いと</rt></ruby>している。</p>
+        <p><ruby>宿屋<rt>やどや</rt></ruby>、<ruby>雑貨<rt>ざっか</rt></ruby><ruby>屋<rt>や</rt></ruby>、<ruby>村長<rt>そんちょう</rt></ruby><ruby>宅<rt>たく</rt></ruby>、<ruby>元<rt>もと</rt></ruby><ruby>鍛冶<rt>かじ</rt></ruby><ruby>屋<rt>や</rt></ruby>など<ruby>必要<rt>ひつよう</rt></ruby><ruby>最低限<rt>さいていげん</rt></ruby>の<ruby>機能<rt>きのう</rt></ruby>しかないので、<ruby>本格的<rt>ほんかくてき</rt></ruby>な<ruby>冒険<rt>ぼうけん</rt></ruby>をするには<ruby>先<rt>さき</rt></ruby>を<ruby>目指<rt>めざ</rt></ruby>す<ruby>必要<rt>ひつよう</rt></ruby>がある。</p>
+        <h3>デルタ<ruby>町<rt>まち</rt></ruby></h3>
+        <p><ruby>初期<rt>しょき</rt></ruby>フィールドの<ruby>中央<rt>ちゅうおう</rt></ruby>にある<ruby>町<rt>まち</rt></ruby>。<ruby>城塞<rt>じょうさい</rt></ruby><ruby>都市<rt>とし</rt></ruby>で、<ruby>中<rt>ちゅう</rt></ruby><ruby>規模<rt>きぼ</rt></ruby>な<ruby>町<rt>まち</rt></ruby>。</p>
+        <p><ruby>最初<rt>さいしょ</rt></ruby>の<ruby>目標<rt>もくひょう</rt></ruby>として、このデルタ<ruby>町<rt>まち</rt></ruby>を<ruby>目指<rt>めざ</rt></ruby>すことになる。<ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド、<ruby>鍛冶屋<rt>かじや</rt></ruby>、<ruby>教会<rt>きょうかい</rt></ruby>など、<ruby>一通<rt>ひととお</rt></ruby>りの<ruby>設備<rt>せつび</rt></ruby>がそろっている。</p>
+        <h3>デルタ<ruby>町<rt>まち</rt></ruby>ダンジョン</h3>
+        <p>デルタ<ruby>町<rt>まち</rt></ruby>の<ruby>地下<rt>ちか</rt></ruby>にあるダンジョン。</p>
+        <p><ruby>第<rt>だい</rt></ruby><ruby>一章<rt>いっしょう</rt></ruby>の<ruby>最終<rt>さいしゅう</rt></ruby>ボスが<ruby>待<rt>ま</rt></ruby>ち<ruby>構<rt>かま</rt></ruby>える、<ruby>比較的<rt>ひかくてき</rt></ruby><ruby>難易<rt>なんい</rt></ruby><ruby>度<rt>ど</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いコンテンツ。</p>
+        <h3>サークル<ruby>地方<rt>ちほう</rt></ruby></h3>
+        <p><ruby>地理<rt>ちり</rt></ruby>としては、<ruby>世界<rt>せかい</rt></ruby>「レポリダイ」。カーディス<ruby>大陸<rt>たいりく</rt></ruby>。</p>
+        <p>アデレイス<ruby>王国<rt>おうこく</rt></ruby>、<ruby>首都<rt>しゅと</rt></ruby>はファインティア。</p>
+        <p><ruby>第<rt>だい</rt></ruby><ruby>一章<rt>いっしょう</rt></ruby>のデルタ<ruby>町<rt>まち</rt></ruby><ruby>周辺<rt>しゅうへん</rt></ruby>の<ruby>村<rt>むら</rt></ruby>を<ruby>含<rt>ふく</rt></ruby>めてサークル<ruby>地方<rt>ちほう</rt></ruby>と<ruby>呼<rt>よ</rt></ruby>ぶ。</p>
+        <p>サークル<ruby>地方<rt>ちほう</rt></ruby>は、<ruby>大<rt>おお</rt></ruby>きなカルデラの<ruby>内側<rt>うちがわ</rt></ruby>にあり、<ruby>四方<rt>しほう</rt></ruby>を<ruby>山<rt>やま</rt></ruby>が<ruby>囲<rt>かこ</rt></ruby>んでいる<ruby>閉鎖<rt>へいさ</rt></ruby>された<ruby>地<rt>ち</rt></ruby>。</p>
       </div>
       <div class="cover-wrap">
         <img class="item-middle"  src="images/wolfs.jpg" alt="ウルフ">
@@ -209,58 +220,59 @@
       <div class="work-info">
         <h3>ボス</h3>
         <p>ダンジョンボス、フィールドボスなどがいる。</p>
-        <p>主にパーティー向けコンテンツであり、多くの経験値とアイテムそして名声が取得できる。</p>
+        <p><ruby>主<rt>おも</rt></ruby>にパーティー<ruby>向<rt>む</rt></ruby>けコンテンツであり、<ruby>多<rt>おお</rt></ruby>くの<ruby>経験<rt>けいけん</rt></ruby><ruby>値<rt>ち</rt></ruby>とアイテムそして<ruby>名声<rt>めいせい</rt></ruby>が<ruby>取得<rt>しゅとく</rt></ruby>できる。</p>
         <h3>オオオオカミ</h3>
-        <p>森フィールドボス。北東と南西の森にそれぞれ生息している。</p>
-        <p>群れで行動し、ソロで討伐するのは難易度が非常に高い。</p>
+        <p><ruby>森<rt>もり</rt></ruby>フィールドボス。<ruby>北東<rt>ほくとう</rt></ruby>と<ruby>南西<rt>なんせい</rt></ruby>の<ruby>森<rt>もり</rt></ruby>にそれぞれ<ruby>生息<rt>せいそく</rt></ruby>している。</p>
+        <p><ruby>群<rt>む</rt></ruby>れで<ruby>行動<rt>こうどう</rt></ruby>し、ソロで<ruby>討伐<rt>とうばつ</rt></ruby>するのは<ruby>難易<rt>なんい</rt></ruby><ruby>度<rt>ど</rt></ruby>が<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>高<rt>たか</rt></ruby>い。</p>
       </div>
       <div class="work-info">
-        <h3>錬金術とポーション</h3>
-        <p>錬金術により、ポーションの作成が可能となっている。</p>
-        <p>錬金術は材料を投入し料理のような調合作業を経て、ポーションになる。</p>
-        <p>5級ポーションがメインで登場するが、調薬作業のランクにより効能が異なる。</p>
+        <h3><ruby>錬金術<rt>れんきんじゅつ</rt></ruby>とポーション</h3>
+        <p><ruby>錬金術<rt>れんきんじゅつ</rt></ruby>により、ポーションの<ruby>作成<rt>さくせい</rt></ruby>が<ruby>可能<rt>かのう</rt></ruby>となっている。</p>
+        <p><ruby>錬金術<rt>れんきんじゅつ</rt></ruby>は<ruby>材料<rt>ざいりょう</rt></ruby>を<ruby>投入<rt>とうにゅう</rt></ruby>し<ruby>料理<rt>りょうり</rt></ruby>のような<ruby>調合<rt>ちょうごう</rt></ruby><ruby>作業<rt>さぎょう</rt></ruby>を<ruby>経<rt>へ</rt></ruby>て、ポーションになる。</p>
+        <p>5<ruby>級<rt>きゅう</rt></ruby>ポーションがメインで<ruby>登場<rt>とうじょう</rt></ruby>するが、<ruby>調薬<rt>ちょうやく</rt></ruby><ruby>作業<rt>さぎょう</rt></ruby>のランクにより<ruby>効能<rt>こうのう</rt></ruby>が<ruby>異<rt>こと</rt></ruby>なる。</p>
       </div>
       <div class="cover-wrap">
-        <img class="item-middle" src="images/portion.jpg" alt="5級ポーション">
+        <img class="item-middle" src="images/portion.jpg" alt="5<ruby>級<rt>きゅう</rt></ruby>ポーション">
       </div>
       <div class="work-info">
         <h3>ソロ</h3>
-        <p>「ひとり」を意味するゲーム用語。多くのソロプレイヤーがいる一方、一時的な回復などがしにくいため、難易度の高いプレイスタイルだとされる。</p>
-        <p>主人公であるミケたちは、基本ソロでは活動せずパーティープレイ中心で行動する。</p>
+        <p>「ひとり」を<ruby>意味<rt>いみ</rt></ruby>するゲーム<ruby>用語<rt>ようご</rt></ruby>。<ruby>多<rt>おお</rt></ruby>くのソロプレイヤーがいる<ruby>一方<rt>いっぽう</rt></ruby>、<ruby>一時的<rt>いちじてき</rt></ruby>な<ruby>回復<rt>かいふく</rt></ruby>などがしにくいため、<ruby>難易<rt>なんい</rt></ruby><ruby>度<rt>ど</rt></ruby>の<ruby>高<rt>たか</rt></ruby>いプレイスタイルだとされる。</p>
+        <p><ruby>主人公<rt>しゅじんこう</rt></ruby>であるミケたちは、<ruby>基本<rt>きほん</rt></ruby>ソロでは<ruby>活動<rt>かつどう</rt></ruby>せずパーティープレイ<ruby>中心<rt>ちゅうしん</rt></ruby>で<ruby>行動<rt>こうどう</rt></ruby>する。</p>
         <h3>パーティー</h3>
-        <p>2人から6人程度までをいちグループとしたシステム要素。</p>
-        <p>経験値やアイテムの自動分配機能がある。</p>
-        <p>パーティーには名前を付けられ、若干のボーナス加点がつく。</p>
+        <p>2<ruby>人<rt>にん</rt></ruby>から6<ruby>人<rt>にん</rt></ruby><ruby>程度<rt>ていど</rt></ruby>までをいちグループとしたシステム<ruby>要素<rt>ようそ</rt></ruby>。</p>
+        <p><ruby>経験<rt>けいけん</rt></ruby><ruby>値<rt>ち</rt></ruby>やアイテムの<ruby>自動<rt>じどう</rt></ruby><ruby>分配<rt>ぶんぱい</rt></ruby><ruby>機<rt>き</rt></ruby><ruby>能<rt>のう</rt></ruby>がある。</p>
+        <p>パーティーには<ruby>名前<rt>なまえ</rt></ruby>を<ruby>付<rt>つ</rt></ruby>けられ、<ruby>若干<rt>じゃっかん</rt></ruby>のボーナス<ruby>加点<rt>かてん</rt></ruby>がつく。</p>
         <h3>レイド</h3>
-        <p>2パーティーから6パーティー程度までをいちグループとした集まりのこと。</p>
-        <p>強いボス戦などで共同して行動することをこう呼ぶ。</p>
+        <p>2パーティーから6パーティー<ruby>程度<rt>ていど</rt></ruby>までをいちグループとした<ruby>集<rt>あつ</rt></ruby>まりのこと。</p>
+        <p><ruby>強<rt>つよ</rt></ruby>いボス<ruby>戦<rt>せん</rt></ruby>などで<ruby>共同<rt>きょうどう</rt></ruby>して<ruby>行動<rt>こうどう</rt></ruby>することをこう<ruby>呼<rt>よ</rt></ruby>ぶ。</p>
       </div>
       <div class="cover-wrap">
         <img class="item-inline" src="images/donguri.jpg" alt="どんぐりペンダント">
       </div>
       <div class="work-info">
         <h3>NPC</h3>
-        <p>エヌピーシー。Non Player Character。ゲーム内の住民のことを主にさす。</p>
-        <p>WVROではAI駆動型NPCとなっており、プレイヤーと見分けがほとんどつかない。</p>
-        <p>非礼なことをすればプレイヤーもNCPに適当に扱われるし、愛情をこめて接すればそれなりに応えてくれる。</p>
-        <h3>神の使い</h3>
-        <p>プレイヤーのことを、NPCたちは「神の使い」と認識しており、世界の外から来たことを知覚している。</p>
-        <p>NPCは基本、外の世界の知識を持たないが、それでも自分たちの世界以外があることを理解している。</p>
+        <p>エヌピーシー。Non Player Character。ゲーム<ruby>内<rt>ない</rt></ruby>の<ruby>住民<rt>じゅうみん</rt></ruby>のことを<ruby>主<rt>おも</rt></ruby>にさす。</p>
+        <p>WVROではAI<ruby>駆動<rt>くどう</rt></ruby><ruby>型<rt>がた</rt></ruby>NPCとなっており、プレイヤーと<ruby>見分<rt>みわ</rt></ruby>けがほとんどつかない。</p>
+        <p><ruby>非礼<rt>ひれい</rt></ruby>なことをすればプレイヤーもNCPに<ruby>適当<rt>てきとう</rt></ruby>に<ruby>扱<rt>あつか</rt></ruby>われるし、<ruby>愛情<rt>あいじょう</rt></ruby>をこめて<ruby>接<rt>せっ</rt></ruby>すればそれなりに<ruby>応<rt>こた</rt></ruby>えてくれる。</p>
+        <h3><ruby>神<rt>かみ</rt></ruby>の<ruby>使<rt>つか</rt></ruby>い</h3>
+        <p>プレイヤーのことを、NPCたちは「<ruby>神<rt>かみ</rt></ruby>の<ruby>使<rt>つか</rt></ruby>い」と<ruby>認識<rt>にんしき</rt></ruby>しており、<ruby>世界<rt>せかい</rt></ruby>の<ruby>外<rt>そと</rt></ruby>から<ruby>来<rt>き</rt></ruby>たことを<ruby>知覚<rt>ちかく</rt></ruby>している。</p>
+        <p>NPCは<ruby>基本<rt>きほん</rt></ruby>、<ruby>外<rt>そと</rt></ruby>の<ruby>世界<rt>せかい</rt></ruby>の<ruby>知識<rt>ちしき</rt></ruby>を<ruby>持<rt>も</rt></ruby>たないが、それでも<ruby>自分<rt>じぶん</rt></ruby>たちの<ruby>世界<rt>せかい</rt></ruby><ruby>以外<rt>いがい</rt></ruby>があることを<ruby>理解<rt>りかい</rt></ruby>している。</p>
       </div>
       <div class="cover-wrap">
-        <img class="item-middle" src="images/maruki.jpg" alt="丸木先生">
+        <img class="item-middle" src="images/maruki.jpg" alt="<ruby>丸木<rt>まるき</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>">
       </div>
       <div class="work-info">
-        <h3>定期健診</h3>
-        <p>主人公のミケたちは医療実験のため、定期的に丸木先生の診察を受ける。</p>
-        <p>ミケたちはログアウト不可なので、丸木先生がゲームにログインしてゲーム内で診察を行う。</p>
+        <h3><ruby>定期<rt>ていき</rt></ruby><ruby>健診<rt>けんしん</rt></ruby></h3>
+        <p><ruby>主人公<rt>しゅじんこう</rt></ruby>のミケたちは<ruby>医療<rt>いりょう</rt></ruby><ruby>実験<rt>じっけん</rt></ruby>のため、<ruby>定期的<rt>ていきてき</rt></ruby>に<ruby>丸木<rt>まるき</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>の<ruby>診察<rt>しんさつ</rt></ruby>を<ruby>受<rt>う</rt></ruby>ける。</p>
+        <p>ミケたちはログアウト<ruby>不可<rt>ふか</rt></ruby>なので、<ruby>丸木<rt>まるき</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>がゲームにログインしてゲーム<ruby>内<rt>ない</rt></ruby>で<ruby>診察<rt>しんさつ</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>う。</p>
       </div>
     </div>
 
     <footer>
-      <a href="index.html" class="back-link">戻る</a>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
       <p>© 2026 takigawa ebiro</p>
     </footer>
   </div>
+  <script src="ruby_button.js" charset="utf-8"></script>
 </body>
 </html>
