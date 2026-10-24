@@ -30,6 +30,16 @@
       min-height: 100vh;
       padding: 3rem 1rem 4rem;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+      z-index: 10;
+    }
 
     a {
       color: var(--sakura);
@@ -193,11 +203,13 @@
     }
   </style>
 </head>
-<body>
+<body class="ruby-off">
   <div class="container">
+    <button type="button" id="toggle-ruby">ルビON/OFF</button>
+    <script src="ruby_button.js" charset="utf-8"></script>
     <header>
-      <h1>転生幼女の異世界 孤児院ライフ</h1>
-      <p class="author">滝川海老郎</p>
+      <h1><ruby>転生<rt>てんせい</rt></ruby><ruby>幼女<rt>ようじょ</rt></ruby>の<ruby>異世界<rt>いせかい</rt></ruby> <ruby>孤児院<rt>こじいん</rt></ruby>ライフ</h1>
+      <p class="author"><ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby></p>
     </header>
     <div class="work-card">
       <div class="cover-wrap">
@@ -206,12 +218,12 @@
     </div>
     <div class="description">
       <strong>【コミカライズ】</strong><br>
-      領主一家の貴族だった私は異端児として孤児院に入れられてしまう。<br>
-      しかしそこは女の子の楽園だった。<br>
-      周りには広い庭から森まで続いていた。そうだここで採取とかしてスローライフして過ごそう。ついでに生活も改善していこう。女の子たちは立ち上がる。<br>
-      まずは裏庭の薬草、続いて裏の森からキノコ、苺、一角ウサギ、スライムの核などを採取してくる。そうしているうちに院長先生から冒険者をやってみないかと誘われる。<br>
-      冒険者ギルドへ行き森探索などをすすめ、夏ミカンなど新たな食べモノをゲットし、魔法を覚え、ついにウルフを狩るまでになるのだった。
-      女の子だってたくましい。冒険はまだまだ続く。
+      <ruby>領主<rt>りょうしゅ</rt></ruby><ruby>一家<rt>いっか</rt></ruby>の<ruby>貴族<rt>きぞく</rt></ruby>だった<ruby>私<rt>わたし</rt></ruby>は<ruby>異端<rt>いたん</rt></ruby><ruby>児<rt>じ</rt></ruby>として<ruby>孤児院<rt>こじいん</rt></ruby>に<ruby>入<rt>い</rt></ruby>れられてしまう。<br>
+      しかしそこは<ruby>女<rt>おんな</rt></ruby>の<ruby>子<rt>こ</rt></ruby>の<ruby>楽園<rt>らくえん</rt></ruby>だった。<br>
+      <ruby>周<rt>まわ</rt></ruby>りには<ruby>広<rt>ひろ</rt></ruby>い<ruby>庭<rt>にわ</rt></ruby>から<ruby>森<rt>もり</rt></ruby>まで<ruby>続<rt>つづ</rt></ruby>いていた。そうだここで<ruby>採取<rt>さいしゅ</rt></ruby>とかしてスローライフして<ruby>過<rt>す</rt></ruby>ごそう。ついでに<ruby>生活<rt>せいかつ</rt></ruby>も<ruby>改善<rt>かいぜん</rt></ruby>していこう。<ruby>女<rt>おんな</rt></ruby>の<ruby>子<rt>こ</rt></ruby>たちは<ruby>立<rt>た</rt></ruby>ち<ruby>上<rt>あ</rt></ruby>がる。<br>
+      まずは<ruby>裏庭<rt>うらにわ</rt></ruby>の<ruby>薬草<rt>やくそう</rt></ruby>、<ruby>続<rt>つづ</rt></ruby>いて<ruby>裏<rt>うら</rt></ruby>の<ruby>森<rt>もり</rt></ruby>からキノコ、<ruby>苺<rt>いちご</rt></ruby>、<ruby>一角<rt>いっかく</rt></ruby>ウサギ、スライムの<ruby>核<rt>かく</rt></ruby>などを<ruby>採取<rt>さいしゅ</rt></ruby>してくる。そうしているうちに<ruby>院長<rt>いんちょう</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>から<ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>をやってみないかと<ruby>誘<rt>さそ</rt></ruby>われる。<br>
+      <ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルドへ<ruby>行<rt>い</rt></ruby>き<ruby>森<rt>もり</rt></ruby><ruby>探索<rt>たんさく</rt></ruby>などをすすめ、<ruby>夏<rt>なつ</rt></ruby>ミカンなど<ruby>新<rt>あら</rt></ruby>たな<ruby>食<rt>た</rt></ruby>べモノをゲットし、<ruby>魔法<rt>まほう</rt></ruby>を<ruby>覚<rt>おぼ</rt></ruby>え、ついにウルフを<ruby>狩<rt>か</rt></ruby>るまでになるのだった。
+      <ruby>女<rt>おんな</rt></ruby>の<ruby>子<rt>こ</rt></ruby>だってたくましい。<ruby>冒険<rt>ぼうけん</rt></ruby>はまだまだ<ruby>続<rt>つづ</rt></ruby>く。
     </div>
     <h2>コミカライズ</h2>
     <div class="work-card">
@@ -219,39 +231,39 @@
         <img src="images/youjyo_comic_soon.jpg" alt="表紙：Coming Soon">
       </div>
       <div class="work-info">
-        <h3>転生幼女の異世界 孤児院ライフ（漫画）</h3>
+        <h3><ruby>転生<rt>てんせい</rt></ruby><ruby>幼女<rt>ようじょ</rt></ruby>の<ruby>異世界<rt>いせかい</rt></ruby> <ruby>孤児院<rt>こじいん</rt></ruby>ライフ（<ruby>漫画<rt>まんが</rt></ruby>）</h3>
         <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          原作：滝川海老郎／製作中
+          <ruby>原作<rt>げんさく</rt></ruby>：<ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／<ruby>製作<rt>せいさく</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>
         </p>
       </div>
     </div>
-    <h2>Web版</h2>
+    <h2>Web<ruby>版<rt>ばん</rt></ruby></h2>
     <div class="work-card">
       <div class="work-info">
-        <h3>転生幼女の異世界 孤児院ライフ（Web版）</h3>
+        <h3><ruby>転生<rt>てんせい</rt></ruby><ruby>幼女<rt>ようじょ</rt></ruby>の<ruby>異世界<rt>いせかい</rt></ruby> <ruby>孤児院<rt>こじいん</rt></ruby>ライフ（Web<ruby>版<rt>ばん</rt></ruby>）</h3>
         <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          5.8万文字 全26話 完結
+          5.8<ruby>万<rt>まん</rt></ruby><ruby>文字<rt>もじ</rt></ruby> <ruby>全<rt>ぜん</rt></ruby>26<ruby>話<rt>わ</rt></ruby> <ruby>完結<rt>かんけつ</rt></ruby>
         </p>
         <div class="links">
           <a href="https://kakuyomu.jp/works/16817330652210434716">カクヨム</a>
-          <a href="https://ncode.syosetu.com/n3546mh/">小説家になろう</a>
-          <a href="https://kakuyomu.jp/works/16818093085867000741">カクヨム(総ルビ)</a>
+          <a href="https://ncode.syosetu.com/n3546mh/"><ruby>小説家<rt>しょうせつか</rt></ruby>になろう</a>
+          <a href="https://kakuyomu.jp/works/16818093085867000741">カクヨム(<ruby>総<rt>そう</rt></ruby>ルビ)</a>
         </div>
       </div>
     </div>
-    <h2>キャラクター紹介</h2>
+    <h2>キャラクター<ruby>紹介<rt>しょうかい</rt></ruby></h2>
     <div class="work-card">
       <div class="work-info">
         <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          主要キャラクターを紹介します。
+          <ruby>主要<rt>しゅよう</rt></ruby>キャラクターを<ruby>紹介<rt>しょうかい</rt></ruby>します。
         </p>
         <div class="links">
-          <a href="character.html">キャラクター紹介</a>
+          <a href="character.html">キャラクター<ruby>紹介<rt>しょうかい</rt></ruby></a>
         </div>
       </div>
     </div>
     <footer>
-      <a href="../index.html" class="back-link">上へ戻る</a>
+      <a href="../index.html" class="back-link"><ruby>上<rt>うえ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>る</a>
       <p>© 2026 takigawa ebiro</p>
     </footer>
   </div>

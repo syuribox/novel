@@ -30,6 +30,16 @@
       min-height: 100vh;
       padding: 3rem 1rem 4rem;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+      z-index: 10;
+    }
 
     a {
       color: var(--sakura);
@@ -151,12 +161,14 @@
     }
   </style>
 </head>
-<body>
+<body class="ruby-off">
   <div class="container">
+    <button type="button" id="toggle-ruby">ルビON/OFF</button>
+    <script src="ruby_button.js" charset="utf-8"></script>
     <header>
-      <h1>キャラクター紹介</h1>
-      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;">転生幼女の異世界 孤児院ライフ</p>
-      <a href="index.html" class="back-link">戻る</a>
+      <h1>キャラクター<ruby>紹介<rt>しょうかい</rt></ruby></h1>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;"><ruby>転生<rt>てんせい</rt></ruby><ruby>幼女<rt>ようじょ</rt></ruby>の<ruby>異世界<rt>いせかい</rt></ruby> <ruby>孤児院<rt>こじいん</rt></ruby>ライフ</p>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
     </header>
 
     <div class="work-card">
@@ -165,11 +177,11 @@
       </div>
       <div class="work-info">
         <h3>トエ</h3>
-        <p class="nickname">主人公／8歳の少女</p>
-        <p>本名は「トエリーナ・フォン・エストリア」。</p>
-        <p>転生者でいろいろやりすぎて、髪が両親と違うピンク色だったことから、孤児院へ追放された。孤児院では素性を隠しトエと名乗る。</p>
-        <p>一応隠しているが鑑定や魔法が使えるため、それを使いつつ貧乏質素な生活を採取や簡単な狩りや冒険をして改善していく。</p>
-        <p>友達たちと一緒に森を探索し冒険者見習いとなって外の森へと冒険を進める。頑張っちゃう、女の子。</p>
+        <p class="nickname"><ruby>主人公<rt>しゅじんこう</rt></ruby>／8<ruby>歳<rt>さい</rt></ruby>の<ruby>少女<rt>しょうじょ</rt></ruby></p>
+        <p><ruby>本名<rt>ほんみょう</rt></ruby>は「トエリーナ・フォン・エストリア」。</p>
+        <p><ruby>転生<rt>てんせい</rt></ruby><ruby>者<rt>しゃ</rt></ruby>でいろいろやりすぎて、<ruby>髪<rt>かみ</rt></ruby>が<ruby>両親<rt>りょうしん</rt></ruby>と<ruby>違<rt>ちが</rt></ruby>うピンク<ruby>色<rt>いろ</rt></ruby>だったことから、<ruby>孤児院<rt>こじいん</rt></ruby>へ<ruby>追放<rt>ついほう</rt></ruby>された。<ruby>孤児院<rt>こじいん</rt></ruby>では<ruby>素性<rt>すじょう</rt></ruby>を<ruby>隠<rt>かく</rt></ruby>しトエと<ruby>名乗<rt>なの</rt></ruby>る。</p>
+        <p><ruby>一応<rt>いちおう</rt></ruby><ruby>隠<rt>かく</rt></ruby>しているが<ruby>鑑定<rt>かんてい</rt></ruby>や<ruby>魔法<rt>まほう</rt></ruby>が<ruby>使<rt>つか</rt></ruby>えるため、それを<ruby>使<rt>つか</rt></ruby>いつつ<ruby>貧乏<rt>びんぼう</rt></ruby><ruby>質素<rt>しっそ</rt></ruby>な<ruby>生活<rt>せいかつ</rt></ruby>を<ruby>採取<rt>さいしゅ</rt></ruby>や<ruby>簡単<rt>かんたん</rt></ruby>な<ruby>狩<rt>か</rt></ruby>りや<ruby>冒険<rt>ぼうけん</rt></ruby>をして<ruby>改善<rt>かいぜん</rt></ruby>していく。</p>
+        <p><ruby>友達<rt>ともだち</rt></ruby>たちと<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>森<rt>もり</rt></ruby>を<ruby>探索<rt>たんさく</rt></ruby>し<ruby>冒険者<rt>ぼうけんしゃ</rt></ruby><ruby>見習<rt>みなら</rt></ruby>いとなって<ruby>外<rt>そと</rt></ruby>の<ruby>森<rt>もり</rt></ruby>へと<ruby>冒険<rt>ぼうけん</rt></ruby>を<ruby>進<rt>すす</rt></ruby>める。<ruby>頑張<rt>がんば</rt></ruby>っちゃう、<ruby>女<rt>おんな</rt></ruby>の<ruby>子<rt>こ</rt></ruby>。</p>
       </div>
     </div>
 
@@ -179,9 +191,9 @@
       </div>
       <div class="work-info">
         <h3>サエナ</h3>
-        <p class="nickname">隣席の友達／8歳</p>
-        <p>金髪。目は緑。当初は一緒にヤギの世話係をしている。一緒に冒険に出る最初のパートナー。</p>
-        <p>隣のベッド、食事も隣の席で、先輩のメンバーだが、トエと親しくしてくれる。</p>
+        <p class="nickname"><ruby>隣席<rt>りんせき</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>／8<ruby>歳<rt>さい</rt></ruby></p>
+        <p><ruby>金髪<rt>きんぱつ</rt></ruby>。<ruby>目<rt>め</rt></ruby>は<ruby>緑<rt>みどり</rt></ruby>。<ruby>当初<rt>とうしょ</rt></ruby>は<ruby>一緒<rt>いっしょ</rt></ruby>にヤギの<ruby>世話<rt>せわ</rt></ruby><ruby>係<rt>がかり</rt></ruby>をしている。<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>冒険<rt>ぼうけん</rt></ruby>に<ruby>出<rt>で</rt></ruby>る<ruby>最初<rt>さいしょ</rt></ruby>のパートナー。</p>
+        <p><ruby>隣<rt>となり</rt></ruby>のベッド、<ruby>食事<rt>しょくじ</rt></ruby>も<ruby>隣<rt>となり</rt></ruby>の<ruby>席<rt>せき</rt></ruby>で、<ruby>先輩<rt>せんぱい</rt></ruby>のメンバーだが、トエと<ruby>親<rt>した</rt></ruby>しくしてくれる。</p>
       </div>
     </div>
 
@@ -191,9 +203,9 @@
       </div>
       <div class="work-info">
         <h3>シリス</h3>
-        <p class="nickname">女の子／7歳</p>
-        <p>ちょっとクールな感じの女の子。お姉ちゃんがいる。トエより少し小さい。</p>
-        <p>茶色目に茶色髪。美人よりもかわいい感じ。スライムがちょっと苦手。</p>
+        <p class="nickname"><ruby>女<rt>おんな</rt></ruby>の<ruby>子<rt>こ</rt></ruby>／7<ruby>歳<rt>さい</rt></ruby></p>
+        <p>ちょっとクールな<ruby>感<rt>かん</rt></ruby>じの<ruby>女<rt>おんな</rt></ruby>の<ruby>子<rt>こ</rt></ruby>。お<ruby>姉<rt>ねえ</rt></ruby>ちゃんがいる。トエより<ruby>少<rt>すこ</rt></ruby>し<ruby>小<rt>ちい</rt></ruby>さい。</p>
+        <p><ruby>茶色<rt>ちゃいろ</rt></ruby><ruby>目<rt>め</rt></ruby>に<ruby>茶色<rt>ちゃいろ</rt></ruby><ruby>髪<rt>かみ</rt></ruby>。<ruby>美人<rt>びじん</rt></ruby>よりもかわいい<ruby>感<rt>かん</rt></ruby>じ。スライムがちょっと<ruby>苦手<rt>にがて</rt></ruby>。</p>
       </div>
     </div>
 
@@ -203,45 +215,45 @@
       </div>
       <div class="work-info">
         <h3>ミリア</h3>
-        <p class="nickname">猫人族／8歳</p>
-        <p>短い黒髪、黒目、猫尻尾。獣人の風当たりが強いことからおとなしくしていた。</p>
-        <p>トエの教室で勉強するようになって興味を持ってから一緒に行動するように。</p>
+        <p class="nickname"><ruby>猫<rt>ねこ</rt></ruby><ruby>人<rt>ひと</rt></ruby><ruby>族<rt>ぞく</rt></ruby>／8<ruby>歳<rt>さい</rt></ruby></p>
+        <p><ruby>短<rt>みじか</rt></ruby>い<ruby>黒髪<rt>くろかみ</rt></ruby>、<ruby>黒目<rt>くろめ</rt></ruby>、<ruby>猫<rt>ねこ</rt></ruby><ruby>尻尾<rt>しっぽ</rt></ruby>。<ruby>獣人<rt>じゅうじん</rt></ruby>の<ruby>風<rt>かぜ</rt></ruby><ruby>当<rt>あ</rt></ruby>たりが<ruby>強<rt>つよ</rt></ruby>いことからおとなしくしていた。</p>
+        <p>トエの<ruby>教室<rt>きょうしつ</rt></ruby>で<ruby>勉強<rt>べんきょう</rt></ruby>するようになって<ruby>興味<rt>きょうみ</rt></ruby>を<ruby>持<rt>も</rt></ruby>ってから<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>行動<rt>こうどう</rt></ruby>するように。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>シスター・サファエ</h3>
-        <p class="nickname">修道院と孤児院の院長</p>
-        <p>修道院と孤児院の院長先生。みんなをとりまとめている。みんなのお母さん。</p>
-        <p>ミサをしたり説法をしたりと教育熱心で、トエたちに冒険者業をすすめてくる。</p>
+        <p class="nickname"><ruby>修道院<rt>しゅうどういん</rt></ruby>と<ruby>孤児院<rt>こじいん</rt></ruby>の<ruby>院長<rt>いんちょう</rt></ruby></p>
+        <p><ruby>修道院<rt>しゅうどういん</rt></ruby>と<ruby>孤児院<rt>こじいん</rt></ruby>の<ruby>院長<rt>いんちょう</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>。みんなをとりまとめている。みんなのお<ruby>母<rt>かあ</rt></ruby>さん。</p>
+        <p>ミサをしたり<ruby>説法<rt>せっぽう</rt></ruby>をしたりと<ruby>教育<rt>きょういく</rt></ruby><ruby>熱心<rt>ねっしん</rt></ruby>で、トエたちに<ruby>冒険者<rt>ぼうけんしゃ</rt></ruby><ruby>業<rt>ぎょう</rt></ruby>をすすめてくる。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>ライエル</h3>
-        <p class="nickname">商人／おじさん</p>
-        <p>孤児院に出入りしている商人。トエが採ってきた薬草や魔核やキノコを買い取ってくれる。</p>
-        <p>干し肉や、香辛料などを販売してくれる。みんなの人気者。</p>
+        <p class="nickname"><ruby>商人<rt>しょうにん</rt></ruby>／おじさん</p>
+        <p><ruby>孤児院<rt>こじいん</rt></ruby>に<ruby>出入<rt>でい</rt></ruby>りしている<ruby>商人<rt>しょうにん</rt></ruby>。トエが<ruby>採<rt>と</rt></ruby>ってきた<ruby>薬草<rt>やくそう</rt></ruby>や<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>やキノコを<ruby>買<rt>か</rt></ruby>い<ruby>取<rt>と</rt></ruby>ってくれる。</p>
+        <p><ruby>干<rt>ほ</rt></ruby>し<ruby>肉<rt>にく</rt></ruby>や、<ruby>香辛料<rt>こうしんりょう</rt></ruby>などを<ruby>販売<rt>はんばい</rt></ruby>してくれる。みんなの<ruby>人気者<rt>にんきもの</rt></ruby>。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>エミリー・フラクタル</h3>
-        <p class="nickname">冒険者／25歳</p>
-        <p>C級冒険者で、暇なときにトエたちの面倒を見てくれる。</p>
-        <p>剣術が得意だけど、火魔法以外はあまり使えないみたい。</p>
+        <p class="nickname"><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>／25<ruby>歳<rt>さい</rt></ruby></p>
+        <p>C<ruby>級<rt>きゅう</rt></ruby><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>で、<ruby>暇<rt>ひま</rt></ruby>なときにトエたちの<ruby>面倒<rt>めんどう</rt></ruby>を<ruby>見<rt>み</rt></ruby>てくれる。</p>
+        <p><ruby>剣術<rt>けんじゅつ</rt></ruby>が<ruby>得意<rt>とくい</rt></ruby>だけど、<ruby>火<rt>ひ</rt></ruby><ruby>魔法<rt>まほう</rt></ruby><ruby>以外<rt>いがい</rt></ruby>はあまり<ruby>使<rt>つか</rt></ruby>えないみたい。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>ドゴーグ・バラリッド</h3>
-        <p class="nickname">冒険者／40歳</p>
-        <p>冒険者で、なぜかトエたちに興味を持ち面倒を見てくれる。</p>
-        <p>スキンヘッドで明らかに怖そうだけど、根はいい人らしい。けっこう鈍感。</p>
+        <p class="nickname"><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>／40<ruby>歳<rt>さい</rt></ruby></p>
+        <p><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>で、なぜかトエたちに<ruby>興味<rt>きょうみ</rt></ruby>を<ruby>持<rt>も</rt></ruby>ち<ruby>面倒<rt>めんどう</rt></ruby>を<ruby>見<rt>み</rt></ruby>てくれる。</p>
+        <p>スキンヘッドで<ruby>明<rt>あき</rt></ruby>らかに<ruby>怖<rt>こわ</rt></ruby>そうだけど、<ruby>根<rt>ね</rt></ruby>はいい<ruby>人<rt>ひと</rt></ruby>らしい。けっこう<ruby>鈍感<rt>どんかん</rt></ruby>。</p>
       </div>
     </div>
 
@@ -252,7 +264,7 @@
     </div>
 
     <footer>
-      <a href="index.html" class="back-link">戻る</a>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
       <p>© 2026 takigawa ebiro</p>
     </footer>
   </div>
