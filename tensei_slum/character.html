@@ -31,6 +31,16 @@
       min-height: 100vh;
       padding: 3rem 1rem 4rem;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+      z-index: 10;
+    }
 
     a {
       color: var(--sakura);
@@ -152,111 +162,113 @@
     }
   </style>
 </head>
-<body>
+<body class="ruby-off">
   <div class="container">
+    <button type="button" id="toggle-ruby">ルビON/OFF</button>
+    <script src="ruby_button.js" charset="utf-8"></script>
     <header>
-      <h1>キャラクター紹介</h1>
-      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;">異世界転生スラム街からの成り上がり</p>
-      <a href="index.html" class="back-link">戻る</a>
+      <h1>キャラクター<ruby>紹介<rt>しょうかい</rt></ruby></h1>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;"><ruby>異世界<rt>いせかい</rt></ruby><ruby>転生<rt>てんせい</rt></ruby>スラム<ruby>街<rt>がい</rt></ruby>からの<ruby>成<rt>な</rt></ruby>り<ruby>上<rt>あ</rt></ruby>がり</p>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
     </header>
 
     <div class="work-card">
       <div class="work-info">
         <h3>エド</h3>
-        <p class="nickname">主人公／人族の6歳の男の子</p>
-        <p>スラム街「ラニエルダ」に住む、元気な男の子。石に躓いて転んだことで、前世を思い出した転生者。</p>
-        <p>黒髪、黒目の珍しい見た目で、他のスラムの子から敬遠されていた。</p>
-        <p>元の世界の知識に加え、覚醒した「鑑定」と「アイテムボックス」で、貧しい生活から這い上がっていく。</p>
-        <p>料理、釣り、小物づくりなど生産活動にいそしんで、生活改善を目指す。</p>
-        <p>母親「トマリア」はエドとミーニャ一家を置いて行方不明に。父親は物心ついた時から不明。</p>
+        <p class="nickname"><ruby>主人公<rt>しゅじんこう</rt></ruby>／<ruby>人<rt>ひと</rt></ruby><ruby>族<rt>ぞく</rt></ruby>の6<ruby>歳<rt>さい</rt></ruby>の<ruby>男<rt>おとこ</rt></ruby>の<ruby>子<rt>こ</rt></ruby></p>
+        <p>スラム<ruby>街<rt>がい</rt></ruby>「ラニエルダ」に<ruby>住<rt>す</rt></ruby>む、<ruby>元気<rt>げんき</rt></ruby>な<ruby>男<rt>おとこ</rt></ruby>の<ruby>子<rt>こ</rt></ruby>。<ruby>石<rt>いし</rt></ruby>に<ruby>躓<rt>つまず</rt></ruby>いて<ruby>転<rt>ころ</rt></ruby>んだことで、<ruby>前世<rt>ぜんせ</rt></ruby>を<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>だ</rt></ruby>した<ruby>転生<rt>てんせい</rt></ruby><ruby>者<rt>しゃ</rt></ruby>。</p>
+        <p><ruby>黒髪<rt>くろかみ</rt></ruby>、<ruby>黒目<rt>くろめ</rt></ruby>の<ruby>珍<rt>めずら</rt></ruby>しい<ruby>見<rt>み</rt></ruby>た<ruby>目<rt>め</rt></ruby>で、<ruby>他<rt>ほか</rt></ruby>のスラムの<ruby>子<rt>こ</rt></ruby>から<ruby>敬遠<rt>けいえん</rt></ruby>されていた。</p>
+        <p><ruby>元<rt>もと</rt></ruby>の<ruby>世界<rt>せかい</rt></ruby>の<ruby>知識<rt>ちしき</rt></ruby>に<ruby>加<rt>くわ</rt></ruby>え、<ruby>覚醒<rt>かくせい</rt></ruby>した「<ruby>鑑定<rt>かんてい</rt></ruby>」と「アイテムボックス」で、<ruby>貧<rt>まず</rt></ruby>しい<ruby>生活<rt>せいかつ</rt></ruby>から<ruby>這<rt>は</rt></ruby>い<ruby>上<rt>あ</rt></ruby>がっていく。</p>
+        <p><ruby>料理<rt>りょうり</rt></ruby>、<ruby>釣<rt>つ</rt></ruby>り、<ruby>小物<rt>こもの</rt></ruby>づくりなど<ruby>生産<rt>せいさん</rt></ruby><ruby>活動<rt>かつどう</rt></ruby>にいそしんで、<ruby>生活<rt>せいかつ</rt></ruby><ruby>改善<rt>かいぜん</rt></ruby>を<ruby>目指<rt>めざ</rt></ruby>す。</p>
+        <p><ruby>母親<rt>ははおや</rt></ruby>「トマリア」はエドとミーニャ<ruby>一家<rt>いっか</rt></ruby>を<ruby>置<rt>お</rt></ruby>いて<ruby>行方不明<rt>ゆくえふめい</rt></ruby>に。<ruby>父親<rt>ちちおや</rt></ruby>は<ruby>物心<rt>ぶっしん</rt></ruby>ついた<ruby>時<rt>とき</rt></ruby>から<ruby>不明<rt>ふめい</rt></ruby>。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>ミーニャ・サルバキア</h3>
-        <p class="nickname">居候の娘／エルフの6歳</p>
-        <p>エドの家に転がり込んできた一家の娘。エルフの血を引いていて、なにやら訳アリらしい。</p>
-        <p>明るい性格でエドが好きなのを隠さない陽気さのムードメーカー。中盤以降、回復魔法が使えるように。ついでに本人は無自覚なものの祝福も使える。</p>
+        <p class="nickname"><ruby>居候<rt>いそうろう</rt></ruby>の<ruby>娘<rt>むすめ</rt></ruby>／エルフの6<ruby>歳<rt>さい</rt></ruby></p>
+        <p>エドの<ruby>家<rt>いえ</rt></ruby>に<ruby>転<rt>ころ</rt></ruby>がり<ruby>込<rt>こ</rt></ruby>んできた<ruby>一家<rt>いっか</rt></ruby>の<ruby>娘<rt>むすめ</rt></ruby>。エルフの<ruby>血<rt>ち</rt></ruby>を<ruby>引<rt>ひ</rt></ruby>いていて、なにやら<ruby>訳<rt>わけ</rt></ruby>アリらしい。</p>
+        <p><ruby>明<rt>あか</rt></ruby>るい<ruby>性格<rt>せいかく</rt></ruby>でエドが<ruby>好<rt>す</rt></ruby>きなのを<ruby>隠<rt>かく</rt></ruby>さない<ruby>陽気<rt>ようき</rt></ruby>さのムードメーカー。<ruby>中盤<rt>ちゅうばん</rt></ruby><ruby>以降<rt>いこう</rt></ruby>、<ruby>回復<rt>かいふく</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>が<ruby>使<rt>つか</rt></ruby>えるように。ついでに<ruby>本人<rt>ほんにん</rt></ruby>は<ruby>無自覚<rt>むじかく</rt></ruby>なものの<ruby>祝福<rt>しゅくふく</rt></ruby>も<ruby>使<rt>つか</rt></ruby>える。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>ラニア・エスフィス</h3>
-        <p class="nickname">幼馴染みの娘／マギ族の6歳</p>
-        <p>エドの家の近所に住んでいる、幼馴染み。マギ族は魔法が得意らしく、ゴブリンなんてイチコロと強気。</p>
-        <p>普段は冷静沈着だけど、感極まると泣いてしまうところも。</p>
+        <p class="nickname"><ruby>幼馴染<rt>おさななじ</rt></ruby>みの<ruby>娘<rt>むすめ</rt></ruby>／マギ<ruby>族<rt>ぞく</rt></ruby>の6<ruby>歳<rt>さい</rt></ruby></p>
+        <p>エドの<ruby>家<rt>いえ</rt></ruby>の<ruby>近所<rt>きんじょ</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでいる、<ruby>幼馴染<rt>おさななじ</rt></ruby>み。マギ<ruby>族<rt>ぞく</rt></ruby>は<ruby>魔法<rt>まほう</rt></ruby>が<ruby>得意<rt>とくい</rt></ruby>らしく、ゴブリンなんてイチコロと<ruby>強気<rt>つよき</rt></ruby>。</p>
+        <p><ruby>普段<rt>ふだん</rt></ruby>は<ruby>冷静<rt>れいせい</rt></ruby><ruby>沈着<rt>ちんちゃく</rt></ruby>だけど、<ruby>感<rt>かん</rt></ruby><ruby>極<rt>きわ</rt></ruby>まると<ruby>泣<rt>な</rt></ruby>いてしまうところも。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>ギード・サルバキア</h3>
-        <p class="nickname">ミーニャの父親</p>
-        <p>事情がおありのミーニャ父。エルフの貴族らしく、スラム街に潜伏している。</p>
-        <p>警戒から日雇い労働していたが、まったく性格に合わず、エドのススメでスプーン作りの内職に転向する。</p>
+        <p class="nickname">ミーニャの<ruby>父親<rt>ちちおや</rt></ruby></p>
+        <p><ruby>事情<rt>じじょう</rt></ruby>がおありのミーニャ<ruby>父<rt>ちち</rt></ruby>。エルフの<ruby>貴族<rt>きぞく</rt></ruby>らしく、スラム<ruby>街<rt>がい</rt></ruby>に<ruby>潜伏<rt>せんぷく</rt></ruby>している。</p>
+        <p><ruby>警戒<rt>けいかい</rt></ruby>から<ruby>日雇<rt>ひやと</rt></ruby>い<ruby>労働<rt>ろうどう</rt></ruby>していたが、まったく<ruby>性<rt>せい</rt></ruby><ruby>格<rt>かく</rt></ruby>に<ruby>合<rt>あ</rt></ruby>わず、エドのススメでスプーン<ruby>作<rt>づく</rt></ruby>りの<ruby>内職<rt>ないしょく</rt></ruby>に<ruby>転向<rt>てんこう</rt></ruby>する。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>メルン・サルバキア</h3>
-        <p class="nickname">ミーニャの母親</p>
-        <p>昔は出るところに出ればお姫様だったらしい。</p>
-        <p>スラム街のエドの家で診療所をしており、回復魔法や薬学に詳しい。そのかわり料理は微妙。</p>
+        <p class="nickname">ミーニャの<ruby>母親<rt>ははおや</rt></ruby></p>
+        <p><ruby>昔<rt>むかし</rt></ruby>は<ruby>出<rt>で</rt></ruby>るところに<ruby>出<rt>で</rt></ruby>ればお<ruby>姫様<rt>ひめさま</rt></ruby>だったらしい。</p>
+        <p>スラム<ruby>街<rt>がい</rt></ruby>のエドの<ruby>家<rt>いえ</rt></ruby>で<ruby>診療所<rt>しんりょうしょ</rt></ruby>をしており、<ruby>回復<rt>かいふく</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>や<ruby>薬学<rt>やくがく</rt></ruby>に<ruby>詳<rt>くわ</rt></ruby>しい。そのかわり<ruby>料理<rt>りょうり</rt></ruby>は<ruby>微妙<rt>びみょう</rt></ruby>。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>ドリドン</h3>
-        <p class="nickname">雑貨店店主</p>
-        <p>スラム街の隅にある雑貨店。ラニエルダのスポンサーでもある。</p>
-        <p>エドと商売の相手をしたり、エドたちを支援してくれる、人格者。</p>
+        <p class="nickname"><ruby>雑貨店<rt>ざっかてん</rt></ruby><ruby>店主<rt>てんしゅ</rt></ruby></p>
+        <p>スラム<ruby>街<rt>がい</rt></ruby>の<ruby>隅<rt>すみ</rt></ruby>にある<ruby>雑貨店<rt>ざっかてん</rt></ruby>。ラニエルダのスポンサーでもある。</p>
+        <p>エドと<ruby>商売<rt>しょうばい</rt></ruby>の<ruby>相手<rt>あいて</rt></ruby>をしたり、エドたちを<ruby>支援<rt>しえん</rt></ruby>してくれる、<ruby>人格者<rt>じんかくしゃ</rt></ruby>。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>ハリス</h3>
-        <p class="nickname">近所のガキ大将</p>
-        <p>スラム街の子供たちのまとめ役。頬に傷がある。</p>
-        <p>エドとはやや不仲だったが、和解した。エドの仕事の一部ハーブティーをもらい受け、作業に当たる。</p>
+        <p class="nickname"><ruby>近所<rt>きんじょ</rt></ruby>のガキ<ruby>大将<rt>だいしょう</rt></ruby></p>
+        <p>スラム<ruby>街<rt>がい</rt></ruby>の<ruby>子供<rt>こども</rt></ruby>たちのまとめ<ruby>役<rt>やく</rt></ruby>。<ruby>頬<rt>ほお</rt></ruby>に<ruby>傷<rt>きず</rt></ruby>がある。</p>
+        <p>エドとはやや<ruby>不仲<rt>ふなか</rt></ruby>だったが、<ruby>和解<rt>わかい</rt></ruby>した。エドの<ruby>仕事<rt>しごと</rt></ruby>の<ruby>一部<rt>いちぶ</rt></ruby>ハーブティーをもらい<ruby>受<rt>う</rt></ruby>け、<ruby>作業<rt>さぎょう</rt></ruby>に<ruby>当<rt>あ</rt></ruby>たる。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>ビーエスト</h3>
-        <p class="nickname">トライエ騎士団の兵士</p>
-        <p>エドたちに同行したり、剣を教えてくれたりする兵士。</p>
-        <p>エクスプローラー流剣術の使い手で、そこそこ強いらしい。</p>
+        <p class="nickname">トライエ<ruby>騎士<rt>きし</rt></ruby><ruby>団<rt>だん</rt></ruby>の<ruby>兵士<rt>へいし</rt></ruby></p>
+        <p>エドたちに<ruby>同行<rt>どうこう</rt></ruby>したり、<ruby>剣<rt>けん</rt></ruby>を<ruby>教<rt>おし</rt></ruby>えてくれたりする<ruby>兵士<rt>へいし</rt></ruby>。</p>
+        <p>エクスプローラー<ruby>流<rt>りゅう</rt></ruby><ruby>剣術<rt>けんじゅつ</rt></ruby>の<ruby>使<rt>つか</rt></ruby>い<ruby>手<rt>て</rt></ruby>で、そこそこ<ruby>強<rt>つよ</rt></ruby>いらしい。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>エレノア・ゼッケンバウアー</h3>
-        <p class="nickname">トライエ領主の次女6歳</p>
-        <p>コミカライズ版でも活躍中。エドに興味を持ち、接近してくる。</p>
-        <p>案外活動的で、町に出てきてはエドの料理を食べたり、なにやら指揮をとったり強い女の子。</p>
+        <p class="nickname">トライエ<ruby>領主<rt>りょうしゅ</rt></ruby>の<ruby>次女<rt>じじょ</rt></ruby>6<ruby>歳<rt>さい</rt></ruby></p>
+        <p>コミカライズ<ruby>版<rt>ばん</rt></ruby>でも<ruby>活躍<rt>かつやく</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>。エドに<ruby>興味<rt>きょうみ</rt></ruby>を<ruby>持<rt>も</rt></ruby>ち、<ruby>接近<rt>せっきん</rt></ruby>してくる。</p>
+        <p><ruby>案外<rt>あんがい</rt></ruby><ruby>活動的<rt>かつどうてき</rt></ruby>で、<ruby>町<rt>まち</rt></ruby>に<ruby>出<rt>で</rt></ruby>てきてはエドの<ruby>料理<rt>りょうり</rt></ruby>を<ruby>食<rt>た</rt></ruby>べたり、なにやら<ruby>指揮<rt>しき</rt></ruby>をとったり<ruby>強<rt>つよ</rt></ruby>い<ruby>女<rt>おんな</rt></ruby>の<ruby>子<rt>こ</rt></ruby>。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
         <h3>シエル・モールライト</h3>
-        <p class="nickname">猫耳族の6歳の少女</p>
-        <p>2巻から登場、コミカライズ版ではゲスト出演。</p>
-        <p>近くの村で売られそうだったところを逃げてきた少女。</p>
-        <p>猫耳と猫尻尾がかわいらしい。トマト農家の実家には思うところもあるようで、トマトが好き。</p>
-        <p>エドに家の前で拾われ、食事を貰ったことをきっかけに、居ついてしまった。</p>
+        <p class="nickname"><ruby>猫耳<rt>ねこみみ</rt></ruby><ruby>族<rt>ぞく</rt></ruby>の6<ruby>歳<rt>さい</rt></ruby>の<ruby>少女<rt>しょうじょ</rt></ruby></p>
+        <p>2<ruby>巻<rt>かん</rt></ruby>から<ruby>登場<rt>とうじょう</rt></ruby>、コミカライズ<ruby>版<rt>ばん</rt></ruby>ではゲスト<ruby>出演<rt>しゅつえん</rt></ruby>。</p>
+        <p><ruby>近<rt>ちか</rt></ruby>くの<ruby>村<rt>むら</rt></ruby>で<ruby>売<rt>う</rt></ruby>られそうだったところを<ruby>逃<rt>に</rt></ruby>げてきた<ruby>少女<rt>しょうじょ</rt></ruby>。</p>
+        <p><ruby>猫耳<rt>ねこみみ</rt></ruby>と<ruby>猫<rt>ねこ</rt></ruby><ruby>尻尾<rt>しっぽ</rt></ruby>がかわいらしい。トマト<ruby>農家<rt>のうか</rt></ruby>の<ruby>実家<rt>じっか</rt></ruby>には<ruby>思<rt>おも</rt></ruby>うところもあるようで、トマトが<ruby>好<rt>す</rt></ruby>き。</p>
+        <p>エドに<ruby>家<rt>いえ</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>で<ruby>拾<rt>ひろ</rt></ruby>われ、<ruby>食事<rt>しょくじ</rt></ruby>を<ruby>貰<rt>もら</rt></ruby>ったことをきっかけに、<ruby>居<rt>い</rt></ruby>ついてしまった。</p>
       </div>
     </div>
 
     <footer>
-      <a href="index.html" class="back-link">戻る</a>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
       <p>© 2026 takigawa ebiro</p>
     </footer>
   </div>
