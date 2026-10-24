@@ -31,6 +31,16 @@
       min-height: 100vh;
       padding: 3rem 1rem 4rem;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+      z-index: 10;
+    }
 
     a {
       color: var(--sakura);
@@ -152,12 +162,13 @@
     }
   </style>
 </head>
-<body>
+<body class="ruby-off">
   <div class="container">
+    <button type="button" id="toggle-ruby">ルビON/OFF</button>
     <header>
       <h1>ギャラリー</h1>
-      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;">留学生は同棲JKエルフちゃん</p>
-      <a href="index.html" class="back-link">戻る</a>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;"><ruby>留学生<rt>りゅうがくせい</rt></ruby>は<ruby>同棲<rt>どうせい</rt></ruby>JKエルフちゃん</p>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
     </header>
 
     <div class="work-card">
@@ -165,7 +176,7 @@
         <img src="images/jk_elf_01.jpg">
       </div>
       <div class="work-info">
-        <p>ララちゃんセーラー服</p>
+        <p>ララちゃんセーラー<ruby>服<rt>ふく</rt></ruby></p>
       </div>
     </div>
 
@@ -174,7 +185,7 @@
         <img src="images/jk_elf_03.jpg">
       </div>
       <div class="work-info">
-        <p>ケート制服</p>
+        <p>ケート<ruby>制服<rt>せいふく</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -182,7 +193,7 @@
         <img src="images/jk_elf_03_1.jpg">
       </div>
       <div class="work-info">
-        <p>アキラ制服</p>
+        <p>アキラ<ruby>制服<rt>せいふく</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -190,7 +201,7 @@
         <img src="images/jk_elf_04.jpg">
       </div>
       <div class="work-info">
-        <p>ララちゃん私服</p>
+        <p>ララちゃん<ruby>私服<rt>しふく</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -198,7 +209,7 @@
         <img src="images/jk_elf_05.jpg">
       </div>
       <div class="work-info">
-        <p>ララちゃん体操服</p>
+        <p>ララちゃん<ruby>体操服<rt>たいそうふく</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -206,7 +217,7 @@
         <img src="images/jk_elf_06.jpg">
       </div>
       <div class="work-info">
-        <p>ララちゃんスクール水着</p>
+        <p>ララちゃんスクール<ruby>水着<rt>みずぎ</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -214,7 +225,7 @@
         <img src="images/jk_elf_07_new.jpg">
       </div>
       <div class="work-info">
-        <p>ハルカ、セーラー服</p>
+        <p>ハルカ、セーラー<ruby>服<rt>ふく</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -222,7 +233,7 @@
         <img src="images/jk_elf_07_1.jpg">
       </div>
       <div class="work-info">
-        <p>ハルカ私服</p>
+        <p>ハルカ<ruby>私服<rt>しふく</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -230,7 +241,7 @@
         <img src="images/jk_elf_07_2.jpg">
       </div>
       <div class="work-info">
-        <p>ララちゃん遠足</p>
+        <p>ララちゃん<ruby>遠足<rt>えんそく</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -238,7 +249,7 @@
         <img src="images/jk_elf_07_3.jpg">
       </div>
       <div class="work-info">
-        <p>ハルカ遠足</p>
+        <p>ハルカ<ruby>遠足<rt>えんそく</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -246,7 +257,7 @@
         <img src="images/jk_elf_08.jpg">
       </div>
       <div class="work-info">
-        <p>ララちゃん水着</p>
+        <p>ララちゃん<ruby>水着<rt>みずぎ</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -254,7 +265,7 @@
         <img src="images/jk_elf_09_new.jpg">
       </div>
       <div class="work-info">
-        <p>ハルカ水着</p>
+        <p>ハルカ<ruby>水着<rt>みずぎ</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -262,7 +273,7 @@
         <img src="images/jk_elf_10.jpg">
       </div>
       <div class="work-info">
-        <p>エリカ入院着</p>
+        <p>エリカ<ruby>入院<rt>にゅういん</rt></ruby><ruby>着<rt>ぎ</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -270,7 +281,7 @@
         <img src="images/jk_elf_11.jpg">
       </div>
       <div class="work-info">
-        <p>エリカ、セーラー服</p>
+        <p>エリカ、セーラー<ruby>服<rt>ふく</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -278,7 +289,7 @@
         <img src="images/jk_elf_11_1.jpg">
       </div>
       <div class="work-info">
-        <p>エリカ私服</p>
+        <p>エリカ<ruby>私服<rt>しふく</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -294,7 +305,7 @@
         <img src="images/jkelf_ex_03.jpg">
       </div>
       <div class="work-info">
-        <p>エリカ動物園</p>
+        <p>エリカ<ruby>動物<rt>どうぶつ</rt></ruby><ruby>園<rt>えん</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -302,7 +313,7 @@
         <img src="images/jkelf_ex_04.jpg">
       </div>
       <div class="work-info">
-        <p>ハルカ、ハロウィン仮装</p>
+        <p>ハルカ、ハロウィン<ruby>仮装<rt>かそう</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -310,7 +321,7 @@
         <img src="images/jkelf_ex_05.jpg">
       </div>
       <div class="work-info">
-        <p>ララちゃん七夕</p>
+        <p>ララちゃん<ruby>七夕<rt>たなばた</rt></ruby></p>
       </div>
     </div>
     <div class="work-card">
@@ -362,9 +373,10 @@
       </div>
     </div>
     <footer>
-      <a href="index.html" class="back-link">戻る</a>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
       <p>© 2026 takigawa ebiro</p>
     </footer>
   </div>
+  <script src="ruby_button.js" charset="utf-8"></script>
 </body>
 </html>

@@ -31,6 +31,16 @@
       min-height: 100vh;
       padding: 3rem 1rem 4rem;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+      z-index: 10;
+    }
 
     a {
       color: var(--sakura);
@@ -160,84 +170,86 @@
     }
   </style>
 </head>
-<body>
+<body class="ruby-off">
   <div class="container">
+    <button type="button" id="toggle-ruby">ルビON/OFF</button>
     <header>
-      <h1>世界観＆用語集</h1>
-      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;">留学生は同棲JKエルフちゃん</p>
-      <a href="index.html" class="back-link">戻る</a>
+      <h1><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></h1>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;"><ruby>留学生<rt>りゅうがくせい</rt></ruby>は<ruby>同棲<rt>どうせい</rt></ruby>JKエルフちゃん</p>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
     </header>
 
-    <h2>世界観</h2>
+    <h2><ruby>世界観<rt>せかいかん</rt></ruby></h2>
     <div class="work-card">
       <div class="cover-wrap">
         <img src="images/school.jpg" alt="県立埼台東高校">
       </div>
       <div class="work-info">
-        <p>現代日本。世界には人知れず、異世界人や宇宙人がやってきており、主人公ケートの父親はそんな来訪者たちに関する仕事を公務員として行っていた。</p>
-        <p>逆転移してきたエルフの異世界人ララちゃんを保護した父親は、ケートの家に住まわせることを決め、同棲生活が始まる。</p>
-        <p>世界には魔力が存在しているらしいが、一般人には知られていない。妹エリカの不明だった病気もこの魔力が関係しているようで、ララちゃんが解決に導く。</p>
-        <p>ケートとララちゃん、そしてエリカの明るい同棲生活がはじまり、一年の行事を通して、親交を深めていく。</p>
+        <p><ruby>現代<rt>げんだい</rt></ruby><ruby>日本<rt>にほん</rt></ruby>。<ruby>世界<rt>せかい</rt></ruby>には<ruby>人知<rt>ひとし</rt></ruby>れず、<ruby>異世界<rt>いせかい</rt></ruby><ruby>人<rt>じん</rt></ruby>や<ruby>宇宙人<rt>うちゅうじん</rt></ruby>がやってきており、<ruby>主人公<rt>しゅじんこう</rt></ruby>ケートの<ruby>父親<rt>ちちおや</rt></ruby>はそんな<ruby>来訪者<rt>らいほうしゃ</rt></ruby>たちに<ruby>関<rt>かん</rt></ruby>する<ruby>仕事<rt>しごと</rt></ruby>を<ruby>公務<rt>こうむ</rt></ruby><ruby>員<rt>いん</rt></ruby>として<ruby>行<rt>い</rt></ruby>っていた。</p>
+        <p><ruby>逆転<rt>ぎゃくてん</rt></ruby><ruby>移<rt>うつ</rt></ruby>してきたエルフの<ruby>異世界<rt>いせかい</rt></ruby><ruby>人<rt>じん</rt></ruby>ララちゃんを<ruby>保護<rt>ほご</rt></ruby>した<ruby>父親<rt>ちちおや</rt></ruby>は、ケートの<ruby>家<rt>いえ</rt></ruby>に<ruby>住<rt>す</rt></ruby>まわせることを<ruby>決<rt>き</rt></ruby>め、<ruby>同棲<rt>どうせい</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby>が<ruby>始<rt>はじ</rt></ruby>まる。</p>
+        <p><ruby>世界<rt>せかい</rt></ruby>には<ruby>魔力<rt>まりょく</rt></ruby>が<ruby>存在<rt>そんざい</rt></ruby>しているらしいが、<ruby>一般人<rt>いっぱんじん</rt></ruby>には<ruby>知<rt>し</rt></ruby>られていない。<ruby>妹<rt>いもうと</rt></ruby>エリカの<ruby>不明<rt>ふめい</rt></ruby>だった<ruby>病気<rt>びょうき</rt></ruby>もこの<ruby>魔力<rt>まりょく</rt></ruby>が<ruby>関係<rt>かんけい</rt></ruby>しているようで、ララちゃんが<ruby>解決<rt>かいけつ</rt></ruby>に<ruby>導<rt>みちび</rt></ruby>く。</p>
+        <p>ケートとララちゃん、そしてエリカの<ruby>明<rt>あか</rt></ruby>るい<ruby>同棲<rt>どうせい</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby>がはじまり、<ruby>一年<rt>いちねん</rt></ruby>の<ruby>行事<rt>ぎょうじ</rt></ruby>を<ruby>通<rt>とお</rt></ruby>して、<ruby>親交<rt>しんこう</rt></ruby>を<ruby>深<rt>ふか</rt></ruby>めていく。</p>
       </div>
     </div>
-    <h2>用語集</h2>
+    <h2><ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></h2>
     <div class="work-card">
       <div class="work-info">
-        <h3>県立埼台東高校</h3>
-        <p>ケートたちの通う県立高校。普通科。</p>
-        <p>可もなく不可もなく。いたって普通、中堅の高等学校。学食がある。</p>
+        <h3><ruby>県立<rt>けんりつ</rt></ruby><ruby>埼台<rt>さきだい</rt></ruby><ruby>東<rt>ひがし</rt></ruby><ruby>高校<rt>こうこう</rt></ruby></h3>
+        <p>ケートたちの<ruby>通<rt>かよ</rt></ruby>う<ruby>県立<rt>けんりつ</rt></ruby><ruby>高校<rt>こうこう</rt></ruby>。<ruby>普通<rt>ふつう</rt></ruby><ruby>科<rt>か</rt></ruby>。</p>
+        <p><ruby>可<rt>か</rt></ruby>もなく<ruby>不可<rt>ふか</rt></ruby>もなく。いたって<ruby>普通<rt>ふつう</rt></ruby>、<ruby>中堅<rt>ちゅうけん</rt></ruby>の<ruby>高等<rt>こうとう</rt></ruby><ruby>学校<rt>がっこう</rt></ruby>。<ruby>学食<rt>がくしょく</rt></ruby>がある。</p>
         <h3>アルクメニスタン</h3>
-        <p>ララちゃんの出身国という架空の東欧国家。もちろん誰も信じていない。</p>
-        <h3>埼台市</h3>
-        <p>S県にある架空の市。</p>
-        <p>関東地方にあり、平野部の住宅街を中心に、小高い山々に川が流れている。</p>
+        <p>ララちゃんの<ruby>出身<rt>しゅっしん</rt></ruby><ruby>国<rt>こく</rt></ruby>という<ruby>架空<rt>かくう</rt></ruby>の<ruby>東欧<rt>とうおう</rt></ruby><ruby>国家<rt>こっか</rt></ruby>。もちろん<ruby>誰<rt>だれ</rt></ruby>も<ruby>信<rt>しん</rt></ruby>じていない。</p>
+        <h3><ruby>埼台<rt>さきだい</rt></ruby><ruby>市<rt>し</rt></ruby></h3>
+        <p>S<ruby>県<rt>けん</rt></ruby>にある<ruby>架空<rt>かくう</rt></ruby>の<ruby>市<rt>し</rt></ruby>。</p>
+        <p><ruby>関東<rt>かんとう</rt></ruby><ruby>地方<rt>ちほう</rt></ruby>にあり、<ruby>平野<rt>へいや</rt></ruby><ruby>部<rt>ぶ</rt></ruby>の<ruby>住宅街<rt>じゅうたくがい</rt></ruby>を<ruby>中心<rt>ちゅうしん</rt></ruby>に、<ruby>小高<rt>こだか</rt></ruby>い<ruby>山々<rt>やまやま</rt></ruby>に<ruby>川<rt>かわ</rt></ruby>が<ruby>流<rt>なが</rt></ruby>れている。</p>
       </div>
       <div class="cover-wrap">
-        <img class="item-inline" src="images/sharp.jpg" alt="シャープペンと消しゴム">
+        <img class="item-inline" src="images/sharp.jpg" alt="シャープペンと<ruby>消<rt>け</rt></ruby>し<ruby>ゴム<rt>ごむ</rt></ruby>">
       </div>
       <div class="work-info">
-        <h3>埼台東総合病院</h3>
-        <p>市内にある埼台市の市立病院。エリカが入院している。</p>
-        <h3>市内循環バス</h3>
-        <p>市内を走る循環バス。以前は普通の路線で遠くまで走っていたが、近年変更され市内循環型に置き換えられた。</p>
-        <h3>東川駅</h3>
-        <p>埼台市東区にある駅。ケートたちの最寄り駅。</p>
-        <p>人形を売ってる雑貨店などがある。</p>
-        <h3>埼台駅/駅前商店街</h3>
-        <p>埼台市にある駅。東川駅から電車で一駅。駅前商店街がある市の中心市街地。</p>
-        <p>時期になると七夕の飾り付けがされて、キャンペーンが行われる。</p>
-        <p>リングやアクセサリーを売ってる装飾店などがある。</p>
-        <h3>市民プール</h3>
-        <p>埼台市にある市民プール。だいぶ老朽化しているが、去年には流れるプールが完成した。</p>
-        <p>建て直した新しい更衣室、ポテト売り場やウォータースライダーなどがある。入場料が安い。</p>
+        <h3><ruby>埼台<rt>さきだい</rt></ruby><ruby>東<rt>ひがし</rt></ruby><ruby>総合<rt>そうごう</rt></ruby><ruby>病院<rt>びょういん</rt></ruby></h3>
+        <p><ruby>市内<rt>しない</rt></ruby>にある<ruby>埼<rt>さき</rt></ruby><ruby>台<rt>だい</rt></ruby><ruby>市<rt>し</rt></ruby>の<ruby>市立<rt>しりつ</rt></ruby><ruby>病院<rt>びょういん</rt></ruby>。エリカが<ruby>入院<rt>にゅういん</rt></ruby>している。</p>
+        <h3><ruby>市内<rt>しない</rt></ruby><ruby>循環<rt>じゅんかん</rt></ruby>バス</h3>
+        <p><ruby>市内<rt>しない</rt></ruby>を<ruby>走<rt>はし</rt></ruby>る<ruby>循環<rt>じゅんかん</rt></ruby>バス。<ruby>以前<rt>いぜん</rt></ruby>は<ruby>普通<rt>ふつう</rt></ruby>の<ruby>路線<rt>ろせん</rt></ruby>で<ruby>遠<rt>とお</rt></ruby>くまで<ruby>走<rt>はし</rt></ruby>っていたが、<ruby>近年<rt>きんねん</rt></ruby><ruby>変更<rt>へんこう</rt></ruby>され<ruby>市内<rt>しない</rt></ruby><ruby>循環<rt>じゅんかん</rt></ruby><ruby>型<rt>がた</rt></ruby>に<ruby>置<rt>お</rt></ruby>き<ruby>換<rt>か</rt></ruby>えられた。</p>
+        <h3><ruby>東川<rt>ひがしかわ</rt></ruby><ruby>駅<rt>えき</rt></ruby></h3>
+        <p><ruby>埼<rt>さき</rt></ruby><ruby>台<rt>だい</rt></ruby><ruby>市<rt>し</rt></ruby><ruby>東区<rt>ひがしく</rt></ruby>にある<ruby>駅<rt>えき</rt></ruby>。ケートたちの<ruby>最寄<rt>もよ</rt></ruby>り<ruby>駅<rt>えき</rt></ruby>。</p>
+        <p><ruby>人形<rt>にんぎょう</rt></ruby>を<ruby>売<rt>う</rt></ruby>ってる<ruby>雑貨店<rt>ざっかてん</rt></ruby>などがある。</p>
+        <h3><ruby>埼<rt>さき</rt></ruby><ruby>台<rt>だい</rt></ruby><ruby>駅<rt>えき</rt></ruby>/<ruby>駅前<rt>えきまえ</rt></ruby><ruby>商店街<rt>しょうてんがい</rt></ruby></h3>
+        <p><ruby>埼<rt>さき</rt></ruby><ruby>台<rt>だい</rt></ruby><ruby>市<rt>し</rt></ruby>にある<ruby>駅<rt>えき</rt></ruby>。<ruby>東川<rt>ひがしかわ</rt></ruby><ruby>駅<rt>えき</rt></ruby>から<ruby>電車<rt>でんしゃ</rt></ruby>で<ruby>一駅<rt>ひとえき</rt></ruby>。<ruby>駅前<rt>えきまえ</rt></ruby><ruby>商店街<rt>しょうてんがい</rt></ruby>がある<ruby>市<rt>し</rt></ruby>の<ruby>中心<rt>ちゅうしん</rt></ruby><ruby>市街地<rt>しがいち</rt></ruby>。</p>
+        <p><ruby>時期<rt>じき</rt></ruby>になると<ruby>七夕<rt>たなばた</rt></ruby>の<ruby>飾<rt>かざ</rt></ruby>り<ruby>付<rt>つ</rt></ruby>けがされて、キャンペーンが<ruby>行<rt>おこな</rt></ruby>われる。</p>
+        <p>リングやアクセサリーを<ruby>売<rt>う</rt></ruby>ってる<ruby>装飾<rt>そうしょく</rt></ruby><ruby>店<rt>てん</rt></ruby>などがある。</p>
+        <h3><ruby>市民<rt>しみん</rt></ruby>プール</h3>
+        <p><ruby>埼<rt>さき</rt></ruby><ruby>台<rt>だい</rt></ruby><ruby>市<rt>し</rt></ruby>にある<ruby>市民<rt>しみん</rt></ruby>プール。だいぶ<ruby>老朽化<rt>ろうきゅうか</rt></ruby>しているが、<ruby>去年<rt>きょねん</rt></ruby>には<ruby>流<rt>なが</rt></ruby>れるプールが<ruby>完成<rt>かんせい</rt></ruby>した。</p>
+        <p><ruby>建<rt>た</rt></ruby>て<ruby>直<rt>なお</rt></ruby>した<ruby>新<rt>あたら</rt></ruby>しい<ruby>更衣<rt>こうい</rt></ruby><ruby>室<rt>しつ</rt></ruby>、ポテト<ruby>売<rt>う</rt></ruby>り<ruby>場<rt>ば</rt></ruby>やウォータースライダーなどがある。<ruby>入場<rt>にゅうじょう</rt></ruby><ruby>料<rt>りょう</rt></ruby>が<ruby>安<rt>やす</rt></ruby>い。</p>
       </div>
       <div class="cover-wrap">
-        <img class="item-middle" src="images/park.jpg" alt="公園">
+        <img class="item-middle" src="images/park.jpg" alt="<ruby>公園<rt>こうえん</rt></ruby>">
       </div>
       <div class="work-info">
-        <h3>西山公園</h3>
-        <p>コンビニの隣の公園。小さな広場があるだけのシンプルな公園。</p>
-        <h3>中吉田公園</h3>
-        <p>通称「なかよし公園」。小さいころハルカと遊んだ思い出の場所。</p>
-        <p>ケートの家と学校の間にある、どこにでもある公園。</p>
-        <p>よく小学生が遊んでいて、砂場やトイレ、遊具、災害用倉庫なんかがある。</p>
-        <p>桜の木が植えられており、春にはお花見を楽しめる。</p>
-        <h3>東川</h3>
-        <p>中吉田公園から続く川。川沿いに桜並木がある。</p>
+        <h3><ruby>西山<rt>にしやま</rt></ruby><ruby>公園<rt>こうえん</rt></ruby></h3>
+        <p>コンビニの<ruby>隣<rt>となり</rt></ruby>の<ruby>公園<rt>こうえん</rt></ruby>。<ruby>小<rt>ちい</rt></ruby>さな<ruby>広場<rt>ひろば</rt></ruby>があるだけのシンプルな<ruby>公園<rt>こうえん</rt></ruby>。</p>
+        <h3><ruby>中吉田<rt>なかよしだ</rt></ruby><ruby>公園<rt>こうえん</rt></ruby></h3>
+        <p><ruby>通称<rt>つうしょう</rt></ruby>「なかよし<ruby>公園<rt>こうえん</rt></ruby>」。<ruby>小<rt>ちい</rt></ruby>さいころハルカと<ruby>遊<rt>あそ</rt></ruby>んだ<ruby>思<rt>おも</rt></ruby>い<ruby>出<rt>で</rt></ruby>の<ruby>場所<rt>ばしょ</rt></ruby>。</p>
+        <p>ケートの<ruby>家<rt>いえ</rt></ruby>と<ruby>学校<rt>がっこう</rt></ruby>の<ruby>間<rt>あいだ</rt></ruby>にある、どこにでもある<ruby>公園<rt>こうえん</rt></ruby>。</p>
+        <p>よく<ruby>小学生<rt>しょうがくせい</rt></ruby>が<ruby>遊<rt>あそ</rt></ruby>んでいて、<ruby>砂場<rt>すなば</rt></ruby>やトイレ、<ruby>遊具<rt>ゆうぐ</rt></ruby>、<ruby>災害<rt>さいがい</rt></ruby><ruby>用<rt>よう</rt></ruby><ruby>倉庫<rt>そうこ</rt></ruby>なんかがある。</p>
+        <p><ruby>桜<rt>さくら</rt></ruby>の<ruby>木<rt>き</rt></ruby>が<ruby>植<rt>う</rt></ruby>えられており、<ruby>春<rt>はる</rt></ruby>にはお<ruby>花見<rt>はなみ</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しめる。</p>
+        <h3><ruby>東川<rt>ひがしかわ</rt></ruby></h3>
+        <p><ruby>中吉田<rt>なかよしだ</rt></ruby><ruby>公園<rt>こうえん</rt></ruby>から<ruby>続<rt>つづ</rt></ruby>く<ruby>川<rt>かわ</rt></ruby>。<ruby>川沿<rt>かわぞ</rt></ruby>いに<ruby>桜<rt>さくら</rt></ruby><ruby>並木<rt>なみき</rt></ruby>がある。</p>
       </div>
       <div class="cover-wrap">
-        <img class="item-middle" src="images/mounten.jpg" alt="青沢山からの眺め">
+        <img class="item-middle" src="images/mounten.jpg" alt="<ruby>青<rt>あお</rt></ruby><ruby>沢山<rt>たくさん</rt></ruby>からの<ruby>眺<rt>なが</rt></ruby>め">
       </div>
       <div class="work-info">
-        <h3>青沢山</h3>
-        <p>遠足やどんぐり拾いに行く市内の北西部にある小高い山。</p>
-        <p>お茶畑や山林があり、上まで登れば市内から東京まで一望できる。</p>
+        <h3><ruby>青沢<rt>あおさわ</rt></ruby><ruby>山<rt>やま</rt></ruby></h3>
+        <p><ruby>遠足<rt>えんそく</rt></ruby>やどんぐり<ruby>拾<rt>ひろ</rt></ruby>いに<ruby>行<rt>い</rt></ruby>く<ruby>市内<rt>しない</rt></ruby>の<ruby>北西部<rt>ほくせいぶ</rt></ruby>にある<ruby>小高<rt>こだか</rt></ruby>い<ruby>山<rt>やま</rt></ruby>。</p>
+        <p>お<ruby>茶畑<rt>ちゃばたけ</rt></ruby>や<ruby>山林<rt>さんりん</rt></ruby>があり、<ruby>上<rt>うえ</rt></ruby>まで<ruby>登<rt>のぼ</rt></ruby>れば<ruby>市内<rt>しない</rt></ruby>から<ruby>東京<rt>とうきょう</rt></ruby>まで<ruby>一望<rt>いちぼう</rt></ruby>できる。</p>
       </div>
     </div>
     <footer>
-      <a href="index.html" class="back-link">戻る</a>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
       <p>© 2026 takigawa ebiro</p>
     </footer>
   </div>
+  <script src="ruby_button.js" charset="utf-8"></script>
 </body>
 </html>
