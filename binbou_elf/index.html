@@ -30,6 +30,16 @@
       min-height: 100vh;
       padding: 3rem 1rem 4rem;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+      z-index: 10;
+    }
 
     a {
       color: var(--sakura);
@@ -193,31 +203,33 @@
     }
   </style>
 </head>
-<body>
+<body class="ruby-off">
   <div class="container">
+    <button type="button" id="toggle-ruby">ルビON/OFF</button>
+    <script src="ruby_button.js" charset="utf-8"></script>
     <header>
-      <h1>元貧乏エルフの錬金術調薬店</h1>
-      <p class="author">滝川海老郎</p>
+      <h1><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby></h1>
+      <p class="author"><ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby></p>
     </header>
 
     <div class="description">
-      <strong>第4回ドラゴンノベルス小説コンテスト　特別賞</strong><br>
-      <strong>【100万PV突破・書籍化・コミカライズ】</strong><br>
-      田舎では貧乏な錬金術師のミレーユ。彼女は13歳で憧れの王都に来てみれば錬金術は衰退していた。結果的にミレーユは世界最高水準の錬金術師だったことが判明する。<br>
-      まずは露店でのポーション販売から始めて、どちらの商業ギルドに加入するかで一悶着する。お店をレンタル契約し錬金術調薬店を開業する。新商品が売れすぎて困ったり、ペットのスライムが忘れたころに活躍したり、火事が起きて大混乱したり、ユグドラシルの木の葉っぱ、世界樹をめぐって騒動があったり、楽しくも忙しい毎日を送ることになる。<br>
-      相棒のスライムとともに二人で王都の生活を満喫しつつ、弟子の美少女と同棲して通いのメイドさんも加えて、錬金術調薬店を経営していく。<br>
+      <strong><ruby>第<rt>だい</rt></ruby>4<ruby>回<rt>かい</rt></ruby>ドラゴンノベルス<ruby>小説<rt>しょうせつ</rt></ruby>コンテスト　<ruby>特別<rt>とくべつ</rt></ruby><ruby>賞<rt>しょう</rt></ruby></strong><br>
+      <strong>【100<ruby>万<rt>まん</rt></ruby>PV<ruby>突破<rt>とっぱ</rt></ruby>・<ruby>書籍<rt>しょせき</rt></ruby><ruby>化<rt>か</rt></ruby>・コミカライズ】</strong><br>
+      <ruby>田舎<rt>いなか</rt></ruby>では<ruby>貧乏<rt>びんぼう</rt></ruby>な<ruby>錬金術師<rt>れんきんじゅつし</rt></ruby>のミレーユ。<ruby>彼女<rt>かのじょ</rt></ruby>は13<ruby>歳<rt>さい</rt></ruby>で<ruby>憧<rt>あこが</rt></ruby>れの<ruby>王都<rt>おうと</rt></ruby>に<ruby>来<rt>き</rt></ruby>てみれば<ruby>錬金術<rt>れんきんじゅつ</rt></ruby>は<ruby>衰退<rt>すいたい</rt></ruby>していた。<ruby>結果的<rt>けっかてき</rt></ruby>にミレーユは<ruby>世界<rt>せかい</rt></ruby><ruby>最高<rt>さいこう</rt></ruby><ruby>水準<rt>すいじゅん</rt></ruby>の<ruby>錬金術師<rt>れんきんじゅつし</rt></ruby>だったことが<ruby>判明<rt>はんめい</rt></ruby>する。<br>
+      まずは<ruby>露店<rt>ろてん</rt></ruby>でのポーション<ruby>販売<rt>はんばい</rt></ruby>から<ruby>始<rt>はじ</rt></ruby>めて、どちらの<ruby>商業<rt>しょうぎょう</rt></ruby>ギルドに<ruby>加入<rt>かにゅう</rt></ruby>するかで<ruby>一悶着<rt>ひともんちゃく</rt></ruby>する。お<ruby>店<rt>みせ</rt></ruby>をレンタル<ruby>契約<rt>けいやく</rt></ruby>し<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby>を<ruby>開業<rt>かいぎょう</rt></ruby>する。<ruby>新<rt>しん</rt></ruby><ruby>商品<rt>しょうひん</rt></ruby>が<ruby>売<rt>う</rt></ruby>れすぎて<ruby>困<rt>こま</rt></ruby>ったり、ペットのスライムが<ruby>忘<rt>わす</rt></ruby>れたころに<ruby>活躍<rt>かつやく</rt></ruby>したり、<ruby>火事<rt>かじ</rt></ruby>が<ruby>起<rt>お</rt></ruby>きて<ruby>大混乱<rt>だいこんらん</rt></ruby>したり、ユグドラシルの<ruby>木<rt>き</rt></ruby>の<ruby>葉<rt>は</rt></ruby>っぱ、<ruby>世界樹<rt>せかいじゅ</rt></ruby>をめぐって<ruby>騒動<rt>そうどう</rt></ruby>があったり、<ruby>楽<rt>たの</rt></ruby>しくも<ruby>忙<rt>いそが</rt></ruby>しい<ruby>毎日<rt>まいにち</rt></ruby>を<ruby>送<rt>おく</rt></ruby>ることになる。<br>
+      <ruby>相棒<rt>あいぼう</rt></ruby>のスライムとともに<ruby>二人<rt>ふたり</rt></ruby>で<ruby>王都<rt>おうと</rt></ruby>の<ruby>生活<rt>せいかつ</rt></ruby>を<ruby>満喫<rt>まんきつ</rt></ruby>しつつ、<ruby>弟子<rt>でし</rt></ruby>の<ruby>美少女<rt>びしょうじょ</rt></ruby>と<ruby>同棲<rt>どうせい</rt></ruby>して<ruby>通<rt>かよ</rt></ruby>いのメイドさんも<ruby>加<rt>くわ</rt></ruby>えて、<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby>を<ruby>経営<rt>けいえい</rt></ruby>していく。<br>
     </div>
 
-    <h2>小説</h2>
+    <h2><ruby>小説<rt>しょうせつ</rt></ruby></h2>
 
     <div class="work-card">
       <div class="cover-wrap">
         <img src="images/binelf_novel1.jpg" alt="表紙：元貧乏エルフの錬金術調薬店 1巻">
       </div>
       <div class="work-info">
-        <h3>元貧乏エルフの錬金術調薬店 1</h3>
+        <h3><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby> 1</h3>
         <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          滝川海老郎／イラスト：にもし／KADOKAWA／ドラゴンノベルス
+          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／イラスト：にもし／KADOKAWA／ドラゴンノベルス
         </p>
         <div class="links">
           <a href="https://www.kadokawa.co.jp/product/322304000544/">KADOKAWA</a>
@@ -231,9 +243,9 @@
         <img src="images/binelf_novel2.jpg" alt="表紙：元貧乏エルフの錬金術調薬店 2巻">
       </div>
       <div class="work-info">
-        <h3>元貧乏エルフの錬金術調薬店 2</h3>
+        <h3><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby> 2</h3>
         <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          滝川海老郎／イラスト：にもし／KADOKAWA／ドラゴンノベルス
+          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／イラスト：にもし／KADOKAWA／ドラゴンノベルス
         </p>
         <div class="links">
           <a href="https://www.kadokawa.co.jp/product/322401000179/">KADOKAWA</a>
@@ -248,11 +260,11 @@
         <img src="images/binelf_comic_bun.jpg" alt="表紙：コミカライズ(分冊版)">
       </div>
       <div class="work-info">
-        <h3>元貧乏エルフの錬金術調薬店(漫画)</h3>
+        <h3><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby>(<ruby>漫画<rt>まんが</rt></ruby>)</h3>
         <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          漫画：露木彩／原作：滝川海老郎／キャラクター原案：にもし／　FWコミックス／ピッコマで先行連載
+          <ruby>漫画<rt>まんが</rt></ruby>：<ruby>露木<rt>つゆき</rt></ruby><ruby>彩<rt>あや</rt></ruby>／<ruby>原作<rt>げんさく</rt></ruby>：<ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／キャラクター<ruby>原案<rt>げんあん</rt></ruby>：にもし／　FWコミックス／ピッコマで<ruby>先行<rt>せんこう</rt></ruby><ruby>連載<rt>れんさい</rt></ruby>
         </p>
-        <h3>分冊版</h3>
+        <h3><ruby>分冊<rt>ぶんさつ</rt></ruby><ruby>版<rt>ばん</rt></ruby></h3>
         <div class="links" style="margin-bottom:1rem;">
           <a href="https://fwcomics.jp/books/about_binbouelf-all/">FWコミックス</a>
           <a href="https://piccoma.com/web/product/189875">ピッコマ</a>
@@ -265,51 +277,51 @@
       </div>
     </div>
 
-    <h2>Web版</h2>
+    <h2>Web<ruby>版<rt>ばん</rt></ruby></h2>
     <div class="work-card">
       <div class="work-info">
-        <h3>元貧乏エルフの錬金術調薬店(web版)</h3>
+        <h3><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby>(web<ruby>版<rt>ばん</rt></ruby>)</h3>
         <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          滝川海老郎／web版から書籍版は、かなり加筆されており、web版は約半分となっています。
+          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／web<ruby>版<rt>ばん</rt></ruby>から<ruby>書籍<rt>しょせき</rt></ruby><ruby>版<rt>ばん</rt></ruby>は、かなり<ruby>加筆<rt>かひつ</rt></ruby>されており、web<ruby>版<rt>ばん</rt></ruby>は<ruby>約半分<rt>やくはんぶん</rt></ruby>となっています。
         </p>
         <div class="links">
           <a href="https://kakuyomu.jp/works/16816927862953378978">カクヨム</a>
-          <a href="https://ncode.syosetu.com/n6902lp/">小説家になろう</a>
-          <a href="https://kakuyomu.jp/works/16818093082121570296">カクヨム(総ルビ)</a>
+          <a href="https://ncode.syosetu.com/n6902lp/"><ruby>小説家<rt>しょうせつか</rt></ruby>になろう</a>
+          <a href="https://kakuyomu.jp/works/16818093082121570296">カクヨム(<ruby>総<rt>そう</rt></ruby>ルビ)</a>
         </div>
       </div>
     </div>
-    <h2>BOOTH版</h2>
+    <h2>BOOTH<ruby>版<rt>ばん</rt></ruby></h2>
     <div class="work-card">
       <div class="cover-wrap">
         <img src="images/binelf_booth.jpg" alt="BOOTH版表紙">
       </div>
       <div class="work-info">
-        <h3>元貧乏エルフの錬金術調薬店(Web/BOOTH版)</h3>
+        <h3><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby>(Web/BOOTH<ruby>版<rt>ばん</rt></ruby>)</h3>
         <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          滝川海老郎／　中身はweb版準拠です。縦書きPDF/epub3仕様
+          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／　<ruby>中身<rt>なかみ</rt></ruby>はweb<ruby>版<rt>ばん</rt></ruby><ruby>準拠<rt>じゅんきょ</rt></ruby>です。<ruby>縦書<rt>たてが</rt></ruby>きPDF/epub3<ruby>仕様<rt>しよう</rt></ruby>
         </p>
         <div class="links">
-          <a href="https://takigawa-ebirou.booth.pm/items/3916116">BOOTH(無料DL)</a>
+          <a href="https://takigawa-ebirou.booth.pm/items/3916116">BOOTH(<ruby>無料<rt>むりょう</rt></ruby>DL)</a>
         </div>
       </div>
     </div>
 
-    <h2>キャラクター紹介</h2>
+    <h2>キャラクター<ruby>紹介<rt>しょうかい</rt></ruby></h2>
       <div class="work-card">
         <div class="work-info">
           <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-            主要キャラクター(BOOTH版)を紹介します。
+            <ruby>主要<rt>しゅよう</rt></ruby>キャラクター(BOOTH<ruby>版<rt>ばん</rt></ruby>)を<ruby>紹介<rt>しょうかい</rt></ruby>します。
           </p>
           <div class="links">
-            <a href="character.html">キャラクター紹介</a>
+            <a href="character.html">キャラクター<ruby>紹介<rt>しょうかい</rt></ruby></a>
           </div>
         </div>
       </div>
     </div>
 
     <footer>
-      <a href="../index.html" class="back-link">上へ戻る</a>
+      <a href="../index.html" class="back-link"><ruby>上<rt>うえ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>る</a>
       <p>© 2026 takigawa ebiro</p>
     </footer>
   </div>
