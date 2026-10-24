@@ -37,6 +37,14 @@
       color: var(--text);
       line-height: 1.75;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+    }
     a { color: var(--sakura); text-decoration: none; }
     a:hover { color: var(--gold); }
 
@@ -50,6 +58,7 @@
       display: flex; justify-content: space-between; align-items: center;
     }
     .logo { font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+    .nav-menu { display: flex; gap: 1rem; }
     .nav-links { display: flex; gap: 1.5rem; }
     .nav-links a { font-size: 0.95rem; }
     .nav-links a.active { color: var(--gold); }
@@ -137,116 +146,119 @@
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body class="ruby-off">
   <header>
     <nav>
       <div class="logo">[カーマイン村]スローライフ</div>
-      <div class="nav-links">
-        <a href="index.html">ホーム</a>
-        <a href="characters.html">キャラ</a>
-        <a href="world_words.html">用語集</a>
-        <a href="chapter.html" class="active">各話</a>
-        <a href="news.html">ニュース</a>
-        <a href="gallery.html">ギャラリー</a>
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="index.html">ホーム</a>
+          <a href="characters.html">キャラ</a>
+          <a href="world_words.html">用語集</a>
+          <a href="chapter.html" class="active">各話</a>
+          <a href="news.html">ニュース</a>
+          <a href="gallery.html">ギャラリー</a>
+        </div>
+        <button type="button" id="toggle-ruby">ルビON/OFF</button>
       </div>
     </nav>
   </header>
+  <script src="ruby_button.js" charset="utf-8"></script>
 
   <main class="page">
     <h1 class="page-title">
-      各話紹介
-      <span>1話〜15話</span>
+      <ruby>各話<rt>かくわ</rt></ruby><ruby>紹介<rt>しょうかい</rt></ruby>
+      <span>1<ruby>話<rt>わ</rt></ruby>～15<ruby>話<rt>わ</rt></ruby></span>
     </h1>
 
-    <img src="images/village_hero.jpg" alt="カーマイン村" class="hero-village">
+    <img src="images/village_hero.jpg" alt="カーマイン<ruby>村<rt>むら</rt></ruby>" class="hero-village">
 
     <div class="episode">
-      <h2>第1話 <span>マハムのスキル、スローライフ</span></h2>
-      <p>5歳の鑑定の儀で「スローライフ」を引き、ハズレスキルとされたマハム。妹ミリアも「裁縫」を引き、両親に失望される。父の命令で辺境カーマイン村へ領主代行として左遷され、メイドのシータと三人で馬車の旅に出る。村の看板を通過した瞬間、鑑定・アイテムボックスなどの派生スキルが活性化する。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>1<ruby>話<rt>わ</rt></ruby> <span>マハムのスキル、スローライフ</span></h2>
+      <p>5<ruby>歳<rt>さい</rt></ruby>の<ruby>鑑定<rt>かんてい</rt></ruby>の<ruby>儀<rt>ぎ</rt></ruby>で「スローライフ」を<ruby>引<rt>ひ</rt></ruby>き、ハズレスキルとされたマハム。<ruby>妹<rt>いもうと</rt></ruby>ミリアも「<ruby>裁縫<rt>さいほう</rt></ruby>」を<ruby>引<rt>ひ</rt></ruby>き、<ruby>両親<rt>りょうしん</rt></ruby>に<ruby>失望<rt>しつぼう</rt></ruby>される。<ruby>父<rt>ちち</rt></ruby>の<ruby>命令<rt>めいれい</rt></ruby>で<ruby>辺境<rt>へんきょう</rt></ruby>カーマイン<ruby>村<rt>むら</rt></ruby>へ<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>代行<rt>だいこう</rt></ruby>として<ruby>左遷<rt>させん</rt></ruby>され、メイドのシータと<ruby>三人<rt>さんにん</rt></ruby>で<ruby>馬車<rt>ばしゃ</rt></ruby>の<ruby>旅<rt>たび</rt></ruby>に<ruby>出<rt>で</rt></ruby>る。<ruby>村<rt>むら</rt></ruby>の<ruby>看板<rt>かんばん</rt></ruby>を<ruby>通過<rt>つうか</rt></ruby>した<ruby>瞬間<rt>しゅんかん</rt></ruby>、<ruby>鑑定<rt>かんてい</rt></ruby>・アイテムボックスなどの<ruby>派生<rt>はせい</rt></ruby>スキルが<ruby>活性化<rt>かっせいか</rt></ruby>する。</p>
     </div>
 
     <div class="episode">
-      <h2>第2話 <span>村長の娘、ターリャ</span></h2>
-      <p>村に到着し、領主館で初めての夜を過ごす。翌朝、村長の娘ターリャが元気に出迎え、かけっこで案内してくれる。夕方には村の歓迎会が開かれ、ワイルドディアの鍋や蜂蜜ジュースで賑やかな宴を楽しむ。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>2<ruby>話<rt>わ</rt></ruby> <span><ruby>村長<rt>そんちょう</rt></ruby>の<ruby>娘<rt>むすめ</rt></ruby>、ターリャ</span></h2>
+      <p><ruby>村<rt>むら</rt></ruby>に<ruby>到着<rt>とうちゃく</rt></ruby>し、<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>で<ruby>初<rt>はじ</rt></ruby>めての<ruby>夜<rt>よる</rt></ruby>を<ruby>過<rt>す</rt></ruby>ごす。<ruby>翌朝<rt>よくあさ</rt></ruby>、<ruby>村長<rt>そんちょう</rt></ruby>の<ruby>娘<rt>むすめ</rt></ruby>ターリャが<ruby>元気<rt>げんき</rt></ruby>に<ruby>出迎<rt>でむか</rt></ruby>え、かけっこで<ruby>案内<rt>あんない</rt></ruby>してくれる。<ruby>夕方<rt>ゆうがた</rt></ruby>には<ruby>村<rt>むら</rt></ruby>の<ruby>歓迎会<rt>かんげいかい</rt></ruby>が<ruby>開<rt>ひら</rt></ruby>かれ、ワイルドディアの<ruby>鍋<rt>なべ</rt></ruby>や<ruby>蜂蜜<rt>はちみつ</rt></ruby>ジュースで<ruby>賑<rt>にぎ</rt></ruby>やかな<ruby>宴<rt>うたげ</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しむ。</p>
     </div>
 
     <div class="episode">
-      <h2>第3話 <span>庭と手入れとシータの事情</span></h2>
-      <p>領主館の掃除と庭の手入れを始める。ターリャが手伝いに来て一緒に雑草を抜く。シータが左遷についてきた理由を知り、社交界を避けてメイドを選んだ過去を察する。庭仕事を通じて村の生活が少しずつ始まっていく。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>3<ruby>話<rt>わ</rt></ruby> <span><ruby>庭<rt>にわ</rt></ruby>と<ruby>手入<rt>てい</rt></ruby>れとシータの<ruby>事情<rt>じじょう</rt></ruby></span></h2>
+      <p><ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>の<ruby>掃除<rt>そうじ</rt></ruby>と<ruby>庭<rt>にわ</rt></ruby>の<ruby>手入<rt>てい</rt></ruby>れを<ruby>始<rt>はじ</rt></ruby>める。ターリャが<ruby>手伝<rt>てつだ</rt></ruby>いに<ruby>来<rt>き</rt></ruby>て<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>雑草<rt>ざっそう</rt></ruby>を<ruby>抜<rt>ぬ</rt></ruby>く。シータが<ruby>左遷<rt>させん</rt></ruby>についてきた<ruby>理由<rt>りゆう</rt></ruby>を<ruby>知<rt>し</rt></ruby>り、<ruby>社交<rt>しゃこう</rt></ruby><ruby>界<rt>かい</rt></ruby>を<ruby>避<rt>さ</rt></ruby>けてメイドを<ruby>選<rt>えら</rt></ruby>んだ<ruby>過去<rt>かこ</rt></ruby>を<ruby>察<rt>さっ</rt></ruby>する。<ruby>庭仕事<rt>にわしごと</rt></ruby>を<ruby>通<rt>つう</rt></ruby>じて<ruby>村<rt>むら</rt></ruby>の<ruby>生活<rt>せいかつ</rt></ruby>が<ruby>少<rt>すこ</rt></ruby>しずつ<ruby>始<rt>はじ</rt></ruby>まっていく。</p>
     </div>
 
     <div class="episode">
-      <h2>第4話 <span>リリーおばば、薬師と錬金術</span></h2>
-      <p>村人たちが庭の手入れを手伝いに来る。ポーションを買いにリリーおばばの店へ行くと、ハイエルフだと判明。薬草の知識を褒められ、薬師の指導を受けることになる。ミリアは裁縫の練習を続ける。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>4<ruby>話<rt>わ</rt></ruby> <span>リリーおばば、<ruby>薬師<rt>やくし</rt></ruby>と<ruby>錬金術<rt>れんきんじゅつ</rt></ruby></span></h2>
+      <p><ruby>村人<rt>むらびと</rt></ruby>たちが<ruby>庭<rt>にわ</rt></ruby>の<ruby>手入<rt>てい</rt></ruby>れを<ruby>手伝<rt>てつだ</rt></ruby>いに<ruby>来<rt>く</rt></ruby>る。ポーションを<ruby>買<rt>か</rt></ruby>いにリリーおばばの<ruby>店<rt>みせ</rt></ruby>へ<ruby>行<rt>い</rt></ruby>くと、ハイエルフだと<ruby>判明<rt>はんめい</rt></ruby>。<ruby>薬草<rt>やくそう</rt></ruby>の<ruby>知識<rt>ちしき</rt></ruby>を<ruby>褒<rt>ほ</rt></ruby>められ、<ruby>薬師<rt>やくし</rt></ruby>の<ruby>指導<rt>しどう</rt></ruby>を<ruby>受<rt>う</rt></ruby>けることになる。ミリアは<ruby>裁縫<rt>さいほう</rt></ruby>の<ruby>練習<rt>れんしゅう</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>ける。</p>
     </div>
 
-    <img src="images/arrival.jpg" alt="到着" class="mid-image">
+    <img src="images/arrival.jpg" alt="<ruby>到着<rt>とうちゃく</rt></ruby>" class="mid-image">
 
     <div class="episode">
-      <h2>第5話 <span>草原探索、スライム魔核</span></h2>
-      <p>ターリャと一緒に村の横の草原へスライム狩りに出る。グリーンスライムを倒して魔核を採取し、お小遣い稼ぎをする。アイテムボックスの便利さを実感しながら、初めての収入を得る。</p>
-    </div>
-
-    <div class="episode">
-      <h2>第6話 <span>冒険者ギルド、トールとソラエナ</span></h2>
-      <p>スライムの魔核を冒険者ギルドで売る。受付の猫獣人ラーミアと出会い、休憩スペースでガキ大将トールとソラエナと初めて顔を合わせる。その後教会で初めての収入を神に捧げる。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>5<ruby>話<rt>わ</rt></ruby> <span><ruby>草原<rt>そうげん</rt></ruby><ruby>探索<rt>たんさく</rt></ruby>、スライム<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby></span></h2>
+      <p>ターリャと<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>村<rt>むら</rt></ruby>の<ruby>横<rt>よこ</rt></ruby>の<ruby>草原<rt>そうげん</rt></ruby>へスライム<ruby>狩<rt>が</rt></ruby>りに<ruby>出<rt>で</rt></ruby>る。グリーンスライムを<ruby>倒<rt>たお</rt></ruby>して<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>採取<rt>さいしゅ</rt></ruby>し、お<ruby>小遣<rt>こづか</rt></ruby>い<ruby>稼<rt>かせ</rt></ruby>ぎをする。アイテムボックスの<ruby>便利<rt>べんり</rt></ruby>さを<ruby>実感<rt>じっかん</rt></ruby>しながら、<ruby>初<rt>はじ</rt></ruby>めての<ruby>収入<rt>しゅうにゅう</rt></ruby>を<ruby>得<rt>え</rt></ruby>る。</p>
     </div>
 
     <div class="episode">
-      <h2>第7話 <span>リリーおばばと経済圏</span></h2>
-      <p>リリーおばばの店を再び訪れる。村が高級ポーションを作ることで現金収入を得、村民が豊かである仕組みを知る。ターリャから村の経済について教えてもらい、ただの寒村ではないことを理解する。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>6<ruby>話<rt>わ</rt></ruby> <span><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド、トールとソラエナ</span></h2>
+      <p>スライムの<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルドで<ruby>売<rt>う</rt></ruby>る。<ruby>受付<rt>うけつけ</rt></ruby>の<ruby>猫<rt>ねこ</rt></ruby><ruby>獣人<rt>じゅうじん</rt></ruby>ラーミアと<ruby>出会<rt>であ</rt></ruby>い、<ruby>休憩<rt>きゅうけい</rt></ruby>スペースでガキ<ruby>大将<rt>だいしょう</rt></ruby>トールとソラエナと<ruby>初<rt>はじ</rt></ruby>めて<ruby>顔<rt>かお</rt></ruby>を<ruby>合<rt>あ</rt></ruby>わせる。その<ruby>後<rt>あと</rt></ruby><ruby>教会<rt>きょうかい</rt></ruby>で<ruby>初<rt>はじ</rt></ruby>めての<ruby>収入<rt>しゅうにゅう</rt></ruby>を<ruby>神<rt>かみ</rt></ruby>に<ruby>捧<rt>ささ</rt></ruby>げる。</p>
     </div>
 
     <div class="episode">
-      <h2>第8話 <span>兄上からの手紙</span></h2>
-      <p>カイン兄上から速達便で手紙が届く。村での生活を心配しつつ、侯爵家の困窮やパーティーの苦労が書かれている。マハムたちは返事とミリアの絵日記を準備する。トールから「何もしないのがいい」と励まされる。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>7<ruby>話<rt>わ</rt></ruby> <span>リリーおばばと<ruby>経済圏<rt>けいざいけん</rt></ruby></span></h2>
+      <p>リリーおばばの<ruby>店<rt>みせ</rt></ruby>を<ruby>再<rt>ふたた</rt></ruby>び<ruby>訪<rt>おとず</rt></ruby>れる。<ruby>村<rt>むら</rt></ruby>が<ruby>高級<rt>こうきゅう</rt></ruby>ポーションを<ruby>作<rt>つく</rt></ruby>ることで<ruby>現金<rt>げんきん</rt></ruby><ruby>収入<rt>しゅうにゅう</rt></ruby>を<ruby>得<rt>え</rt></ruby>、<ruby>村民<rt>そんみん</rt></ruby>が<ruby>豊<rt>ゆた</rt></ruby>かである<ruby>仕組<rt>しく</rt></ruby>みを<ruby>知<rt>し</rt></ruby>る。ターリャから<ruby>村<rt>むら</rt></ruby>の<ruby>経済<rt>けいざい</rt></ruby>について<ruby>教<rt>おし</rt></ruby>えてもらい、ただの<ruby>寒村<rt>かんそん</rt></ruby>ではないことを<ruby>理解<rt>りかい</rt></ruby>する。</p>
+    </div>
+
+    <div class="episode">
+      <h2><ruby>第<rt>だい</rt></ruby>8<ruby>話<rt>わ</rt></ruby> <span><ruby>兄上<rt>あにうえ</rt></ruby>からの<ruby>手紙<rt>てがみ</rt></ruby></span></h2>
+      <p>カイン<ruby>兄上<rt>あにうえ</rt></ruby>から<ruby>速達便<rt>そくたつびん</rt></ruby>で<ruby>手紙<rt>てがみ</rt></ruby>が<ruby>届<rt>とど</rt></ruby>く。<ruby>村<rt>むら</rt></ruby>での<ruby>生活<rt>せいかつ</rt></ruby>を<ruby>心配<rt>しんぱい</rt></ruby>しつつ、<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby>の<ruby>困窮<rt>こんきゅう</rt></ruby>やパーティーの<ruby>苦労<rt>くろう</rt></ruby>が<ruby>書<rt>か</rt></ruby>かれている。マハムたちは<ruby>返事<rt>へんじ</rt></ruby>とミリアの<ruby>絵日記<rt>えにっき</rt></ruby>を<ruby>準備<rt>じゅんび</rt></ruby>する。トールから「<ruby>何<rt>なに</rt></ruby>もしないのがいい」と<ruby>励<rt>はげ</rt></ruby>まされる。</p>
     </div>
 
     <img src="images/tarlya_call.jpg" alt="ターリャ" class="mid-image">
 
     <div class="episode">
-      <h2>第9話 <span>ブラックスネークの恐怖</span></h2>
-      <p>草原でスライム狩り中にブラックスネークと遭遇。毒はないと知りつつも、ネズミを丸飲みする姿にミリアとターリャが怖がる。ギルドで報告し、ラーミアから高級革になることを教えられる。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>9<ruby>話<rt>わ</rt></ruby> <span>ブラックスネークの<ruby>恐怖<rt>きょうふ</rt></ruby></span></h2>
+      <p><ruby>草原<rt>そうげん</rt></ruby>でスライム<ruby>狩<rt>が</rt></ruby>り<ruby>中<rt>ちゅう</rt></ruby>にブラックスネークと<ruby>遭遇<rt>そうぐう</rt></ruby>。<ruby>毒<rt>どく</rt></ruby>はないと<ruby>知<rt>し</rt></ruby>りつつも、ネズミを<ruby>丸飲<rt>まるの</rt></ruby>みする<ruby>姿<rt>すがた</rt></ruby>にミリアとターリャが<ruby>怖<rt>こわ</rt></ruby>がる。ギルドで<ruby>報告<rt>ほうこく</rt></ruby>し、ラーミアから<ruby>高級<rt>こうきゅう</rt></ruby><ruby>革<rt>がわ</rt></ruby>になることを<ruby>教<rt>おし</rt></ruby>えられる。</p>
     </div>
 
     <div class="episode">
-      <h2>第10話 <span>ミリアの裁縫</span></h2>
-      <p>ミリアが魔法陣の刺繍で護符を作る。完成した護符をトールやソラエナに渡し、教会で安全祈願をしてもらう。ミリアの裁縫スキルが実用的であることを改めて実感する。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>10<ruby>話<rt>わ</rt></ruby> <span>ミリアの<ruby>裁縫<rt>さいほう</rt></ruby></span></h2>
+      <p>ミリアが<ruby>魔法陣<rt>まほうじん</rt></ruby>の<ruby>刺繍<rt>ししゅう</rt></ruby>で<ruby>護符<rt>ごふ</rt></ruby>を<ruby>作<rt>つく</rt></ruby>る。<ruby>完成<rt>かんせい</rt></ruby>した<ruby>護符<rt>ごふ</rt></ruby>をトールやソラエナに<ruby>渡<rt>わた</rt></ruby>し、<ruby>教会<rt>きょうかい</rt></ruby>で<ruby>安全<rt>あんぜん</rt></ruby><ruby>祈願<rt>きがん</rt></ruby>をしてもらう。ミリアの<ruby>裁縫<rt>さいほう</rt></ruby>スキルが<ruby>実用的<rt>じつようてき</rt></ruby>であることを<ruby>改<rt>あらた</rt></ruby>めて<ruby>実感<rt>じっかん</rt></ruby>する。</p>
     </div>
 
     <div class="episode">
-      <h2>第11話 <span>閑話：マハムの女神様</span></h2>
-      <p>明晰夢の中で女神トカリアーナ様と出会う。転生の理由を聞かれ、「ただ生活すればよい」と告げられる。お布施やおやつをねだられ、満月の夜に目が覚める。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>11<ruby>話<rt>わ</rt></ruby> <span><ruby>閑話<rt>かんわ</rt></ruby>：マハムの<ruby>女神<rt>めがみ</rt></ruby><ruby>様<rt>さま</rt></ruby></span></h2>
+      <p><ruby>明晰<rt>めいせき</rt></ruby><ruby>夢<rt>ゆめ</rt></ruby>の<ruby>中<rt>なか</rt></ruby>で<ruby>女神<rt>めがみ</rt></ruby>トカリアーナ<ruby>様<rt>さま</rt></ruby>と<ruby>出会<rt>であ</rt></ruby>う。<ruby>転生<rt>てんせい</rt></ruby>の<ruby>理由<rt>りゆう</rt></ruby>を<ruby>聞<rt>き</rt></ruby>かれ、「ただ<ruby>生活<rt>せいかつ</rt></ruby>すればよい」と<ruby>告<rt>つ</rt></ruby>げられる。お<ruby>布施<rt>ふせ</rt></ruby>やおやつをねだられ、<ruby>満月<rt>まんげつ</rt></ruby>の<ruby>夜<rt>よる</rt></ruby>に<ruby>目<rt>め</rt></ruby>が<ruby>覚<rt>さ</rt></ruby>める。</p>
     </div>
 
     <div class="episode">
-      <h2>第12話 <span>お花見会</span></h2>
-      <p>春の恒例行事・お花見会が開かれる。ワイルドボアのスープや串焼き、蜂蜜ジュースで村中が盛り上がる。ターリャがエール配りを手伝い、サクラの花びらが舞う中で宴会を楽しむ。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>12<ruby>話<rt>わ</rt></ruby> <span>お<ruby>花見会<rt>はなみかい</rt></ruby></span></h2>
+      <p><ruby>春<rt>はる</rt></ruby>の<ruby>恒例<rt>こうれい</rt></ruby><ruby>行事<rt>ぎょうじ</rt></ruby>・お<ruby>花見会<rt>はなみかい</rt></ruby>が<ruby>開<rt>ひら</rt></ruby>かれる。ワイルドボアのスープや<ruby>串焼<rt>くしや</rt></ruby>き、<ruby>蜂蜜<rt>はちみつ</rt></ruby>ジュースで<ruby>村中<rt>むらじゅう</rt></ruby>が<ruby>盛<rt>も</rt></ruby>り<ruby>上<rt>あ</rt></ruby>がる。ターリャがエール<ruby>配<rt>くば</rt></ruby>りを<ruby>手伝<rt>てつだ</rt></ruby>い、サクラの<ruby>花<rt>はな</rt></ruby>びらが<ruby>舞<rt>ま</rt></ruby>う<ruby>中<rt>なか</rt></ruby>で<ruby>宴会<rt>えんかい</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しむ。</p>
     </div>
 
-    <img src="images/village_daily.jpg" alt="村の日常" class="mid-image">
+    <img src="images/village_daily.jpg" alt="<ruby>村<rt>むら</rt></ruby>の<ruby>日常<rt>にちじょう</rt></ruby>" class="mid-image">
 
     <div class="episode">
-      <h2>第13話 <span>トールの後悔とソラエナの理解</span></h2>
-      <p>トールがソラエナを怒らせてしまい、仲直りのために白い花を探す。マハムとミリアが手伝い、花束を渡して無事仲直りする。幼馴染カップルの様子を温かく見守る。</p>
-    </div>
-
-    <div class="episode">
-      <h2>第14話 <span>シータの才能</span></h2>
-      <p>シータが氷魔法でアイスクリームを作ってくれる。男爵令嬢として氷魔法を持ちながら、社交界を避けてメイドになった経緯を知る。戦闘能力もあることを察する。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>13<ruby>話<rt>わ</rt></ruby> <span>トールの<ruby>後悔<rt>こうかい</rt></ruby>とソラエナの<ruby>理解<rt>りかい</rt></ruby></span></h2>
+      <p>トールがソラエナを<ruby>怒<rt>おこ</rt></ruby>らせてしまい、<ruby>仲直<rt>なかなお</rt></ruby>りのために<ruby>白<rt>しろ</rt></ruby>い<ruby>花<rt>はな</rt></ruby>を<ruby>探<rt>さが</rt></ruby>す。マハムとミリアが<ruby>手伝<rt>てつだ</rt></ruby>い、<ruby>花束<rt>はなたば</rt></ruby>を<ruby>渡<rt>わた</rt></ruby>して<ruby>無事<rt>ぶじ</rt></ruby><ruby>仲直<rt>なかなお</rt></ruby>りする。<ruby>幼馴染<rt>おさななじみ</rt></ruby>カップルの<ruby>様子<rt>ようす</rt></ruby>を<ruby>温<rt>あたた</rt></ruby>かく<ruby>見守<rt>みまも</rt></ruby>る。</p>
     </div>
 
     <div class="episode">
-      <h2>第15話 <span>ベーコンの尽きた日</span></h2>
-      <p>王都から持ってきたベーコンが尽き、ミリアと一緒に村の肉屋へ行く。ワイルドウルフの肉を買い、シータに調理してもらう。村での自給自足的な生活に一歩近づく。</p>
+      <h2><ruby>第<rt>だい</rt></ruby>14<ruby>話<rt>わ</rt></ruby> <span>シータの<ruby>才能<rt>さいのう</rt></ruby></span></h2>
+      <p>シータが<ruby>氷<rt>こおり</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>でアイスクリームを<ruby>作<rt>つく</rt></ruby>ってくれる。<ruby>男爵<rt>だんしゃく</rt></ruby><ruby>令嬢<rt>れいじょう</rt></ruby>として<ruby>氷<rt>こおり</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>を<ruby>持<rt>も</rt></ruby>ちながら、<ruby>社交<rt>しゃこう</rt></ruby><ruby>界<rt>かい</rt></ruby>を<ruby>避<rt>さ</rt></ruby>けてメイドになった<ruby>経緯<rt>けいい</rt></ruby>を<ruby>知<rt>し</rt></ruby>る。<ruby>戦闘<rt>せんとう</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>もあることを<ruby>察<rt>さっ</rt></ruby>する。</p>
+    </div>
+
+    <div class="episode">
+      <h2><ruby>第<rt>だい</rt></ruby>15<ruby>話<rt>わ</rt></ruby> <span>ベーコンの<ruby>尽<rt>つ</rt></ruby>きた<ruby>日<rt>ひ</rt></ruby></span></h2>
+      <p><ruby>王都<rt>おうと</rt></ruby>から<ruby>持<rt>も</rt></ruby>ってきたベーコンが<ruby>尽<rt>つ</rt></ruby>き、ミリアと<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>村<rt>むら</rt></ruby>の<ruby>肉屋<rt>にくや</rt></ruby>へ<ruby>行<rt>い</rt></ruby>く。ワイルドウルフの<ruby>肉<rt>にく</rt></ruby>を<ruby>買<rt>か</rt></ruby>い、シータに<ruby>調理<rt>ちょうり</rt></ruby>してもらう。<ruby>村<rt>むら</rt></ruby>での<ruby>自給自足<rt>じきゅうじそく</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>生活<rt>せいかつ</rt></ruby>に<ruby>一歩<rt>いっぽ</rt></ruby><ruby>近<rt>ちか</rt></ruby>づく。</p>
     </div>
 
     <div class="episode">
       <h2>... <span>それから</span></h2>
-      <p>掲載期間中は、毎日連載を続けます。お楽しみに。<br>
+      <p><ruby>掲載<rt>けいさい</rt></ruby><ruby>期間<rt>きかん</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>は、<ruby>毎日<rt>まいにち</rt></ruby><ruby>連載<rt>れんさい</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>けます。お<ruby>楽<rt>たの</rt></ruby>しみに。<br>
       <br>
-      →カクヨム：[カーマイン村]異世界スキル【スローライフ】(準備中)<br>
+      → <a class="btn">カクヨム(<ruby>準備<rt>じゅんび</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>)</a><br>
       </p>
     </div>
   </main>
@@ -255,16 +267,16 @@
     <nav class="footer-nav">
       <a href="index.html">ホーム</a>
       <a href="characters.html">キャラ</a>
-      <a href="world_words.html">世界観＆用語集</a>
+      <a href="world_words.html"><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></a>
     </nav>
     <nav class="footer-nav">
-      <a href="chapter.html">各話</a>
+      <a href="chapter.html"><ruby>各話<rt>かくわ</rt></ruby></a>
       <a href="news.html">ニュース</a>
       <a href="gallery.html">ギャラリー</a>
     </nav>
-    <p>[カーマイン村]異世界スキル【スローライフ】</p>
-    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ——</p>
-    <a href="../index.html">上へ戻る</a>
+    <p>[カーマイン<ruby>村<rt>むら</rt></ruby>]<ruby>異世界<rt>いせかい</rt></ruby>スキル【スローライフ】</p>
+    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ――</p>
+    <a href="../index.html"><ruby>上<rt>うえ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>る</a>
     <p style="margin-top:0.5rem;">© 2026 takigawa ebiro</p>
   </footer>
 

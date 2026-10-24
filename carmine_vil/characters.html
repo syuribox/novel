@@ -38,6 +38,14 @@
       color: var(--text);
       line-height: 1.7;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+    }
     a { color: var(--sakura); text-decoration: none; }
     a:hover { color: var(--gold); }
 
@@ -52,6 +60,7 @@
       display: flex; justify-content: space-between; align-items: center;
     }
     .logo { font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+    .nav-menu { display: flex; gap: 1rem; }
     .nav-links { display: flex; gap: 1.5rem; }
     .nav-links a { font-size: 0.95rem; }
     .nav-links a.active { color: var(--gold); }
@@ -164,37 +173,40 @@
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body class="ruby-off">
   <header>
     <nav>
       <div class="logo">[カーマイン村]スローライフ</div>
-      <div class="nav-links">
-        <a href="index.html">ホーム</a>
-        <a href="characters.html" class="active">キャラ</a>
-        <a href="world_words.html">用語集</a>
-        <a href="chapter.html">各話</a>
-        <a href="news.html">ニュース</a>
-        <a href="gallery.html">ギャラリー</a>
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="index.html">ホーム</a>
+          <a href="characters.html" class="active">キャラ</a>
+          <a href="world_words.html">用語集</a>
+          <a href="chapter.html">各話</a>
+          <a href="news.html">ニュース</a>
+          <a href="gallery.html">ギャラリー</a>
+        </div>
+        <button type="button" id="toggle-ruby">ルビON/OFF</button>
       </div>
     </nav>
   </header>
+  <script src="ruby_button.js" charset="utf-8"></script>
 
   <main class="page">
     <h1 class="page-title">
-      キャラクター 一覧
+      キャラクター <ruby>一覧<rt>いちらん</rt></ruby>
       <span>のんびり、ほのぼの、ゆるりと</span>
     </h1>
 
-    <!-- 主要キャラクター -->
+    <!-- <ruby>主要<rt>しゅよう</rt></ruby>キャラクター -->
     <div class="main-char">
       <img src="images/maham.jpg" alt="マハム">
       <div>
         <h2>マハム・ハインリヒ</h2>
-        <div class="role">6歳 / ハインリヒ侯爵家三男 / スキル：スローライフ</div>
-        <p>5歳の鑑定の儀で「スローライフ」というハズレスキルを引き、両親を落胆させた貴族三男。6歳で妹ミリアとともに辺境カーマイン村へ領主代行として左遷される。</p>
-        <p>村に入った瞬間スキルが活性化し、鑑定初級・アイテムボックス小・植物図鑑知識初級・魔物図鑑知識初級などの便利な派生スキルを得る。戦闘よりも庭いじりや観察が得意で、のんびり屋。</p>
-        <p>前世の記憶を持ちながらも、村の人々と関わり、庭の手入れやスライム狩り、村の施設視察を通じて少しずつ「何もしない」ことの奥深さを知っていく。転生者らしい冷静さと、子供らしい好奇心を併せ持つ主人公。</p>
+        <div class="role">6<ruby>歳<rt>さい</rt></ruby> / ハインリヒ<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby><ruby>三男<rt>さんなん</rt></ruby> / スキル：スローライフ</div>
+        <p>5<ruby>歳<rt>さい</rt></ruby>の<ruby>鑑定<rt>かんてい</rt></ruby>の<ruby>儀<rt>ぎ</rt></ruby>で「スローライフ」というハズレスキルを<ruby>引<rt>ひ</rt></ruby>き、<ruby>両親<rt>りょうしん</rt></ruby>を<ruby>落胆<rt>らくたん</rt></ruby>させた<ruby>貴族<rt>きぞく</rt></ruby><ruby>三男<rt>さんなん</rt></ruby>。6<ruby>歳<rt>さい</rt></ruby>で<ruby>妹<rt>いもうと</rt></ruby>ミリアとともに<ruby>辺境<rt>へんきょう</rt></ruby>カーマイン<ruby>村<rt>むら</rt></ruby>へ<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>代行<rt>だいこう</rt></ruby>として<ruby>左遷<rt>させん</rt></ruby>される。</p>
+        <p><ruby>村<rt>むら</rt></ruby>に<ruby>入<rt>はい</rt></ruby>った<ruby>瞬間<rt>しゅんかん</rt></ruby>スキルが<ruby>活性化<rt>かっせいか</rt></ruby>し、<ruby>鑑定<rt>かんてい</rt></ruby><ruby>初級<rt>しょきゅう</rt></ruby>・アイテムボックス<ruby>小<rt>しょう</rt></ruby>・<ruby>植物<rt>しょくぶつ</rt></ruby><ruby>図鑑<rt>ずかん</rt></ruby><ruby>知識<rt>ちしき</rt></ruby><ruby>初級<rt>しょきゅう</rt></ruby>・<ruby>魔物<rt>まもの</rt></ruby><ruby>図鑑<rt>ずかん</rt></ruby><ruby>知識<rt>ちしき</rt></ruby><ruby>初級<rt>しょきゅう</rt></ruby>などの<ruby>便利<rt>べんり</rt></ruby>な<ruby>派生<rt>はせい</rt></ruby>スキルを<ruby>得<rt>え</rt></ruby>る。<ruby>戦闘<rt>せんとう</rt></ruby>よりも<ruby>庭<rt>にわ</rt></ruby>いじりや<ruby>観察<rt>かんさつ</rt></ruby>が<ruby>得意<rt>とくい</rt></ruby>で、のんびり<ruby>屋<rt>や</rt></ruby>。</p>
+        <p><ruby>前世<rt>ぜんせ</rt></ruby>の<ruby>記憶<rt>きおく</rt></ruby>を<ruby>持<rt>も</rt></ruby>ちながらも、<ruby>村<rt>むら</rt></ruby>の<ruby>人々<rt>ひとびと</rt></ruby>と<ruby>関<rt>かか</rt></ruby>わり、<ruby>庭<rt>にわ</rt></ruby>の<ruby>手入<rt>てい</rt></ruby>れやスライム<ruby>狩<rt>が</rt></ruby>り、<ruby>村<rt>むら</rt></ruby>の<ruby>施設<rt>しせつ</rt></ruby><ruby>視察<rt>しさつ</rt></ruby>を<ruby>通<rt>つう</rt></ruby>じて<ruby>少<rt>すこ</rt></ruby>しずつ「<ruby>何<rt>なに</rt></ruby>もしない」ことの<ruby>奥深<rt>おくふか</rt></ruby>さを<ruby>知<rt>し</rt></ruby>っていく。<ruby>転生<rt>てんせい</rt></ruby><ruby>者<rt>しゃ</rt></ruby>らしい<ruby>冷静<rt>れいせい</rt></ruby>さと、<ruby>子供<rt>こども</rt></ruby>らしい<ruby>好奇心<rt>こうきしん</rt></ruby>を<ruby>併<rt>あわ</rt></ruby>せ<ruby>持<rt>も</rt></ruby>つ<ruby>主人公<rt>しゅじんこう</rt></ruby>。</p>
       </div>
     </div>
 
@@ -202,10 +214,10 @@
       <img src="images/miria.jpg" alt="ミリア">
       <div>
         <h2>ミリア・ハインリヒ</h2>
-        <div class="role">5歳 / マハムの妹 / スキル：裁縫</div>
-        <p>マハムの一つ下の妹。鑑定の儀で「裁縫」を引き、武勲第一主義の侯爵家では不満を持たれたが、本人はすぐに立ち直る優しい性格。</p>
-        <p>魔法陣の刺繍ができる実用品としての裁縫スキルを持ち、護符作りが上手。村に来てからはシータと一緒に針仕事をしたり、マハムを心配したりと、兄想いの可愛い妹として活躍する。</p>
-        <p>少し心配性だが、好奇心旺盛で村の生活にもすぐ慣れる。絵日記を書くのが得意で、兄上への手紙にも絵日記を添える。</p>
+        <div class="role">5<ruby>歳<rt>さい</rt></ruby> / マハムの<ruby>妹<rt>いもうと</rt></ruby> / スキル：<ruby>裁縫<rt>さいほう</rt></ruby></div>
+        <p>マハムの<ruby>一<rt>ひと</rt></ruby>つ<ruby>下<rt>した</rt></ruby>の<ruby>妹<rt>いもうと</rt></ruby>。<ruby>鑑定<rt>かんてい</rt></ruby>の<ruby>儀<rt>ぎ</rt></ruby>で「<ruby>裁縫<rt>さいほう</rt></ruby>」を<ruby>引<rt>ひ</rt></ruby>き、<ruby>武勲<rt>ぶくん</rt></ruby><ruby>第一<rt>だいいち</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby>の<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby>では<ruby>不満<rt>ふまん</rt></ruby>を<ruby>持<rt>も</rt></ruby>たれたが、<ruby>本人<rt>ほんにん</rt></ruby>はすぐに<ruby>立<rt>た</rt></ruby>ち<ruby>直<rt>なお</rt></ruby>る<ruby>優<rt>やさ</rt></ruby>しい<ruby>性格<rt>せいかく</rt></ruby>。</p>
+        <p><ruby>魔法陣<rt>まほうじん</rt></ruby>の<ruby>刺繍<rt>ししゅう</rt></ruby>ができる<ruby>実用品<rt>じつようひん</rt></ruby>としての<ruby>裁縫<rt>さいほう</rt></ruby>スキルを<ruby>持<rt>も</rt></ruby>ち、<ruby>護符<rt>ごふ</rt></ruby><ruby>作<rt>づく</rt></ruby>りが<ruby>上手<rt>じょうず</rt></ruby>。<ruby>村<rt>むら</rt></ruby>に<ruby>来<rt>き</rt></ruby>てからはシータと<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>針仕事<rt>はりしごと</rt></ruby>をしたり、マハムを<ruby>心配<rt>しんぱい</rt></ruby>したりと、<ruby>兄<rt>あに</rt></ruby><ruby>想<rt>おも</rt></ruby>いの<ruby>可愛<rt>かわい</rt></ruby>い<ruby>妹<rt>いもうと</rt></ruby>として<ruby>活躍<rt>かつやく</rt></ruby>する。</p>
+        <p><ruby>少<rt>すこ</rt></ruby>し<ruby>心配性<rt>しんぱいしょう</rt></ruby>だが、<ruby>好奇心<rt>こうきしん</rt></ruby><ruby>旺盛<rt>おうせい</rt></ruby>で<ruby>村<rt>むら</rt></ruby>の<ruby>生活<rt>せいかつ</rt></ruby>にもすぐ<ruby>慣<rt>な</rt></ruby>れる。<ruby>絵日記<rt>えにっき</rt></ruby>を<ruby>書<rt>か</rt></ruby>くのが<ruby>得意<rt>とくい</rt></ruby>で、<ruby>兄上<rt>あにうえ</rt></ruby>への<ruby>手紙<rt>てがみ</rt></ruby>にも<ruby>絵日記<rt>えにっき</rt></ruby>を<ruby>添<rt>そ</rt></ruby>える。</p>
       </div>
     </div>
 
@@ -213,10 +225,10 @@
       <img src="images/seeta.jpg" alt="シータ">
       <div>
         <h2>シータ・エルドラン</h2>
-        <div class="role">16歳 / メイド / スキル：氷魔法 / 男爵令嬢</div>
-        <p>ハインリヒ侯爵家のメイドで、マハムとミリアの世話係。下級貴族の親戚筋で、社交界の噂を嫌ってメイドの道を選んだ黒髪黒目の低身長巨乳美少女。</p>
-        <p>氷魔法（水魔法の上位）を持ち、生活魔法も得意。クリーン魔法で家を掃除したり、氷でアイスティーやアイスクリームを作ったりと、村生活を支える頼れるお姉さん。</p>
-        <p>戦闘能力も一定以上あり、護衛としての役割も期待されていた。マハムたちにとっては親代わりのような存在で、優しくしっかりした性格。</p>
+        <div class="role">16<ruby>歳<rt>さい</rt></ruby> / メイド / スキル：<ruby>氷<rt>こおり</rt></ruby><ruby>魔法<rt>まほう</rt></ruby> / <ruby>男爵<rt>だんしゃく</rt></ruby><ruby>令嬢<rt>れいじょう</rt></ruby></div>
+        <p>ハインリヒ<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby>のメイドで、マハムとミリアの<ruby>世話<rt>せわ</rt></ruby><ruby>係<rt>かかり</rt></ruby>。<ruby>下級<rt>かきゅう</rt></ruby><ruby>貴族<rt>きぞく</rt></ruby>の<ruby>親戚<rt>しんせき</rt></ruby><ruby>筋<rt>すじ</rt></ruby>で、<ruby>社交<rt>しゃこう</rt></ruby><ruby>界<rt>かい</rt></ruby>の<ruby>噂<rt>うわさ</rt></ruby>を<ruby>嫌<rt>きら</rt></ruby>ってメイドの<ruby>道<rt>みち</rt></ruby>を<ruby>選<rt>えら</rt></ruby>んだ<ruby>黒髪<rt>くろかみ</rt></ruby><ruby>黒目<rt>くろめ</rt></ruby>の<ruby>低<rt>てい</rt></ruby><ruby>身長<rt>しんちょう</rt></ruby><ruby>巨乳<rt>きょにゅう</rt></ruby><ruby>美少女<rt>びしょうじょ</rt></ruby>。</p>
+        <p><ruby>氷<rt>こおり</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>（<ruby>水<rt>みず</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>の<ruby>上位<rt>じょうい</rt></ruby>）を<ruby>持<rt>も</rt></ruby>ち、<ruby>生活<rt>せいかつ</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>も<ruby>得意<rt>とくい</rt></ruby>。クリーン<ruby>魔法<rt>まほう</rt></ruby>で<ruby>家<rt>いえ</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>したり、<ruby>氷<rt>こおり</rt></ruby>でアイスティーやアイスクリームを<ruby>作<rt>つく</rt></ruby>ったりと、<ruby>村<rt>むら</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby>を<ruby>支<rt>ささ</rt></ruby>える<ruby>頼<rt>たよ</rt></ruby>れるお<ruby>姉<rt>ねえ</rt></ruby>さん。</p>
+        <p><ruby>戦闘<rt>せんとう</rt></ruby><ruby>能力<rt>のうりょく</rt></ruby>も<ruby>一定<rt>いってい</rt></ruby><ruby>以上<rt>いじょう</rt></ruby>あり、<ruby>護衛<rt>ごえい</rt></ruby>としての<ruby>役割<rt>やくわり</rt></ruby>も<ruby>期待<rt>きたい</rt></ruby>されていた。マハムたちにとっては<ruby>親代<rt>おやが</rt></ruby>わりのような<ruby>存在<rt>そんざい</rt></ruby>で、<ruby>優<rt>やさ</rt></ruby>しくしっかりした<ruby>性格<rt>せいかく</rt></ruby>。</p>
       </div>
     </div>
 
@@ -224,48 +236,48 @@
       <img src="images/tarya.jpg" alt="ターリャ">
       <div>
         <h2>ターリャ</h2>
-        <div class="role">6歳 / 村長の娘 / 元気な村娘</div>
-        <p>カーマイン村の村長ドーサンとカイラの娘。金髪碧眼の元気いっぱいな女の子で、毎朝領主館の丘を駆け上がって「あーそーぼー」とマハムたちを呼びに来る。</p>
-        <p>かけっこが得意で足が速く、村の案内役としてマハムたちを連れ回す。食いしん坊でお祭りや宴会が大好き。ミリアとはすぐに仲良くなる。</p>
-        <p>無邪気で行動力があり、時に大人を振り回すが、村の日常に欠かせない存在。マハムにとっては最初の村の友達。</p>
+        <div class="role">6<ruby>歳<rt>さい</rt></ruby> / <ruby>村長<rt>そんちょう</rt></ruby>の<ruby>娘<rt>むすめ</rt></ruby> / <ruby>元気<rt>げんき</rt></ruby>な<ruby>村<rt>むら</rt></ruby><ruby>娘<rt>むすめ</rt></ruby></div>
+        <p>カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>村長<rt>そんちょう</rt></ruby>ドーサンとカイラの<ruby>娘<rt>むすめ</rt></ruby>。<ruby>金髪<rt>きんぱつ</rt></ruby><ruby>碧眼<rt>へきがん</rt></ruby>の<ruby>元気<rt>げんき</rt></ruby>いっぱいな<ruby>女<rt>おんな</rt></ruby>の<ruby>子<rt>こ</rt></ruby>で、<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>の<ruby>丘<rt>おか</rt></ruby>を<ruby>駆<rt>か</rt></ruby>け<ruby>上<rt>あ</rt></ruby>がって「あーそーぼー」とマハムたちを<ruby>呼<rt>よ</rt></ruby>びに<ruby>来<rt>く</rt></ruby>る。</p>
+        <p>かけっこが<ruby>得意<rt>とくい</rt></ruby>で<ruby>足<rt>あし</rt></ruby>が<ruby>速<rt>はや</rt></ruby>く、<ruby>村<rt>むら</rt></ruby>の<ruby>案内<rt>あんない</rt></ruby><ruby>役<rt>やく</rt></ruby>としてマハムたちを<ruby>連<rt>つ</rt></ruby>れ<ruby>回<rt>まわ</rt></ruby>す。<ruby>食<rt>く</rt></ruby>いしん<ruby>坊<rt>ぼ</rt></ruby>でお<ruby>祭<rt>まつ</rt></ruby>りや<ruby>宴会<rt>えんかい</rt></ruby>が<ruby>大好<rt>だいす</rt></ruby>き。ミリアとはすぐに<ruby>仲良<rt>なかよ</rt></ruby>くなる。</p>
+        <p><ruby>無邪気<rt>むじゃき</rt></ruby>で<ruby>行動<rt>こうどう</rt></ruby><ruby>力<rt>りょく</rt></ruby>があり、<ruby>時<rt>とき</rt></ruby>に<ruby>大人<rt>おとな</rt></ruby>を<ruby>振<rt>ふ</rt></ruby>り<ruby>回<rt>まわ</rt></ruby>すが、<ruby>村<rt>むら</rt></ruby>の<ruby>日常<rt>にちじょう</rt></ruby>に<ruby>欠<rt>か</rt></ruby>かせない<ruby>存在<rt>そんざい</rt></ruby>。マハムにとっては<ruby>最初<rt>さいしょ</rt></ruby>の<ruby>村<rt>むら</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>。</p>
       </div>
     </div>
 
-    <!-- 家族 -->
-    <h3 class="section-title">ハインリヒ侯爵家</h3>
+    <!-- <ruby>家族<rt>かぞく</rt></ruby> -->
+    <h3 class="section-title">ハインリヒ<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby></h3>
     <div class="small-grid">
       <div class="small-card">
         <h4>カイン・ハインリヒ</h4>
-        <div class="role">10歳 / 長男 / スキル：剣術</div>
-        <p>家督を継ぐ予定の優秀な長男。筆まめで、定期的にマハムたちへ手紙を送る。王都でのパーティーや婚約探しに苦労している。</p>
+        <div class="role">10<ruby>歳<rt>さい</rt></ruby> / <ruby>長男<rt>ちょうなん</rt></ruby> / スキル：<ruby>剣術<rt>けんじゅつ</rt></ruby></div>
+        <p><ruby>家督<rt>かとく</rt></ruby>を<ruby>継<rt>つ</rt></ruby>ぐ<ruby>予定<rt>よてい</rt></ruby>の<ruby>優秀<rt>ゆうしゅう</rt></ruby>な<ruby>長男<rt>ちょうなん</rt></ruby>。<ruby>筆<rt>ふで</rt></ruby>まめで、<ruby>定期的<rt>ていきてき</rt></ruby>にマハムたちへ<ruby>手紙<rt>てがみ</rt></ruby>を<ruby>送<rt>おく</rt></ruby>る。<ruby>王都<rt>おうと</rt></ruby>でのパーティーや<ruby>婚約<rt>こんやく</rt></ruby><ruby>探<rt>さが</rt></ruby>しに<ruby>苦労<rt>くろう</rt></ruby>している。</p>
       </div>
       <div class="small-card">
         <h4>エイド・ハインリヒ</h4>
-        <div class="role">8歳 / 次男 / スキル：火魔法</div>
-        <p>火魔法スキル持ちのやんちゃな次男。マハムたちにはあまり興味がなく、手に余る存在として描かれる。</p>
+        <div class="role">8<ruby>歳<rt>さい</rt></ruby> / <ruby>次男<rt>じなん</rt></ruby> / スキル：<ruby>火<rt>ひ</rt></ruby><ruby>魔法<rt>まほう</rt></ruby></div>
+        <p><ruby>火<rt>ひ</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>スキル<ruby>持<rt>も</rt></ruby>ちのやんちゃな<ruby>次男<rt>じなん</rt></ruby>。マハムたちにはあまり<ruby>興味<rt>きょうみ</rt></ruby>がなく、<ruby>手<rt>て</rt></ruby>に<ruby>余<rt>あま</rt></ruby>る<ruby>存在<rt>そんざい</rt></ruby>として<ruby>描<rt>えが</rt></ruby>かれる。</p>
       </div>
       <div class="small-card">
-        <h4>ハインリヒ侯爵</h4>
-        <div class="role">父親</div>
-        <p>武勲第一主義の侯爵。ハズレスキルのマハムとミリアを左遷するが、一年後には寂しさを感じて帰還を促す不器用な父親。</p>
+        <h4>ハインリヒ<ruby>侯爵<rt>こうしゃく</rt></ruby></h4>
+        <div class="role"><ruby>父親<rt>ちちおや</rt></ruby></div>
+        <p><ruby>武勲<rt>ぶくん</rt></ruby><ruby>第一<rt>だいいち</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby>の<ruby>侯爵<rt>こうしゃく</rt></ruby>。ハズレスキルのマハムとミリアを<ruby>左遷<rt>させん</rt></ruby>するが、<ruby>一年<rt>いちねん</rt></ruby><ruby>後<rt>ご</rt></ruby>には<ruby>寂<rt>さび</rt></ruby>しさを<ruby>感<rt>かん</rt></ruby>じて<ruby>帰還<rt>きかん</rt></ruby>を<ruby>促<rt>うなが</rt></ruby>す<ruby>不器用<rt>ぶきよう</rt></ruby>な<ruby>父親<rt>ちちおや</rt></ruby>。</p>
       </div>
       <div class="small-card">
         <h4>エメダ・ハインリヒ</h4>
-        <div class="role">母親</div>
-        <p>左遷には反対しつつも、侯爵家の事情に従う。子供たちを気遣う優しい性格。</p>
+        <div class="role"><ruby>母親<rt>ははおや</rt></ruby></div>
+        <p><ruby>左遷<rt>させん</rt></ruby>には<ruby>反対<rt>はんたい</rt></ruby>しつつも、<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby>の<ruby>事情<rt>じじょう</rt></ruby>に<ruby>従<rt>したが</rt></ruby>う。<ruby>子供<rt>こども</rt></ruby>たちを<ruby>気遣<rt>きづか</rt></ruby>う<ruby>優<rt>やさ</rt></ruby>しい<ruby>性格<rt>せいかく</rt></ruby>。</p>
       </div>
     </div>
 
-    <h3 class="section-title">カーマイン村の主な住人</h3>
-    <!-- トール・ソラエナ・ラーミア（中間サイズ） -->
+    <h3 class="section-title">カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>主<rt>おも</rt></ruby>な<ruby>住人<rt>じゅうにん</rt></ruby></h3>
+    <!-- トール・ソラエナ・ラーミア（<ruby>中間<rt>ちゅうかん</rt></ruby>サイズ） -->
     <div class="main-char">
       <img src="images/tholl.jpg" alt="トール">
       <div>
         <h2>トール</h2>
-        <div class="role">8歳 / ガキ大将</div>
-        <p>カーマイン村のガキ大将。いばりんぼで噂好き、少し生意気な態度を取るが根は悪くない。マハムたちが村に来てからはよく絡んできて、一緒に遊びや探索に加わる。</p>
-        <p>彼女のソラエナとは幼馴染で、彼女の前では少し素直になる。騎士になりたいと一時的に木剣で素振りをしたり、噂を仕入れてきてはマハムたちを巻き込むなど、行動力はあるが三日坊主気味。</p>
-        <p>村の子供たちの中心的存在で、マークやロイドといった兄弟を従えている。マハムにとっては最初の男友達的な存在。</p>
+        <div class="role">8<ruby>歳<rt>さい</rt></ruby> / ガキ<ruby>大将<rt>だいしょう</rt></ruby></div>
+        <p>カーマイン<ruby>村<rt>むら</rt></ruby>のガキ<ruby>大将<rt>だいしょう</rt></ruby>。いばりんぼで<ruby>噂<rt>うわさ</rt></ruby><ruby>好<rt>ず</rt></ruby>き、<ruby>少<rt>すこ</rt></ruby>し<ruby>生意気<rt>なまいき</rt></ruby>な<ruby>態度<rt>たいど</rt></ruby>を<ruby>取<rt>と</rt></ruby>るが<ruby>根<rt>ね</rt></ruby>は<ruby>悪<rt>わる</rt></ruby>くない。マハムたちが<ruby>村<rt>むら</rt></ruby>に<ruby>来<rt>き</rt></ruby>てからはよく<ruby>絡<rt>から</rt></ruby>んできて、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>びや<ruby>探索<rt>たんさく</rt></ruby>に<ruby>加<rt>くわ</rt></ruby>わる。</p>
+        <p><ruby>彼女<rt>かのじょ</rt></ruby>のソラエナとは<ruby>幼馴染<rt>おさななじみ</rt></ruby>で、<ruby>彼女<rt>かのじょ</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>では<ruby>少<rt>すこ</rt></ruby>し<ruby>素直<rt>すなお</rt></ruby>になる。<ruby>騎士<rt>きし</rt></ruby>になりたいと<ruby>一時的<rt>いちじてき</rt></ruby>に<ruby>木剣<rt>ぼっけん</rt></ruby>で<ruby>素振<rt>すぶ</rt></ruby>りをしたり、<ruby>噂<rt>うわさ</rt></ruby>を<ruby>仕入<rt>しい</rt></ruby>れてきてはマハムたちを<ruby>巻<rt>ま</rt></ruby>き<ruby>込<rt>こ</rt></ruby>むなど、<ruby>行動力<rt>こうどうりょく</rt></ruby>はあるが<ruby>三日坊主<rt>みっかぼうず</rt></ruby><ruby>気味<rt>ぎみ</rt></ruby>。</p>
+        <p><ruby>村<rt>むら</rt></ruby>の<ruby>子供<rt>こども</rt></ruby>たちの<ruby>中心的<rt>ちゅうしんてき</rt></ruby><ruby>存在<rt>そんざい</rt></ruby>で、マークやロイドといった<ruby>兄弟<rt>きょうだい</rt></ruby>を<ruby>従<rt>したが</rt></ruby>えている。マハムにとっては<ruby>最初<rt>さいしょ</rt></ruby>の<ruby>男友達<rt>おとこともだち</rt></ruby><ruby>的<rt>てき</rt></ruby>な<ruby>存在<rt>そんざい</rt></ruby>。</p>
       </div>
     </div>
 
@@ -273,10 +285,10 @@
       <img src="images/soraena.jpg" alt="ソラエナ">
       <div>
         <h2>ソラエナ</h2>
-        <div class="role">8歳 / トールの幼馴染</div>
-        <p>トールの幼馴染で彼女ポジ。頭が良く、冷静で優しい性格。トールが暴走しそうなときにさりげなく止める役割を担うことが多い。</p>
-        <p>実は妖精を見たことがあるなど、ロマンチックな一面も持つ。マハムやミリアともすぐに打ち解け、村の子供たちの中では比較的落ち着いた存在。</p>
-        <p>トールを支えるしっかり者で、彼女の存在があるからこそトールのガキ大将ぶりも成り立っている。</p>
+        <div class="role">8<ruby>歳<rt>さい</rt></ruby> / トールの<ruby>幼馴染<rt>おさななじみ</rt></ruby></div>
+        <p>トールの<ruby>幼馴染<rt>おさななじみ</rt></ruby>で<ruby>彼女<rt>かのじょ</rt></ruby>ポジ。<ruby>頭<rt>あたま</rt></ruby>が<ruby>良<rt>よ</rt></ruby>く、<ruby>冷静<rt>れいせい</rt></ruby>で<ruby>優<rt>やさ</rt></ruby>しい<ruby>性格<rt>せいかく</rt></ruby>。トールが<ruby>暴走<rt>ぼうそう</rt></ruby>しそうなときにさりげなく<ruby>止<rt>と</rt></ruby>める<ruby>役割<rt>やくわり</rt></ruby>を<ruby>担<rt>にな</rt></ruby>うことが<ruby>多<rt>おお</rt></ruby>い。</p>
+        <p><ruby>実<rt>じつ</rt></ruby>は<ruby>妖精<rt>ようせい</rt></ruby>を<ruby>見<rt>み</rt></ruby>たことがあるなど、ロマンチックな<ruby>一面<rt>いちめん</rt></ruby>も<ruby>持<rt>も</rt></ruby>つ。マハムやミリアともすぐに<ruby>打<rt>う</rt></ruby>ち<ruby>解<rt>と</rt></ruby>け、<ruby>村<rt>むら</rt></ruby>の<ruby>子供<rt>こども</rt></ruby>たちの<ruby>中<rt>なか</rt></ruby>では<ruby>比較的<rt>ひかくてき</rt></ruby><ruby>落<rt>お</rt></ruby>ち<ruby>着<rt>つ</rt></ruby>いた<ruby>存在<rt>そんざい</rt></ruby>。</p>
+        <p>トールを<ruby>支<rt>ささ</rt></ruby>えるしっかり<ruby>者<rt>もの</rt></ruby>で、<ruby>彼女<rt>かのじょ</rt></ruby>の<ruby>存在<rt>そんざい</rt></ruby>があるからこそトールのガキ<ruby>大将<rt>だいしょう</rt></ruby>ぶりも<ruby>成<rt>な</rt></ruby>り<ruby>立<rt>た</rt></ruby>っている。</p>
       </div>
     </div>
 
@@ -284,57 +296,57 @@
       <img src="images/ramia.jpg" alt="ラーミア">
       <div>
         <h2>ラーミア</h2>
-        <div class="role">20歳 / 猫獣人 / 冒険者ギルド受付嬢</div>
-        <p>黒髪金目の猫獣人で、カーマイン村の冒険者ギルド受付嬢。語尾が「にょ」という特徴的な口調。口癖が抜けずに左遷されてきた経緯を持つ。</p>
-        <p>愛嬌があり、尻尾や耳で感情がよく出る。ギルドの仕事はあまり忙しくないため、マハムたちがスライム魔核を売りに来るたびに会話を楽しむ。お酒に弱く、祭りではよく酔っ払う。</p>
-        <p>ヘルマート男爵に好意を抱いているなど、恋愛面でも少し恥ずかしがり屋。村のムードメーカー的存在で、マハムたちとも気軽に話せるお姉さん。</p>
+        <div class="role">20<ruby>歳<rt>さい</rt></ruby> / <ruby>猫<rt>ねこ</rt></ruby><ruby>獣人<rt>じゅうじん</rt></ruby> / <ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド<ruby>受付嬢<rt>うけつけじょう</rt></ruby></div>
+        <p><ruby>黒髪<rt>くろかみ</rt></ruby><ruby>金目<rt>きんめ</rt></ruby>の<ruby>猫<rt>ねこ</rt></ruby><ruby>獣人<rt>じゅうじん</rt></ruby>で、カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド<ruby>受付嬢<rt>うけつけじょう</rt></ruby>。<ruby>語尾<rt>ごび</rt></ruby>が「にょ」という<ruby>特徴的<rt>とくちょうてき</rt></ruby>な<ruby>口調<rt>くちょう</rt></ruby>。<ruby>口癖<rt>くちぐせ</rt></ruby>が<ruby>抜<rt>ぬ</rt></ruby>けずに<ruby>左遷<rt>させん</rt></ruby>されてきた<ruby>経緯<rt>けいい</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ。</p>
+        <p><ruby>愛嬌<rt>あいきょう</rt></ruby>があり、<ruby>尻尾<rt>しっぽ</rt></ruby>や<ruby>耳<rt>みみ</rt></ruby>で<ruby>感情<rt>かんじょう</rt></ruby>がよく<ruby>出<rt>で</rt></ruby>る。ギルドの<ruby>仕事<rt>しごと</rt></ruby>はあまり<ruby>忙<rt>いそが</rt></ruby>しくないため、マハムたちがスライム<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>売<rt>う</rt></ruby>りに<ruby>来<rt>く</rt></ruby>るたびに<ruby>会話<rt>かいわ</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しむ。お<ruby>酒<rt>さけ</rt></ruby>に<ruby>弱<rt>よわ</rt></ruby>く、<ruby>祭<rt>まつ</rt></ruby>りではよく<ruby>酔<rt>よ</rt></ruby>っ<ruby>払<rt>ぱら</rt></ruby>う。</p>
+        <p>ヘルマート<ruby>男爵<rt>だんしゃく</rt></ruby>に<ruby>好意<rt>こうい</rt></ruby>を<ruby>抱<rt>いだ</rt></ruby>いているなど、<ruby>恋愛<rt>れんあい</rt></ruby><ruby>面<rt>めん</rt></ruby>でも<ruby>少<rt>すこ</rt></ruby>し<ruby>恥<rt>は</rt></ruby>ずかしがり<ruby>屋<rt>や</rt></ruby>。<ruby>村<rt>むら</rt></ruby>のムードメーカー<ruby>的<rt>てき</rt></ruby><ruby>存在<rt>そんざい</rt></ruby>で、マハムたちとも<ruby>気軽<rt>きがる</rt></ruby>に<ruby>話<rt>はな</rt></ruby>せるお<ruby>姉<rt>ねえ</rt></ruby>さん。</p>
       </div>
     </div>
     <div class="small-grid">
       <div class="small-card">
-        <h4>ドーサン村長</h4>
-        <div class="role">42歳 / 村長</div>
-        <p>ターリャの父親。温かく世話焼きで、村のまとめ役。昔はガキ大将だったという過去を持つ。シイタケと紅茶栽培をしている。</p>
+        <h4>ドーサン<ruby>村長<rt>そんちょう</rt></ruby></h4>
+        <div class="role">42<ruby>歳<rt>さい</rt></ruby> / <ruby>村長<rt>そんちょう</rt></ruby></div>
+        <p>ターリャの<ruby>父親<rt>ちちおや</rt></ruby>。<ruby>温<rt>あたた</rt></ruby>かく<ruby>世話焼<rt>せわや</rt></ruby>きで、<ruby>村<rt>むら</rt></ruby>のまとめ<ruby>役<rt>やく</rt></ruby>。<ruby>昔<rt>むかし</rt></ruby>はガキ<ruby>大将<rt>だいしょう</rt></ruby>だったという<ruby>過去<rt>かこ</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ。シイタケと<ruby>紅茶<rt>こうちゃ</rt></ruby><ruby>栽培<rt>さいばい</rt></ruby>をしている。</p>
       </div>
       <div class="small-card">
         <h4>カイラ</h4>
-        <div class="role">38歳 / 村長の妻</div>
-        <p>ターリャの母親。おっとりしているが夫の尻を叩くこともある。シータにダイエット相談をするなど、村の主婦代表。</p>
+        <div class="role">38<ruby>歳<rt>さい</rt></ruby> / <ruby>村長<rt>そんちょう</rt></ruby>の<ruby>妻<rt>つま</rt></ruby></div>
+        <p>ターリャの<ruby>母親<rt>ははおや</rt></ruby>。おっとりしているが<ruby>夫<rt>おっと</rt></ruby>の<ruby>尻<rt>しり</rt></ruby>を<ruby>叩<rt>たた</rt></ruby>くこともある。シータにダイエット<ruby>相談<rt>そうだん</rt></ruby>をするなど、<ruby>村<rt>むら</rt></ruby>の<ruby>主婦<rt>しゅふ</rt></ruby><ruby>代表<rt>だいひょう</rt></ruby>。</p>
       </div>
       <div class="small-card">
         <h4>リリー・カサンドラ</h4>
-        <div class="role">見た目70歳・実年齢300歳以上 / ハイエルフ</div>
-        <p>村の最長老兼相談役。最上級ポーションを製造して村の外貨を稼ぐ薬師。マハムの錬金術の師匠。くすんだ金髪のハイエルフ。</p>
+        <div class="role"><ruby>見<rt>み</rt></ruby>た<ruby>目<rt>め</rt></ruby>70<ruby>歳<rt>さい</rt></ruby>・<ruby>実<rt>じつ</rt></ruby><ruby>年齢<rt>ねんれい</rt></ruby>300<ruby>歳<rt>さい</rt></ruby><ruby>以上<rt>いじょう</rt></ruby> / ハイエルフ</div>
+        <p><ruby>村<rt>むら</rt></ruby>の<ruby>最長<rt>さいちょう</rt></ruby><ruby>老<rt>ろう</rt></ruby><ruby>兼<rt>けん</rt></ruby><ruby>相談<rt>そうだん</rt></ruby><ruby>役<rt>やく</rt></ruby>。<ruby>最上級<rt>さいじょうきゅう</rt></ruby>ポーションを<ruby>製造<rt>せいぞう</rt></ruby>して<ruby>村<rt>むら</rt></ruby>の<ruby>外貨<rt>がいか</rt></ruby>を<ruby>稼<rt>かせ</rt></ruby>ぐ<ruby>薬師<rt>やくし</rt></ruby>。マハムの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby>の<ruby>師匠<rt>ししょう</rt></ruby>。くすんだ<ruby>金髪<rt>きんぱつ</rt></ruby>のハイエルフ。</p>
       </div>
       <div class="small-card">
-        <h4>バハト・ローリン準男爵</h4>
-        <div class="role">50歳 / 冒険者ギルド長</div>
-        <p>普段何をしているか不明なギルド長。奥で書類仕事をしているらしいが、実は意外な趣味の副業も。</p>
+        <h4>バハト・ローリン<ruby>準<rt>じゅん</rt></ruby><ruby>男爵<rt>だんしゃく</rt></ruby></h4>
+        <div class="role">50<ruby>歳<rt>さい</rt></ruby> / <ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド<ruby>長<rt>ちょう</rt></ruby></div>
+        <p><ruby>普段<rt>ふだん</rt></ruby><ruby>何<rt>なに</rt></ruby>をしているか<ruby>不明<rt>ふめい</rt></ruby>なギルド<ruby>長<rt>ちょう</rt></ruby>。<ruby>奥<rt>おく</rt></ruby>で<ruby>書類<rt>しょるい</rt></ruby><ruby>仕事<rt>しごと</rt></ruby>をしているらしいが、<ruby>実<rt>じつ</rt></ruby>は<ruby>意外<rt>いがい</rt></ruby>な<ruby>趣味<rt>しゅみ</rt></ruby>の<ruby>副業<rt>ふくぎょう</rt></ruby>も。</p>
       </div>
       <div class="small-card">
-        <h4>ヘルマート・フィランド男爵</h4>
-        <div class="role">45歳 / 商人</div>
-        <p>村に来る商人貴族。アイテムボックス持ちで、リリーのポーションを王都まで運ぶ重要任務を担当。丸顔で愛嬌のある人。</p>
+        <h4>ヘルマート・フィランド<ruby>男爵<rt>だんしゃく</rt></ruby></h4>
+        <div class="role">45<ruby>歳<rt>さい</rt></ruby> / <ruby>商人<rt>しょうにん</rt></ruby></div>
+        <p><ruby>村<rt>むら</rt></ruby>に<ruby>来<rt>く</rt></ruby>る<ruby>商人<rt>しょうにん</rt></ruby><ruby>貴族<rt>きぞく</rt></ruby>。アイテムボックス<ruby>持<rt>も</rt></ruby>ちで、リリーのポーションを<ruby>王都<rt>おうと</rt></ruby>まで<ruby>運<rt>はこ</rt></ruby>ぶ<ruby>重要<rt>じゅうよう</rt></ruby><ruby>任務<rt>にんむ</rt></ruby>を<ruby>担当<rt>たんとう</rt></ruby>。<ruby>丸顔<rt>まるがお</rt></ruby>で<ruby>愛嬌<rt>あいきょう</rt></ruby>のある<ruby>人<rt>ひと</rt></ruby>。</p>
       </div>
       <div class="small-card">
-        <h4>アンドリュー神父</h4>
-        <div class="role">トカリアーナ教会・カーマイン村出張所</div>
-        <p>村の教会の神父。高齢で背が低く、ドワーフ族かもしれない。熱心な信者で、村の行事にも積極的に関わる。</p>
+        <h4>アンドリュー<ruby>神父<rt>しんぷ</rt></ruby></h4>
+        <div class="role">トカリアーナ<ruby>教会<rt>きょうかい</rt></ruby>・カーマイン<ruby>村<rt>むら</rt></ruby><ruby>出張所<rt>しゅっちょうしょ</rt></ruby></div>
+        <p><ruby>村<rt>むら</rt></ruby>の<ruby>教会<rt>きょうかい</rt></ruby>の<ruby>神父<rt>しんぷ</rt></ruby>。<ruby>高齢<rt>こうれい</rt></ruby>で<ruby>背<rt>せ</rt></ruby>が<ruby>低<rt>ひく</rt></ruby>く、ドワーフ<ruby>族<rt>ぞく</rt></ruby>かもしれない。<ruby>熱心<rt>ねっしん</rt></ruby>な<ruby>信者<rt>しんじゃ</rt></ruby>で、<ruby>村<rt>むら</rt></ruby>の<ruby>行事<rt>ぎょうじ</rt></ruby>にも<ruby>積極的<rt>せっきょくてき</rt></ruby>に<ruby>関<rt>かか</rt></ruby>わる。</p>
       </div>
       <div class="small-card">
-        <h4>雑貨屋の店主</h4>
-        <div class="role">高齢の男性 / ハゲ頭</div>
-        <p>村の生命線である何でも屋の店主。元鍛冶屋で金物に強い。蜂蜜飴や野沢菜饅頭なども扱う。</p>
+        <h4><ruby>雑貨<rt>ざっか</rt></ruby><ruby>屋<rt>や</rt></ruby>の<ruby>店主<rt>てんしゅ</rt></ruby></h4>
+        <div class="role"><ruby>高齢<rt>こうれい</rt></ruby>の<ruby>男性<rt>だんせい</rt></ruby> / ハゲ<ruby>頭<rt>あたま</rt></ruby></div>
+        <p><ruby>村<rt>むら</rt></ruby>の<ruby>生命<rt>せいめい</rt></ruby><ruby>線<rt>せん</rt></ruby>である<ruby>何<rt>なん</rt></ruby>でも<ruby>屋<rt>や</rt></ruby>の<ruby>店主<rt>てんしゅ</rt></ruby>。<ruby>元<rt>もと</rt></ruby><ruby>鍛冶<rt>かじ</rt></ruby><ruby>屋<rt>や</rt></ruby>で<ruby>金物<rt>かなもの</rt></ruby>に<ruby>強<rt>つよ</rt></ruby>い。<ruby>蜂蜜<rt>はちみつ</rt></ruby><ruby>飴<rt>あめ</rt></ruby>や<ruby>野沢菜<rt>のざわな</rt></ruby><ruby>饅頭<rt>まんじゅう</rt></ruby>なども<ruby>扱<rt>あつか</rt></ruby>う。</p>
       </div>
       <div class="small-card">
-        <h4>喫茶店のメイドさん</h4>
-        <div class="role">「森の小鳥たち」ウエイトレス</div>
-        <p>村の喫茶店で働く素朴な村娘のメイドさん。コーヒーやホットケーキを提供し、マハムたちを迎える。</p>
+        <h4><ruby>喫茶店<rt>きっさてん</rt></ruby>のメイドさん</h4>
+        <div class="role">「<ruby>森<rt>もり</rt></ruby>の<ruby>小鳥<rt>ことり</rt></ruby>たち」ウエイトレス</div>
+        <p><ruby>村<rt>むら</rt></ruby>の<ruby>喫茶店<rt>きっさてん</rt></ruby>で<ruby>働<rt>はたら</rt></ruby>く<ruby>素朴<rt>そぼく</rt></ruby>な<ruby>村<rt>むら</rt></ruby><ruby>娘<rt>むすめ</rt></ruby>のメイドさん。コーヒーやホットケーキを<ruby>提供<rt>ていきょう</rt></ruby>し、マハムたちを<ruby>迎<rt>むか</rt></ruby>える。</p>
       </div>
       <div class="small-card">
-        <h4>漬物屋のおじさん</h4>
-        <div class="role">長身のおじさん</div>
-        <p>村唯一の漬物専門店の店主。がっちり体型で高身長。キャベツや野沢菜の漬物を作り、町へも輸出している。</p>
+        <h4><ruby>漬物<rt>つけもの</rt></ruby><ruby>屋<rt>や</rt></ruby>のおじさん</h4>
+        <div class="role"><ruby>長身<rt>ちょうしん</rt></ruby>のおじさん</div>
+        <p><ruby>村<rt>むら</rt></ruby><ruby>唯一<rt>ゆいいつ</rt></ruby>の<ruby>漬物<rt>つけもの</rt></ruby><ruby>専門店<rt>せんもんてん</rt></ruby>の<ruby>店主<rt>てんしゅ</rt></ruby>。がっちり<ruby>体型<rt>たいけい</rt></ruby>で<ruby>高<rt>こう</rt></ruby><ruby>身長<rt>しんちょう</rt></ruby>。キャベツや<ruby>野沢菜<rt>のざわな</rt></ruby>の<ruby>漬物<rt>つけもの</rt></ruby>を<ruby>作<rt>つく</rt></ruby>り、<ruby>町<rt>まち</rt></ruby>へも<ruby>輸出<rt>ゆしゅつ</rt></ruby>している。</p>
       </div>
     </div>
   </main>
@@ -343,16 +355,16 @@
     <nav class="footer-nav">
       <a href="index.html">ホーム</a>
       <a href="characters.html">キャラ</a>
-      <a href="world_words.html">世界観＆用語集</a>
+      <a href="world_words.html"><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></a>
     </nav>
     <nav class="footer-nav">
-      <a href="chapter.html">各話</a>
+      <a href="chapter.html"><ruby>各話<rt>かくわ</rt></ruby></a>
       <a href="news.html">ニュース</a>
       <a href="gallery.html">ギャラリー</a>
     </nav>
-    <p>[カーマイン村]異世界スキル【スローライフ】</p>
-    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ——</p>
-    <a href="../index.html">上へ戻る</a>
+    <p>[カーマイン<ruby>村<rt>むら</rt></ruby>]<ruby>異世界<rt>いせかい</rt></ruby>スキル【スローライフ】</p>
+    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ――</p>
+    <a href="../index.html"><ruby>上<rt>うえ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>る</a>
     <p style="margin-top:0.5rem;">© 2026 takigawa ebiro</p>
   </footer>
 

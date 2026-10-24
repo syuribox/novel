@@ -38,6 +38,14 @@
       color: var(--text);
       line-height: 1.7;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+    }
     a { color: var(--sakura); text-decoration: none; }
     a:hover { color: var(--gold); }
 
@@ -52,6 +60,7 @@
       display: flex; justify-content: space-between; align-items: center;
     }
     .logo { font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+    .nav-menu { display: flex; gap: 1rem; }
     .nav-links { display: flex; gap: 1.5rem; }
     .nav-links a { font-size: 0.95rem; }
     .nav-links a.active { color: var(--gold); }
@@ -167,81 +176,84 @@
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body class="ruby-off">
   <header>
     <nav>
       <div class="logo">[カーマイン村]スローライフ</div>
-      <div class="nav-links">
-        <a href="index.html">ホーム</a>
-        <a href="characters.html">キャラ</a>
-        <a href="world_words.html" class="active">用語集</a>
-        <a href="chapter.html">各話</a>
-        <a href="news.html">ニュース</a>
-        <a href="gallery.html">ギャラリー</a>
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="index.html">ホーム</a>
+          <a href="characters.html">キャラ</a>
+          <a href="world_words.html" class="active">用語集</a>
+          <a href="chapter.html">各話</a>
+          <a href="news.html">ニュース</a>
+          <a href="gallery.html">ギャラリー</a>
+        </div>
+        <button type="button" id="toggle-ruby">ルビON/OFF</button>
       </div>
     </nav>
   </header>
+  <script src="ruby_button.js" charset="utf-8"></script>
 
   <main class="page">
     <h1 class="page-title">
-      世界観＆用語集
+      <ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby>
       <span>のんびり、ほのぼの、ゆるりと</span>
     </h1>
 
-    <!-- 主要キャラクター -->
-    <h2 class="section-title">地理</h2>
+    <!-- <ruby>主要<rt>しゅよう</rt></ruby>キャラクター -->
+    <h2 class="section-title"><ruby>地理<rt>ちり</rt></ruby></h2>
     <div class="main-char">
       <img src="images/carmine.jpg" alt="カーマイン村">
       <div>
-        <h3>カーマイン村</h3>
-        <div class="role">ハインリヒ領の辺境村</div>
-        <p>50軒200人ほどが住む小さな山間の村。王都から馬車で5日。高級ポーションと野菜の漬物を出荷している。</p>
-        <p>ハインリヒ領の西の果て近くにある。自然豊かで、住民はのびのび生活している。</p>
-        <p>ポーション輸出により比較的裕福で、生活には余裕がある。まさにスローライフにうってつけ。</p>
-        <p>領主館、村長宅、冒険者ギルド、教会出張所、雑貨屋、ポーション店、肉屋、宿屋、漬物屋、喫茶店三軒、皮なめし屋、いくつかの農家などがある。</p>
+        <h3>カーマイン<ruby>村<rt>むら</rt></ruby></h3>
+        <div class="role">ハインリヒ<ruby>領<rt>りょう</rt></ruby>の<ruby>辺境<rt>へんきょう</rt></ruby><ruby>村<rt>むら</rt></ruby></div>
+        <p>50<ruby>軒<rt>けん</rt></ruby>200<ruby>人<rt>にん</rt></ruby>ほどが<ruby>住<rt>す</rt></ruby>む<ruby>小<rt>ちい</rt></ruby>さな<ruby>山間<rt>さんかん</rt></ruby>の<ruby>村<rt>むら</rt></ruby>。<ruby>王都<rt>おうと</rt></ruby>から<ruby>馬車<rt>ばしゃ</rt></ruby>で5<ruby>日<rt>にち</rt></ruby>。<ruby>高級<rt>こうきゅう</rt></ruby>ポーションと<ruby>野菜<rt>やさい</rt></ruby>の<ruby>漬物<rt>つけもの</rt></ruby>を<ruby>出荷<rt>しゅっか</rt></ruby>している。</p>
+        <p>ハインリヒ<ruby>領<rt>りょう</rt></ruby>の<ruby>西<rt>にし</rt></ruby>の<ruby>果<rt>は</rt></ruby>て<ruby>近<rt>ちか</rt></ruby>くにある。<ruby>自然<rt>しぜん</rt></ruby><ruby>豊<rt>ゆた</rt></ruby>かで、<ruby>住民<rt>じゅうみん</rt></ruby>はのびのび<ruby>生活<rt>せいかつ</rt></ruby>している。</p>
+        <p>ポーション<ruby>輸出<rt>ゆしゅつ</rt></ruby>により<ruby>比較的<rt>ひかくてき</rt></ruby><ruby>裕福<rt>ゆうふく</rt></ruby>で、<ruby>生活<rt>せいかつ</rt></ruby>には<ruby>余裕<rt>よゆう</rt></ruby>がある。まさにスローライフにうってつけ。</p>
+        <p><ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>、<ruby>村長<rt>そんちょう</rt></ruby><ruby>宅<rt>たく</rt></ruby>、<ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド、<ruby>教会<rt>きょうかい</rt></ruby><ruby>出張所<rt>しゅっちょうしょ</rt></ruby>、<ruby>雑貨<rt>ざっか</rt></ruby><ruby>屋<rt>や</rt></ruby>、ポーション<ruby>店<rt>てん</rt></ruby>、<ruby>肉屋<rt>にくや</rt></ruby>、<ruby>宿屋<rt>やどや</rt></ruby>、<ruby>漬物<rt>つけもの</rt></ruby><ruby>屋<rt>や</rt></ruby>、<ruby>喫茶店<rt>きっさてん</rt></ruby>3<ruby>軒<rt>けん</rt></ruby>、<ruby>皮<rt>かわ</rt></ruby>なめし<ruby>屋<rt>や</rt></ruby>、いくつかの<ruby>農家<rt>のうか</rt></ruby>などがある。</p>
       </div>
     </div>
     <div class="small-grid">
       <div class="small-card">
-        <h4>王都</h4>
-        <div class="role">シエルフィーダ王国、王都</div>
-        <p>王国の最大都市。王宮があり政治経済の中心を担う。</p>
-        <p>ハインリヒ侯爵家のタウンハウスがある。
-        <p>特に長男カインが頻繁に開かれるパーティーや晩餐会で、婚約する相手の令嬢を探す舞台になる。</p>
-        <p>食料品は農村部、地方都市を経由して輸入しているため、物価が高い。</p>
+        <h4><ruby>王都<rt>おうと</rt></ruby></h4>
+        <div class="role">シエルフィーダ<ruby>王国<rt>おうこく</rt></ruby>、<ruby>王都<rt>おうと</rt></ruby></div>
+        <p><ruby>王国<rt>おうこく</rt></ruby>の<ruby>最大<rt>さいだい</rt></ruby><ruby>都市<rt>とし</rt></ruby>。<ruby>王宮<rt>おうきゅう</rt></ruby>があり<ruby>政治<rt>せいじ</rt></ruby><ruby>経済<rt>けいざい</rt></ruby>の<ruby>中心<rt>ちゅうしん</rt></ruby>を<ruby>担<rt>にな</rt></ruby>う。</p>
+        <p>ハインリヒ<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby>のタウンハウスがある。
+        <p><ruby>特<rt>とく</rt></ruby>に<ruby>長男<rt>ちょうなん</rt></ruby>カインが<ruby>頻繁<rt>ひんぱん</rt></ruby>に<ruby>開<rt>ひら</rt></ruby>かれるパーティーや<ruby>晩餐会<rt>ばんさんかい</rt></ruby>で、<ruby>婚約<rt>こんやく</rt></ruby>する<ruby>相手<rt>あいて</rt></ruby>の<ruby>令嬢<rt>れいじょう</rt></ruby>を<ruby>探<rt>さが</rt></ruby>す<ruby>舞台<rt>ぶたい</rt></ruby>になる。</p>
+        <p><ruby>食料<rt>しょくりょう</rt></ruby><ruby>品<rt>ひん</rt></ruby>は<ruby>農村<rt>のうそん</rt></ruby><ruby>部<rt>ぶ</rt></ruby>、<ruby>地方<rt>ちほう</rt></ruby><ruby>都市<rt>とし</rt></ruby>を<ruby>経由<rt>けいゆ</rt></ruby>して<ruby>輸入<rt>ゆにゅう</rt></ruby>しているため、<ruby>物価<rt>ぶっか</rt></ruby>が<ruby>高<rt>たか</rt></ruby>い。</p>
       </div>
       <div class="small-card">
-        <h4>ブルーストーン町</h4>
-        <div class="role">ハインリヒ領の町</div>
-        <p>カーマイン村に行く途中にある、隣町。カーマイン村から狼煙(のろし)が見える。</p>
-        <p>領主はカエサル・クライド男爵。</p>
-        <p>簡易城塞都市で城門がある。バザール、教会支部、錬金術教会などを有する。</p>
+        <h4>ブルーストーン<ruby>町<rt>まち</rt></ruby></h4>
+        <div class="role">ハインリヒ<ruby>領<rt>りょう</rt></ruby>の<ruby>町<rt>まち</rt></ruby></div>
+        <p>カーマイン<ruby>村<rt>むら</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<ruby>途中<rt>とちゅう</rt></ruby>にある、<ruby>隣町<rt>となりまち</rt></ruby>。カーマイン<ruby>村<rt>むら</rt></ruby>から<ruby>狼煙<rt>のろし</rt></ruby>(のろし)が<ruby>見<rt>み</rt></ruby>える。</p>
+        <p><ruby>領主<rt>りょうしゅ</rt></ruby>はカエサル・クライド<ruby>男爵<rt>だんしゃく</rt></ruby>。</p>
+        <p><ruby>簡易<rt>かんい</rt></ruby><ruby>城塞<rt>じょうさい</rt></ruby><ruby>都市<rt>とし</rt></ruby>で<ruby>城門<rt>じょうもん</rt></ruby>がある。バザール、<ruby>教会<rt>きょうかい</rt></ruby><ruby>支部<rt>しぶ</rt></ruby>、<ruby>錬金術<rt>れんきんじゅつ</rt></ruby>ギルドなどを<ruby>有<rt>ゆう</rt></ruby>する。</p>
       </div>
       <div class="small-card">
-        <h4>領都ハインリヒ</h4>
-        <div class="role">ハインリヒ領の領都</div>
-        <p>カントリーハウスがある。マハムたちはお呼ばれして一日滞在する。</p>
-        <p>本当の実家ではあるが、あまりここが自分の家だという実感はない。</p>
+        <h4><ruby>領<rt>りょう</rt></ruby><ruby>都<rt>と</rt></ruby>ハインリヒ</h4>
+        <div class="role">ハインリヒ<ruby>領<rt>りょう</rt></ruby>の<ruby>領<rt>りょう</rt></ruby><ruby>都<rt>と</rt></ruby></div>
+        <p>カントリーハウスがある。マハムたちはお<ruby>呼<rt>よ</rt></ruby>ばれして<ruby>一日<rt>いちにち</rt></ruby><ruby>滞在<rt>たいざい</rt></ruby>する。</p>
+        <p><ruby>本当<rt>ほんとう</rt></ruby>の<ruby>実家<rt>じっか</rt></ruby>ではあるが、あまりここが<ruby>自分<rt>じぶん</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>だという<ruby>実感<rt>じっかん</rt></ruby>はない。</p>
       </div>
       <div class="small-card">
         <h4>ベドラウィン</h4>
-        <div class="role">第二都市</div>
-        <p>王国第二位の規模の都市、飛空艇の運用基地があり、商工業が発達している。</p>
-        <p>外国からの輸入品も扱っており、かなり栄えている。</p>
+        <div class="role"><ruby>第二<rt>だいに</rt></ruby><ruby>都市<rt>とし</rt></ruby></div>
+        <p><ruby>王国<rt>おうこく</rt></ruby><ruby>第二<rt>だいに</rt></ruby><ruby>位<rt>い</rt></ruby>の<ruby>規模<rt>きぼ</rt></ruby>の<ruby>都市<rt>とし</rt></ruby>、<ruby>飛空<rt>ひくう</rt></ruby><ruby>艇<rt>てい</rt></ruby>の<ruby>運用<rt>うんよう</rt></ruby><ruby>基地<rt>きち</rt></ruby>があり、<ruby>商工業<rt>しょうこうぎょう</rt></ruby>が<ruby>発達<rt>はったつ</rt></ruby>している。</p>
+        <p><ruby>外国<rt>がいこく</rt></ruby>からの<ruby>輸入<rt>ゆにゅう</rt></ruby><ruby>品<rt>ひん</rt></ruby>も<ruby>扱<rt>あつか</rt></ruby>っており、かなり<ruby>栄<rt>さか</rt></ruby>えている。</p>
       </div>
       <div class="small-card">
-        <h4>奥の村</h4>
-        <div class="role">ハインリヒ領の村</div>
-        <p>カーマイン村の裏山を登った上にある廃村。かなり昔、鉱石を採掘していた。</p>
-        <p>飛空艇発着場跡もあり、鉱石を空輸していた痕跡がある。</p>
+        <h4><ruby>奥<rt>おく</rt></ruby>の<ruby>村<rt>むら</rt></ruby></h4>
+        <div class="role">ハインリヒ<ruby>領<rt>りょう</rt></ruby>の<ruby>村<rt>むら</rt></ruby></div>
+        <p>カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>裏山<rt>うらやま</rt></ruby>を<ruby>登<rt>のぼ</rt></ruby>った<ruby>上<rt>うえ</rt></ruby>にある<ruby>廃村<rt>はいそん</rt></ruby>。かなり<ruby>昔<rt>むかし</rt></ruby>、<ruby>鉱石<rt>こうせき</rt></ruby>を<ruby>採掘<rt>さいくつ</rt></ruby>していた。</p>
+        <p><ruby>飛空<rt>ひくう</rt></ruby><ruby>艇<rt>てい</rt></ruby><ruby>発着場<rt>はっちゃくじょう</rt></ruby><ruby>跡<rt>あと</rt></ruby>もあり、<ruby>鉱石<rt>こうせき</rt></ruby>を<ruby>空輸<rt>くうゆ</rt></ruby>していた<ruby>痕跡<rt>こんせき</rt></ruby>がある。</p>
       </div>
       <div class="small-card">
-        <h4>ミラクシル村</h4>
-        <div class="role">温泉村</div>
-        <p>ハインリヒ領にある温泉村。旅館があり、温泉と食事などが楽しめる。</p>
-        <p>寒い冬には温かい温泉に浸かって温まりたい。</p>
-        <p>カーマイン村と違い平野部にあり、長閑な田舎村。</p>
+        <h4>ミラクシル<ruby>村<rt>むら</rt></ruby></h4>
+        <div class="role"><ruby>温泉<rt>おんせん</rt></ruby><ruby>村<rt>むら</rt></ruby></div>
+        <p>ハインリヒ<ruby>領<rt>りょう</rt></ruby>にある<ruby>温泉<rt>おんせん</rt></ruby><ruby>村<rt>むら</rt></ruby>。<ruby>旅館<rt>りょかん</rt></ruby>があり、<ruby>温泉<rt>おんせん</rt></ruby>と<ruby>食事<rt>しょくじ</rt></ruby>などが<ruby>楽<rt>たの</rt></ruby>しめる。</p>
+        <p><ruby>寒<rt>さむ</rt></ruby>い<ruby>冬<rt>ふゆ</rt></ruby>には<ruby>温<rt>あたた</rt></ruby>かい<ruby>温泉<rt>おんせん</rt></ruby>に<ruby>浸<rt>つ</rt></ruby>かって<ruby>温<rt>あたた</rt></ruby>まりたい。</p>
+        <p>カーマイン<ruby>村<rt>むら</rt></ruby>と<ruby>違<rt>ちが</rt></ruby>い<ruby>平野<rt>へいや</rt></ruby><ruby>部<rt>ぶ</rt></ruby>にあり、<ruby>長閑<rt>のどか</rt></ruby>な<ruby>田舎<rt>いなか</rt></ruby><ruby>村<rt>むら</rt></ruby>。</p>
       </div>
       
     </div>
@@ -251,220 +263,221 @@
       <img src="images/maham.jpg" alt="マハム">
       <div>
         <h3><small>スキル</small><br>【スローライフ】</h3>
-        <div class="role">マハムの固有スキル</div>
-        <p>マハムが5歳の鑑定の儀で取得したスキルだが、スキル本体の技能は不明。</p>
-        <p>スローライフして生活するのを支援するスキルとなっているが、隠された最強の能力……とかもなく、普通に生活する。</p>
-        <p>カーマイン村に到着すると、サブスキルが覚醒する。</p>
-        <p>事実上は「何もしない」スキルともいえる。やはりハズレスキルと言われても仕方がない側面がある。</p>
+        <div class="role">マハムの<ruby>固有<rt>こゆう</rt></ruby>スキル</div>
+        <p>マハムが5<ruby>歳<rt>さい</rt></ruby>の<ruby>鑑定<rt>かんてい</rt></ruby>の<ruby>儀<rt>ぎ</rt></ruby>で<ruby>取得<rt>しゅとく</rt></ruby>したスキルだが、スキル<ruby>本体<rt>ほんたい</rt></ruby>の<ruby>技能<rt>ぎのう</rt></ruby>は<ruby>不明<rt>ふめい</rt></ruby>。</p>
+        <p>スローライフして<ruby>生活<rt>せいかつ</rt></ruby>するのを<ruby>支援<rt>しえん</rt></ruby>するスキルとなっているが、<ruby>隠<rt>かく</rt></ruby>された<ruby>最強<rt>さいきょう</rt></ruby>の<ruby>能力<rt>のうりょく</rt></ruby>……とかもなく、<ruby>普通<rt>ふつう</rt></ruby>に<ruby>生活<rt>せいかつ</rt></ruby>する。</p>
+        <p>カーマイン<ruby>村<rt>むら</rt></ruby>に<ruby>到着<rt>とうちゃく</rt></ruby>すると、サブスキルが<ruby>覚醒<rt>かくせい</rt></ruby>する。</p>
+        <p><ruby>事実上<rt>じじつじょう</rt></ruby>は「<ruby>何<rt>なに</rt></ruby>もしない」スキルともいえる。やはりハズレスキルと<ruby>言<rt>い</rt></ruby>われても<ruby>仕方<rt>しかた</rt></ruby>がない<ruby>側面<rt>そくめん</rt></ruby>がある。</p>
       </div>
     </div>
     <div class="small-grid">
       <div class="small-card">
-        <h4>鑑定初級</h4>
+        <h4><ruby>鑑定<rt>かんてい</rt></ruby><ruby>初級<rt>しょきゅう</rt></ruby></h4>
         <div class="role">マハムのサブスキル</div>
-        <p>マハムが現物を見て意識することで頭の中に情報が流れ込んでくるスキル。</p>
-        <p>ただし詳細が分かるわけではなく、概要程度であまり役に立たない。</p>
-        <p>薬草やキノコなどの識別には使える。</p>
+        <p>マハムが<ruby>現物<rt>げんぶつ</rt></ruby>を<ruby>見<rt>み</rt></ruby>て<ruby>意識<rt>いしき</rt></ruby>することで<ruby>頭<rt>あたま</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>情報<rt>じょうほう</rt></ruby>が<ruby>流<rt>なが</rt></ruby>れ<ruby>込<rt>こ</rt></ruby>んでくるスキル。</p>
+        <p>ただし<ruby>詳細<rt>しょうさい</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かるわけではなく、<ruby>概要<rt>がいよう</rt></ruby><ruby>程度<rt>ていど</rt></ruby>であまり<ruby>役<rt>やく</rt></ruby>に<ruby>立<rt>た</rt></ruby>たない。</p>
+        <p><ruby>薬草<rt>やくそう</rt></ruby>やキノコなどの<ruby>識別<rt>しきべつ</rt></ruby>には<ruby>使<rt>つか</rt></ruby>える。</p>
       </div>
       <div class="small-card">
-        <h4>アイテムボックス小</h4>
+        <h4>アイテムボックス<ruby>小<rt>しょう</rt></ruby></h4>
         <div class="role">マハムのサブスキル</div>
-        <p>マハムの意思で出し入れできる異次元倉庫。</p>
-        <p>かなりの容量で、マハムが試したところ、500リットルくらいは入りそうだ。</p>
-        <p>普段は、半分を非常用水、携帯食料、おやつ、ショートソードなどを入れている。</p>
+        <p>マハムの<ruby>意思<rt>いし</rt></ruby>で<ruby>出<rt>だ</rt></ruby>し<ruby>入<rt>い</rt></ruby>れできる<ruby>異次元<rt>いじげん</rt></ruby><ruby>倉庫<rt>そうこ</rt></ruby>。</p>
+        <p>かなりの<ruby>容量<rt>ようりょう</rt></ruby>で、マハムが<ruby>試<rt>ため</rt></ruby>したところ、500リットルくらいは<ruby>入<rt>はい</rt></ruby>りそうだ。</p>
+        <p><ruby>普段<rt>ふだん</rt></ruby>は、<ruby>半分<rt>はんぶん</rt></ruby>を<ruby>非常用<rt>ひじょうよう</rt></ruby><ruby>水<rt>すい</rt></ruby>、<ruby>携帯<rt>けいたい</rt></ruby><ruby>食料<rt>しょくりょう</rt></ruby>、おやつ、ショートソードなどを<ruby>入<rt>い</rt></ruby>れている。</p>
       </div>
       <div class="small-card">
-        <h4>植物・魔物図鑑知識初級</h4>
+        <h4><ruby>植物<rt>しょくぶつ</rt></ruby>・<ruby>魔物<rt>まもの</rt></ruby><ruby>図鑑<rt>ずかん</rt></ruby><ruby>知識<rt>ちしき</rt></ruby><ruby>初級<rt>しょきゅう</rt></ruby></h4>
         <div class="role">マハムのサブスキル</div>
-        <p>マハムが現物を見て意識することで頭の中に情報が流れ込んでくるスキル。</p>
-        <p>簡単な植物・魔物に関する情報を得られる。基本的なことのみなので、有用ではあるが使いどころが限られる。</p>
-        <p>全知識がインストールされるわけではなく、都度情報が分かるタイプ。</p>
+        <p>マハムが<ruby>現物<rt>げんぶつ</rt></ruby>を<ruby>見<rt>み</rt></ruby>て<ruby>意識<rt>いしき</rt></ruby>することで<ruby>頭<rt>あたま</rt></ruby>の<ruby>中<rt>なか</rt></ruby>に<ruby>情報<rt>じょうほう</rt></ruby>が<ruby>流<rt>なが</rt></ruby>れ<ruby>込<rt>こ</rt></ruby>んでくるスキル。</p>
+        <p><ruby>簡単<rt>かんたん</rt></ruby>な<ruby>植物<rt>しょくぶつ</rt></ruby>・<ruby>魔物<rt>まもの</rt></ruby>に<ruby>関<rt>かん</rt></ruby>する<ruby>情報<rt>じょうほう</rt></ruby>を<ruby>得<rt>え</rt></ruby>られる。<ruby>基本的<rt>きほんてき</rt></ruby>なことのみなので、<ruby>有用<rt>ゆうよう</rt></ruby>ではあるが<ruby>使<rt>つか</rt></ruby>いどころが<ruby>限<rt>かぎ</rt></ruby>られる。</p>
+        <p><ruby>全<rt>ぜん</rt></ruby><ruby>知識<rt>ちしき</rt></ruby>がインストールされるわけではなく、<ruby>都度<rt>つど</rt></ruby><ruby>情報<rt>じょうほう</rt></ruby>が<ruby>分<rt>わ</rt></ruby>かるタイプ。</p>
       </div>
     </div>
 
-    <h2 class="section-title">用語</h2>
+    <h2 class="section-title"><ruby>用語<rt>ようご</rt></ruby></h2>
     <div class="small-grid">
       <div class="small-card">
-        <h4>鑑定の儀</h4>
-        <div class="role">儀式</div>
-        <p>5歳になると貴族が教会で受ける儀式により、スキルの鑑定を行う。</p>
-        <p>貴族の子のみが対象だが、スキルを授かることができるとされる。</p>
-        <p>どのようなスキルになるかは、決まっていない。</p>
+        <h4><ruby>鑑定<rt>かんてい</rt></ruby>の<ruby>儀<rt>ぎ</rt></ruby></h4>
+        <div class="role"><ruby>儀式<rt>ぎしき</rt></ruby></div>
+        <p>5<ruby>歳<rt>さい</rt></ruby>になると<ruby>貴族<rt>きぞく</rt></ruby>が<ruby>教会<rt>きょうかい</rt></ruby>で<ruby>受<rt>う</rt></ruby>ける<ruby>儀式<rt>ぎしき</rt></ruby>により、スキルの<ruby>鑑定<rt>かんてい</rt></ruby>を<ruby>行<rt>おこな</rt></ruby>う。</p>
+        <p><ruby>貴族<rt>きぞく</rt></ruby>の<ruby>子<rt>こ</rt></ruby>のみが<ruby>対象<rt>たいしょう</rt></ruby>だが、スキルを<ruby>授<rt>さず</rt></ruby>かることができるとされる。</p>
+        <p>どのようなスキルになるかは、あらかじめ<ruby>決<rt>き</rt></ruby>まっていない。</p>
       </div>
       <div class="small-card">
         <h4>スキル</h4>
-        <div class="role">神から授かるもの</div>
-        <p>鑑定の儀を通して授かる特殊な技能をスキルと呼称している。</p>
-        <p>勇者、聖女、僧侶、剣聖、剣術、槍術、火魔法、水魔法、氷魔法、アイテムボックス、裁縫、料理、木工、金細工、農業、猟師、漁師など多岐にわたる。</p>
-        <p>平凡なものから、非常に珍しいレアスキルまで様々だが、貴族の将来を左右する。</p>
+        <div class="role"><ruby>神<rt>かみ</rt></ruby>から<ruby>授<rt>さず</rt></ruby>かるもの</div>
+        <p><ruby>鑑定<rt>かんてい</rt></ruby>の<ruby>儀<rt>ぎ</rt></ruby>を<ruby>通<rt>とお</rt></ruby>して<ruby>授<rt>さず</rt></ruby>かる<ruby>特殊<rt>とくしゅ</rt></ruby>な<ruby>技能<rt>ぎのう</rt></ruby>をスキルと<ruby>呼称<rt>こしょう</rt></ruby>している。</p>
+        <p><ruby>勇者<rt>ゆうしゃ</rt></ruby>、<ruby>聖女<rt>せいじょ</rt></ruby>、<ruby>僧侶<rt>そうりょ</rt></ruby>、<ruby>剣聖<rt>けんせい</rt></ruby>、<ruby>剣術<rt>けんじゅつ</rt></ruby>、<ruby>槍術<rt>そうじゅつ</rt></ruby>、<ruby>火<rt>ひ</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>、<ruby>水<rt>みず</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>、<ruby>氷<rt>こおり</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>、アイテムボックス、<ruby>裁縫<rt>さいほう</rt></ruby>、<ruby>料理<rt>りょうり</rt></ruby>、<ruby>木工<rt>もっこう</rt></ruby>、<ruby>金細工<rt>きんざいく</rt></ruby>、<ruby>農業<rt>のうぎょう</rt></ruby>、<ruby>猟師<rt>りょうし</rt></ruby>、<ruby>漁師<rt>りょうし</rt></ruby>など<ruby>多岐<rt>たき</rt></ruby>にわたる。</p>
+        <p><ruby>平凡<rt>へいぼん</rt></ruby>なものから、<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>珍<rt>めずら</rt></ruby>しいレアスキルまで<ruby>様々<rt>さまざま</rt></ruby>だが、<ruby>貴族<rt>きぞく</rt></ruby>の<ruby>将来<rt>しょうらい</rt></ruby>を<ruby>左右<rt>さゆう</rt></ruby>する。</p>
       </div>
       <div class="small-card">
         <h4>サブスキル</h4>
-        <div class="role">神から授かるもの</div>
-        <p>スキルには派生スキルがつくことがある。</p>
-        <p>マハムがそうであるように、火魔法や水魔法などの魔法使いは、さらに個別の使える魔法がある。</p>
-        <p>スキルがなくても、適性があれば魔法は使える場合もあるので、一概にスキルという括りだけではない。</p>
+        <div class="role"><ruby>神<rt>かみ</rt></ruby>から<ruby>授<rt>さず</rt></ruby>かるもの</div>
+        <p>スキルには<ruby>派生<rt>はせい</rt></ruby>スキルがつくことがある。</p>
+        <p>マハムがそうであるように、<ruby>火<rt>ひ</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>や<ruby>水<rt>みず</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>などの<ruby>魔法使<rt>まほうつか</rt></ruby>いは、さらに<ruby>個別<rt>こべつ</rt></ruby>の<ruby>使<rt>つか</rt></ruby>える<ruby>魔法<rt>まほう</rt></ruby>がある。</p>
+        <p>スキルがなくても、<ruby>適性<rt>てきせい</rt></ruby>があれば<ruby>魔法<rt>まほう</rt></ruby>は<ruby>使<rt>つか</rt></ruby>える<ruby>場合<rt>ばあい</rt></ruby>もあるので、<ruby>一概<rt>いちがい</rt></ruby>にスキルという<ruby>括<rt>くく</rt></ruby>りだけではない。</p>
       </div>
       <div class="small-card">
-        <h4>トカリアーナ様</h4>
-        <div class="role">創世神／主神</div>
-        <p>全知全能の神。金髪碧眼の美女と言い伝えられている。神話では存在が伝えられているが、有史以来、再び顕現したことはない。</p>
-        <p>性格は温和で慈悲深いらしい。「みんなに分け与えよ」という言葉を残しており、寄付や公共の福祉を重視しているようだ。</p>
+        <h4>トカリアーナ<ruby>様<rt>さま</rt></ruby></h4>
+        <div class="role"><ruby>創世<rt>そうせい</rt></ruby><ruby>神<rt>かみ</rt></ruby>／<ruby>主神<rt>しゅしん</rt></ruby></div>
+        <p><ruby>全知全能<rt>ぜんちぜんのう</rt></ruby>の<ruby>神<rt>かみ</rt></ruby>。<ruby>金髪<rt>きんぱつ</rt></ruby><ruby>碧眼<rt>へきがん</rt></ruby>の<ruby>美女<rt>びじょ</rt></ruby>と<ruby>言<rt>い</rt></ruby>い<ruby>伝<rt>つた</rt></ruby>えられている。<ruby>神話<rt>しんわ</rt></ruby>では<ruby>存在<rt>そんざい</rt></ruby>が<ruby>伝<rt>つた</rt></ruby>えられているが、<ruby>有史<rt>ゆうし</rt></ruby><ruby>以来<rt>いらい</rt></ruby>、<ruby>再<rt>ふたた</rt></ruby>び<ruby>顕現<rt>けんげん</rt></ruby>したことはない。</p>
+        <p><ruby>性格<rt>せいかく</rt></ruby>は<ruby>温和<rt>おんわ</rt></ruby>で<ruby>慈悲深<rt>じひぶか</rt></ruby>いらしい。「みんなに<ruby>分<rt>わ</rt></ruby>け<ruby>与<rt>あた</rt></ruby>えよ」という<ruby>言葉<rt>ことば</rt></ruby>を<ruby>残<rt>のこ</rt></ruby>しており、<ruby>寄付<rt>きふ</rt></ruby>や<ruby>公共<rt>こうきょう</rt></ruby>の<ruby>福祉<rt>ふくし</rt></ruby>を<ruby>重視<rt>じゅうし</rt></ruby>しているようだ。</p>
       </div>
       <div class="small-card">
-        <h4>神々</h4>
-        <div class="role">多神教</div>
-        <p>様々な神様が共存共栄している。俊足の神ラークリア。食の神エリソシア。獣人神バッカリス。幸運の神シトリアーナ。雷神トールなど。</p>
+        <h4><ruby>神々<rt>かみがみ</rt></ruby></h4>
+        <div class="role"><ruby>多神教<rt>たしんきょう</rt></ruby></div>
+        <p><ruby>様々<rt>さまざま</rt></ruby>な<ruby>神様<rt>かみさま</rt></ruby>が<ruby>共存共栄<rt>きょうそんきょうえい</rt></ruby>している。<ruby>俊足<rt>しゅんそく</rt></ruby>の<ruby>神<rt>かみ</rt></ruby>ラークリア。<ruby>食<rt>しょく</rt></ruby>の<ruby>神<rt>かみ</rt></ruby>エリソシア。<ruby>獣人<rt>じゅうじん</rt></ruby><ruby>神<rt>しん</rt></ruby>バッカリス。<ruby>幸運<rt>こううん</rt></ruby>の<ruby>神<rt>かみ</rt></ruby>シトリアーナ。<ruby>雷神<rt>らいじん</rt></ruby>トールなど。</p>
       </div>
       <div class="small-card">
         <h4>グリーシェ</h4>
-        <div class="role">神への挨拶</div>
-        <p>お祈り、寝る前など、神様への挨拶に用いる定型句。</p>
-        <p>日常的に気軽に使われる、よくある聖句で、教会で神父との挨拶にも使う。</p>
+        <div class="role"><ruby>神<rt>かみ</rt></ruby>への<ruby>挨拶<rt>あいさつ</rt></ruby></div>
+        <p>お<ruby>祈<rt>いの</rt></ruby>り、<ruby>寝<rt>ね</rt></ruby>る<ruby>前<rt>まえ</rt></ruby>など、<ruby>神様<rt>かみさま</rt></ruby>への<ruby>挨拶<rt>あいさつ</rt></ruby>に<ruby>用<rt>もち</rt></ruby>いる<ruby>定型<rt>ていけい</rt></ruby><ruby>句<rt>く</rt></ruby>。</p>
+        <p><ruby>日常的<rt>にちじょうてき</rt></ruby>に<ruby>気軽<rt>きがる</rt></ruby>に<ruby>使<rt>つか</rt></ruby>われる、よくある<ruby>聖句<rt>せいく</rt></ruby>で、<ruby>教会<rt>きょうかい</rt></ruby>で<ruby>神父<rt>しんぷ</rt></ruby>との<ruby>挨拶<rt>あいさつ</rt></ruby>にも<ruby>使<rt>つか</rt></ruby>う。</p>
       </div>
       <div class="small-card">
-        <h4>冒険者ギルド</h4>
-        <div class="role">全世界組織</div>
-        <p>世界冒険者教会があり、それぞれの国が実体のあるギルド組織を運営している。</p>
-        <p>ほとんどの村や町にはギルドがあり、魔物の討伐や薬草などの採取物の管理をしている。</p>
+        <h4><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド</h4>
+        <div class="role"><ruby>全<rt>ぜん</rt></ruby><ruby>世界<rt>せかい</rt></ruby><ruby>組織<rt>そしき</rt></ruby></div>
+        <p><ruby>世界<rt>せかい</rt></ruby><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド<ruby>協会<rt>きょうかい</rt></ruby>があり、それぞれの<ruby>国<rt>くに</rt></ruby>が<ruby>実体<rt>じったい</rt></ruby>のあるギルド<ruby>組織<rt>そしき</rt></ruby>を<ruby>運営<rt>うんえい</rt></ruby>している。</p>
+        <p>ほとんどの<ruby>村<rt>むら</rt></ruby>や<ruby>町<rt>まち</rt></ruby>にはギルドがあり、<ruby>魔物<rt>まもの</rt></ruby>の<ruby>討伐<rt>とうばつ</rt></ruby>や<ruby>薬草<rt>やくそう</rt></ruby>などの<ruby>採取<rt>さいしゅ</rt></ruby><ruby>物<rt>ぶつ</rt></ruby>の<ruby>管理<rt>かんり</rt></ruby>をしている。</p>
       </div>
       <div class="small-card">
-        <h4>魔道コンロ</h4>
-        <div class="role">魔道具</div>
-        <p>魔石か魔核を燃料とする魔道具。熱源であり上にフライパンなどを載せて温める。</p>
-        <p>比較的安価に製造され、料理店や貴族の家、領主館など裕福な家庭や専門店で多く使われる。</p>
+        <h4><ruby>魔道<rt>まどう</rt></ruby>コンロ</h4>
+        <div class="role"><ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby></div>
+        <p><ruby>魔石<rt>ませき</rt></ruby>か<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>燃料<rt>ねんりょう</rt></ruby>とする<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>。<ruby>熱源<rt>ねつげん</rt></ruby>であり<ruby>上<rt>うえ</rt></ruby>にフライパンなどを<ruby>載<rt>の</rt></ruby>せて<ruby>温<rt>あたた</rt></ruby>める。</p>
+        <p><ruby>比較的<rt>ひかくてき</rt></ruby><ruby>安価<rt>あんか</rt></ruby>に<ruby>製造<rt>せいぞう</rt></ruby>され、<ruby>料理店<rt>りょうりてん</rt></ruby>や<ruby>貴族<rt>きぞく</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>、<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>など<ruby>裕福<rt>ゆうふく</rt></ruby>な<ruby>家庭<rt>かてい</rt></ruby>や<ruby>専門店<rt>せんもんてん</rt></ruby>で<ruby>多<rt>おお</rt></ruby>く<ruby>使<rt>つか</rt></ruby>われる。</p>
       </div>
       <div class="small-card">
-        <h4>魔道ランプ</h4>
-        <div class="role">魔道具</div>
-        <p>魔石か魔核を燃料とする魔道具。スイッチ式でオンにすると光を放つ。</p>
-        <p>比較的安価に製造され、貴族の家、領主館など裕福な家庭や専門店で多く使われる。</p>
+        <h4><ruby>魔道<rt>まどう</rt></ruby>ランプ</h4>
+        <div class="role"><ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby></div>
+        <p><ruby>魔石<rt>ませき</rt></ruby>か<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>燃料<rt>ねんりょう</rt></ruby>とする<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>。スイッチ<ruby>式<rt>しき</rt></ruby>でオンにすると<ruby>光<rt>ひかり</rt></ruby>を<ruby>放<rt>はな</rt></ruby>つ。</p>
+        <p><ruby>比較的<rt>ひかくてき</rt></ruby><ruby>安価<rt>あんか</rt></ruby>に<ruby>製造<rt>せいぞう</rt></ruby>され、<ruby>貴族<rt>きぞく</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>、<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>など<ruby>裕福<rt>ゆうふく</rt></ruby>な<ruby>家庭<rt>かてい</rt></ruby>や<ruby>専門店<rt>せんもんてん</rt></ruby>で<ruby>多<rt>おお</rt></ruby>く<ruby>使<rt>つか</rt></ruby>われる。</p>
       </div>
       <div class="small-card">
-        <h4>魔道シャワー</h4>
-        <div class="role">魔道具</div>
-        <p>魔石か魔核を燃料とする魔道具。スイッチ式でオンにすると温かいお湯を直接発生させる。</p>
-        <p>実はちょっと珍しく、カーマイン村では領主館にしか設置されていないらしい。貴族の家では基本の魔道具だが一般人は使っていない程度には高価なようだ。</p>
+        <h4><ruby>魔道<rt>まどう</rt></ruby>シャワー</h4>
+        <div class="role"><ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby></div>
+        <p><ruby>魔石<rt>ませき</rt></ruby>か<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>燃料<rt>ねんりょう</rt></ruby>とする<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>。スイッチ<ruby>式<rt>しき</rt></ruby>でオンにすると<ruby>温<rt>あたた</rt></ruby>かいお<ruby>湯<rt>ゆ</rt></ruby>を<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>発生<rt>はっせい</rt></ruby>させる。</p>
+        <p><ruby>実<rt>じつ</rt></ruby>はちょっと<ruby>珍<rt>めずら</rt></ruby>しく、カーマイン<ruby>村<rt>むら</rt></ruby>では<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>にしか<ruby>設置<rt>せっち</rt></ruby>されていないらしい。<ruby>貴族<rt>きぞく</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>では<ruby>基本<rt>きほん</rt></ruby>の<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>だが<ruby>一般人<rt>いっぱんじん</rt></ruby>は<ruby>使<rt>つか</rt></ruby>っていない<ruby>程度<rt>ていど</rt></ruby>には<ruby>高価<rt>こうか</rt></ruby>なようだ。</p>
       </div>
       <div class="small-card">
         <h4>ポーション</h4>
-        <div class="role">魔法薬</div>
-        <p>水薬で、主に薬草を煮て成分を抽出することで生産される。</p>
-        <p>中級ポーションの色は青で、色が濃いほうが濃度が高く高性能。</p>
+        <div class="role"><ruby>魔法<rt>まほう</rt></ruby><ruby>薬<rt>やく</rt></ruby></div>
+        <p><ruby>水薬<rt>みずぐすり</rt></ruby>で、<ruby>主<rt>おも</rt></ruby>に<ruby>薬草<rt>やくそう</rt></ruby>を<ruby>煮<rt>に</rt></ruby>て<ruby>成分<rt>せいぶん</rt></ruby>を<ruby>抽出<rt>ちゅうしゅつ</rt></ruby>することで<ruby>生産<rt>せいさん</rt></ruby>される。</p>
+        <p><ruby>中級<rt>ちゅうきゅう</rt></ruby>ポーションの<ruby>色<rt>いろ</rt></ruby>は<ruby>青<rt>あお</rt></ruby>で、<ruby>色<rt>いろ</rt></ruby>が<ruby>濃<rt>こ</rt></ruby>いほうが<ruby>濃度<rt>のうど</rt></ruby>が<ruby>高<rt>たか</rt></ruby>く<ruby>高<rt>こう</rt></ruby><ruby>性能<rt>せいのう</rt></ruby>。</p>
       </div>
       <div class="small-card">
-        <h4>貨幣</h4>
+        <h4><ruby>貨幣<rt>かへい</rt></ruby></h4>
         <div class="role">コイン</div>
-        <p>通貨単位は「ギリム」。10ギリム鉄貨の他、銅貨、銀貨、金貨などが使用される。</p>
-        <p>古いコインや、記念硬貨といったものも流通している。歴史的経緯により最低10ギリムからで1ギリムは使われていない。</p>
+        <p><ruby>通貨<rt>つうか</rt></ruby><ruby>単位<rt>たんい</rt></ruby>は「ギリム」。10ギリム<ruby>鉄<rt>てつ</rt></ruby><ruby>貨<rt>か</rt></ruby>の<ruby>他<rt>ほか</rt></ruby>、<ruby>銅貨<rt>どうか</rt></ruby>、<ruby>銀貨<rt>ぎんか</rt></ruby>、<ruby>金貨<rt>きんか</rt></ruby>などが<ruby>使用<rt>しよう</rt></ruby>される。</p>
+        <p><ruby>古<rt>ふる</rt></ruby>いコインや、<ruby>記念<rt>きねん</rt></ruby><ruby>硬貨<rt>こうか</rt></ruby>といったものも<ruby>流通<rt>りゅうつう</rt></ruby>している。<ruby>歴史的<rt>れきしてき</rt></ruby><ruby>経緯<rt>けいい</rt></ruby>により<ruby>最低<rt>さいてい</rt></ruby>10ギリムからで1ギリムは<ruby>使<rt>つか</rt></ruby>われていない。</p>
       </div>
       <div class="small-card">
-        <h4>狼煙の日</h4>
-        <div class="role">試験日</div>
-        <p>毎年春と秋の終わりの二回。王都から順番に都市や村町で狼煙を順番に伝えていく。</p>
-        <p>試験の煙は白と決まっていて、緊急時には他に黒や赤い煙などを使い分ける。冒険者ギルドの管轄。</p>
+        <h4><ruby>狼煙<rt>のろし</rt></ruby>の<ruby>日<rt>ひ</rt></ruby></h4>
+        <div class="role"><ruby>試験<rt>しけん</rt></ruby><ruby>日<rt>び</rt></ruby></div>
+        <p><ruby>毎年<rt>まいとし</rt></ruby><ruby>春<rt>はる</rt></ruby>と<ruby>秋<rt>あき</rt></ruby>の<ruby>終<rt>お</rt></ruby>わりの<ruby>二回<rt>にかい</rt></ruby>。<ruby>王都<rt>おうと</rt></ruby>から<ruby>順番<rt>じゅんばん</rt></ruby>に<ruby>都市<rt>とし</rt></ruby>や<ruby>村町<rt>むらまち</rt></ruby>で<ruby>狼煙<rt>のろし</rt></ruby>を<ruby>順番<rt>じゅんばん</rt></ruby>に<ruby>伝<rt>つた</rt></ruby>えていく。</p>
+        <p><ruby>試験<rt>しけん</rt></ruby>の<ruby>煙<rt>けむり</rt></ruby>は<ruby>白<rt>しろ</rt></ruby>と<ruby>決<rt>き</rt></ruby>まっていて、<ruby>緊急時<rt>きんきゅうじ</rt></ruby>には<ruby>他<rt>ほか</rt></ruby>に<ruby>黒<rt>くろ</rt></ruby>や<ruby>赤<rt>あか</rt></ruby>い<ruby>煙<rt>けむり</rt></ruby>などを<ruby>使<rt>つか</rt></ruby>い<ruby>分<rt>わ</rt></ruby>ける。<ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルドの<ruby>管轄<rt>かんかつ</rt></ruby>。</p>
       </div>
       <div class="small-card">
         <h4>ミスリル</h4>
-        <div class="role">魔法金属</div>
-        <p>非常に軽く、錆びない硬い金属。マハムはミスリルナイフを所有している。</p>
-        <p>ソードなども存在しているがとても高価。高級品の代名詞。</p>
+        <div class="role"><ruby>魔法<rt>まほう</rt></ruby><ruby>金属<rt>きんぞく</rt></ruby></div>
+        <p><ruby>非常<rt>ひじょう</rt></ruby>に<ruby>軽<rt>かる</rt></ruby>く、<ruby>錆<rt>さ</rt></ruby>びない<ruby>硬<rt>かた</rt></ruby>い<ruby>金属<rt>きんぞく</rt></ruby>。マハムはミスリルナイフを<ruby>所有<rt>しょゆう</rt></ruby>している。</p>
+        <p>ソードなども<ruby>存在<rt>そんざい</rt></ruby>しているがとても<ruby>高価<rt>こうか</rt></ruby>。<ruby>高級<rt>こうきゅう</rt></ruby><ruby>品<rt>ひん</rt></ruby>の<ruby>代名詞<rt>だいめいし</rt></ruby>。</p>
       </div>
       <div class="small-card">
-        <h4>飛空艇</h4>
-        <div class="role">空を飛ぶ船</div>
-        <p>魔導機関を搭載した空を飛ぶ船。国防用にも国際貿易用にも使われている。</p>
-        <p>南国カミシール王国などから、胡椒、砂糖、チョコレートなどの希少品を空輸している。</p>
+        <h4><ruby>飛空<rt>ひくう</rt></ruby><ruby>艇<rt>てい</rt></ruby></h4>
+        <div class="role"><ruby>空<rt>そら</rt></ruby>を<ruby>飛<rt>と</rt></ruby>ぶ<ruby>船<rt>ふね</rt></ruby></div>
+        <p><ruby>魔導<rt>まどう</rt></ruby><ruby>機関<rt>きかん</rt></ruby>を<ruby>搭載<rt>とうさい</rt></ruby>した<ruby>空<rt>そら</rt></ruby>を<ruby>飛<rt>と</rt></ruby>ぶ<ruby>船<rt>ふね</rt></ruby>。<ruby>国防<rt>こくぼう</rt></ruby><ruby>用<rt>よう</rt></ruby>にも<ruby>国際<rt>こくさい</rt></ruby><ruby>貿易<rt>ぼうえき</rt></ruby><ruby>用<rt>よう</rt></ruby>にも<ruby>使<rt>つか</rt></ruby>われている。</p>
+        <p><ruby>南国<rt>なんごく</rt></ruby>カミシール<ruby>王国<rt>おうこく</rt></ruby>などから、<ruby>胡椒<rt>こしょう</rt></ruby>、<ruby>砂糖<rt>さとう</rt></ruby>、チョコレートなどの<ruby>希少<rt>きしょう</rt></ruby><ruby>品<rt>ひん</rt></ruby>を<ruby>空輸<rt>くうゆ</rt></ruby>している。</p>
       </div>
     </div>
 
-    <h2 class="section-title">動物＆魔物</h2>
+    <h2 class="section-title"><ruby>動物<rt>どうぶつ</rt></ruby>＆<ruby>魔物<rt>まもの</rt></ruby></h2>
     <div class="small-grid">
       <div class="small-card">
         <h4>スライム</h4>
-        <div class="role">最弱のモンスター</div>
-        <p>平原などに生息。グリーンスライム、ブルースライムなどの種類がある。</p>
-        <p>スライムの魔核1個10ギリム(鉄貨1枚)。</p>
+        <div class="role"><ruby>最弱<rt>さいじゃく</rt></ruby>のモンスター</div>
+        <p><ruby>平原<rt>へいげん</rt></ruby>などに<ruby>生息<rt>せいそく</rt></ruby>。グリーンスライム、ブルースライムなどの<ruby>種類<rt>しゅるい</rt></ruby>がある。</p>
+        <p>スライムの<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>1<ruby>個<rt>こ</rt></ruby>10ギリム(<ruby>鉄<rt>てつ</rt></ruby><ruby>貨<rt>か</rt></ruby>1<ruby>枚<rt>まい</rt></ruby>)。</p>
       </div>
       <div class="small-card">
-        <h4>角ウサギ</h4>
+        <h4><ruby>角<rt>つの</rt></ruby>ウサギ</h4>
         <div class="role">ホーンラビット</div>
-        <p>森などに生息。すばしっこい。角が売れる。肉も食料として食べられる。</p>
-        <p>弱いモンスターの代表格だが、機動力は侮れない。</p>
+        <p><ruby>一角<rt>いっかく</rt></ruby>ウサギとも。<ruby>森<rt>もり</rt></ruby>などに<ruby>生息<rt>せいそく</rt></ruby>。すばしっこい。
+        <ruby>角<rt>つの</rt></ruby>が<ruby>売<rt>う</rt></ruby>れる。<ruby>肉<rt>にく</rt></ruby>も<ruby>食料<rt>しょくりょう</rt></ruby>として<ruby>食<rt>た</rt></ruby>べられる。
+        <ruby>弱<rt>よわ</rt></ruby>いモンスターの<ruby>代表格<rt>だいひょうかく</rt></ruby>だが、<ruby>機動力<rt>きどうりょく</rt></ruby>は<ruby>侮<rt>あなど</rt></ruby>れない。</p>
       </div>
       <div class="small-card">
         <h4>ワイルドボア</h4>
-        <div class="role">野生のイノシシ</div>
-        <p>牙が強力で、かなりの巨体で強い。肉が多く、最高の獲物だ。</p>
+        <div class="role"><ruby>野生<rt>やせい</rt></ruby>のイノシシ</div>
+        <p><ruby>牙<rt>きば</rt></ruby>が<ruby>強力<rt>きょうりょく</rt></ruby>で、かなりの<ruby>巨体<rt>きょたい</rt></ruby>で<ruby>強<rt>つよ</rt></ruby>い。<ruby>肉<rt>にく</rt></ruby>が<ruby>多<rt>おお</rt></ruby>く、<ruby>最高<rt>さいこう</rt></ruby>の<ruby>獲物<rt>えもの</rt></ruby>だ。</p>
       </div>
       <div class="small-card">
         <h4>ワイルドディア</h4>
-        <div class="role">野生のシカ</div>
-        <p>草食性でおとなしいので危険は少ない。角が硬いので注意は必要。</p>
-        <p>肉はとても美味しく、ごちそうの一つだ。</p>
+        <div class="role"><ruby>野生<rt>やせい</rt></ruby>のシカ</div>
+        <p><ruby>草食性<rt>そうしょくせい</rt></ruby>でおとなしいので<ruby>危険<rt>きけん</rt></ruby>は<ruby>少<rt>すく</rt></ruby>ない。<ruby>角<rt>つの</rt></ruby>が<ruby>硬<rt>かた</rt></ruby>いので<ruby>注意<rt>ちゅうい</rt></ruby>は<ruby>必要<rt>ひつよう</rt></ruby>。</p>
+        <p><ruby>肉<rt>にく</rt></ruby>はとても<ruby>美味<rt>おい</rt></ruby>しく、ごちそうの<ruby>一<rt>ひと</rt></ruby>つだ。</p>
       </div>
       <div class="small-card">
         <h4>ワイルドウルフ</h4>
-        <div class="role">野生のオオカミ</div>
-        <p>肉食で集団で襲い掛かってくると危険な魔物。</p>
-        <p>肉は食用にもなる。</p>
+        <div class="role"><ruby>野生<rt>やせい</rt></ruby>のオオカミ</div>
+        <p><ruby>肉食<rt>にくしょく</rt></ruby>で<ruby>集団<rt>しゅうだん</rt></ruby>で<ruby>襲<rt>おそ</rt></ruby>い<ruby>掛<rt>か</rt></ruby>かってくると<ruby>危険<rt>きけん</rt></ruby>な<ruby>魔物<rt>まもの</rt></ruby>。</p>
+        <p><ruby>肉<rt>にく</rt></ruby>は<ruby>食用<rt>しょくよう</rt></ruby>にもなる。</p>
       </div>
       <div class="small-card">
         <h4>ワイルドホーン</h4>
-        <div class="role">野生のオオシカ</div>
-        <p>大きな角を持つ大鹿。体も普通のディアよりも巨体だ。</p>
-        <p>肉は食用になり、食べ応えがありそうだ。</p>
+        <div class="role"><ruby>野生<rt>やせい</rt></ruby>のオオシカ</div>
+        <p><ruby>大<rt>おお</rt></ruby>きな<ruby>角<rt>つの</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ<ruby>大鹿<rt>おおじか</rt></ruby>。<ruby>体<rt>からだ</rt></ruby>も<ruby>普通<rt>ふつう</rt></ruby>のディアよりも<ruby>巨体<rt>きょたい</rt></ruby>だ。</p>
+        <p><ruby>肉<rt>にく</rt></ruby>は<ruby>食用<rt>しょくよう</rt></ruby>になり、<ruby>食<rt>た</rt></ruby>べ<ruby>応<rt>こた</rt></ruby>えがありそうだ。</p>
       </div>
       <div class="small-card">
         <h4>ワタリワイバーン</h4>
-        <div class="role">渡りをするワイバーンの一種</div>
-        <p>非常に危険な上位魔物。カーマイン村の上空を飛んでいくだけだが……。</p>
-        <p>マハムたちは空を飛ぶワイバーンを目撃して、右往左往する。</p>
+        <div class="role"><ruby>渡<rt>わた</rt></ruby>りをするワイバーンの<ruby>一種<rt>いっしゅ</rt></ruby></div>
+        <p><ruby>非常<rt>ひじょう</rt></ruby>に<ruby>危険<rt>きけん</rt></ruby>な<ruby>上位<rt>じょうい</rt></ruby><ruby>魔物<rt>まもの</rt></ruby>。カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>上空<rt>じょうくう</rt></ruby>を<ruby>飛<rt>と</rt></ruby>んでいくだけだが……。</p>
+        <p>マハムたちは<ruby>空<rt>そら</rt></ruby>を<ruby>飛<rt>と</rt></ruby>ぶワイバーンを<ruby>目撃<rt>もくげき</rt></ruby>して、<ruby>右往左往<rt>うおうさおう</rt></ruby>する。</p>
       </div>
       <div class="small-card">
         <h4>キラービー</h4>
-        <div class="role">魔虫</div>
-        <p>大きなハチの昆虫型魔物。</p>
-        <p>蜂蜜を生産する種類で、カーマイン村の特産品の一つ。蜂蜜ジュースの材料でもある。</p>
+        <div class="role"><ruby>魔<rt>ま</rt></ruby><ruby>虫<rt>むし</rt></ruby></div>
+        <p><ruby>大<rt>おお</rt></ruby>きなハチの<ruby>昆虫<rt>こんちゅう</rt></ruby><ruby>型<rt>がた</rt></ruby><ruby>魔物<rt>まもの</rt></ruby>。</p>
+        <p><ruby>蜂蜜<rt>はちみつ</rt></ruby>を<ruby>生産<rt>せいさん</rt></ruby>する<ruby>種類<rt>しゅるい</rt></ruby>で、カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>特産<rt>とくさん</rt></ruby><ruby>品<rt>ひん</rt></ruby>の<ruby>一<rt>ひと</rt></ruby>つ。<ruby>蜂蜜<rt>はちみつ</rt></ruby>ジュースの<ruby>材料<rt>ざいりょう</rt></ruby>でもある。</p>
       </div>
       <div class="small-card">
         <h4>レインボーバード</h4>
-        <div class="role">魔鳥</div>
-        <p>非常に綺麗な声で鳴くモンスターの小鳥。</p>
-        <p>魔核を主食にする変わった食性で、観賞用によく飼われる。比較的おとなしい。</p>
+        <div class="role"><ruby>魔<rt>ま</rt></ruby><ruby>鳥<rt>ちょう</rt></ruby></div>
+        <p><ruby>非常<rt>ひじょう</rt></ruby>に<ruby>綺麗<rt>きれい</rt></ruby>な<ruby>声<rt>こえ</rt></ruby>で<ruby>鳴<rt>な</rt></ruby>くモンスターの<ruby>小鳥<rt>ことり</rt></ruby>。</p>
+        <p><ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>主食<rt>しゅしょく</rt></ruby>にする<ruby>変<rt>か</rt></ruby>わった<ruby>食性<rt>しょくせい</rt></ruby>で、<ruby>観賞<rt>かんしょう</rt></ruby><ruby>用<rt>よう</rt></ruby>によく<ruby>飼<rt>か</rt></ruby>われる。<ruby>比較的<rt>ひかくてき</rt></ruby>おとなしい。</p>
       </div>
       <div class="small-card">
         <h4>ランバード</h4>
-        <div class="role">魔鳥</div>
-        <p>陸鳥で空を飛べない代わりに速く走るモンスターの大型の鳥。
-        ダチョウ似ているがさらに少し大きく、少女くらいなら乗ることができる。
-        冒険者ギルドが運用している。</p>
+        <div class="role"><ruby>魔<rt>ま</rt></ruby><ruby>鳥<rt>ちょう</rt></ruby></div>
+        <p><ruby>陸鳥<rt>りくちょう</rt></ruby>で<ruby>空<rt>そら</rt></ruby>を<ruby>飛<rt>と</rt></ruby>べない<ruby>代<rt>か</rt></ruby>わりに<ruby>速<rt>はや</rt></ruby>く<ruby>走<rt>はし</rt></ruby>るモンスターの<ruby>大型<rt>おおがた</rt></ruby>の<ruby>鳥<rt>とり</rt></ruby>。
+        ダチョウ<ruby>似<rt>に</rt></ruby>ているがさらに<ruby>少<rt>すこ</rt></ruby>し<ruby>大<rt>おお</rt></ruby>きく、<ruby>少女<rt>しょうじょ</rt></ruby>くらいなら<ruby>乗<rt>の</rt></ruby>ることができる。
+        <ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルドが<ruby>運用<rt>うんよう</rt></ruby>している。</p>
       </div>
       <div class="small-card">
         <h4>ゴブリン</h4>
-        <div class="role">魔の森に生息</div>
-        <p>弱い人型の魔物。カーマイン村の近くには出没しない。</p>
+        <div class="role"><ruby>魔<rt>ま</rt></ruby>の<ruby>森<rt>もり</rt></ruby>に<ruby>生息<rt>せいそく</rt></ruby></div>
+        <p><ruby>弱<rt>よわ</rt></ruby>い<ruby>人型<rt>ひとがた</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くには<ruby>出没<rt>しゅつぼつ</rt></ruby>しない。</p>
       </div>
       <div class="small-card">
         <h4>コボルト</h4>
-        <div class="role">魔の森に生息</div>
-        <p>弱い犬人型の魔物。カーマイン村の近くには出没しない。</p>
+        <div class="role"><ruby>魔<rt>ま</rt></ruby>の<ruby>森<rt>もり</rt></ruby>に<ruby>生息<rt>せいそく</rt></ruby></div>
+        <p><ruby>弱<rt>よわ</rt></ruby>い<ruby>犬<rt>いぬ</rt></ruby><ruby>人型<rt>ひとがた</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くには<ruby>出没<rt>しゅつぼつ</rt></ruby>しない。</p>
       </div>
       <div class="small-card">
         <h4>オーク</h4>
-        <div class="role">魔の森に生息</div>
-        <p>強い豚人型の魔物。カーマイン村の近くには出没しない。</p>
+        <div class="role"><ruby>魔<rt>ま</rt></ruby>の<ruby>森<rt>もり</rt></ruby>に<ruby>生息<rt>せいそく</rt></ruby></div>
+        <p><ruby>強<rt>つよ</rt></ruby>い<ruby>豚<rt>ぶた</rt></ruby><ruby>人型<rt>ひとがた</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くには<ruby>出没<rt>しゅつぼつ</rt></ruby>しない。</p>
       </div>
       <div class="small-card">
         <h4>オーガ</h4>
-        <div class="role">魔の森に生息</div>
-        <p>強い鬼人型の魔物。カーマイン村の近くには出没しない。</p>
+        <div class="role"><ruby>魔<rt>ま</rt></ruby>の<ruby>森<rt>もり</rt></ruby>に<ruby>生息<rt>せいそく</rt></ruby></div>
+        <p><ruby>強<rt>つよ</rt></ruby>い<ruby>鬼<rt>おに</rt></ruby><ruby>人型<rt>ひとがた</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>近<rt>ちか</rt></ruby>くには<ruby>出没<rt>しゅつぼつ</rt></ruby>しない。</p>
       </div>
       <div class="small-card">
         <h4>ドラゴン</h4>
-        <div class="role">伝説の魔物</div>
-        <p>翼と手足と尻尾を持つ、大型爬虫類風の魔物。魔物の王様であり、憧れの存在でもある。</p>
-        <p>竜ともいい、勇者による竜退治は物語の定番になっている。</p>
+        <div class="role"><ruby>伝説<rt>でんせつ</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby></div>
+        <p><ruby>翼<rt>つばさ</rt></ruby>と<ruby>手足<rt>てあし</rt></ruby>と<ruby>尻尾<rt>しっぽ</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ、<ruby>大型<rt>おおがた</rt></ruby><ruby>爬虫類<rt>はちゅうるい</rt></ruby><ruby>風<rt>ふう</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。<ruby>魔物<rt>まもの</rt></ruby>の<ruby>王様<rt>おうさま</rt></ruby>であり、<ruby>憧<rt>あこが</rt></ruby>れの<ruby>存在<rt>そんざい</rt></ruby>でもある。</p>
+        <p><ruby>竜<rt>りゅう</rt></ruby>ともいい、<ruby>勇者<rt>ゆうしゃ</rt></ruby>による<ruby>竜<rt>りゅう</rt></ruby><ruby>退治<rt>たいじ</rt></ruby>は<ruby>物語<rt>ものがたり</rt></ruby>の<ruby>定番<rt>ていばん</rt></ruby>になっている。</p>
       </div>
     </div>
   </main>
@@ -473,16 +486,16 @@
     <nav class="footer-nav">
       <a href="index.html">ホーム</a>
       <a href="characters.html">キャラ</a>
-      <a href="world_words.html">世界観＆用語集</a>
+      <a href="world_words.html"><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></a>
     </nav>
     <nav class="footer-nav">
-      <a href="chapter.html">各話</a>
+      <a href="chapter.html"><ruby>各話<rt>かくわ</rt></ruby></a>
       <a href="news.html">ニュース</a>
       <a href="gallery.html">ギャラリー</a>
     </nav>
-    <p>[カーマイン村]異世界スキル【スローライフ】</p>
-    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ——</p>
-    <a href="../index.html">上へ戻る</a>
+    <p>[カーマイン<ruby>村<rt>むら</rt></ruby>]<ruby>異世界<rt>いせかい</rt></ruby>スキル【スローライフ】</p>
+    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ――</p>
+    <a href="../index.html"><ruby>上<rt>うえ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>る</a>
     <p style="margin-top:0.5rem;">© 2026 takigawa ebiro</p>
   </footer>
 

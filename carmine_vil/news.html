@@ -37,6 +37,14 @@
       color: var(--text);
       line-height: 1.75;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+    }
     a { color: var(--sakura); text-decoration: none; }
     a:hover { color: var(--gold); }
 
@@ -50,6 +58,7 @@
       display: flex; justify-content: space-between; align-items: center;
     }
     .logo { font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+    .nav-menu { display: flex; gap: 1rem; }
     .nav-links { display: flex; gap: 1.5rem; }
     .nav-links a { font-size: 0.95rem; }
     .nav-links a.active { color: var(--gold); }
@@ -129,26 +138,29 @@
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body class="ruby-off">
   <header>
     <nav>
       <div class="logo">[カーマイン村]スローライフ</div>
-      <div class="nav-links">
-        <a href="index.html">ホーム</a>
-        <a href="characters.html">キャラ</a>
-        <a href="world_words.html">用語集</a>
-        <a href="chapter.html">各話</a>
-        <a href="news.html" class="active">ニュース</a>
-        <a href="gallery.html">ギャラリー</a>
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="index.html">ホーム</a>
+          <a href="characters.html">キャラ</a>
+          <a href="world_words.html">用語集</a>
+          <a href="chapter.html">各話</a>
+          <a href="news.html" class="active">ニュース</a>
+          <a href="gallery.html">ギャラリー</a>
+        </div>
+        <button type="button" id="toggle-ruby">ルビON/OFF</button>
       </div>
     </nav>
   </header>
+  <script src="ruby_button.js" charset="utf-8"></script>
 
   <main class="page">
     <h1 class="page-title">
       ニュース
-      <span>Updates</span>
+      <span>お<ruby>知<rt>し</rt></ruby>らせ</span>
     </h1>
 
     <img src="images/news.jpg" alt="ミリアとターリャ" style="width:100%; max-height:420px; object-fit:cover; border-radius:16px; margin-bottom:2.5rem; box-shadow:0 10px 30px rgba(0,0,0,0.4);">
@@ -157,32 +169,44 @@
       <div class="news-item">
         <div class="news-date">2027.01.31</div>
         <div class="news-content">
-          <h2>カクヨムweb小説版 完結予定</h2>
-          <p>カクヨムweb小説版は、2027年1月31日をもって完結予定です。</p>
+          <h2>カクヨムweb<ruby>小説<rt>しょうせつ</rt></ruby><ruby>版<rt>ばん</rt></ruby> <ruby>完結<rt>かんけつ</rt></ruby><ruby>予定<rt>よてい</rt></ruby></h2>
+          <p>カクヨムweb<ruby>小説<rt>しょうせつ</rt></ruby><ruby>版<rt>ばん</rt></ruby>は、2027<ruby>年<rt>ねん</rt></ruby>1<ruby>月<rt>がつ</rt></ruby>31<ruby>日<rt>にち</rt></ruby>をもって<ruby>完結<rt>かんけつ</rt></ruby><ruby>予定<rt>よてい</rt></ruby>です。</p>
         </div>
       </div>
 
       <div class="news-item">
         <div class="news-date">2026.12.01</div>
         <div class="news-content">
-          <h2>カクヨムコン12 参加予定</h2>
-          <p>カクヨムコン12への参加を予定しています。応援よろしくお願いいたします。</p>
+          <h2>カクヨムコン12 <ruby>参加<rt>さんか</rt></ruby><ruby>予定<rt>よてい</rt></ruby></h2>
+          <p>カクヨムコン12への<ruby>参加<rt>さんか</rt></ruby>を<ruby>予定<rt>よてい</rt></ruby>しています。<ruby>応援<rt>おうえん</rt></ruby>よろしくお<ruby>願<rt>ねが</rt></ruby>いいたします。</p>
+          <p>1<ruby>日<rt>にち</rt></ruby>1<ruby>話<rt>わ</rt></ruby><ruby>更新<rt>こうしん</rt></ruby>、19:08<ruby>公開<rt>こうかい</rt></ruby>となります。</p>
+          <p><ruby>総<rt>そう</rt></ruby>ルビ<ruby>版<rt>ばん</rt></ruby>も1<ruby>日<rt>にち</rt></ruby>1<ruby>話<rt>わ</rt></ruby><ruby>更新<rt>こうしん</rt></ruby>、21:08<ruby>公開<rt>こうかい</rt></ruby>となります。</p>
         </div>
       </div>
 
       <div class="news-item">
         <div class="news-date">2026.11.20</div>
         <div class="news-content">
-          <h2>カクヨムweb小説版 連載開始予定</h2>
-          <p>カクヨムにてweb小説版の連載を開始予定です。詳細は決定次第、改めてお知らせいたします。</p>
+          <h2>カクヨムweb<ruby>小説<rt>しょうせつ</rt></ruby><ruby>版<rt>ばん</rt></ruby> <ruby>連載<rt>れんさい</rt></ruby><ruby>開始<rt>かいし</rt></ruby><ruby>予定<rt>よてい</rt></ruby></h2>
+          <p>カクヨムにてweb<ruby>小説<rt>しょうせつ</rt></ruby><ruby>版<rt>ばん</rt></ruby>の<ruby>連載<rt>れんさい</rt></ruby>を<ruby>開始<rt>かいし</rt></ruby><ruby>予定<rt>よてい</rt></ruby>です。</p>
+          <p>1<ruby>日<rt>にち</rt></ruby>2<ruby>話<rt>わ</rt></ruby><ruby>更新<rt>こうしん</rt></ruby>、11<ruby>月<rt>がつ</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>の<ruby>期間<rt>きかん</rt></ruby>はそれぞれ7:08、19:08<ruby>公開<rt>こうかい</rt></ruby>となります。</p>
+          <p><ruby>総<rt>そう</rt></ruby>ルビ<ruby>版<rt>ばん</rt></ruby>も1<ruby>日<rt>にち</rt></ruby>2<ruby>話<rt>わ</rt></ruby><ruby>更新<rt>こうしん</rt></ruby>、11<ruby>月<rt>がつ</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>の<ruby>期間<rt>きかん</rt></ruby>はそれぞれ12:08、21:08<ruby>公開<rt>こうかい</rt></ruby>となります。</p>
+        </div>
+      </div>
+
+      <div class="news-item">
+        <div class="news-date">2026.10.25</div>
+        <div class="news-content">
+          <h2>ポータルサイト　ルビ<ruby>対応<rt>対応</rt></ruby></h2>
+          <p>ポータルサイト<ruby>全体<rt>ぜんたい</rt></ruby>を、<ruby>総<rt>そう</rt></ruby>ルビ<ruby>仕様<rt>しよう</rt></ruby>に<ruby>対応<rt>たいおう</rt></ruby>いたしました。また<ruby>総<rt>そう</rt></ruby>ルビ<ruby>版<rt>ばん</rt></ruby>の<ruby>同時<rt>どうじ</rt></ruby><ruby>掲載<rt>けいさい</rt></ruby>の<ruby>告知<rt>こくち</rt></ruby>も<ruby>追記<rt>ついき</rt></ruby>しています。</p>
         </div>
       </div>
 
       <div class="news-item">
         <div class="news-date">2026.10.17</div>
         <div class="news-content">
-          <h2>ポータルサイト開設</h2>
-          <p>[カーマイン村]異世界スキル【スローライフ】の公式ポータルサイトを公開しました。キャラクター紹介や各話紹介をご覧いただけます。</p>
+          <h2>ポータルサイト<ruby>開設<rt>かいせつ</rt></ruby></h2>
+          <p>[カーマイン<ruby>村<rt>むら</rt></ruby>]<ruby>異世界<rt>いせかい</rt></ruby>スキル【スローライフ】の<ruby>公式<rt>こうしき</rt></ruby>ポータルサイトを<ruby>公開<rt>こうかい</rt></ruby>しました。キャラクター<ruby>紹介<rt>しょうかい</rt></ruby>や<ruby>各話<rt>かくわ</rt></ruby><ruby>紹介<rt>しょうかい</rt></ruby>をご<ruby>覧<rt>らん</rt></ruby>いただけます。</p>
         </div>
       </div>
 
@@ -193,16 +217,16 @@
     <nav class="footer-nav">
       <a href="index.html">ホーム</a>
       <a href="characters.html">キャラ</a>
-      <a href="world_words.html">世界観＆用語集</a>
+      <a href="world_words.html"><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></a>
     </nav>
     <nav class="footer-nav">
-      <a href="chapter.html">各話</a>
+      <a href="chapter.html"><ruby>各話<rt>かくわ</rt></ruby></a>
       <a href="news.html">ニュース</a>
       <a href="gallery.html">ギャラリー</a>
     </nav>
-    <p>[カーマイン村]異世界スキル【スローライフ】</p>
-    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ——</p>
-    <a href="../index.html">上へ戻る</a>
+    <p>[カーマイン<ruby>村<rt>むら</rt></ruby>]<ruby>異世界<rt>いせかい</rt></ruby>スキル【スローライフ】</p>
+    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ――</p>
+    <a href="../index.html"><ruby>上<rt>うえ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>る</a>
     <p style="margin-top:0.5rem;">© 2026 takigawa ebiro</p>
   </footer>
 

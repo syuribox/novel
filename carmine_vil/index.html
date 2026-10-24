@@ -38,6 +38,14 @@
       color: var(--text);
       line-height: 1.7;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+    }
     a { color: var(--sakura); text-decoration: none; }
     a:hover { color: var(--gold); }
 
@@ -52,6 +60,7 @@
       display: flex; justify-content: space-between; align-items: center;
     }
     .logo { font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+    .nav-menu { display: flex; gap: 1rem; }
     .nav-links { display: flex; gap: 1.5rem; }
     .nav-links a { font-size: 0.95rem; }
 
@@ -136,39 +145,42 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body class="ruby-off">
   <header>
     <nav>
       <div class="logo">[カーマイン村]スローライフ</div>
-      <div class="nav-links">
-        <a href="#synopsis">あらすじ</a>
-        <a href="characters.html">キャラ</a>
-        <a href="world_words.html">用語集</a>
-        <a href="chapter.html">各話</a>
-        <a href="news.html">ニュース</a>
-        <a href="gallery.html">ギャラリー</a>
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="#synopsis">あらすじ</a>
+          <a href="characters.html">キャラ</a>
+          <a href="world_words.html">用語集</a>
+          <a href="chapter.html">各話</a>
+          <a href="news.html">ニュース</a>
+          <a href="gallery.html">ギャラリー</a>
+        </div>
+        <button type="button" id="toggle-ruby">ルビON/OFF</button>
       </div>
     </nav>
   </header>
+  <script src="ruby_button.js" charset="utf-8"></script>
 
   <section class="hero">
     <div class="hero-content">
-      <h1>[カーマイン村]<br>異世界スキル【スローライフ】</h1>
-      <div class="subtitle">～貴族三男、ほのぼのの辺境村で悠々自適の左遷生活～</div>
-      <p class="catch">「始まりの村に暮らす『異世界日常系』」</p>
-      <a href="#synopsis" class="btn">あらすじを読む</a>
+      <h1>[カーマイン<ruby>村<rt>むら</rt></ruby>]<br><ruby>異世界<rt>いせかい</rt></ruby>スキル【スローライフ】</h1>
+      <div class="subtitle">～<ruby>貴族<rt>きぞく</rt></ruby><ruby>三男<rt>さんなん</rt></ruby>、ほのぼのの<ruby>辺境<rt>へんきょう</rt></ruby><ruby>村<rt>むら</rt></ruby>で<ruby>悠々自適<rt>ゆうゆうじてき</rt></ruby>の<ruby>左遷<rt>させん</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby>～</div>
+      <p class="catch">「<ruby>始<rt>はじ</rt></ruby>まりの<ruby>村<rt>むら</rt></ruby>に<ruby>暮<rt>く</rt></ruby>らす『<ruby>異世界<rt>いせかい</rt></ruby><ruby>日常<rt>にちじょう</rt></ruby><ruby>系<rt>けい</rt></ruby>』」</p>
+      <a href="#synopsis" class="btn">あらすじを<ruby>読<rt>よ</rt></ruby>む</a>
     </div>
   </section>
 
   <section id="synopsis">
     <h2>あらすじ</h2>
     <div class="synopsis">
-      <p>異世界貴族社会。5歳でスキル鑑定の儀を受けたマハムは、「スローライフ」というハズレスキルを持っていた。</p>
-      <p>6歳になったマハムは、妹ミリアとともに「ハズレスキル兄妹」として王都ハインリヒ侯爵家から辺境カーマイン村へ、領主代行として左遷される。</p>
-      <p>しかし村に入った瞬間、スキルが活性化。鑑定やアイテムボックスなどの便利なサブスキルが目覚める。</p>
-      <p>メイドのシータ、元気いっぱいの村娘ターリャ、温かい村人たちに囲まれながら、庭の手入れや食事、村の散策といった穏やかな毎日を送る。</p>
-      <p>戦闘や冒険ではなく、「何もしない」ことで世界の裏側が見えてくる——ほのぼのとした異世界日常系。</p>
+      <p><ruby>異世界<rt>いせかい</rt></ruby><ruby>貴族<rt>きぞく</rt></ruby><ruby>社会<rt>しゃかい</rt></ruby>。5<ruby>歳<rt>さい</rt></ruby>でスキル<ruby>鑑定<rt>かんてい</rt></ruby>の<ruby>儀<rt>ぎ</rt></ruby>を<ruby>受<rt>う</rt></ruby>けたマハムは、「スローライフ」というハズレスキルを<ruby>持<rt>も</rt></ruby>っていた。</p>
+      <p>6<ruby>歳<rt>さい</rt></ruby>になったマハムは、<ruby>妹<rt>いもうと</rt></ruby>ミリアとともに「ハズレスキル<ruby>兄妹<rt>きょうだい</rt></ruby>」として<ruby>王都<rt>おうと</rt></ruby>ハインリヒ<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby>から<ruby>辺境<rt>へんきょう</rt></ruby>カーマイン<ruby>村<rt>むら</rt></ruby>へ、<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>代行<rt>だいこう</rt></ruby>として<ruby>左遷<rt>させん</rt></ruby>される。</p>
+      <p>しかし<ruby>村<rt>むら</rt></ruby>に<ruby>入<rt>はい</rt></ruby>った<ruby>瞬間<rt>しゅんかん</rt></ruby>、スキルが<ruby>活性化<rt>かっせいか</rt></ruby>。<ruby>鑑定<rt>かんてい</rt></ruby>やアイテムボックスなどの<ruby>便利<rt>べんり</rt></ruby>なサブスキルが<ruby>目覚<rt>めざ</rt></ruby>める。</p>
+      <p>メイドのシータ、<ruby>元気<rt>げんき</rt></ruby>いっぱいの<ruby>村<rt>むら</rt></ruby><ruby>娘<rt>むすめ</rt></ruby>ターリャ、<ruby>温<rt>あたた</rt></ruby>かい<ruby>村人<rt>むらびと</rt></ruby>たちに<ruby>囲<rt>かこ</rt></ruby>まれながら、<ruby>庭<rt>にわ</rt></ruby>の<ruby>手入<rt>てい</rt></ruby>れや<ruby>食事<rt>しょくじ</rt></ruby>、<ruby>村<rt>むら</rt></ruby>の<ruby>散策<rt>さんさく</rt></ruby>といった<ruby>穏<rt>おだ</rt></ruby>やかな<ruby>毎<rt>まい</rt></ruby><ruby>日<rt>ひ</rt></ruby>を<ruby>送<rt>おく</rt></ruby>る。</p>
+      <p><ruby>戦闘<rt>せんとう</rt></ruby>や<ruby>冒険<rt>ぼうけん</rt></ruby>ではなく、「<ruby>何<rt>なに</rt></ruby>もしない」ことで<ruby>世界<rt>せかい</rt></ruby>の<ruby>裏側<rt>うらがわ</rt></ruby>が<ruby>見<rt>み</rt></ruby>えてくる――ほのぼのとした<ruby>異世界<rt>いせかい</rt></ruby><ruby>日常<rt>にちじょう</rt></ruby><ruby>系<rt>けい</rt></ruby>。</p>
       <p style="text-align:center; margin-top:1.5rem; color:var(--sakura); font-weight:600;">今日も、スローライフ、はじまります。</p>
     </div>
   </section>
@@ -180,37 +192,37 @@
         <img src="images/maham.jpg" alt="マハム">
         <div class="char-info">
           <h3>マハム</h3>
-          <div class="role">6歳 / 貴族三男</div>
-          <p>スキル「スローライフ」。カーマイン村に左遷された主人公。のんびりと村での生活を楽しむ。</p>
+          <div class="role">6<ruby>歳<rt>さい</rt></ruby> / <ruby>貴族<rt>きぞく</rt></ruby><ruby>三男<rt>さんなん</rt></ruby></div>
+          <p>スキル「スローライフ」。カーマイン<ruby>村<rt>むら</rt></ruby>に<ruby>左遷<rt>させん</rt></ruby>された<ruby>主人公<rt>しゅじんこう</rt></ruby>。のんびりと<ruby>村<rt>むら</rt></ruby>での<ruby>生活<rt>せいかつ</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しむ。</p>
         </div>
       </div>
       <div class="char-card">
         <img src="images/miria.jpg" alt="ミリア">
         <div class="char-info">
           <h3>ミリア</h3>
-          <div class="role">マハムの妹</div>
-          <p>スキル「裁縫」。優しくて少し心配性な妹。兄と一緒に村での新しい生活を始める。</p>
+          <div class="role">マハムの<ruby>妹<rt>いもうと</rt></ruby></div>
+          <p>スキル「<ruby>裁縫<rt>さいほう</rt></ruby>」。<ruby>優<rt>やさ</rt></ruby>しくて<ruby>少<rt>すこ</rt></ruby>し<ruby>心配性<rt>しんぱいしょう</rt></ruby>な<ruby>妹<rt>いもうと</rt></ruby>。<ruby>兄<rt>あに</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>村<rt>むら</rt></ruby>での<ruby>新<rt>あたら</rt></ruby>しい<ruby>生活<rt>せいかつ</rt></ruby>を<ruby>始<rt>はじ</rt></ruby>める。</p>
         </div>
       </div>
       <div class="char-card">
         <img src="images/tarya.jpg" alt="ターリャ">
         <div class="char-info">
           <h3>ターリャ</h3>
-          <div class="role">元気な村娘</div>
-          <p>村長の娘。明るく元気いっぱいで、村を案内してくれるマハムたちの最初の友達。</p>
+          <div class="role"><ruby>元気<rt>げんき</rt></ruby>な<ruby>村<rt>むら</rt></ruby><ruby>娘<rt>むすめ</rt></ruby></div>
+          <p><ruby>村長<rt>そんちょう</rt></ruby>の<ruby>娘<rt>むすめ</rt></ruby>。<ruby>明<rt>あか</rt></ruby>るく<ruby>元気<rt>げんき</rt></ruby>いっぱいで、<ruby>村<rt>むら</rt></ruby>を<ruby>案内<rt>あんない</rt></ruby>してくれるマハムたちの<ruby>最初<rt>さいしょ</rt></ruby>の<ruby>友達<rt>ともだち</rt></ruby>。</p>
         </div>
       </div>
       <div class="char-card">
         <img src="images/seeta.jpg" alt="シータ">
         <div class="char-info">
           <h3>シータ</h3>
-          <div class="role">16歳 / 優しいメイド</div>
-          <p>マハムとミリアを支えるメイド。優しくてしっかり者。村でも二人のお世話を続ける。</p>
+          <div class="role">16<ruby>歳<rt>さい</rt></ruby> / <ruby>優<rt>やさ</rt></ruby>しいメイド</div>
+          <p>マハムとミリアを<ruby>支<rt>ささ</rt></ruby>えるメイド。<ruby>優<rt>やさ</rt></ruby>しくてしっかり<ruby>者<rt>もの</rt></ruby>。<ruby>村<rt>むら</rt></ruby>でも<ruby>二人<rt>ふたり</rt></ruby>のお<ruby>世話<rt>せわ</rt></ruby>を<ruby>続<rt>つづ</rt></ruby>ける。</p>
         </div>
       </div>
     </div>
     <div style="text-align: center; margin-top: 2.5rem;">
-      <a href="characters.html" class="btn">キャラクター 一覧</a>
+      <a href="characters.html" class="btn">キャラクター <ruby>一覧<rt>いちらん</rt></ruby></a>
     </div>
   </section>
 
@@ -218,18 +230,18 @@
     <h2>リンク</h2>
     <div class="synopsis">
       <div style="text-align: center; margin-top: 0;">
-        <h3 class="sub-title">[カーマイン村]異世界スキル【スローライフ】(web版)</h3>
+        <h3 class="sub-title">[カーマイン<ruby>村<rt>むら</rt></ruby>]<ruby>異世界<rt>いせかい</rt></ruby>スキル【スローライフ】(web<ruby>版<rt>ばん</rt></ruby>)</h3>
       </div>
       <div style="text-align: center; margin-top: 1.5em;">
         <p>
-          (準備中)<br>
-          <span class="btn btn-disable" title="https://kakuyomu.jp/works/2912051599372402089">カクヨム(web版)</span>
+          (<ruby>準備<rt>じゅんび</rt></ruby><ruby>中<rt>ちゅう</rt></ruby>：<ruby>公開<rt>こうかい</rt></ruby>は2026<ruby>年<rt>ねん</rt></ruby>11<ruby>月<rt>がつ</rt></ruby>20<ruby>日<rt>にち</rt></ruby><ruby>予定<rt>よてい</rt></ruby>です)<br>
+          <span class="btn btn-disable" title="https://kakuyomu.jp/works/2912051599372402089">カクヨム(web<ruby>版<rt>ばん</rt></ruby>)</span>
           <br>
-          <span class="btn btn-disable" title="https://kakuyomu.jp/works/11054822665294077603">カクヨム(総ルビ版)</span>
+          <span class="btn btn-disable" title="https://kakuyomu.jp/works/11054822665294077603">カクヨム(<ruby>総<rt>そう</rt></ruby>ルビ<ruby>版<rt>ばん</rt></ruby>)</span>
           <br>
-          <span class="btn btn-disable" title="https://syosetu.com/">小説家になろう</span>
+          <span class="btn btn-disable" title="https://syosetu.com/"><ruby>小説家<rt>しょうせつか</rt></ruby>になろう</span>
           <br>
-          滝川海老郎@syuribox<br>
+          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>@syuribox<br>
           <a href="https://x.com/syuribox"  class="btn">X(Twitter)</a>
         </p>
       </div>
@@ -237,21 +249,21 @@
   </section>
 
   <section id="chapter">
-    <h2>世界観＆用語集</h2>
+    <h2><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></h2>
     <div class="synopsis">
-      <p>村町、スキル、動物＆魔物などの用語を紹介。</p>
+      <p><ruby>市町村<rt>しちょうそん</rt></ruby>、スキル、<ruby>宗教<rt>しゅうきょう</rt></ruby>、<ruby>動物<rt>どうぶつ</rt></ruby>＆<ruby>魔物<rt>まもの</rt></ruby>などの<ruby>用語<rt>ようご</rt></ruby>を<ruby>紹介<rt>しょうかい</rt></ruby>。</p>
       <div style="text-align: center; margin-top: 2.5rem;">
-        <a href="world_words.html" class="btn">世界観＆用語集</a>
+        <a href="world_words.html" class="btn"><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></a>
       </div>
     </div>
   </section>
 
   <section id="chapter">
-    <h2>各話</h2>
+    <h2><ruby>各話<rt>かくわ</rt></ruby></h2>
     <div class="synopsis">
-      <p>web小説版、1話から15話までの、あらすじを紹介。</p>
+      <p>web<ruby>小説<rt>しょうせつ</rt></ruby><ruby>版<rt>ばん</rt></ruby>、1<ruby>話<rt>わ</rt></ruby>から15<ruby>話<rt>わ</rt></ruby>までの、あらすじを<ruby>紹介<rt>しょうかい</rt></ruby>。</p>
       <div style="text-align: center; margin-top: 2.5rem;">
-        <a href="chapter.html" class="btn">各話を紹介</a>
+        <a href="chapter.html" class="btn"><ruby>各話<rt>かくわ</rt></ruby>を<ruby>紹介<rt>しょうかい</rt></ruby></a>
       </div>
     </div>
   </section>
@@ -259,9 +271,9 @@
   <section id="news">
     <h2>ニュース</h2>
     <div class="synopsis">
-      <p>最新ニュースから、履歴まで、カーマイン村の軌跡をご紹介。</p>
+      <p><ruby>最新<rt>さいしん</rt></ruby>ニュースから、<ruby>履歴<rt>りれき</rt></ruby>まで、カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>軌跡<rt>きせき</rt></ruby>をご<ruby>紹介<rt>しょうかい</rt></ruby>。</p>
         <div style="text-align: center; margin-top: 2.5rem;">
-          <a href="news.html" class="btn">NEWSを紹介</a>
+          <a href="news.html" class="btn">NEWSを<ruby>紹介<rt>しょうかい</rt></ruby></a>
         </div>
       </div>
     </div>
@@ -270,9 +282,9 @@
   <section id="gallery">
     <h2>ギャラリー</h2>
     <div class="synopsis">
-      <p>カーマイン村のギャラリーを紹介。</p>
+      <p>カーマイン<ruby>村<rt>むら</rt></ruby>のギャラリーを<ruby>紹介<rt>しょうかい</rt></ruby>。</p>
       <div style="text-align: center; margin-top: 2.5rem;">
-        <a href="gallery.html" class="btn">ギャラリーを紹介</a>
+        <a href="gallery.html" class="btn">ギャラリーを<ruby>紹介<rt>しょうかい</rt></ruby></a>
       </div>
     </div>
   </section>
@@ -281,16 +293,16 @@
     <nav class="footer-nav">
       <a href="index.html">ホーム</a>
       <a href="characters.html">キャラ</a>
-      <a href="world_words.html">世界観＆用語集</a>
+      <a href="world_words.html"><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></a>
     </nav>
     <nav class="footer-nav">
-      <a href="chapter.html">各話</a>
+      <a href="chapter.html"><ruby>各話<rt>かくわ</rt></ruby></a>
       <a href="news.html">ニュース</a>
       <a href="gallery.html">ギャラリー</a>
     </nav>
-    <p>[カーマイン村]異世界スキル【スローライフ】</p>
-    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ——</p>
-    <a href="../index.html">上へ戻る</a>
+    <p>[カーマイン<ruby>村<rt>むら</rt></ruby>]<ruby>異世界<rt>いせかい</rt></ruby>スキル【スローライフ】</p>
+    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ――</p>
+    <a href="../index.html"><ruby>上<rt>うえ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>る</a>
     <p style="margin-top:0.5rem;">© 2026 takigawa ebiro</p>
   </footer>
 

@@ -37,6 +37,14 @@
       color: var(--text);
       line-height: 1.7;
     }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+    }
     a { color: var(--sakura); text-decoration: none; }
     a:hover { color: var(--gold); }
 
@@ -50,6 +58,7 @@
       display: flex; justify-content: space-between; align-items: center;
     }
     .logo { font-weight: 700; font-size: 1.1rem; color: var(--gold); }
+    .nav-menu { display: flex; gap: 1rem; }
     .nav-links { display: flex; gap: 1.5rem; }
     .nav-links a { font-size: 0.95rem; }
     .nav-links a.active { color: var(--gold); }
@@ -122,21 +131,24 @@
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body class="ruby-off">
   <header>
     <nav>
       <div class="logo">[カーマイン村]スローライフ</div>
-      <div class="nav-links">
-        <a href="index.html">ホーム</a>
-        <a href="characters.html">キャラ</a>
-        <a href="world_words.html">用語集</a>
-        <a href="chapter.html">各話</a>
-        <a href="news.html">ニュース</a>
-        <a href="gallery.html" class="active">ギャラリー</a>
+      <div class="nav-menu">
+        <div class="nav-links">
+          <a href="index.html">ホーム</a>
+          <a href="characters.html">キャラ</a>
+          <a href="world_words.html">用語集</a>
+          <a href="chapter.html">各話</a>
+          <a href="news.html">ニュース</a>
+          <a href="gallery.html" class="active">ギャラリー</a>
+        </div>
+        <button type="button" id="toggle-ruby">ルビON/OFF</button>
       </div>
     </nav>
   </header>
+  <script src="ruby_button.js" charset="utf-8"></script>
 
   <main class="page">
     <h1 class="page-title">
@@ -169,44 +181,44 @@
         <a href="images/full_moon.jpg">
           <img src="images/full_moon.jpg" alt="月見の会">
         </a>
-        <div class="caption">月見の会</div>
+        <div class="caption"><ruby>月見<rt>つきみ</rt></ruby>の<ruby>会<rt>かい</rt></ruby></div>
       </div>
 
       <div class="gallery-item">
         <a href="images/sweet_potato.jpg">
           <img src="images/sweet_potato.jpg" alt="お芋を抱えたターリャ">
         </a>
-        <div class="caption">お芋を抱えたターリャ</div>
+        <div class="caption">お<ruby>芋<rt>いも</rt></ruby>を<ruby>抱<rt>かか</rt></ruby>えたターリャ</div>
       </div>
       <div class="gallery-item">
         <a href="images/snow_ball.jpg">
           <img src="images/snow_ball.jpg" alt="雪合戦">
         </a>
-        <div class="caption">雪合戦</div>
+        <div class="caption"><ruby>雪合戦<rt>ゆきがっせん</rt></ruby></div>
       </div>
       <div class="gallery-item">
         <a href="images/renda_fall.jpg">
-          <img src="images/renda_fall.jpg" alt="レンダの滝">
+          <img src="images/renda_fall.jpg" alt="レンダの滝>">
         </a>
-        <div class="caption">レンダの滝</div>
+        <div class="caption">レンダの<ruby>滝<rt>たき</rt></ruby></div>
       </div>
       <div class="gallery-item">
         <a href="images/wagon.jpg">
           <img src="images/wagon.jpg" alt="馬車の旅">
         </a>
-        <div class="caption">馬車の旅</div>
+        <div class="caption"><ruby>馬車<rt>ばしゃ</rt></ruby>の<ruby>旅<rt>たび</rt></ruby></div>
       </div>
       <div class="gallery-item">
         <a href="images/wyvern.jpg">
           <img src="images/wyvern.jpg" alt="ワタリワイバーンの群れ">
         </a>
-        <div class="caption">ワタリワイバーンの群れ</div>
+        <div class="caption">ワタリワイバーンの<ruby>群<rt>む</rt></ruby>れ</div>
       </div>
       <div class="gallery-item">
         <a href="images/slime.jpg">
           <img src="images/slime.jpg" alt="スライム戦">
         </a>
-        <div class="caption">スライム戦</div>
+        <div class="caption">スライム<ruby>戦<rt>せん</rt></ruby></div>
       </div>
       <div class="gallery-item">
         <a href="images/seeta_icetea.jpg">
@@ -221,16 +233,16 @@
     <nav class="footer-nav">
       <a href="index.html">ホーム</a>
       <a href="characters.html">キャラ</a>
-      <a href="world_words.html">世界観＆用語集</a>
+      <a href="world_words.html"><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></a>
     </nav>
     <nav class="footer-nav">
-      <a href="chapter.html">各話</a>
+      <a href="chapter.html"><ruby>各話<rt>かくわ</rt></ruby></a>
       <a href="news.html">ニュース</a>
       <a href="gallery.html">ギャラリー</a>
     </nav>
-    <p>[カーマイン村]異世界スキル【スローライフ】</p>
-    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ——</p>
-    <a href="../index.html">上へ戻る</a>
+    <p>[カーマイン<ruby>村<rt>むら</rt></ruby>]<ruby>異世界<rt>いせかい</rt></ruby>スキル【スローライフ】</p>
+    <p style="margin-top:0.5rem;">のんびり、ほのぼの、ゆるりと ――</p>
+    <a href="../index.html"><ruby>上<rt>うえ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>る</a>
     <p style="margin-top:0.5rem;">© 2026 takigawa ebiro</p>
   </footer>
 
