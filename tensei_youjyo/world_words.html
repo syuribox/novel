@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界観＆用語集 | 転生幼女の異世界 孤児院ライフ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --sakura: #fda4af;
+      --gold: #fbbf24;
+      --border: rgba(253, 164, 175, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 3rem 1rem 4rem;
+    }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+      z-index: 10;
+    }
+
+    a {
+      color: var(--sakura);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: rgba(253, 164, 175, 0.12);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--sakura);
+    }
+
+    .back-link:hover {
+      background: rgba(253, 164, 175, 0.2);
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 2.2rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(253, 164, 175, 0.4);
+    }
+
+    .cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0c1222;
+      padding: 1.2rem;
+    }
+
+    .work-card img {
+      max-width: 100%;
+      max-height: 420px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .work-info {
+      padding: 1.3rem 1.5rem 1.5rem;
+    }
+
+    .work-info h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+      color: var(--gold);
+    }
+
+    .work-info p {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    p.nickname {
+      color: var(--sakura);
+      font-size: 0.88rem;
+      margin-bottom: 0.6rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.45rem; }
+      body { padding: 2rem 0.8rem 3rem; }
+      .work-card img { max-height: 340px; }
+    }
+  </style>
+</head>
+<body class="ruby-off">
+  <div class="container">
+    <button type="button" id="toggle-ruby">ルビON/OFF</button>
+    <script src="ruby_button.js" charset="utf-8"></script>
+    <header>
+      <h1><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></h1>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;"><ruby>転生<rt>てんせい</rt></ruby><ruby>幼女<rt>ようじょ</rt></ruby>の<ruby>異世界<rt>いせかい</rt></ruby> <ruby>孤児院<rt>こじいん</rt></ruby>ライフ</p>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
+    </header>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>クエシニコ<ruby>孤児院<rt>こじいん</rt></ruby></h3>
+        <p>クエシニコ<ruby>女子<rt>じょし</rt></ruby><ruby>修道院<rt>しゅうどういん</rt></ruby><ruby>付属<rt>ふぞく</rt></ruby>の<ruby>孤児院<rt>こじいん</rt></ruby>。<ruby>院長<rt>いんちょう</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>はサファエ。</p>
+        <p><ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>とは<ruby>別<rt>べつ</rt></ruby>の<ruby>丘<rt>おか</rt></ruby>の<ruby>上<rt>うえ</rt></ruby>にあり、<ruby>北側<rt>きたがわ</rt></ruby>には<ruby>森<rt>もり</rt></ruby>が<ruby>広<rt>ひろ</rt></ruby>がっている。</p>
+        <p><ruby>丘<rt>おか</rt></ruby>の<ruby>南側<rt>みなみがわ</rt></ruby>には<ruby>修道院<rt>しゅうどういん</rt></ruby>の<ruby>野菜畑<rt>やさいばたけ</rt></ruby>、ブドウ<ruby>畑<rt>ばたけ</rt></ruby>などがある。</p>
+        <h3><ruby>修道院<rt>しゅうどういん</rt></ruby>の<ruby>森<rt>もり</rt></ruby></h3>
+        <p><ruby>修道院<rt>しゅうどういん</rt></ruby>の<ruby>裏<rt>うら</rt></ruby>に<ruby>広<rt>ひろ</rt></ruby>がる<ruby>森<rt>もり</rt></ruby>。トエたちが<ruby>最初<rt>さいしょ</rt></ruby>に<ruby>冒険<rt>ぼうけん</rt></ruby>をする<ruby>舞台<rt>ぶたい</rt></ruby>。</p>
+        <p><ruby>丘<rt>おか</rt></ruby>の<ruby>途中<rt>とちゅう</rt></ruby>から<ruby>城壁<rt>じょうへき</rt></ruby>まで<ruby>広<rt>ひろ</rt></ruby>がっている。<ruby>一番<rt>いちばん</rt></ruby><ruby>北<rt>きた</rt></ruby>には<ruby>北門<rt>きたもん</rt></ruby>があるが<ruby>普段<rt>ふだん</rt></ruby>は<ruby>閉鎖<rt>へいさ</rt></ruby>されている。</p>
+        <p>スライム、ホーンラビット、リス、ヘビなどが<ruby>生息<rt>せいそく</rt></ruby>しており、<ruby>大木<rt>たいぼく</rt></ruby>、<ruby>泉<rt>いずみ</rt></ruby>、<ruby>小川<rt>おがわ</rt></ruby>、<ruby>花畑<rt>はなばたけ</rt></ruby>などが<ruby>点在<rt>てんざい</rt></ruby>している。</p>
+        <h3>エストリア<ruby>伯爵<rt>はくしゃく</rt></ruby><ruby>領<rt>りょう</rt></ruby></h3>
+        <p>ストラーダリス<ruby>王国<rt>おうこく</rt></ruby>エストリア<ruby>伯爵<rt>はくしゃく</rt></ruby><ruby>領<rt>りょう</rt></ruby>。<ruby>物語<rt>ものがたり</rt></ruby>の<ruby>舞台<rt>ぶたい</rt></ruby>になる<ruby>城塞<rt>じょうさい</rt></ruby><ruby>都市<rt>とし</rt></ruby>および<ruby>周辺<rt>しゅうへん</rt></ruby>。</p>
+        <p><ruby>西<rt>にし</rt></ruby>にはドリステン<ruby>伯爵<rt>はくしゃく</rt></ruby><ruby>領<rt>りょう</rt></ruby>さらに<ruby>王都<rt>おうと</rt></ruby>がある。その<ruby>先<rt>さき</rt></ruby>にはメリス<ruby>王国<rt>おうこく</rt></ruby>が<ruby>広<rt>ひろ</rt></ruby>がる。</p>
+        <p><ruby>東側<rt>ひがしがわ</rt></ruby>はラーサル<ruby>村<rt>むら</rt></ruby>、さらにメンデルシア<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>領<rt>りょう</rt></ruby>があり、<ruby>海<rt>うみ</rt></ruby>があって<ruby>塩田<rt>えんでん</rt></ruby>により<ruby>塩<rt>しお</rt></ruby>が<ruby>採<rt>と</rt></ruby>れる。</p>
+        <h3>エストリア</h3>
+        <p><ruby>城塞<rt>じょうさい</rt></ruby><ruby>都市<rt>とし</rt></ruby>の<ruby>領<rt>りょう</rt></ruby><ruby>都<rt>と</rt></ruby>。<ruby>北<rt>きた</rt></ruby>には<ruby>森<rt>もり</rt></ruby>が<ruby>広<rt>ひろ</rt></ruby>がり、<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>と<ruby>修道院<rt>しゅうどういん</rt></ruby>の<ruby>二<rt>ふた</rt></ruby>つの<ruby>丘<rt>おか</rt></ruby>が<ruby>町<rt>まち</rt></ruby>との<ruby>境<rt>さかい</rt></ruby>にある。</p>
+        <p>その<ruby>南側<rt>みなみがわ</rt></ruby>には<ruby>貴族<rt>きぞく</rt></ruby><ruby>街<rt>がい</rt></ruby>があり、さらに<ruby>南<rt>みなみ</rt></ruby>に<ruby>市民<rt>しみん</rt></ruby><ruby>街<rt>がい</rt></ruby>が<ruby>広<rt>ひろ</rt></ruby>がる。</p>
+        <p><ruby>市民<rt>しみん</rt></ruby><ruby>街<rt>がい</rt></ruby>には、<ruby>一般<rt>いっぱん</rt></ruby><ruby>市民<rt>しみん</rt></ruby>の<ruby>家々<rt>いえいえ</rt></ruby>、<ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド、スエル<ruby>教会<rt>きょうかい</rt></ruby>などがある。</p>
+        <h3>エストリアの<ruby>森<rt>もり</rt></ruby></h3>
+        <p><ruby>領<rt>りょう</rt></ruby><ruby>都<rt>と</rt></ruby>エストリアの<ruby>外側<rt>そとがわ</rt></ruby>の<ruby>北部<rt>ほくぶ</rt></ruby>に<ruby>広<rt>ひろ</rt></ruby>がる<ruby>森<rt>もり</rt></ruby>。</p>
+        <p><ruby>夏<rt>なつ</rt></ruby>ミカン、スライム、ホーンラビット、フォレストウルフなどが<ruby>生息<rt>せいそく</rt></ruby>、<ruby>採<rt>と</rt></ruby>れる<ruby>森<rt>もり</rt></ruby>。</p>
+        <p><ruby>修道院<rt>しゅうどういん</rt></ruby>の<ruby>森<rt>もり</rt></ruby>よりも<ruby>危険<rt>きけん</rt></ruby><ruby>度<rt>ど</rt></ruby>が<ruby>高<rt>たか</rt></ruby>い<ruby>反面<rt>はんめん</rt></ruby>、<ruby>素材<rt>そざい</rt></ruby>も<ruby>豊富<rt>ほうふ</rt></ruby>にある。</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <div class="work-info">
+        <h3>スエル<ruby>教<rt>きょう</rt></ruby></h3>
+        <p>ストラーダリス<ruby>王国<rt>おうこく</rt></ruby>および<ruby>周辺<rt>しゅうへん</rt></ruby>の<ruby>宗教<rt>しゅうきょう</rt></ruby>。</p>
+        <p><ruby>主神<rt>しゅしん</rt></ruby>、スエルメティス<ruby>様<rt>さま</rt></ruby>を<ruby>崇拝<rt>すうはい</rt></ruby>している。</p>
+        <h3>スエルメティス<ruby>様<rt>さま</rt></ruby></h3>
+        <p>スエル<ruby>教<rt>きょう</rt></ruby>の<ruby>神様<rt>かみさま</rt></ruby>。<ruby>詳細<rt>しょうさい</rt></ruby>は<ruby>語<rt>かた</rt></ruby>られない。</p>
+        <h3>セドーレ</h3>
+        <p>スエル<ruby>教<rt>きょう</rt></ruby>の<ruby>挨拶<rt>あいさつ</rt></ruby>の<ruby>聖句<rt>せいく</rt></ruby>。<ruby>食事<rt>しょくじ</rt></ruby>、<ruby>祈<rt>いの</rt></ruby>り、<ruby>就寝<rt>しゅうしん</rt></ruby>や<ruby>起床<rt>きしょう</rt></ruby>などでも<ruby>用<rt>もち</rt></ruby>いる。</p>
+        <h3>アドラシル<ruby>派<rt>は</rt></ruby></h3>
+        <p><ruby>穏健<rt>おんけん</rt></ruby><ruby>派<rt>は</rt></ruby>。ストラーダリス<ruby>王国<rt>おうこく</rt></ruby>は<ruby>穏健<rt>おんけん</rt></ruby><ruby>派<rt>は</rt></ruby>に<ruby>属<rt>ぞく</rt></ruby>する。<ruby>獣人<rt>じゅうじん</rt></ruby>にも<ruby>寛容<rt>かんよう</rt></ruby><ruby>的<rt>てき</rt></ruby>。</p>
+        <h3>ヨインバイル<ruby>派<rt>は</rt></ruby></h3>
+        <p><ruby>過激派<rt>かげきは</rt></ruby>、<ruby>崇高<rt>すうこう</rt></ruby><ruby>派<rt>は</rt></ruby>。<ruby>周辺<rt>しゅうへん</rt></ruby><ruby>国<rt>くに</rt></ruby>で<ruby>支持<rt>しじ</rt></ruby>されている<ruby>宗派<rt>しゅうは</rt></ruby>。<ruby>人間<rt>にんげん</rt></ruby><ruby>中心<rt>ちゅうしん</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>スライム</h3>
+        <p><ruby>緑<rt>みどり</rt></ruby>や<ruby>青<rt>あお</rt></ruby>のスライム。どこにでもいる。またトイレにも<ruby>生息<rt>せいそく</rt></ruby>。</p>
+        <p><ruby>小<rt>ちい</rt></ruby>さな<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>が<ruby>採<rt>と</rt></ruby>れる。<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>は<ruby>紫色<rt>むらさきいろ</rt></ruby>で<ruby>星空<rt>ほしぞら</rt></ruby>のような<ruby>模様<rt>もよう</rt></ruby>がある。</p>
+        <h3>ホーンラビット</h3>
+        <p><ruby>一角<rt>いっかく</rt></ruby>うさぎ。<ruby>魔石<rt>ませき</rt></ruby>が<ruby>火<rt>ひ</rt></ruby><ruby>属性<rt>ぞくせい</rt></ruby>で<ruby>赤<rt>あか</rt></ruby>い。<ruby>淡泊<rt>たんぱく</rt></ruby>なお<ruby>肉<rt>にく</rt></ruby>になる。</p>
+        <h3>フォレストウルフ</h3>
+        <p><ruby>群<rt>む</rt></ruby>れで<ruby>行動<rt>こうどう</rt></ruby>して<ruby>手<rt>て</rt></ruby>ごわい<ruby>相手<rt>あいて</rt></ruby>。お<ruby>肉<rt>にく</rt></ruby>と<ruby>毛皮<rt>けがわ</rt></ruby>などが<ruby>採<rt>と</rt></ruby>れる。</p>
+        <h3>コボルト</h3>
+        <p><ruby>犬<rt>いぬ</rt></ruby><ruby>人型<rt>ひとがた</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。それほど<ruby>強<rt>つよ</rt></ruby>くはないけれど、<ruby>油断<rt>ゆだん</rt></ruby>は<ruby>大敵<rt>たいてき</rt></ruby>。</p>
+        <h3>ゴブリン</h3>
+        <p><ruby>小<rt>ちい</rt></ruby>さい<ruby>人型<rt>ひとがた</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。<ruby>緑色<rt>みどりいろ</rt></ruby>の<ruby>肌<rt>はだ</rt></ruby>に<ruby>腰<rt>こし</rt></ruby>ミノ<ruby>装備<rt>そうび</rt></ruby>。</p>
+        <h3>ビッグスラッグ</h3>
+        <p>オオナメクジ。<ruby>貝<rt>かい</rt></ruby>に<ruby>似<rt>に</rt></ruby>て<ruby>食<rt>た</rt></ruby>べるとおいしい<ruby>出汁<rt>だし</rt></ruby>が<ruby>出<rt>で</rt></ruby>る。</p>
+        <h3>オーク</h3>
+        <p><ruby>強<rt>つよ</rt></ruby>くて<ruby>大<rt>おお</rt></ruby>きい。<ruby>豚<rt>ぶた</rt></ruby><ruby>人型<rt>ひとがた</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。<ruby>革<rt>かわ</rt></ruby>を<ruby>鎧<rt>よろい</rt></ruby>にする。</p>
+      </div>
+      <div class="work-info">
+        <h3>ヤギ</h3>
+        <p><ruby>白<rt>しろ</rt></ruby>ヤギ。<ruby>孤児院<rt>こじいん</rt></ruby>で<ruby>飼<rt>か</rt></ruby>われている。ミルクを<ruby>出<rt>だ</rt></ruby>すので、<ruby>絞<rt>しぼ</rt></ruby>るのがトエたちの<ruby>仕事<rt>しごと</rt></ruby>。</p>
+        <h3>ラミーニャ</h3>
+        <p><ruby>鳥<rt>とり</rt></ruby><ruby>馬<rt>ば</rt></ruby>。<ruby>益鳥<rt>えきちょう</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。<ruby>人<rt>ひと</rt></ruby>を<ruby>乗<rt>の</rt></ruby>せて<ruby>素早<rt>すばや</rt></ruby>く<ruby>走<rt>はし</rt></ruby>る。<ruby>荷<rt>に</rt></ruby><ruby>運<rt>はこ</rt></ruby>びにも<ruby>用<rt>もち</rt></ruby>いられる。</p>
+        <p><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルドにも<ruby>一羽<rt>いちば</rt></ruby><ruby>常備<rt>じょうび</rt></ruby>されている。</p>
+        <h3><ruby>馬<rt>うま</rt></ruby> / <ruby>馬車<rt>ばしゃ</rt></ruby></h3>
+        <p>ライエルさんの<ruby>馬車<rt>ばしゃ</rt></ruby>の<ruby>他<rt>ほか</rt></ruby>、<ruby>普通<rt>ふつう</rt></ruby>の<ruby>馬<rt>うま</rt></ruby>もちゃんといる。</p>
+      </div>
+    </div>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ホワイト<ruby>草<rt>そう</rt></ruby></h3>
+        <p><ruby>葉<rt>は</rt></ruby>が<ruby>白<rt>しろ</rt></ruby>っぽい<ruby>薬草<rt>やくそう</rt></ruby>。<ruby>初級<rt>しょきゅう</rt></ruby>ポーションの<ruby>材料<rt>ざいりょう</rt></ruby>になる。</p>
+        <p><ruby>冬<rt>ふゆ</rt></ruby>のため<ruby>乾燥<rt>かんそう</rt></ruby>させたものが<ruby>流通<rt>りゅうつう</rt></ruby>している。</p>
+        <h3>サクラ<ruby>草<rt>そう</rt></ruby></h3>
+        <p>サクラのような<ruby>薄<rt>うす</rt></ruby>ピンクの<ruby>花<rt>はな</rt></ruby>を<ruby>咲<rt>さ</rt></ruby>かせる<ruby>草<rt>くさ</rt></ruby>。</p>
+        <p><ruby>中級<rt>ちゅうきゅう</rt></ruby>ポーションの<ruby>添加<rt>てんか</rt></ruby><ruby>剤<rt>ざい</rt></ruby>になるため、<ruby>高値<rt>たかね</rt></ruby>で<ruby>売<rt>う</rt></ruby>れる。</p>
+      </div>
+      <div class="work-info">
+        <h3>キイチゴ</h3>
+        <p><ruby>木苺<rt>きいちご</rt></ruby>。<ruby>低木<rt>ていぼく</rt></ruby>になるイチゴ。<ruby>赤<rt>あか</rt></ruby>い<ruby>実<rt>み</rt></ruby>が<ruby>美味<rt>おい</rt></ruby>しそう。</p>
+        <h3><ruby>夏<rt>なつ</rt></ruby><ruby>ミカン</h3>
+        <p><ruby>大<rt>おお</rt></ruby>きな<ruby>木<rt>き</rt></ruby>になるミカンの<ruby>一種<rt>いっしゅ</rt></ruby>。</p>
+        <p><ruby>野生<rt>やせい</rt></ruby>の<ruby>木<rt>き</rt></ruby>もある。<ruby>貴族<rt>きぞく</rt></ruby>の<ruby>屋敷<rt>やしき</rt></ruby>の<ruby>庭<rt>にわ</rt></ruby>にも<ruby>植<rt>う</rt></ruby>えられている。</p>
+      </div>
+      <div class="work-info">
+        <h3>ブラウンシメジタケ</h3>
+        <p><ruby>食<rt>た</rt></ruby>べると<ruby>美味<rt>おい</rt></ruby>しいキノコ。</p>
+        <p><ruby>茶色<rt>ちゃいろ</rt></ruby>いキノコの<ruby>見分<rt>みわ</rt></ruby>けは<ruby>難<rt>むずか</rt></ruby>しい。</p>
+        <h3>サルノコシカケ</h3>
+        <p><ruby>枯<rt>か</rt></ruby>れた<ruby>木<rt>き</rt></ruby>の<ruby>幹<rt>みき</rt></ruby>に<ruby>生<rt>は</rt></ruby>えるキノコ。</p>
+        <p><ruby>滋養<rt>じよう</rt></ruby>ポーションの<ruby>材料<rt>ざいりょう</rt></ruby>の<ruby>一<rt>ひと</rt></ruby>つ。</p>
+        <h3>キイロヒラタケ</h3>
+        <p>キノコ。<ruby>黄色<rt>きいろ</rt></ruby>い<ruby>毒々<rt>どくどく</rt></ruby>しい<ruby>色<rt>いろ</rt></ruby>だけど、<ruby>食<rt>た</rt></ruby>べると<ruby>美味<rt>おい</rt></ruby>しい。</p>
+      </div>
+    </div>
+
+    <footer>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
+      <p>© 2026 takigawa ebiro</p>
+    </footer>
+  </div>
+</body>
+</html>
