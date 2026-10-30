@@ -5,169 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>キャラクター紹介 | 私たちだけ24時間オンライン生産生活</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-card: #1e293b;
-      --text: #f1f5f9;
-      --text-muted: #94a3b8;
-      --sakura: #fda4af;
-      --sky: #fda4af;
-      --gold: #fbbf24;
-      --border: rgba(253, 164, 175, 0.18);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-      min-height: 100vh;
-      padding: 3rem 1rem 4rem;
-    }
-    body.ruby-off rt {
-      display: none;
-    }
-    #toggle-ruby {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.3rem 0.5rem;
-      z-index: 10;
-    }
-
-    a {
-      color: var(--sakura);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: var(--gold);
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      color: var(--gold);
-      font-size: 1.75rem;
-      font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 0.5rem;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background: rgba(253, 164, 175, 0.12);
-      border: 1px solid var(--border);
-      padding: 0.5rem 1.2rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      color: var(--sakura);
-    }
-
-    .back-link:hover {
-      background: rgba(253, 164, 175, 0.2);
-      color: var(--gold);
-    }
-
-    h2 {
-      font-size: 1.15rem;
-      color: var(--gold);
-      margin: 2.2rem 0 1rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .work-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .work-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(253, 164, 175, 0.4);
-    }
-
-    .cover-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #0c1222;
-      padding: 1.2rem;
-    }
-
-    .work-card img {
-      max-width: 100%;
-      max-height: 420px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      display: block;
-      border-radius: 6px;
-    }
-
-    .work-info {
-      padding: 1.3rem 1.5rem 1.5rem;
-    }
-
-    .work-info h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.6rem;
-      color: var(--gold);
-    }
-
-    .work-info p {
-      color: #e2e8f0;
-      font-size: 0.95rem;
-      margin-bottom: 0.4rem;
-    }
-
-    p.nickname {
-      color: var(--sakura);
-      font-size: 0.88rem;
-      margin-bottom: 0.6rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3.5rem;
-      color: var(--text-muted);
-      font-size: 0.82rem;
-    }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 1.45rem; }
-      body { padding: 2rem 0.8rem 3rem; }
-      .work-card img { max-height: 340px; }
-    }
-  </style>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body class="ruby-off">
   <div class="container">
     <button type="button" id="toggle-ruby">ルビON/OFF</button>
+    <script src="../ruby_button.js" charset="utf-8"></script>
     <header>
       <h1>キャラクター<ruby>紹介<rt>しょうかい</rt></ruby></h1>
-      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;"><ruby>私<rt>わたし</rt></ruby>たちだけ24<ruby>時間<rt>じかん</rt></ruby>オンライン<ruby>生産<rt>せいさん</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby></p>
+      <p class="author"><ruby>私<rt>わたし</rt></ruby>たちだけ24<ruby>時間<rt>じかん</rt></ruby>オンライン<ruby>生産<rt>せいさん</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby></p>
       <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
     </header>
 
@@ -178,7 +24,7 @@
       <div class="work-info">
         <h3>ミケ</h3>
         <p class="nickname"><ruby>主人公<rt>しゅじんこう</rt></ruby></p>
-        <p><ruby>本名<rt>ほんみょう</rt></ruby>は<ruby>大野<rt>おおの</rt></ruby>　<ruby>真美<rt>まみ</rt></ruby>(おおの　まみ)。<ruby>魔法使<rt>まほうつか</rt></ruby>い。<ruby>金髪<rt>きんぱつ</rt></ruby><ruby>碧眼<rt>へきがん</rt></ruby>の<ruby>猫耳<rt>ねこみみ</rt></ruby>キャラクター。</p>
+        <p><ruby>本名<rt>ほんみょう</rt></ruby>は<ruby>大野<rt>おおの</rt></ruby>　<ruby>真美<rt>まみ</rt></ruby><span class="ruby-side">(おおの　まみ)</span>。<ruby>魔法使<rt>まほうつか</rt></ruby>い。<ruby>金髪<rt>きんぱつ</rt></ruby><ruby>碧眼<rt>へきがん</rt></ruby>の<ruby>猫耳<rt>ねこみみ</rt></ruby>キャラクター。</p>
         <p><ruby>夏休<rt>なつやす</rt></ruby>み<ruby>中<rt>ちゅう</rt></ruby>の<ruby>予備校<rt>よびこう</rt></ruby><ruby>生<rt>せい</rt></ruby>で、<ruby>医療<rt>いりょう</rt></ruby><ruby>実験<rt>じっけん</rt></ruby>に<ruby>参加<rt>さんか</rt></ruby>した。<ruby>攻撃<rt>こうげき</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>と<ruby>回復<rt>かいふく</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>を<ruby>切<rt>き</rt></ruby>り<ruby>替<rt>か</rt></ruby>えて<ruby>戦闘<rt>せんとう</rt></ruby>するスタイル。</p>
         <p><ruby>料理<rt>りょうり</rt></ruby>と<ruby>調薬<rt>ちょうやく</rt></ruby>を<ruby>中心<rt>ちゅうしん</rt></ruby>に<ruby>生産<rt>せいさん</rt></ruby><ruby>活動<rt>かつどう</rt></ruby>にも<ruby>精<rt>せい</rt></ruby>を<ruby>出<rt>だ</rt></ruby>す。パーティーリーダーを<ruby>務<rt>つと</rt></ruby>める。</p>
       </div>
@@ -191,7 +37,7 @@
       <div class="work-info">
         <h3>クルミ</h3>
         <p class="nickname"><ruby>槍<rt>やり</rt></ruby><ruby>使<rt>つか</rt></ruby>い</p>
-        <p><ruby>本名<rt>ほんみょう</rt></ruby>は<ruby>安達<rt>あだち</rt></ruby>みくる。<ruby>真美<rt>まみ</rt></ruby>の<ruby>友人<rt>ゆうじん</rt></ruby>。</p>
+        <p><ruby>本名<rt>ほんみょう</rt></ruby>は<ruby>安達<rt>あだち</rt></ruby><span class="ruby-side">(あだち)</span>みくる。<ruby>真美<rt>まみ</rt></ruby>の<ruby>友人<rt>ゆうじん</rt></ruby>。</p>
         <p><ruby>明<rt>あか</rt></ruby>るい<ruby>性格<rt>せいかく</rt></ruby>でムードメーカー。VRゲーム<ruby>内<rt>ない</rt></ruby>では<ruby>槍<rt>やり</rt></ruby>で<ruby>攻撃<rt>こうげき</rt></ruby>して、<ruby>木工<rt>もっこう</rt></ruby><ruby>職人<rt>しょくにん</rt></ruby>を<ruby>名乗<rt>なの</rt></ruby>り<ruby>木工<rt>もっこう</rt></ruby><ruby>細工<rt>さいく</rt></ruby>のアクセサリーを<ruby>作<rt>つく</rt></ruby>ったりしている。</p>
       </div>
     </div>
@@ -203,7 +49,7 @@
       <div class="work-info">
         <h3>サクラ</h3>
         <p class="nickname"><ruby>大盾<rt>おおたて</rt></ruby><ruby>使<rt>つか</rt></ruby>い</p>
-        <p><ruby>本名<rt>ほんみょう</rt></ruby>は<ruby>春巻<rt>はるまき</rt></ruby><ruby>桜<rt>さくら</rt></ruby>。<ruby>真美<rt>まみ</rt></ruby>の<ruby>友人<rt>ゆうじん</rt></ruby>。</p>
+        <p><ruby>本名<rt>ほんみょう</rt></ruby>は<ruby>春巻<rt>はるまき</rt></ruby><ruby>桜<rt>さくら</rt></ruby><span class="ruby-side">(はるまき　さくら)</span>。<ruby>真美<rt>まみ</rt></ruby>の<ruby>友人<rt>ゆうじん</rt></ruby>。</p>
         <p>いつでも<ruby>丁寧語<rt>ていねいご</rt></ruby>でしゃべり、お<ruby>嬢様<rt>じょうさま</rt></ruby><ruby>風<rt>ふう</rt></ruby>。<ruby>盾<rt>たて</rt></ruby>による<ruby>守<rt>まも</rt></ruby>りを<ruby>固<rt>かた</rt></ruby>めて、パーティーの<ruby>防御<rt>ぼうぎょ</rt></ruby>を<ruby>担当<rt>たんとう</rt></ruby>する。</p>
         <p><ruby>鍛冶<rt>かじ</rt></ruby>にちょっと<ruby>興味<rt>きょうみ</rt></ruby>があるらしく、<ruby>加工<rt>かこう</rt></ruby><ruby>品<rt>ひん</rt></ruby>を<ruby>作<rt>つく</rt></ruby>ったりしている。</p>
       </div>
@@ -255,7 +101,7 @@
     <div class="work-card">
       <div class="work-info">
         <h3>リング・ウッド</h3>
-        <p class="nickname"><ruby>丸木<rt>まるき</rt></ruby><ruby>先生<rt>せんせい</rt></ruby>／エルフの<ruby>青年<rt>せいねん</rt></ruby></p>
+        <p class="nickname"><ruby>丸木<rt>まるき</rt></ruby><span class="ruby-side">(まるき)</span><ruby>先生<rt>せんせい</rt></ruby>／エルフの<ruby>青年<rt>せいねん</rt></ruby></p>
         <p><ruby>医療<rt>いりょう</rt></ruby><ruby>実験<rt>じっけん</rt></ruby>の<ruby>担当医<rt>たんとうい</rt></ruby>。たまにログインしてきて<ruby>定期的<rt>ていきてき</rt></ruby>なカウンセリングおよび<ruby>観察<rt>かんさつ</rt></ruby>をしている。</p>
       </div>
     </div>
@@ -265,6 +111,5 @@
       <p>© 2026 takigawa ebiro</p>
     </footer>
   </div>
-  <script src="ruby_button.js" charset="utf-8"></script>
 </body>
 </html>
