@@ -33,7 +33,12 @@
       top: 1rem;
       right: 1rem;
       padding: 0.3rem 0.5rem;
+      min-width: 4.4rem;
+      white-space: nowrap;
       z-index: 10;
+    }
+    body.ruby-big rt {
+      font-size: 75%;
     }
     body.ruby-inline ruby {
       display: inline;
@@ -121,7 +126,7 @@
   <div class="container">
     <button type="button" id="toggle-ruby">ルビON/OFF</button>
     <script src="ruby_button.js" charset="utf-8"></script>
-    <p style="margin-top: 2em;">ルビボタンでルビを表示、括弧表示、非表示と切り替えることができます。</p>
+    <p style="margin-top: 2em;">ルビボタンでルビを表示、拡大表示、括弧表示、非表示と切り替えることができます。</p>
     <hr style="margin: 1em;">
     <h1><ruby>滝川<rt>たきがわ</rt></ruby><ruby>海老郎<rt>えびろう</rt></ruby></h1>
     <p class="subtitle">webノベル<ruby>一覧<rt>いちらん</rt></ruby></p>
