@@ -5,169 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>世界観＆用語集 | 転生幼女の異世界 孤児院ライフ</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-card: #1e293b;
-      --text: #f1f5f9;
-      --text-muted: #94a3b8;
-      --sakura: #fda4af;
-      --gold: #fbbf24;
-      --border: rgba(253, 164, 175, 0.18);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-      min-height: 100vh;
-      padding: 3rem 1rem 4rem;
-    }
-    body.ruby-off rt {
-      display: none;
-    }
-    #toggle-ruby {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.3rem 0.5rem;
-      z-index: 10;
-    }
-
-    a {
-      color: var(--sakura);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: var(--gold);
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      color: var(--gold);
-      font-size: 1.75rem;
-      font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 0.5rem;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background: rgba(253, 164, 175, 0.12);
-      border: 1px solid var(--border);
-      padding: 0.5rem 1.2rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      color: var(--sakura);
-    }
-
-    .back-link:hover {
-      background: rgba(253, 164, 175, 0.2);
-      color: var(--gold);
-    }
-
-    h2 {
-      font-size: 1.15rem;
-      color: var(--gold);
-      margin: 2.2rem 0 1rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .work-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .work-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(253, 164, 175, 0.4);
-    }
-
-    .cover-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #0c1222;
-      padding: 1.2rem;
-    }
-
-    .work-card img {
-      max-width: 100%;
-      max-height: 420px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      display: block;
-      border-radius: 6px;
-    }
-
-    .work-info {
-      padding: 1.3rem 1.5rem 1.5rem;
-    }
-
-    .work-info h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.6rem;
-      color: var(--gold);
-    }
-
-    .work-info p {
-      color: #e2e8f0;
-      font-size: 0.95rem;
-      margin-bottom: 0.4rem;
-    }
-
-    p.nickname {
-      color: var(--sakura);
-      font-size: 0.88rem;
-      margin-bottom: 0.6rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3.5rem;
-      color: var(--text-muted);
-      font-size: 0.82rem;
-    }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 1.45rem; }
-      body { padding: 2rem 0.8rem 3rem; }
-      .work-card img { max-height: 340px; }
-    }
-  </style>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body class="ruby-off">
   <div class="container">
     <button type="button" id="toggle-ruby">ルビON/OFF</button>
-    <script src="ruby_button.js" charset="utf-8"></script>
+    <script src="../ruby_button.js" charset="utf-8"></script>
     <header>
       <h1><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></h1>
-      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;"><ruby>転生<rt>てんせい</rt></ruby><ruby>幼女<rt>ようじょ</rt></ruby>の<ruby>異世界<rt>いせかい</rt></ruby> <ruby>孤児院<rt>こじいん</rt></ruby>ライフ</p>
+      <p class="author"><ruby>転生<rt>てんせい</rt></ruby><ruby>幼女<rt>ようじょ</rt></ruby>の<ruby>異世界<rt>いせかい</rt></ruby> <ruby>孤児院<rt>こじいん</rt></ruby>ライフ</p>
       <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
     </header>
 
@@ -205,9 +51,9 @@
         <h3>セドーレ</h3>
         <p>スエル<ruby>教<rt>きょう</rt></ruby>の<ruby>挨拶<rt>あいさつ</rt></ruby>の<ruby>聖句<rt>せいく</rt></ruby>。<ruby>食事<rt>しょくじ</rt></ruby>、<ruby>祈<rt>いの</rt></ruby>り、<ruby>就寝<rt>しゅうしん</rt></ruby>や<ruby>起床<rt>きしょう</rt></ruby>などでも<ruby>用<rt>もち</rt></ruby>いる。</p>
         <h3>アドラシル<ruby>派<rt>は</rt></ruby></h3>
-        <p><ruby>穏健<rt>おんけん</rt></ruby><ruby>派<rt>は</rt></ruby>。ストラーダリス<ruby>王国<rt>おうこく</rt></ruby>は<ruby>穏健<rt>おんけん</rt></ruby><ruby>派<rt>は</rt></ruby>に<ruby>属<rt>ぞく</rt></ruby>する。<ruby>獣人<rt>じゅうじん</rt></ruby>にも<ruby>寛容<rt>かんよう</rt></ruby><ruby>的<rt>てき</rt></ruby>。</p>
+        <p><ruby>穏健派<rt>おんけんは</rt></ruby>。ストラーダリス<ruby>王国<rt>おうこく</rt></ruby>は<ruby>穏健派<rt>おんけんは</rt></ruby>に<ruby>属<rt>ぞく</rt></ruby>する。<ruby>獣人<rt>じゅうじん</rt></ruby>にも<ruby>寛容<rt>かんよう</rt></ruby><ruby>的<rt>てき</rt></ruby>。</p>
         <h3>ヨインバイル<ruby>派<rt>は</rt></ruby></h3>
-        <p><ruby>過激派<rt>かげきは</rt></ruby>、<ruby>崇高<rt>すうこう</rt></ruby><ruby>派<rt>は</rt></ruby>。<ruby>周辺<rt>しゅうへん</rt></ruby><ruby>国<rt>くに</rt></ruby>で<ruby>支持<rt>しじ</rt></ruby>されている<ruby>宗派<rt>しゅうは</rt></ruby>。<ruby>人間<rt>にんげん</rt></ruby><ruby>中心<rt>ちゅうしん</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ。</p>
+        <p><ruby>過激派<rt>かげきは</rt></ruby>、<ruby>崇高派<rt>すうこうは</rt></ruby>。<ruby>周辺<rt>しゅうへん</rt></ruby><ruby>国<rt>くに</rt></ruby>で<ruby>支持<rt>しじ</rt></ruby>されている<ruby>宗派<rt>しゅうは</rt></ruby>。<ruby>人間<rt>にんげん</rt></ruby><ruby>中心<rt>ちゅうしん</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ。</p>
       </div>
     </div>
 
@@ -215,7 +61,7 @@
       <div class="work-info">
         <h3>スライム</h3>
         <p><ruby>緑<rt>みどり</rt></ruby>や<ruby>青<rt>あお</rt></ruby>のスライム。どこにでもいる。またトイレにも<ruby>生息<rt>せいそく</rt></ruby>。</p>
-        <p><ruby>小<rt>ちい</rt></ruby>さな<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>が<ruby>採<rt>と</rt></ruby>れる。<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>は<ruby>紫色<rt>むらさきいろ</rt></ruby>で<ruby>星空<rt>ほしぞら</rt></ruby>のような<ruby>模様<rt>もよう</rt></ruby>がある。</p>
+        <p><ruby>小<rt>ちい</rt></ruby>さな<ruby>魔核<rt>まかく</rt></ruby>が<ruby>採<rt>と</rt></ruby>れる。<ruby>魔核<rt>まかく</rt></ruby>は<ruby>紫色<rt>むらさきいろ</rt></ruby>で<ruby>星空<rt>ほしぞら</rt></ruby>のような<ruby>模様<rt>もよう</rt></ruby>がある。</p>
         <h3>ホーンラビット</h3>
         <p><ruby>一角<rt>いっかく</rt></ruby>うさぎ。<ruby>魔石<rt>ませき</rt></ruby>が<ruby>火<rt>ひ</rt></ruby><ruby>属性<rt>ぞくせい</rt></ruby>で<ruby>赤<rt>あか</rt></ruby>い。<ruby>淡泊<rt>たんぱく</rt></ruby>なお<ruby>肉<rt>にく</rt></ruby>になる。</p>
         <h3>フォレストウルフ</h3>
@@ -233,8 +79,8 @@
         <h3>ヤギ</h3>
         <p><ruby>白<rt>しろ</rt></ruby>ヤギ。<ruby>孤児院<rt>こじいん</rt></ruby>で<ruby>飼<rt>か</rt></ruby>われている。ミルクを<ruby>出<rt>だ</rt></ruby>すので、<ruby>絞<rt>しぼ</rt></ruby>るのがトエたちの<ruby>仕事<rt>しごと</rt></ruby>。</p>
         <h3>ラミーニャ</h3>
-        <p><ruby>鳥<rt>とり</rt></ruby><ruby>馬<rt>ば</rt></ruby>。<ruby>益鳥<rt>えきちょう</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。<ruby>人<rt>ひと</rt></ruby>を<ruby>乗<rt>の</rt></ruby>せて<ruby>素早<rt>すばや</rt></ruby>く<ruby>走<rt>はし</rt></ruby>る。<ruby>荷<rt>に</rt></ruby><ruby>運<rt>はこ</rt></ruby>びにも<ruby>用<rt>もち</rt></ruby>いられる。</p>
-        <p><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルドにも<ruby>一羽<rt>いちば</rt></ruby><ruby>常備<rt>じょうび</rt></ruby>されている。</p>
+        <p><ruby>鳥<rt>とり</rt></ruby><ruby>馬<rt>うま</rt></ruby>。<ruby>益鳥<rt>えきちょう</rt></ruby>の<ruby>魔物<rt>まもの</rt></ruby>。<ruby>人<rt>ひと</rt></ruby>を<ruby>乗<rt>の</rt></ruby>せて<ruby>素早<rt>すばや</rt></ruby>く<ruby>走<rt>はし</rt></ruby>る。<ruby>荷<rt>に</rt></ruby><ruby>運<rt>はこ</rt></ruby>びにも<ruby>用<rt>もち</rt></ruby>いられる。</p>
+        <p><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルドにも<ruby>一羽<rt>いちわ</rt></ruby><ruby>常備<rt>じょうび</rt></ruby>されている。</p>
         <h3><ruby>馬<rt>うま</rt></ruby> / <ruby>馬車<rt>ばしゃ</rt></ruby></h3>
         <p>ライエルさんの<ruby>馬車<rt>ばしゃ</rt></ruby>の<ruby>他<rt>ほか</rt></ruby>、<ruby>普通<rt>ふつう</rt></ruby>の<ruby>馬<rt>うま</rt></ruby>もちゃんといる。</p>
       </div>
