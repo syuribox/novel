@@ -46,6 +46,22 @@
       right: 1rem;
       padding: 0.3rem 0.5rem;
     }
+    body.ruby-inline ruby {
+      display: inline;
+    }
+    body.ruby-inline rt {
+      display: inline;
+      font-size: 100%;
+    }
+    body.ruby-inline rt::before {
+      content: "(";
+    }
+    body.ruby-inline rt::after {
+      content: ")";
+    }
+    body.ruby-inline .ruby-side, body.ruby-on .ruby-side {
+      display: none;
+    }
     a { color: var(--sakura); text-decoration: none; }
     a:hover { color: var(--gold); }
 
@@ -226,7 +242,7 @@
       <div class="small-card">
         <h4>ブルーストーン<ruby>町<rt>まち</rt></ruby></h4>
         <div class="role">ハインリヒ<ruby>領<rt>りょう</rt></ruby>の<ruby>町<rt>まち</rt></ruby></div>
-        <p>カーマイン<ruby>村<rt>むら</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<ruby>途中<rt>とちゅう</rt></ruby>にある、<ruby>隣町<rt>となりまち</rt></ruby>。カーマイン<ruby>村<rt>むら</rt></ruby>から<ruby>狼煙<rt>のろし</rt></ruby>(のろし)が<ruby>見<rt>み</rt></ruby>える。</p>
+        <p>カーマイン<ruby>村<rt>むら</rt></ruby>に<ruby>行<rt>い</rt></ruby>く<ruby>途中<rt>とちゅう</rt></ruby>にある、<ruby>隣町<rt>となりまち</rt></ruby>。カーマイン<ruby>村<rt>むら</rt></ruby>から<ruby>狼煙<rt>のろし</rt></ruby><span class="ruby-side">(のろし)</span>が<ruby>見<rt>み</rt></ruby>える。</p>
         <p><ruby>領主<rt>りょうしゅ</rt></ruby>はカエサル・クライド<ruby>男爵<rt>だんしゃく</rt></ruby>。</p>
         <p><ruby>簡易<rt>かんい</rt></ruby><ruby>城塞<rt>じょうさい</rt></ruby><ruby>都市<rt>とし</rt></ruby>で<ruby>城門<rt>じょうもん</rt></ruby>がある。バザール、<ruby>教会<rt>きょうかい</rt></ruby><ruby>支部<rt>しぶ</rt></ruby>、<ruby>錬金術<rt>れんきんじゅつ</rt></ruby>ギルドなどを<ruby>有<rt>ゆう</rt></ruby>する。</p>
       </div>
@@ -343,19 +359,19 @@
       <div class="small-card">
         <h4><ruby>魔道<rt>まどう</rt></ruby>コンロ</h4>
         <div class="role"><ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby></div>
-        <p><ruby>魔石<rt>ませき</rt></ruby>か<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>燃料<rt>ねんりょう</rt></ruby>とする<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>。<ruby>熱源<rt>ねつげん</rt></ruby>であり<ruby>上<rt>うえ</rt></ruby>にフライパンなどを<ruby>載<rt>の</rt></ruby>せて<ruby>温<rt>あたた</rt></ruby>める。</p>
+        <p><ruby>魔石<rt>ませき</rt></ruby>か<ruby>魔核<rt>まかく</rt></ruby>を<ruby>燃料<rt>ねんりょう</rt></ruby>とする<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>。<ruby>熱源<rt>ねつげん</rt></ruby>であり<ruby>上<rt>うえ</rt></ruby>にフライパンなどを<ruby>載<rt>の</rt></ruby>せて<ruby>温<rt>あたた</rt></ruby>める。</p>
         <p><ruby>比較的<rt>ひかくてき</rt></ruby><ruby>安価<rt>あんか</rt></ruby>に<ruby>製造<rt>せいぞう</rt></ruby>され、<ruby>料理店<rt>りょうりてん</rt></ruby>や<ruby>貴族<rt>きぞく</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>、<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>など<ruby>裕福<rt>ゆうふく</rt></ruby>な<ruby>家庭<rt>かてい</rt></ruby>や<ruby>専門店<rt>せんもんてん</rt></ruby>で<ruby>多<rt>おお</rt></ruby>く<ruby>使<rt>つか</rt></ruby>われる。</p>
       </div>
       <div class="small-card">
         <h4><ruby>魔道<rt>まどう</rt></ruby>ランプ</h4>
         <div class="role"><ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby></div>
-        <p><ruby>魔石<rt>ませき</rt></ruby>か<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>燃料<rt>ねんりょう</rt></ruby>とする<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>。スイッチ<ruby>式<rt>しき</rt></ruby>でオンにすると<ruby>光<rt>ひかり</rt></ruby>を<ruby>放<rt>はな</rt></ruby>つ。</p>
+        <p><ruby>魔石<rt>ませき</rt></ruby>か<ruby>魔核<rt>まかく</rt></ruby>を<ruby>燃料<rt>ねんりょう</rt></ruby>とする<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>。スイッチ<ruby>式<rt>しき</rt></ruby>でオンにすると<ruby>光<rt>ひかり</rt></ruby>を<ruby>放<rt>はな</rt></ruby>つ。</p>
         <p><ruby>比較的<rt>ひかくてき</rt></ruby><ruby>安価<rt>あんか</rt></ruby>に<ruby>製造<rt>せいぞう</rt></ruby>され、<ruby>貴族<rt>きぞく</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>、<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>など<ruby>裕福<rt>ゆうふく</rt></ruby>な<ruby>家庭<rt>かてい</rt></ruby>や<ruby>専門店<rt>せんもんてん</rt></ruby>で<ruby>多<rt>おお</rt></ruby>く<ruby>使<rt>つか</rt></ruby>われる。</p>
       </div>
       <div class="small-card">
         <h4><ruby>魔道<rt>まどう</rt></ruby>シャワー</h4>
         <div class="role"><ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby></div>
-        <p><ruby>魔石<rt>ませき</rt></ruby>か<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>燃料<rt>ねんりょう</rt></ruby>とする<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>。スイッチ<ruby>式<rt>しき</rt></ruby>でオンにすると<ruby>温<rt>あたた</rt></ruby>かいお<ruby>湯<rt>ゆ</rt></ruby>を<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>発生<rt>はっせい</rt></ruby>させる。</p>
+        <p><ruby>魔石<rt>ませき</rt></ruby>か<ruby>魔核<rt>まかく</rt></ruby>を<ruby>燃料<rt>ねんりょう</rt></ruby>とする<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>。スイッチ<ruby>式<rt>しき</rt></ruby>でオンにすると<ruby>温<rt>あたた</rt></ruby>かいお<ruby>湯<rt>ゆ</rt></ruby>を<ruby>直接<rt>ちょくせつ</rt></ruby><ruby>発生<rt>はっせい</rt></ruby>させる。</p>
         <p><ruby>実<rt>じつ</rt></ruby>はちょっと<ruby>珍<rt>めずら</rt></ruby>しく、カーマイン<ruby>村<rt>むら</rt></ruby>では<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>にしか<ruby>設置<rt>せっち</rt></ruby>されていないらしい。<ruby>貴族<rt>きぞく</rt></ruby>の<ruby>家<rt>いえ</rt></ruby>では<ruby>基本<rt>きほん</rt></ruby>の<ruby>魔道<rt>まどう</rt></ruby><ruby>具<rt>ぐ</rt></ruby>だが<ruby>一般人<rt>いっぱんじん</rt></ruby>は<ruby>使<rt>つか</rt></ruby>っていない<ruby>程度<rt>ていど</rt></ruby>には<ruby>高価<rt>こうか</rt></ruby>なようだ。</p>
       </div>
       <div class="small-card">
@@ -396,7 +412,7 @@
         <h4>スライム</h4>
         <div class="role"><ruby>最弱<rt>さいじゃく</rt></ruby>のモンスター</div>
         <p><ruby>平原<rt>へいげん</rt></ruby>などに<ruby>生息<rt>せいそく</rt></ruby>。グリーンスライム、ブルースライムなどの<ruby>種類<rt>しゅるい</rt></ruby>がある。</p>
-        <p>スライムの<ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>1<ruby>個<rt>こ</rt></ruby>10ギリム(<ruby>鉄<rt>てつ</rt></ruby><ruby>貨<rt>か</rt></ruby>1<ruby>枚<rt>まい</rt></ruby>)。</p>
+        <p>スライムの<ruby>魔核<rt>まかく</rt></ruby>1<ruby>個<rt>こ</rt></ruby>10ギリム(<ruby>鉄<rt>てつ</rt></ruby><ruby>貨<rt>か</rt></ruby>1<ruby>枚<rt>まい</rt></ruby>)。</p>
       </div>
       <div class="small-card">
         <h4><ruby>角<rt>つの</rt></ruby>ウサギ</h4>
@@ -444,7 +460,7 @@
         <h4>レインボーバード</h4>
         <div class="role"><ruby>魔<rt>ま</rt></ruby><ruby>鳥<rt>ちょう</rt></ruby></div>
         <p><ruby>非常<rt>ひじょう</rt></ruby>に<ruby>綺麗<rt>きれい</rt></ruby>な<ruby>声<rt>こえ</rt></ruby>で<ruby>鳴<rt>な</rt></ruby>くモンスターの<ruby>小鳥<rt>ことり</rt></ruby>。</p>
-        <p><ruby>魔<rt>ま</rt></ruby><ruby>核<rt>かく</rt></ruby>を<ruby>主食<rt>しゅしょく</rt></ruby>にする<ruby>変<rt>か</rt></ruby>わった<ruby>食性<rt>しょくせい</rt></ruby>で、<ruby>観賞<rt>かんしょう</rt></ruby><ruby>用<rt>よう</rt></ruby>によく<ruby>飼<rt>か</rt></ruby>われる。<ruby>比較的<rt>ひかくてき</rt></ruby>おとなしい。</p>
+        <p><ruby>魔核<rt>まかく</rt></ruby>を<ruby>主食<rt>しゅしょく</rt></ruby>にする<ruby>変<rt>か</rt></ruby>わった<ruby>食性<rt>しょくせい</rt></ruby>で、<ruby>観賞<rt>かんしょう</rt></ruby><ruby>用<rt>よう</rt></ruby>によく<ruby>飼<rt>か</rt></ruby>われる。<ruby>比較的<rt>ひかくてき</rt></ruby>おとなしい。</p>
       </div>
       <div class="small-card">
         <h4>ランバード</h4>

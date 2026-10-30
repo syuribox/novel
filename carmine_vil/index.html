@@ -46,6 +46,22 @@
       right: 1rem;
       padding: 0.3rem 0.5rem;
     }
+    body.ruby-inline ruby {
+      display: inline;
+    }
+    body.ruby-inline rt {
+      display: inline;
+      font-size: 100%;
+    }
+    body.ruby-inline rt::before {
+      content: "(";
+    }
+    body.ruby-inline rt::after {
+      content: ")";
+    }
+    body.ruby-inline .ruby-side, body.ruby-on .ruby-side {
+      display: none;
+    }
     a { color: var(--sakura); text-decoration: none; }
     a:hover { color: var(--gold); }
 
