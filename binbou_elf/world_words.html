@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>世界観＆用語集 | 元貧乏エルフの錬金術調薬店</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-card: #1e293b;
+      --text: #f1f5f9;
+      --text-muted: #94a3b8;
+      --sakura: #fda4af;
+      --gold: #fbbf24;
+      --border: rgba(253, 164, 175, 0.18);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+      padding: 3rem 1rem 4rem;
+    }
+    body.ruby-off rt {
+      display: none;
+    }
+    #toggle-ruby {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.3rem 0.5rem;
+      z-index: 10;
+    }
+
+    a {
+      color: var(--sakura);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    a:hover {
+      color: var(--gold);
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      color: var(--gold);
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 0.5rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background: rgba(253, 164, 175, 0.12);
+      border: 1px solid var(--border);
+      padding: 0.5rem 1.2rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--sakura);
+    }
+
+    .back-link:hover {
+      background: rgba(253, 164, 175, 0.2);
+      color: var(--gold);
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      color: var(--gold);
+      margin: 2.2rem 0 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .work-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .work-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(253, 164, 175, 0.4);
+    }
+
+    .cover-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0c1222;
+      padding: 1.2rem;
+    }
+
+    .work-card img {
+      max-width: 100%;
+      max-height: 420px;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      border-radius: 6px;
+    }
+
+    .work-info {
+      padding: 1.3rem 1.5rem 1.5rem;
+    }
+
+    .work-info h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.6rem;
+      color: var(--gold);
+    }
+
+    .work-info p {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    p.nickname {
+      color: var(--sakura);
+      font-size: 0.88rem;
+      margin-bottom: 0.6rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 3.5rem;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 480px) {
+      h1 { font-size: 1.45rem; }
+      body { padding: 2rem 0.8rem 3rem; }
+      .work-card img { max-height: 340px; }
+    }
+  </style>
+</head>
+<body class="ruby-off">
+  <div class="container">
+    <button type="button" id="toggle-ruby">ルビON/OFF</button>
+    <script src="ruby_button.js" charset="utf-8"></script>
+    <header>
+      <h1><ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby></h1>
+      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;"><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby></p>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
+    </header>
+
+    <div class="work-card">
+      <div class="work-info">
+        <h3><ruby>王都<rt>おうと</rt></ruby>ベンジャミン</h3>
+        <p>その<ruby>歴史<rt>れきし</rt></ruby>は<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>古<rt>ふる</rt></ruby>く、ユグドラシルの<ruby>木<rt>き</rt></ruby>の<ruby>根元<rt>ねもと</rt></ruby>に<ruby>人々<rt>ひとびと</rt></ruby>が<ruby>集<rt>あつ</rt></ruby>まったことに<ruby>由来<rt>ゆらい</rt></ruby>する。</p>
+        <p><ruby>本作品<rt>ほんさくひん</rt></ruby>のメイン<ruby>舞台<rt>ぶたい</rt></ruby>となる。</p>
+        <h3>ハシユリ<ruby>村<rt>むら</rt></ruby></h3>
+        <p>ミレーユとポムの<ruby>出身<rt>しゅっしん</rt></ruby><ruby>地<rt>ち</rt></ruby>。<ruby>辺境<rt>へんきょう</rt></ruby>も<ruby>辺境<rt>へんきょう</rt></ruby>、<ruby>山<rt>やま</rt></ruby>の<ruby>奥<rt>おく</rt></ruby>、<ruby>王都<rt>おうと</rt></ruby>から<ruby>何日<rt>なんにち</rt></ruby>もかかる<ruby>遠<rt>とお</rt></ruby>い<ruby>地<rt>ち</rt></ruby>。</p>
+        <h3>トラスティア<ruby>王国<rt>おうこく</rt></ruby></h3>
+        <p>ベンジャミン、ハシユリ<ruby>村<rt>むら</rt></ruby>などがある<ruby>王国<rt>おうこく</rt></ruby>。</p>
+        <h3><ruby>南<rt>みなみ</rt></ruby><ruby>平原<rt>へいげん</rt></ruby></h3>
+        <p><ruby>王都<rt>おうと</rt></ruby>ベンジャミンの<ruby>南側<rt>みなみがわ</rt></ruby>に<ruby>広<rt>ひろ</rt></ruby>がる<ruby>平原<rt>へいげん</rt></ruby>。</p>
+        <h3>ベンジャミン<ruby>湖<rt>こ</rt></ruby></h3>
+        <p><ruby>王都<rt>おうと</rt></ruby>ベンジャミンの<ruby>近<rt>ちか</rt></ruby>くにある<ruby>大<rt>おお</rt></ruby>きな<ruby>湖<rt>みずうみ</rt></ruby>。<ruby>海水浴<rt>かいすいよく</rt></ruby>でにぎわうラッフェル<ruby>浜<rt>はま</rt></ruby>などがある。</p>
+      </div>
+      <div class="work-info">
+        <h3><ruby>世界樹<rt>せかいじゅ</rt></ruby></h3>
+        <p>ユグドラシルという<ruby>種類<rt>しゅるい</rt></ruby>の<ruby>大木<rt>たいぼく</rt></ruby>。<ruby>世界<rt>せかい</rt></ruby><ruby>最古<rt>さいこ</rt></ruby>の<ruby>木<rt>き</rt></ruby>と<ruby>言<rt>い</rt></ruby>われている。</p>
+        <p><ruby>何<rt>なん</rt></ruby><ruby>十<rt>じゅう</rt></ruby>メートルもあり、<ruby>世界<rt>せかい</rt></ruby>で<ruby>一番<rt>いちばん</rt></ruby><ruby>大<rt>おお</rt></ruby>きい<ruby>木<rt>き</rt></ruby>という<ruby>言<rt>い</rt></ruby>い<ruby>伝<rt>つた</rt></ruby>えがある。</p>
+        <p>ベンジャミンの<ruby>王宮<rt>おうきゅう</rt></ruby>の<ruby>裏庭<rt>うらにわ</rt></ruby>にそびえ<ruby>立<rt>た</rt></ruby>つ。</p>
+        <h3>ユグドラシル</h3>
+        <p><ruby>世界樹<rt>せかいじゅ</rt></ruby>の<ruby>木<rt>き</rt></ruby>の<ruby>種類<rt>しゅるい</rt></ruby>。<ruby>王宮<rt>おうきゅう</rt></ruby>の<ruby>世界樹<rt>せかいじゅ</rt></ruby>の<ruby>他<rt>ほか</rt></ruby>、<ruby>分木<rt>ぶんき</rt></ruby>がいくつかある。</p>
+        <p><ruby>挿<rt>さ</rt></ruby>し<ruby>木<rt>き</rt></ruby>で<ruby>増<rt>ふ</rt></ruby>えず、<ruby>実<rt>み</rt></ruby>がなることも<ruby>珍<rt>めずら</rt></ruby>しいため、<ruby>大変<rt>たいへん</rt></ruby><ruby>貴重<rt>きちょう</rt></ruby>。</p>
+        <p><ruby>世界樹<rt>せかいじゅ</rt></ruby>は<ruby>大木<rt>たいぼく</rt></ruby>だが、<ruby>反対<rt>はんたい</rt></ruby>にユグドラシルそのものは<ruby>成長<rt>せいちょう</rt></ruby>が<ruby>非常<rt>ひじょう</rt></ruby>に<ruby>遅<rt>おそ</rt></ruby>い。</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <div class="work-info">
+        <h3>ホーランド<ruby>商業<rt>しょうぎょう</rt></ruby>ギルド</h3>
+        <p><ruby>新<rt>あたら</rt></ruby>しくできた<ruby>新興<rt>しんこう</rt></ruby>の<ruby>商業<rt>しょうぎょう</rt></ruby>ギルド。メイラさんが<ruby>副<rt>ふく</rt></ruby><ruby>会長<rt>かいちょう</rt></ruby>をしている。<ruby>会長<rt>かいちょう</rt></ruby>はメイラのお<ruby>父<rt>とう</rt></ruby>さん。</p>
+        <h3>メホリック<ruby>商業<rt>しょうぎょう</rt></ruby>ギルド</h3>
+        <p><ruby>古<rt>ふる</rt></ruby>くからある<ruby>商業<rt>しょうぎょう</rt></ruby>ギルド。<ruby>伝統的<rt>でんとうてき</rt></ruby>な<ruby>名前<rt>なまえ</rt></ruby>のない<ruby>統一<rt>とういつ</rt></ruby>された「<ruby>商業<rt>しょうぎょう</rt></ruby>ギルド」であったが、<ruby>体制<rt>たいせい</rt></ruby>も<ruby>古<rt>ふる</rt></ruby>いためしばしば<ruby>批判<rt>ひはん</rt></ruby>されてきた。</p>
+        <p><ruby>反発<rt>はんぱつ</rt></ruby>した<ruby>人々<rt>ひとびと</rt></ruby>はホーランドを<ruby>興<rt>おこ</rt></ruby>して、<ruby>近年<rt>きんねん</rt></ruby>そちらへ<ruby>移籍<rt>いせき</rt></ruby>する<ruby>人<rt>ひと</rt></ruby>が<ruby>増<rt>ふ</rt></ruby>えている。</p>
+        <h3><ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド</h3>
+        <p><ruby>剣<rt>けん</rt></ruby>と<ruby>盾<rt>たて</rt></ruby>の<ruby>意匠<rt>いしょう</rt></ruby>のギルド。ハシユリ<ruby>村<rt>むら</rt></ruby>にも<ruby>支部<rt>しぶ</rt></ruby>がある。<ruby>王都<rt>おうと</rt></ruby>には<ruby>中央<rt>ちゅうおう</rt></ruby><ruby>店<rt>てん</rt></ruby>と<ruby>西門<rt>にしもん</rt></ruby><ruby>支店<rt>してん</rt></ruby>がある。</p>
+      </div>
+      <div class="work-info">
+        <h3><ruby>商業<rt>しょうぎょう</rt></ruby><ruby>区<rt>く</rt></ruby></h3>
+        <p>お<ruby>店<rt>みせ</rt></ruby>が<ruby>多<rt>おお</rt></ruby>い<ruby>地区<rt>ちく</rt></ruby>。この<ruby>他<rt>ほか</rt></ruby>に<ruby>住宅<rt>じゅうたく</rt></ruby><ruby>区<rt>く</rt></ruby>、<ruby>農業<rt>のうぎょう</rt></ruby><ruby>区<rt>く</rt></ruby>がある。</p>
+        <h3><ruby>貴族<rt>きぞく</rt></ruby><ruby>街<rt>がい</rt></ruby></h3>
+        <p><ruby>貴族<rt>きぞく</rt></ruby>の<ruby>屋敷<rt>やしき</rt></ruby>が<ruby>並<rt>なら</rt></ruby>んでいる<ruby>地区<rt>ちく</rt></ruby>。どの<ruby>家<rt>いえ</rt></ruby>も3<ruby>階<rt>かい</rt></ruby><ruby>建<rt>だ</rt></ruby>て<ruby>庭付<rt>にわつ</rt></ruby>き。</p>
+        <h3><ruby>貧困<rt>ひんこん</rt></ruby><ruby>街<rt>がい</rt></ruby></h3>
+        <p><ruby>貧<rt>まず</rt></ruby>しい<ruby>人<rt>ひと</rt></ruby>たちが<ruby>暮<rt>く</rt></ruby>らしている<ruby>地区<rt>ちく</rt></ruby>。</p>
+        <h3><ruby>王宮<rt>おうきゅう</rt></ruby></h3>
+        <p><ruby>王様<rt>おうさま</rt></ruby>や<ruby>王家<rt>おうけ</rt></ruby>が<ruby>暮<rt>く</rt></ruby>らしていて、<ruby>政治<rt>せいじ</rt></ruby>をしている<ruby>一角<rt>いっかく</rt></ruby>。</p>
+      </div>
+    </div>
+    <div class="work-card">
+      <div class="work-info">
+        <h3>モリス<ruby>草<rt>そう</rt></ruby></h3>
+        <p><ruby>練<rt>ね</rt></ruby>り<ruby>薬草<rt>やくそう</rt></ruby>、<ruby>低級<rt>ていきゅう</rt></ruby>ポーションの<ruby>王都<rt>おうと</rt></ruby>での<ruby>代替<rt>だいたい</rt></ruby><ruby>薬草<rt>やくそう</rt></ruby>。<ruby>比較的<rt>ひかくてき</rt></ruby><ruby>安<rt>やす</rt></ruby>く、<ruby>大量<rt>たいりょう</rt></ruby><ruby>生産<rt>せいさん</rt></ruby>されている。</p>
+        <h3>ミルルの<ruby>実<rt>み</rt></ruby></h3>
+        <p><ruby>低級<rt>ていきゅう</rt></ruby>ポーションの<ruby>添加<rt>てんか</rt></ruby><ruby>剤<rt>ざい</rt></ruby>。<ruby>少<rt>すこ</rt></ruby>し<ruby>効果<rt>こうか</rt></ruby>が<ruby>高<rt>たか</rt></ruby>まる。</p>
+        <h3>ルーフラ<ruby>草<rt>そう</rt></ruby></h3>
+        <p><ruby>中級<rt>ちゅうきゅう</rt></ruby>ポーションの<ruby>薬草<rt>やくそう</rt></ruby>。<ruby>周辺<rt>しゅうへん</rt></ruby><ruby>農家<rt>のうか</rt></ruby>で<ruby>生産<rt>せいさん</rt></ruby>しているが<ruby>購入<rt>こうにゅう</rt></ruby>できるのは<ruby>契約者<rt>けいやくしゃ</rt></ruby>の<ruby>錬金術師<rt>れんきんじゅつし</rt></ruby>などのみに<ruby>限定<rt>げんてい</rt></ruby>されている。</p>
+        <h3>ボブベリーの<ruby>実<rt>み</rt></ruby></h3>
+        <p><ruby>赤<rt>あか</rt></ruby>い<ruby>実<rt>み</rt></ruby>。<ruby>中級<rt>ちゅうきゅう</rt></ruby>ポーションに<ruby>必須<rt>ひっす</rt></ruby>の<ruby>添加<rt>てんか</rt></ruby><ruby>剤<rt>ざい</rt></ruby>。<ruby>魔力<rt>まりょく</rt></ruby>が<ruby>安定<rt>あんてい</rt></ruby>する<ruby>効果<rt>こうか</rt></ruby>がある。</p>
+        <h3><ruby>魔力<rt>まりょく</rt></ruby>の<ruby>実<rt>み</rt></ruby></h3>
+        <p><ruby>魔力<rt>まりょく</rt></ruby>ポーションの<ruby>材料<rt>ざいりょう</rt></ruby>になる、1cmくらいの<ruby>青<rt>あお</rt></ruby>い<ruby>実<rt>み</rt></ruby>。<ruby>草原<rt>そうげん</rt></ruby>などに<ruby>自生<rt>じせい</rt></ruby>する。</p>
+        <h3>ユグドラシルの<ruby>葉<rt>は</rt></ruby></h3>
+        <p><ruby>秘薬<rt>ひやく</rt></ruby>の<ruby>材料<rt>ざいりょう</rt></ruby>の<ruby>一<rt>ひと</rt></ruby>つとして<ruby>知<rt>し</rt></ruby>られている。</p>
+        <h3>アル<ruby>草<rt>そう</rt></ruby></h3>
+        <p><ruby>淡水<rt>たんすい</rt></ruby>の<ruby>水中<rt>すいちゅう</rt></ruby><ruby>植物<rt>しょくぶつ</rt></ruby>。<ruby>秘薬<rt>ひやく</rt></ruby>の<ruby>材料<rt>ざいりょう</rt></ruby>の<ruby>一<rt>ひと</rt></ruby>つ。</p>
+      </div>
+      <div class="work-info">
+        <h3><ruby>練<rt>ね</rt></ruby>り<ruby>薬草<rt>やくそう</rt></ruby></h3>
+        <p><ruby>草<rt>くさ</rt></ruby>を<ruby>煮詰<rt>につ</rt></ruby>めて<ruby>作<rt>つく</rt></ruby>った<ruby>丸薬<rt>がんやく</rt></ruby>。ポーションと<ruby>違<rt>ちが</rt></ruby>い<ruby>長期<rt>ちょうき</rt></ruby><ruby>保存<rt>ほぞん</rt></ruby>できるが<ruby>効果<rt>こうか</rt></ruby>は<ruby>低<rt>ひく</rt></ruby>い。</p>
+        <h3>ポーション</h3>
+        <p>ランクがある<ruby>水薬<rt>みずぐすり</rt></ruby>の<ruby>総称<rt>そうしょう</rt></ruby>。<ruby>普通<rt>ふつう</rt></ruby>のものはヒーリングポーションの<ruby>一種<rt>いっしゅ</rt></ruby>をいう。</p>
+        <h3><ruby>低級<rt>ていきゅう</rt></ruby>ポーション</h3>
+        <p><ruby>一番<rt>いちばん</rt></ruby><ruby>安<rt>やす</rt></ruby>い、<ruby>効果<rt>こうか</rt></ruby>も<ruby>低<rt>ひく</rt></ruby>いポーションの<ruby>一<rt>ひと</rt></ruby>つ。<ruby>傷薬<rt>きずぐすり</rt></ruby>などとしてよく<ruby>使用<rt>しよう</rt></ruby>される。</p>
+        <p><ruby>澄<rt>す</rt></ruby>んだ<ruby>緑色<rt>みどりいろ</rt></ruby>をしている。</p>
+        <h3><ruby>中級<rt>ちゅうきゅう</rt></ruby>ポーション</h3>
+        <p><ruby>病院<rt>びょういん</rt></ruby>などで<ruby>主<rt>おも</rt></ruby>に<ruby>使用<rt>しよう</rt></ruby>される。ちょっと<ruby>大<rt>おお</rt></ruby>きな<ruby>傷<rt>きず</rt></ruby>にも<ruby>効<rt>き</rt></ruby>き<ruby>目<rt>め</rt></ruby>がある。</p>
+        <p><ruby>綺麗<rt>きれい</rt></ruby>な<ruby>水色<rt>みずいろ</rt></ruby>をしている。</p>
+        <h3><ruby>中<rt>ちゅう</rt></ruby><ruby>上級<rt>じょうきゅう</rt></ruby>ポーション</h3>
+        <p><ruby>中盤<rt>ちゅうばん</rt></ruby><ruby>以降<rt>いこう</rt></ruby>に<ruby>登場<rt>とうじょう</rt></ruby>する「<ruby>謎<rt>なぞ</rt></ruby>」の<ruby>多<rt>おお</rt></ruby>い、ちょっとリッチなポーション。</p>
+        <p><ruby>黄緑色<rt>きみどりいろ</rt></ruby>のポーション。</p>
+        <h3><ruby>上級<rt>じょうきゅう</rt></ruby>ポーション</h3>
+        <p><ruby>風邪<rt>かぜ</rt></ruby>や<ruby>病気<rt>びょうき</rt></ruby>など、<ruby>色々<rt>いろいろ</rt></ruby>なものにも<ruby>効果<rt>こうか</rt></ruby>が<ruby>高<rt>たか</rt></ruby>いとされる、<ruby>貴重<rt>きちょう</rt></ruby>なポーション。</p>
+        <h3><ruby>魔力<rt>まりょく</rt></ruby>ポーション</h3>
+        <p><ruby>魔力<rt>まりょく</rt></ruby>の<ruby>回復<rt>かいふく</rt></ruby>ができる<ruby>貴重<rt>きちょう</rt></ruby>なポーション。</p>
+        <p><ruby>青<rt>あお</rt></ruby>い<ruby>色<rt>いろ</rt></ruby>のポーション。</p>
+        <h3><ruby>秘薬<rt>ひやく</rt></ruby></h3>
+        <p>ユグドラシルの<ruby>葉<rt>は</rt></ruby>などを<ruby>材料<rt>ざいりょう</rt></ruby>にした、<ruby>伝説<rt>でんせつ</rt></ruby><ruby>級<rt>きゅう</rt></ruby>のポーション。</p>
+        <p><ruby>秘薬<rt>ひやく</rt></ruby>は<ruby>赤色<rt>あかいろ</rt></ruby>なのが<ruby>特徴的<rt>とくちょうてき</rt></ruby>。</p>
+      </div>
+    </div>
+
+    <footer>
+      <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
+      <p>© 2026 takigawa ebiro</p>
+    </footer>
+  </div>
+</body>
+</html>
