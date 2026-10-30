@@ -5,169 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>キャラクター紹介 | 留学生は同棲JKエルフちゃん</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-card: #1e293b;
-      --text: #f1f5f9;
-      --text-muted: #94a3b8;
-      --sakura: #fda4af;
-      --sky: #fda4af;
-      --gold: #fbbf24;
-      --border: rgba(253, 164, 175, 0.18);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-      min-height: 100vh;
-      padding: 3rem 1rem 4rem;
-    }
-    body.ruby-off rt {
-      display: none;
-    }
-    #toggle-ruby {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.3rem 0.5rem;
-      z-index: 10;
-    }
-
-    a {
-      color: var(--sakura);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: var(--gold);
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    h1 {
-      color: var(--gold);
-      font-size: 1.75rem;
-      font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 0.5rem;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 0.5rem;
-      background: rgba(253, 164, 175, 0.12);
-      border: 1px solid var(--border);
-      padding: 0.5rem 1.2rem;
-      border-radius: 999px;
-      font-size: 0.9rem;
-      color: var(--sakura);
-    }
-
-    .back-link:hover {
-      background: rgba(253, 164, 175, 0.2);
-      color: var(--gold);
-    }
-
-    h2 {
-      font-size: 1.15rem;
-      color: var(--gold);
-      margin: 2.2rem 0 1rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .work-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 1.5rem;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .work-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(253, 164, 175, 0.4);
-    }
-
-    .cover-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #0c1222;
-      padding: 1.2rem;
-    }
-
-    .work-card img {
-      max-width: 100%;
-      max-height: 420px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      display: block;
-      border-radius: 6px;
-    }
-
-    .work-info {
-      padding: 1.3rem 1.5rem 1.5rem;
-    }
-
-    .work-info h3 {
-      font-size: 1.15rem;
-      margin-bottom: 0.6rem;
-      color: var(--gold);
-    }
-
-    .work-info p {
-      color: #e2e8f0;
-      font-size: 0.95rem;
-      margin-bottom: 0.4rem;
-    }
-
-    p.nickname {
-      color: var(--sakura);
-      font-size: 0.88rem;
-      margin-bottom: 0.6rem;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3.5rem;
-      color: var(--text-muted);
-      font-size: 0.82rem;
-    }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 1.45rem; }
-      body { padding: 2rem 0.8rem 3rem; }
-      .work-card img { max-height: 340px; }
-    }
-  </style>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body class="ruby-off">
   <div class="container">
     <button type="button" id="toggle-ruby">ルビON/OFF</button>
+    <script src="../ruby_button.js" charset="utf-8"></script>
     <header>
       <h1>キャラクター<ruby>紹介<rt>しょうかい</rt></ruby></h1>
-      <p class="author" style="color:var(--text-muted); font-size:0.9rem; margin-bottom:0.8rem;"><ruby>留学生<rt>りゅうがくせい</rt></ruby>は<ruby>同棲<rt>どうせい</rt></ruby>JKエルフちゃん</p>
+      <p class="author"><ruby>留学生<rt>りゅうがくせい</rt></ruby>は<ruby>同棲<rt>どうせい</rt></ruby>JKエルフちゃん</p>
       <a href="index.html" class="back-link"><ruby>戻<rt>もど</rt></ruby>る</a>
     </header>
 
@@ -176,9 +22,9 @@
         <img src="images/keito.jpg" alt="">
       </div>
       <div class="work-info">
-        <h3>ケート(<ruby>山女<rt>やまめ</rt></ruby>　<ruby>景都<rt>けいと</rt></ruby>)</h3>
+        <h3>ケート[山女(やまめ)　<ruby>景都<rt>けいと</rt></ruby>]</h3>
         <p class="nickname"><ruby>主人公<rt>しゅじんこう</rt></ruby>／<ruby>男子<rt>だんし</rt></ruby><ruby>高校生<rt>こうこうせい</rt></ruby></p>
-        <p><ruby>諸<rt>しょ</rt></ruby><ruby>事情<rt>じじょう</rt></ruby>から<ruby>一人暮<rt>ひとりぐ</rt></ruby>らし<ruby>状態<rt>じょうたい</rt></ruby>だった<ruby>男子<rt>だんし</rt></ruby><ruby>高校生<rt>こうこうせい</rt></ruby>。ララが<ruby>居候<rt>いそうろう</rt></ruby>することに。</p>
+        <p><ruby>諸<rt>しょ</rt></ruby><ruby>事情<rt>じじょう</rt></ruby>から<ruby>一人<rt>ひとり</rt></ruby><ruby>暮<rt>ぐ</rt></ruby>らし<ruby>状態<rt>じょうたい</rt></ruby>だった<ruby>男子<rt>だんし</rt></ruby><ruby>高校生<rt>こうこうせい</rt></ruby>。ララが<ruby>居候<rt>いそうろう</rt></ruby>することに。</p>
         <p><ruby>妹<rt>いもうと</rt></ruby>エリカも<ruby>病院<rt>びょういん</rt></ruby>を<ruby>退院<rt>たいいん</rt></ruby>して<ruby>合流<rt>ごうりゅう</rt></ruby>し、<ruby>三人<rt>さんにん</rt></ruby>で<ruby>暮<rt>く</rt></ruby>らしだす。</p>
         <p><ruby>寂<rt>さび</rt></ruby>しい<ruby>生活<rt>せいかつ</rt></ruby>から<ruby>一転<rt>いってん</rt></ruby>、にぎやかな<ruby>学園<rt>がくえん</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby>を<ruby>送<rt>おく</rt></ruby>ることになる。</p>
       </div>
@@ -190,7 +36,7 @@
       </div>
       <div class="work-info">
         <h3>ララ</h3>
-        <p class="nickname"><ruby>逆転<rt>ぎゃくてん</rt></ruby><ruby>移<rt>うつし</rt></ruby>のエルフの<ruby>少女<rt>しょうじょ</rt></ruby></p>
+        <p class="nickname"><ruby>逆<rt>ぎゃく</rt></ruby><ruby>転移<rt>てんい</rt></ruby>のエルフの<ruby>少女<rt>しょうじょ</rt></ruby></p>
         <p>エルフ<ruby>族<rt>ぞく</rt></ruby>で<ruby>本名<rt>ほんみょう</rt></ruby>は「ラーラミン・ハイッペロット・トワイライト」。</p>
         <p><ruby>異世界<rt>いせかい</rt></ruby>から<ruby>逆<rt>ぎゃく</rt></ruby><ruby>転移<rt>てんい</rt></ruby>してきた。どこの<ruby>国<rt>くに</rt></ruby>も<ruby>受<rt>う</rt></ruby>け<ruby>入<rt>い</rt></ruby>れずケートの<ruby>父親<rt>ちちおや</rt></ruby>が<ruby>日本<rt>にほん</rt></ruby>のケートの<ruby>家<rt>いえ</rt></ruby>に<ruby>住<rt>す</rt></ruby>まわせることに。</p>
         <p><ruby>明<rt>あか</rt></ruby>るい<ruby>性格<rt>せいかく</rt></ruby>で、いつも<ruby>楽<rt>たの</rt></ruby>しそうにふるまう。<ruby>地球<rt>ちきゅう</rt></ruby>と<ruby>異世界<rt>いせかい</rt></ruby>の<ruby>常識<rt>じょうしき</rt></ruby>は<ruby>違<rt>ちが</rt></ruby>う<ruby>様<rt>よう</rt></ruby>で、ぐいぐいくる。</p>
@@ -202,7 +48,7 @@
         <img src="images/haruka.jpg" alt="">
       </div>
       <div class="work-info">
-        <h3>ハルカ(<ruby>遠国<rt>えんこく</rt></ruby>　<ruby>春香<rt>はるか</rt></ruby>)</h3>
+        <h3>ハルカ[<ruby>遠国(えんこく)　<ruby>春香<rt>はるか</rt></ruby>]</h3>
         <p class="nickname">ケートの<ruby>幼馴染<rt>おさななじ</rt></ruby>み</p>
         <p><ruby>近所<rt>きんじょ</rt></ruby>に<ruby>住<rt>す</rt></ruby>んでおり、ケートの<ruby>古<rt>ふる</rt></ruby>くからの<ruby>知<rt>し</rt></ruby>り<ruby>合<rt>あ</rt></ruby>い。<ruby>何<rt>なに</rt></ruby>かと<ruby>世話<rt>せわ</rt></ruby>を<ruby>焼<rt>や</rt></ruby>いてくれ、エリカの<ruby>病院<rt>びょういん</rt></ruby>の<ruby>世話<rt>せわ</rt></ruby>もしている。</p>
         <p><ruby>男<rt>おとこ</rt></ruby>であるケートでは<ruby>相談<rt>そうだん</rt></ruby>できないようなこともエリカと<ruby>話<rt>はなし</rt></ruby>ができることをケートも<ruby>把握<rt>はあく</rt></ruby>しており、<ruby>感謝<rt>かんしゃ</rt></ruby>している。</p>
@@ -214,7 +60,7 @@
         <img src="images/erika.jpg" alt="">
       </div>
       <div class="work-info">
-        <h3>エリカ(<ruby>山女<rt>やまめ</rt></ruby>　<ruby>絵理<rt>えり</rt></ruby><ruby>加<rt>か</rt></ruby>)</h3>
+        <h3>エリカ[山女(やまめ)　<ruby>絵理加<rt>えりか</rt></ruby>]</h3>
         <p class="nickname">ケートの<ruby>妹<rt>いもうと</rt></ruby></p>
         <p><ruby>病気<rt>びょうき</rt></ruby>で<ruby>入院<rt>にゅういん</rt></ruby>していたが、ララの<ruby>活躍<rt>かつやく</rt></ruby>で<ruby>退院<rt>たいいん</rt></ruby>できるまでに<ruby>回復<rt>かいふく</rt></ruby>、<ruby>新年度<rt>しんねんど</rt></ruby>から<ruby>同<rt>おな</rt></ruby>じ<ruby>高校<rt>こうこう</rt></ruby>へ<ruby>進学<rt>しんがく</rt></ruby>する。</p>
         <p>ケートとハルカ、ララの<ruby>三人<rt>さんにん</rt></ruby>が<ruby>大好<rt>だいす</rt></ruby>き。エリカは<ruby>病院<rt>びょういん</rt></ruby>でのことで<ruby>三人<rt>さんにん</rt></ruby>に<ruby>感謝<rt>かんしゃ</rt></ruby>している。</p>
@@ -226,7 +72,7 @@
         <img src="images/akira.jpg" alt="">
       </div>
       <div class="work-info">
-        <h3>アキラ(<ruby>山川<rt>やまかわ</rt></ruby>　<ruby>彰<rt>あきら</rt></ruby>)</h3>
+        <h3>アキラ[<ruby>山川(やまかわ)　<ruby>彰<rt>あきら</rt></ruby>]</h3>
         <p class="nickname">ケートの<ruby>友達<rt>ともだち</rt></ruby></p>
         <p>クラス<ruby>委員<rt>いいん</rt></ruby>。<ruby>眼鏡<rt>めがね</rt></ruby>はしていない。<ruby>親<rt>おや</rt></ruby>は<ruby>教育<rt>きょういく</rt></ruby><ruby>熱心<rt>ねっしん</rt></ruby>だが、<ruby>本人<rt>ほんにん</rt></ruby>は<ruby>真面目<rt>まじめ</rt></ruby>というよりもフレンドリー。</p>
         <p>ケートと<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>んだり<ruby>出<rt>で</rt></ruby>かけたりする。</p>
@@ -238,7 +84,7 @@
         <h3><ruby>父<rt>とう</rt></ruby>さん</h3>
         <p class="nickname">ケートの<ruby>父親<rt>ちちおや</rt></ruby></p>
         <p><ruby>国家<rt>こっか</rt></ruby><ruby>公務員<rt>こうむいん</rt></ruby>で、<ruby>安全<rt>あんぜん</rt></ruby><ruby>保障<rt>ほしょう</rt></ruby><ruby>周<rt>まわ</rt></ruby>りを<ruby>担当<rt>たんとう</rt></ruby>している<ruby>防衛省<rt>ぼうえいしょう</rt></ruby>の<ruby>職員<rt>しょくいん</rt></ruby>。<ruby>今<rt>いま</rt></ruby>は<ruby>出向<rt>しゅっこう</rt></ruby>により<ruby>外務省<rt>がいむしょう</rt></ruby>で<ruby>海外<rt>かいがい</rt></ruby><ruby>勤務<rt>きんむ</rt></ruby>をしている。</p>
-        <p><ruby>宇宙人<rt>うちゅうじん</rt></ruby>や<ruby>異世界<rt>いせかい</rt></ruby><ruby>人<rt>じん</rt></ruby>などを<ruby>極秘<rt>ごくひ</rt></ruby>に<ruby>扱<rt>あつか</rt></ruby>っているらしく、ララの<ruby>担当<rt>たんとう</rt></ruby><ruby>職員<rt>しょくいん</rt></ruby>でもある。</p>
+        <p><ruby>宇宙人<rt>うちゅうじん</rt></ruby>や<ruby>異世界人<rt>いせかいじん</rt></ruby>などを<ruby>極秘<rt>ごくひ</rt></ruby>に<ruby>扱<rt>あつか</rt></ruby>っているらしく、ララの<ruby>担当<rt>たんとう</rt></ruby><ruby>職員<rt>しょくいん</rt></ruby>でもある。</p>
       </div>
     </div>
 
@@ -246,14 +92,14 @@
       <div class="work-info">
         <h3><ruby>母<rt>かあ</rt></ruby>さん</h3>
         <p class="nickname">ケートの<ruby>母親<rt>ははおや</rt></ruby></p>
-        <p><ruby>父親<rt>ちちおや</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>海外<rt>かいがい</rt></ruby><ruby>赴任<rt>ふにん</rt></ruby>についていったので、<ruby>日本<rt>にほん</rt></ruby><ruby>国内<rt>こくない</rt></ruby>にいない。<ruby>結果<rt>けっか</rt></ruby>、ケートは<ruby>一人暮<rt>ひとりぐ</rt></ruby>らし<ruby>状態<rt>じょうたい</rt></ruby>だった。</p>
+        <p><ruby>父親<rt>ちちおや</rt></ruby>と<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>海外<rt>かいがい</rt></ruby><ruby>赴任<rt>ふにん</rt></ruby>についていったので、<ruby>日本<rt>にほん</rt></ruby><ruby>国内<rt>こくない</rt></ruby>にいない。<ruby>結果<rt>けっか</rt></ruby>、ケートは<ruby>一人<rt>ひとり</rt></ruby><ruby>暮<rt>ぐ</rt></ruby>らし<ruby>状態<rt>じょうたい</rt></ruby>だった。</p>
         <p>カレーや<ruby>唐揚<rt>からあ</rt></ruby>げなど、<ruby>家庭<rt>かてい</rt></ruby><ruby>料理<rt>りょうり</rt></ruby>は<ruby>得意<rt>とくい</rt></ruby>で、そのDNAはケートも<ruby>受<rt>う</rt></ruby>け<ruby>継<rt>つ</rt></ruby>いでいる。</p>
       </div>
     </div>
 
     <div class="work-card">
       <div class="work-info">
-        <h3><ruby>灯里<rt>あかり</rt></ruby>(あかり)ちゃん<ruby>先生<rt>せんせい</rt></ruby></h3>
+        <h3>灯里(あかり)ちゃん<ruby>先生<rt>せんせい</rt></ruby></h3>
         <p class="nickname">ケートの<ruby>担任<rt>たんにん</rt></ruby></p>
         <p><ruby>高校<rt>こうこう</rt></ruby>の<ruby>担任<rt>たんにん</rt></ruby>。まだ<ruby>若<rt>わか</rt></ruby>く、<ruby>生徒<rt>せいと</rt></ruby>から<ruby>親<rt>した</rt></ruby>しまれている。なんやかんや<ruby>涙<rt>なみだ</rt></ruby>もろいところも。</p>
         <p>ララの<ruby>担任<rt>たんにん</rt></ruby>でもあり、<ruby>外部<rt>がいぶ</rt></ruby>からのあれやこれを<ruby>裏<rt>うら</rt></ruby>で<ruby>処理<rt>しょり</rt></ruby>している<ruby>苦労人<rt>くろうにん</rt></ruby>でもあるらしい。</p>
@@ -265,6 +111,5 @@
       <p>© 2026 takigawa ebiro</p>
     </footer>
   </div>
-  <script src="ruby_button.js" charset="utf-8"></script>
 </body>
 </html>
