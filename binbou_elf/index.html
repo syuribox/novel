@@ -5,211 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>元貧乏エルフの錬金術調薬店 | 滝川海老郎</title>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-card: #1e293b;
-      --text: #f1f5f9;
-      --text-muted: #94a3b8;
-      --sakura: #fda4af;
-      --gold: #fbbf24;
-      --border: rgba(253, 164, 175, 0.18);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-      min-height: 100vh;
-      padding: 3rem 1rem 4rem;
-    }
-    body.ruby-off rt {
-      display: none;
-    }
-    #toggle-ruby {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      padding: 0.3rem 0.5rem;
-      z-index: 10;
-    }
-
-    a {
-      color: var(--sakura);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    a:hover {
-      color: var(--gold);
-    }
-
-    .container {
-      max-width: 720px;
-      margin: 0 auto;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    h1 {
-      color: var(--gold);
-      font-size: 1.75rem;
-      font-weight: 700;
-      line-height: 1.4;
-      margin-bottom: 0.5rem;
-    }
-
-    .subtitle {
-      color: var(--sakura);
-      font-size: 0.95rem;
-      margin-bottom: 0.3rem;
-    }
-
-    .author {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    .description {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 1.4rem 1.6rem;
-      margin-bottom: 2.5rem;
-      font-size: 0.95rem;
-      color: #e2e8f0;
-    }
-
-    .description strong {
-      color: var(--gold);
-    }
-
-    h2 {
-      font-size: 1.15rem;
-      color: var(--gold);
-      margin: 2.2rem 0 1rem;
-      padding-bottom: 0.4rem;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .work-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      margin-bottom: 1.2rem;
-      transition: transform 0.2s, border-color 0.2s;
-    }
-
-    .work-card:hover {
-      transform: translateY(-2px);
-      border-color: rgba(253, 164, 175, 0.4);
-    }
-
-    .cover-wrap {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background: #0c1222;
-      padding: 1.2rem;
-    }
-
-    .work-card img {
-      max-width: 100%;
-      max-height: 380px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      display: block;
-      border-radius: 6px;
-    }
-
-    .work-info {
-      padding: 1.2rem 1.4rem;
-    }
-
-    .work-info h3 {
-      font-size: 1.05rem;
-      margin-bottom: 0.6rem;
-      color: var(--text);
-    }
-
-    .links {
-      display: flex;
-      gap: 0.8rem;
-      flex-wrap: wrap;
-    }
-
-    .links a {
-      display: inline-block;
-      background: rgba(253, 164, 175, 0.1);
-      border: 1px solid var(--border);
-      padding: 0.4rem 0.9rem;
-      border-radius: 999px;
-      font-size: 0.88rem;
-      color: var(--sakura);
-    }
-
-    .links a:hover {
-      background: rgba(253, 164, 175, 0.18);
-      color: var(--gold);
-    }
-
-    .comic-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1.2rem;
-      margin-top: 0.5rem;
-    }
-
-    .comic-item {
-      text-align: center;
-    }
-
-    .comic-item img {
-      max-width: 100%;
-      max-height: 280px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      margin: 0 auto 0.5rem;
-      border-radius: 8px;
-      border: 1px solid var(--border);
-      display: block;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 3.5rem;
-      color: var(--text-muted);
-      font-size: 0.82rem;
-    }
-
-    @media (max-width: 480px) {
-      h1 { font-size: 1.45rem; }
-      body { padding: 2rem 0.8rem 3rem; }
-      .work-card img { max-height: 320px; }
-      .comic-item img { max-height: 240px; }
-    }
-  </style>
+  <link rel="stylesheet" href="../style.css">
 </head>
 <body class="ruby-off">
   <div class="container">
     <button type="button" id="toggle-ruby">ルビON/OFF</button>
-    <script src="ruby_button.js" charset="utf-8"></script>
+    <script src="../ruby_button.js" charset="utf-8"></script>
     <header>
       <h1><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby></h1>
-      <p class="author"><ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby></p>
+      <p class="author"><ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老郎<rt>えびろう</rt></ruby></p>
     </header>
 
     <div class="description">
@@ -228,8 +32,8 @@
       </div>
       <div class="work-info">
         <h3><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby> 1</h3>
-        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／イラスト：にもし／KADOKAWA／ドラゴンノベルス
+        <p class="sub-text">
+          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老郎<rt>えびろう</rt></ruby>／イラスト：にもし／KADOKAWA／ドラゴンノベルス
         </p>
         <div class="links">
           <a href="https://www.kadokawa.co.jp/product/322304000544/">KADOKAWA</a>
@@ -244,8 +48,8 @@
       </div>
       <div class="work-info">
         <h3><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby> 2</h3>
-        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／イラスト：にもし／KADOKAWA／ドラゴンノベルス
+        <p class="sub-text">
+          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老郎<rt>えびろう</rt></ruby>／イラスト：にもし／KADOKAWA／ドラゴンノベルス
         </p>
         <div class="links">
           <a href="https://www.kadokawa.co.jp/product/322401000179/">KADOKAWA</a>
@@ -261,8 +65,8 @@
       </div>
       <div class="work-info">
         <h3><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby>(<ruby>漫画<rt>まんが</rt></ruby>)</h3>
-        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          <ruby>漫画<rt>まんが</rt></ruby>：<ruby>露木<rt>つゆき</rt></ruby><ruby>彩<rt>あや</rt></ruby>／<ruby>原作<rt>げんさく</rt></ruby>：<ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／キャラクター<ruby>原案<rt>げんあん</rt></ruby>：にもし／　FWコミックス／ピッコマで<ruby>先行<rt>せんこう</rt></ruby><ruby>連載<rt>れんさい</rt></ruby>
+        <p class="sub-text">
+          <ruby>漫画<rt>まんが</rt></ruby>：<ruby>露木<rt>つゆき</rt></ruby><ruby>彩<rt>あや</rt></ruby>／<ruby>原作<rt>げんさく</rt></ruby>：<ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老郎<rt>えびろう</rt></ruby>／キャラクター<ruby>原案<rt>げんあん</rt></ruby>：にもし／　FWコミックス／ピッコマで<ruby>先行<rt>せんこう</rt></ruby><ruby>連載<rt>れんさい</rt></ruby>
         </p>
         <h3><ruby>分冊<rt>ぶんさつ</rt></ruby><ruby>版<rt>ばん</rt></ruby></h3>
         <div class="links" style="margin-bottom:1rem;">
@@ -281,8 +85,8 @@
     <div class="work-card">
       <div class="work-info">
         <h3><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby>(web<ruby>版<rt>ばん</rt></ruby>)</h3>
-        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／web<ruby>版<rt>ばん</rt></ruby>から<ruby>書籍<rt>しょせき</rt></ruby><ruby>版<rt>ばん</rt></ruby>は、かなり<ruby>加筆<rt>かひつ</rt></ruby>されており、web<ruby>版<rt>ばん</rt></ruby>は<ruby>約半分<rt>やくはんぶん</rt></ruby>となっています。
+        <p class="sub-text">
+          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老郎<rt>えびろう</rt></ruby>／web<ruby>版<rt>ばん</rt></ruby>から<ruby>書籍<rt>しょせき</rt></ruby><ruby>版<rt>ばん</rt></ruby>は、かなり<ruby>加筆<rt>かひつ</rt></ruby>されており、web<ruby>版<rt>ばん</rt></ruby>は<ruby>約半分<rt>やくはんぶん</rt></ruby>となっています。
         </p>
         <div class="links">
           <a href="https://kakuyomu.jp/works/16816927862953378978">カクヨム</a>
@@ -298,8 +102,8 @@
       </div>
       <div class="work-info">
         <h3><ruby>元<rt>もと</rt></ruby><ruby>貧乏<rt>びんぼう</rt></ruby>エルフの<ruby>錬金術<rt>れんきんじゅつ</rt></ruby><ruby>調薬<rt>ちょうやく</rt></ruby><ruby>店<rt>てん</rt></ruby>(Web/BOOTH<ruby>版<rt>ばん</rt></ruby>)</h3>
-        <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
-          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老<rt>えび</rt></ruby><ruby>郎<rt>ろう</rt></ruby>／　<ruby>中身<rt>なかみ</rt></ruby>はweb<ruby>版<rt>ばん</rt></ruby><ruby>準拠<rt>じゅんきょ</rt></ruby>です。<ruby>縦書<rt>たてが</rt></ruby>きPDF/epub3<ruby>仕様<rt>しよう</rt></ruby>
+        <p class="sub-text">
+          <ruby>滝川<rt>たきかわ</rt></ruby><ruby>海老郎<rt>えびろう</rt></ruby>／　<ruby>中身<rt>なかみ</rt></ruby>はweb<ruby>版<rt>ばん</rt></ruby><ruby>準拠<rt>じゅんきょ</rt></ruby>です。<ruby>縦書<rt>たてが</rt></ruby>きPDF/epub3<ruby>仕様<rt>しよう</rt></ruby>
         </p>
         <div class="links">
           <a href="https://takigawa-ebirou.booth.pm/items/3916116">BOOTH(<ruby>無料<rt>むりょう</rt></ruby>DL)</a>
@@ -310,7 +114,7 @@
     <h2>コンテンツ</h2>
       <div class="work-card">
         <div class="work-info">
-          <p style="margin-bottom:0.8rem; color:var(--text-muted); font-size:0.9rem;">
+          <p class="sub-text">
             <ruby>主要<rt>しゅよう</rt></ruby>キャラクター(BOOTH<ruby>版<rt>ばん</rt></ruby>)、<ruby>世界観<rt>せかいかん</rt></ruby>＆<ruby>用語<rt>ようご</rt></ruby><ruby>集<rt>しゅう</rt></ruby>を<ruby>紹介<rt>しょうかい</rt></ruby>します。
           </p>
           <div class="links">
