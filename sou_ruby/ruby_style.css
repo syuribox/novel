@@ -1,0 +1,34 @@
+﻿body.ruby-off rt {
+  display: none;
+}
+#toggle-ruby {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.3rem 0.5rem;
+  min-width: 4.6rem;
+  white-space: nowrap;
+  z-index: 10;
+}
+body.ruby-off rt.ruby-all, body.ruby-off .ruby-all rt {
+  display: ruby-text;
+}
+body.ruby-big rt {
+  font-size: 75%;
+}
+body.ruby-inline ruby {
+  display: inline;
+}
+body.ruby-inline rt {
+  display: inline;
+  font-size: 100%;
+}
+body.ruby-inline rt::before {
+  content: "(";
+}
+body.ruby-inline rt::after {
+  content: ")";
+}
+body:not(.ruby-off) .ruby-side {
+  display: none;
+}
