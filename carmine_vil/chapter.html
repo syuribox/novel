@@ -20,154 +20,7 @@
   <meta name="twitter:description" content="貴族三男マハムが辺境村で始める、のんびりほのぼのスローライフ。公式ポータルサイト。">
   <meta name="twitter:image" content="https://syuribox.github.io/novel/carmine_vil/images/village_hero.jpg">
   <meta name="twitter:site" content="@syuribox">
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-card: #1e293b;
-      --text: #f1f5f9;
-      --text-muted: #cbd5e1;
-      --sakura: #fda4af;
-      --gold: #fbbf24;
-      --sky: #7dd3fc;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.75;
-    }
-    body.ruby-off rt {
-      display: none;
-    }
-    #toggle-ruby {
-      top: 1rem;
-      right: 1rem;
-      padding: 0.3rem 0.5rem;
-      min-width: 4.6rem;
-      white-space: nowrap;
-    }
-    body.ruby-off rt.ruby-all, body.ruby-off .ruby-all rt {
-      display: ruby-text;
-    }
-    body.ruby-big rt {
-      font-size: 75%;
-    }
-    body.ruby-inline ruby {
-      display: inline;
-    }
-    body.ruby-inline rt {
-      display: inline;
-      font-size: 100%;
-    }
-    body.ruby-inline rt::before {
-      content: "(";
-    }
-    body.ruby-inline rt::after {
-      content: ")";
-    }
-    body.ruby-inline .ruby-side, body.ruby-on .ruby-side {
-      display: none;
-    }
-    a { color: var(--sakura); text-decoration: none; }
-    a:hover { color: var(--gold); }
-
-    header {
-      position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(253, 164, 175, 0.2);
-    }
-    nav {
-      max-width: 1200px; margin: 0 auto; padding: 0.8rem 1.5rem;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .logo { font-weight: 700; font-size: 1.1rem; color: var(--gold); }
-    .nav-menu { display: flex; gap: 1rem; }
-    .nav-links { display: flex; gap: 1.5rem; }
-    .nav-links a { font-size: 0.95rem; }
-    .nav-links a.active { color: var(--gold); }
-
-    .page {
-      padding-top: 70px;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      padding-bottom: 4rem;
-    }
-    .page-title {
-      text-align: center;
-      margin: 2rem 0 1.5rem;
-      font-size: 2rem;
-      color: var(--gold);
-    }
-    .page-title span {
-      display: block;
-      font-size: 1rem;
-      color: var(--sakura);
-      margin-top: 0.4rem;
-      font-weight: 400;
-    }
-
-    .hero-village {
-      width: 100%;
-      height: 420px;
-      object-fit: cover;
-      border-radius: 16px;
-      margin-bottom: 2.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-    }
-
-    .episode {
-      background: var(--bg-card);
-      border-radius: 14px;
-      padding: 1.6rem 1.8rem;
-      margin-bottom: 1.4rem;
-      border: 1px solid rgba(253, 164, 175, 0.12);
-    }
-    .episode h2 {
-      color: var(--sakura);
-      font-size: 1.25rem;
-      margin-bottom: 0.6rem;
-    }
-    .episode h2 span {
-      color: var(--sky);
-      font-size: 0.9rem;
-      margin-left: 0.5rem;
-      font-weight: 400;
-    }
-    .episode p {
-      color: var(--text-muted);
-      font-size: 0.98rem;
-    }
-
-    .mid-image {
-      width: 100%;
-      max-width: 900px;
-      height: 280px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin: 2rem auto;
-      display: block;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-    }
-
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--text-muted);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      font-size: 0.9rem;
-      margin-top: 1rem;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .hero-village { height: 240px; }
-      .mid-image { height: 200px; }
-      .page { padding-left: 1rem; padding-right: 1rem; }
-    }
-  </style>
+  <link href="style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="ruby-off">
@@ -175,6 +28,11 @@
     <nav>
       <div class="logo">[カーマイン村]スローライフ</div>
       <div class="nav-menu">
+        <button type="button" id="hamburger" class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <div class="nav-links">
           <a href="index.html">ホーム</a>
           <a href="characters.html">キャラ</a>
@@ -303,6 +161,6 @@
     <a href="../index.html"><ruby>上<rt>うえ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>る</a>
     <p style="margin-top:0.5rem;">© 2026 takigawa ebiro</p>
   </footer>
-
+  <script src="menu.js"></script>
 </body>
 </html>

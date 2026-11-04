@@ -20,181 +20,7 @@
   <meta name="twitter:description" content="貴族三男マハムが辺境村で始める、のんびりほのぼのスローライフ。公式ポータルサイト。">
   <meta name="twitter:image" content="https://syuribox.github.io/novel/carmine_vil/images/village_hero.jpg">
   <meta name="twitter:site" content="@syuribox">
-  <style>
-    :root {
-      --bg: #0f172a;
-      --bg-card: #1e293b;
-      --text: #f1f5f9;
-      --text-muted: #cbd5e1;
-      --sakura: #fda4af;
-      --sakura-deep: #fb7185;
-      --gold: #fbbf24;
-      --sky: #7dd3fc;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: "Noto Sans JP", "Hiragino Sans", "Yu Gothic", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-    }
-    body.ruby-off rt {
-      display: none;
-    }
-    #toggle-ruby {
-      top: 1rem;
-      right: 1rem;
-      padding: 0.3rem 0.5rem;
-      min-width: 4.6rem;
-      white-space: nowrap;
-    }
-    body.ruby-off rt.ruby-all, body.ruby-off .ruby-all rt {
-      display: ruby-text;
-    }
-    body.ruby-big rt {
-      font-size: 75%;
-    }
-    body.ruby-inline ruby {
-      display: inline;
-    }
-    body.ruby-inline rt {
-      display: inline;
-      font-size: 100%;
-    }
-    body.ruby-inline rt::before {
-      content: "(";
-    }
-    body.ruby-inline rt::after {
-      content: ")";
-    }
-    body.ruby-inline .ruby-side, body.ruby-on .ruby-side {
-      display: none;
-    }
-    a { color: var(--sakura); text-decoration: none; }
-    a:hover { color: var(--gold); }
-
-    /* Header（index.htmlと共通） */
-    header {
-      position: fixed; top: 0; width: 100%; z-index: 100;
-      background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px);
-      border-bottom: 1px solid rgba(253, 164, 175, 0.2);
-    }
-    nav {
-      max-width: 1200px; margin: 0 auto; padding: 0.8rem 1.5rem;
-      display: flex; justify-content: space-between; align-items: center;
-    }
-    .logo { font-weight: 700; font-size: 1.1rem; color: var(--gold); }
-    .nav-menu { display: flex; gap: 1rem; }
-    .nav-links { display: flex; gap: 1.5rem; }
-    .nav-links a { font-size: 0.95rem; }
-    .nav-links a.active { color: var(--gold); }
-
-    /* Page */
-    .page {
-      padding-top: 80px;
-      max-width: 1100px;
-      margin: 0 auto;
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-      padding-bottom: 4rem;
-    }
-    .page-title {
-      text-align: center;
-      margin: 2rem 0 1rem;
-      font-size: 2rem;
-      color: var(--gold);
-    }
-    .page-title span {
-      display: block;
-      font-size: 1rem;
-      color: var(--sakura);
-      margin-top: 0.4rem;
-      font-weight: 400;
-    }
-
-    /* Main characters */
-    .main-char {
-      display: grid;
-      grid-template-columns: 240px 1fr;
-      gap: 2rem;
-      background: var(--bg-card);
-      border-radius: 16px;
-      padding: 1.8rem;
-      margin-bottom: 2rem;
-      border: 1px solid rgba(253, 164, 175, 0.15);
-    }
-    .main-char img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-    .main-char h2 {
-      color: var(--sakura);
-      font-size: 1.6rem;
-      margin-bottom: 0.3rem;
-    }
-    .main-char .role {
-      color: var(--sky);
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
-    .main-char p {
-      color: var(--text-muted);
-      margin-bottom: 0.8rem;
-      font-size: 0.98rem;
-    }
-
-    /* Small characters */
-    h3.section-title {
-      text-align: center;
-      color: var(--gold);
-      margin: 3.5rem 0 1.5rem;
-      font-size: 1.5rem;
-    }
-    .small-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 1.2rem;
-    }
-    .small-card {
-      background: var(--bg-card);
-      border-radius: 12px;
-      padding: 1.2rem;
-      border: 1px solid rgba(255,255,255,0.06);
-    }
-    .small-card h4 {
-      color: var(--sakura);
-      margin-bottom: 0.3rem;
-      font-size: 1.1rem;
-    }
-    .small-card .role {
-      color: var(--sky);
-      font-size: 0.92rem;
-      margin-bottom: 0.6rem;
-    }
-    .small-card p {
-      color: var(--text-muted);
-      font-size: 0.98rem;
-      line-height: 1.6;
-    }
-
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: var(--text-muted);
-      border-top: 1px solid rgba(255,255,255,0.08);
-      font-size: 0.9rem;
-      margin-top: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links { display: none; }
-      .main-char { grid-template-columns: 1fr; }
-      .main-char img { height: 280px; }
-      .page { padding-left: 1rem; padding-right: 1rem; }
-    }
-  </style>
+  <link href="style.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body class="ruby-off">
@@ -202,6 +28,11 @@
     <nav>
       <div class="logo">[カーマイン村]スローライフ</div>
       <div class="nav-menu">
+        <button type="button" id="hamburger" class="hamburger" aria-label="メニューを開く" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <div class="nav-links">
           <a href="index.html">ホーム</a>
           <a href="characters.html" class="active">キャラ</a>
@@ -222,11 +53,11 @@
       <span>のんびり、ほのぼの、ゆるりと</span>
     </h1>
 
-    <!-- <ruby>主要<rt>しゅよう</rt></ruby>キャラクター -->
+    <h2 class="section-title"> <ruby>主要<rt>しゅよう</rt></ruby>キャラクター</h2>
     <div class="main-char">
       <img src="images/maham.jpg" alt="マハム">
       <div>
-        <h2>マハム・ハインリヒ</h2>
+        <h3>マハム・ハインリヒ</h3>
         <div class="role">6<ruby>歳<rt>さい</rt></ruby> / ハインリヒ<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby><ruby>三男<rt>さんなん</rt></ruby> / スキル：スローライフ</div>
         <p>5<ruby>歳<rt>さい</rt></ruby>の<ruby>鑑定<rt>かんてい</rt></ruby>の<ruby>儀<rt>ぎ</rt></ruby>で「スローライフ」というハズレスキルを<ruby>引<rt>ひ</rt></ruby>き、<ruby>両親<rt>りょうしん</rt></ruby>を<ruby>落胆<rt>らくたん</rt></ruby>させた<ruby>貴族<rt>きぞく</rt></ruby><ruby>三男<rt>さんなん</rt></ruby>。6<ruby>歳<rt>さい</rt></ruby>で<ruby>妹<rt>いもうと</rt></ruby>ミリアとともに<ruby>辺境<rt>へんきょう</rt></ruby>カーマイン<ruby>村<rt>むら</rt></ruby>へ<ruby>領主<rt>りょうしゅ</rt></ruby><ruby>代行<rt>だいこう</rt></ruby>として<ruby>左遷<rt>させん</rt></ruby>される。</p>
         <p><ruby>村<rt>むら</rt></ruby>に<ruby>入<rt>はい</rt></ruby>った<ruby>瞬間<rt>しゅんかん</rt></ruby>スキルが<ruby>活性化<rt>かっせいか</rt></ruby>し、<ruby>鑑定<rt>かんてい</rt></ruby><ruby>初級<rt>しょきゅう</rt></ruby>・アイテムボックス<ruby>小<rt>しょう</rt></ruby>・<ruby>植物<rt>しょくぶつ</rt></ruby><ruby>図鑑<rt>ずかん</rt></ruby><ruby>知識<rt>ちしき</rt></ruby><ruby>初級<rt>しょきゅう</rt></ruby>・<ruby>魔物<rt>まもの</rt></ruby><ruby>図鑑<rt>ずかん</rt></ruby><ruby>知識<rt>ちしき</rt></ruby><ruby>初級<rt>しょきゅう</rt></ruby>などの<ruby>便利<rt>べんり</rt></ruby>な<ruby>派生<rt>はせい</rt></ruby>スキルを<ruby>得<rt>え</rt></ruby>る。<ruby>戦闘<rt>せんとう</rt></ruby>よりも<ruby>庭<rt>にわ</rt></ruby>いじりや<ruby>観察<rt>かんさつ</rt></ruby>が<ruby>得意<rt>とくい</rt></ruby>で、のんびり<ruby>屋<rt>や</rt></ruby>。</p>
@@ -237,7 +68,7 @@
     <div class="main-char">
       <img src="images/miria.jpg" alt="ミリア">
       <div>
-        <h2>ミリア・ハインリヒ</h2>
+        <h3>ミリア・ハインリヒ</h3>
         <div class="role">5<ruby>歳<rt>さい</rt></ruby> / マハムの<ruby>妹<rt>いもうと</rt></ruby> / スキル：<ruby>裁縫<rt>さいほう</rt></ruby></div>
         <p>マハムの<ruby>一<rt>ひと</rt></ruby>つ<ruby>下<rt>した</rt></ruby>の<ruby>妹<rt>いもうと</rt></ruby>。<ruby>鑑定<rt>かんてい</rt></ruby>の<ruby>儀<rt>ぎ</rt></ruby>で「<ruby>裁縫<rt>さいほう</rt></ruby>」を<ruby>引<rt>ひ</rt></ruby>き、<ruby>武勲<rt>ぶくん</rt></ruby><ruby>第一<rt>だいいち</rt></ruby><ruby>主義<rt>しゅぎ</rt></ruby>の<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby>では<ruby>不満<rt>ふまん</rt></ruby>を<ruby>持<rt>も</rt></ruby>たれたが、<ruby>本人<rt>ほんにん</rt></ruby>はすぐに<ruby>立<rt>た</rt></ruby>ち<ruby>直<rt>なお</rt></ruby>る<ruby>優<rt>やさ</rt></ruby>しい<ruby>性格<rt>せいかく</rt></ruby>。</p>
         <p><ruby>魔法陣<rt>まほうじん</rt></ruby>の<ruby>刺繍<rt class="ruby-all">ししゅう</rt></ruby>ができる<ruby>実用品<rt>じつようひん</rt></ruby>としての<ruby>裁縫<rt>さいほう</rt></ruby>スキルを<ruby>持<rt>も</rt></ruby>ち、<ruby>護符<rt>ごふ</rt></ruby><ruby>作<rt>づく</rt></ruby>りが<ruby>上手<rt>じょうず</rt></ruby>。<ruby>村<rt>むら</rt></ruby>に<ruby>来<rt>き</rt></ruby>てからはシータと<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>針仕事<rt>はりしごと</rt></ruby>をしたり、マハムを<ruby>心配<rt>しんぱい</rt></ruby>したりと、<ruby>兄<rt>あに</rt></ruby><ruby>想<rt>おも</rt></ruby>いの<ruby>可愛<rt>かわい</rt></ruby>い<ruby>妹<rt>いもうと</rt></ruby>として<ruby>活躍<rt>かつやく</rt></ruby>する。</p>
@@ -248,7 +79,7 @@
     <div class="main-char">
       <img src="images/seeta.jpg" alt="シータ">
       <div>
-        <h2>シータ・エルドラン</h2>
+        <h3>シータ・エルドラン</h3>
         <div class="role">16<ruby>歳<rt>さい</rt></ruby> / メイド / スキル：<ruby>氷<rt>こおり</rt></ruby><ruby>魔法<rt>まほう</rt></ruby> / <ruby>男爵<rt>だんしゃく</rt></ruby><ruby>令嬢<rt>れいじょう</rt></ruby></div>
         <p>ハインリヒ<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby>のメイドで、マハムとミリアの<ruby>世話<rt>せわ</rt></ruby><ruby>係<rt>がかり</rt></ruby>。<ruby>下級<rt>かきゅう</rt></ruby><ruby>貴族<rt>きぞく</rt></ruby>の<ruby>親戚<rt>しんせき</rt></ruby><ruby>筋<rt>すじ</rt></ruby>で、<ruby>社交<rt>しゃこう</rt></ruby><ruby>界<rt>かい</rt></ruby>の<ruby>噂<rt class="ruby-all">うわさ</rt></ruby>を<ruby>嫌<rt>きら</rt></ruby>ってメイドの<ruby>道<rt>みち</rt></ruby>を<ruby>選<rt>えら</rt></ruby>んだ<ruby>黒髪<rt>くろかみ</rt></ruby><ruby>黒目<rt>くろめ</rt></ruby>の<ruby>低<rt>てい</rt></ruby><ruby>身長<rt>しんちょう</rt></ruby><ruby>巨乳<rt>きょにゅう</rt></ruby><ruby>美少女<rt>びしょうじょ</rt></ruby>。</p>
         <p><ruby>氷<rt>こおり</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>（<ruby>水<rt>みず</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>の<ruby>上位<rt>じょうい</rt></ruby>）を<ruby>持<rt>も</rt></ruby>ち、<ruby>生活<rt>せいかつ</rt></ruby><ruby>魔法<rt>まほう</rt></ruby>も<ruby>得意<rt>とくい</rt></ruby>。クリーン<ruby>魔法<rt>まほう</rt></ruby>で<ruby>家<rt>いえ</rt></ruby>を<ruby>掃除<rt>そうじ</rt></ruby>したり、<ruby>氷<rt>こおり</rt></ruby>でアイスティーやアイスクリームを<ruby>作<rt>つく</rt></ruby>ったりと、<ruby>村<rt>むら</rt></ruby><ruby>生活<rt>せいかつ</rt></ruby>を<ruby>支<rt>ささ</rt></ruby>える<ruby>頼<rt>たよ</rt></ruby>れるお<ruby>姉<rt>ねえ</rt></ruby>さん。</p>
@@ -259,7 +90,7 @@
     <div class="main-char">
       <img src="images/tarya.jpg" alt="ターリャ">
       <div>
-        <h2>ターリャ</h2>
+        <h3>ターリャ</h3>
         <div class="role">6<ruby>歳<rt>さい</rt></ruby> / <ruby>村長<rt>そんちょう</rt></ruby>の<ruby>娘<rt>むすめ</rt></ruby> / <ruby>元気<rt>げんき</rt></ruby>な<ruby>村<rt>むら</rt></ruby><ruby>娘<rt>むすめ</rt></ruby></div>
         <p>カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>村長<rt>そんちょう</rt></ruby>ドーサンとカイラの<ruby>娘<rt>むすめ</rt></ruby>。<ruby>金髪<rt>きんぱつ</rt></ruby><ruby>碧眼<rt>へきがん</rt></ruby>の<ruby>元気<rt>げんき</rt></ruby>いっぱいな<ruby>女<rt>おんな</rt></ruby>の<ruby>子<rt>こ</rt></ruby>で、<ruby>毎朝<rt>まいあさ</rt></ruby><ruby>領主<rt>りょうしゅ</rt></ruby><ruby>館<rt>かん</rt></ruby>の<ruby>丘<rt>おか</rt></ruby>を<ruby>駆<rt>か</rt></ruby>け<ruby>上<rt>あ</rt></ruby>がって「あーそーぼー」とマハムたちを<ruby>呼<rt>よ</rt></ruby>びに<ruby>来<rt>く</rt></ruby>る。</p>
         <p>かけっこが<ruby>得意<rt>とくい</rt></ruby>で<ruby>足<rt>あし</rt></ruby>が<ruby>速<rt>はや</rt></ruby>く、<ruby>村<rt>むら</rt></ruby>の<ruby>案内<rt>あんない</rt></ruby><ruby>役<rt>やく</rt></ruby>としてマハムたちを<ruby>連<rt>つ</rt></ruby>れ<ruby>回<rt>まわ</rt></ruby>す。<ruby>食<rt>く</rt></ruby>いしん<ruby>坊<rt>ぼ</rt></ruby>でお<ruby>祭<rt>まつ</rt></ruby>りや<ruby>宴会<rt>えんかい</rt></ruby>が<ruby>大好<rt>だいす</rt></ruby>き。ミリアとはすぐに<ruby>仲良<rt>なかよ</rt></ruby>くなる。</p>
@@ -268,7 +99,7 @@
     </div>
 
     <!-- <ruby>家族<rt>かぞく</rt></ruby> -->
-    <h3 class="section-title">ハインリヒ<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby></h3>
+    <h2 class="section-title">ハインリヒ<ruby>侯爵<rt>こうしゃく</rt></ruby><ruby>家<rt>け</rt></ruby></h2>
     <div class="small-grid">
       <div class="small-card">
         <h4>カイン・ハインリヒ</h4>
@@ -292,12 +123,12 @@
       </div>
     </div>
 
-    <h3 class="section-title">カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>主<rt>おも</rt></ruby>な<ruby>住人<rt>じゅうにん</rt></ruby></h3>
+    <h2 class="section-title">カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>主<rt>おも</rt></ruby>な<ruby>住人<rt>じゅうにん</rt></ruby></h2>
     <!-- トール・ソラエナ・ラーミア（<ruby>中間<rt>ちゅうかん</rt></ruby>サイズ） -->
     <div class="main-char">
       <img src="images/tholl2.jpg" alt="トール">
       <div>
-        <h2>トール</h2>
+        <h3>トール</h3>
         <div class="role">8<ruby>歳<rt>さい</rt></ruby> / ガキ<ruby>大将<rt>だいしょう</rt></ruby></div>
         <p>カーマイン<ruby>村<rt>むら</rt></ruby>のガキ<ruby>大将<rt>だいしょう</rt></ruby>。いばりんぼで<ruby>噂<rt>うわさ</rt></ruby><ruby>好<rt>ず</rt></ruby>き、<ruby>少<rt>すこ</rt></ruby>し<ruby>生意気<rt>なまいき</rt></ruby>な<ruby>態度<rt>たいど</rt></ruby>を<ruby>取<rt>と</rt></ruby>るが<ruby>根<rt>ね</rt></ruby>は<ruby>悪<rt>わる</rt></ruby>くない。マハムたちが<ruby>村<rt>むら</rt></ruby>に<ruby>来<rt>き</rt></ruby>てからはよく<ruby>絡<rt>から</rt></ruby>んできて、<ruby>一緒<rt>いっしょ</rt></ruby>に<ruby>遊<rt>あそ</rt></ruby>びや<ruby>探索<rt>たんさく</rt></ruby>に<ruby>加<rt>くわ</rt></ruby>わる。</p>
         <p><ruby>彼女<rt>かのじょ</rt></ruby>のソラエナとは<ruby>幼馴染<rt class="ruby-all">おさななじみ</rt></ruby>で、<ruby>彼女<rt>かのじょ</rt></ruby>の<ruby>前<rt>まえ</rt></ruby>では<ruby>少<rt>すこ</rt></ruby>し<ruby>素直<rt>すなお</rt></ruby>になる。<ruby>騎士<rt>きし</rt></ruby>になりたいと<ruby>一時的<rt>いちじてき</rt></ruby>に<ruby>木剣<rt>ぼっけん</rt></ruby>で<ruby>素振<rt>すぶ</rt></ruby>りをしたり、<ruby>噂<rt>うわさ</rt></ruby>を<ruby>仕入<rt>しい</rt></ruby>れてきてはマハムたちを<ruby>巻<rt>ま</rt></ruby>き<ruby>込<rt>こ</rt></ruby>むなど、<ruby>行動力<rt>こうどうりょく</rt></ruby>はあるが<ruby>三日坊主<rt>みっかぼうず</rt></ruby><ruby>気味<rt>ぎみ</rt></ruby>。</p>
@@ -308,7 +139,7 @@
     <div class="main-char">
       <img src="images/soraena.jpg" alt="ソラエナ">
       <div>
-        <h2>ソラエナ</h2>
+        <h3>ソラエナ</h3>
         <div class="role">8<ruby>歳<rt>さい</rt></ruby> / トールの<ruby>幼馴染<rt>おさななじみ</rt></ruby></div>
         <p>トールの<ruby>幼馴染<rt>おさななじみ</rt></ruby>で<ruby>彼女<rt>かのじょ</rt></ruby>ポジ。<ruby>頭<rt>あたま</rt></ruby>が<ruby>良<rt>よ</rt></ruby>く、<ruby>冷静<rt>れいせい</rt></ruby>で<ruby>優<rt>やさ</rt></ruby>しい<ruby>性格<rt>せいかく</rt></ruby>。トールが<ruby>暴走<rt>ぼうそう</rt></ruby>しそうなときにさりげなく<ruby>止<rt>と</rt></ruby>める<ruby>役割<rt>やくわり</rt></ruby>を<ruby>担<rt>にな</rt></ruby>うことが<ruby>多<rt>おお</rt></ruby>い。</p>
         <p><ruby>実<rt>じつ</rt></ruby>は<ruby>妖精<rt>ようせい</rt></ruby>を<ruby>見<rt>み</rt></ruby>たことがあるなど、ロマンチックな<ruby>一面<rt>いちめん</rt></ruby>も<ruby>持<rt>も</rt></ruby>つ。マハムやミリアともすぐに<ruby>打<rt>う</rt></ruby>ち<ruby>解<rt>と</rt></ruby>け、<ruby>村<rt>むら</rt></ruby>の<ruby>子供<rt>こども</rt></ruby>たちの<ruby>中<rt>なか</rt></ruby>では<ruby>比較的<rt>ひかくてき</rt></ruby><ruby>落<rt>お</rt></ruby>ち<ruby>着<rt>つ</rt></ruby>いた<ruby>存在<rt>そんざい</rt></ruby>。</p>
@@ -319,7 +150,7 @@
     <div class="main-char">
       <img src="images/ramia.jpg" alt="ラーミア">
       <div>
-        <h2>ラーミア</h2>
+        <h3>ラーミア</h3>
         <div class="role">20<ruby>歳<rt>さい</rt></ruby> / <ruby>猫<rt>ねこ</rt></ruby><ruby>獣人<rt>じゅうじん</rt></ruby> / <ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド<ruby>受付嬢<rt>うけつけじょう</rt></ruby></div>
         <p><ruby>黒髪<rt>くろかみ</rt></ruby><ruby>金目<rt>きんめ</rt></ruby>の<ruby>猫<rt>ねこ</rt></ruby><ruby>獣人<rt>じゅうじん</rt></ruby>で、カーマイン<ruby>村<rt>むら</rt></ruby>の<ruby>冒険者<rt>ぼうけんしゃ</rt></ruby>ギルド<ruby>受付嬢<rt>うけつけじょう</rt></ruby>。<ruby>語尾<rt>ごび</rt></ruby>が「にょ」という<ruby>特徴的<rt>とくちょうてき</rt></ruby>な<ruby>口調<rt>くちょう</rt></ruby>。<ruby>口癖<rt>くちぐせ</rt></ruby>が<ruby>抜<rt>ぬ</rt></ruby>けずに<ruby>左遷<rt>させん</rt></ruby>されてきた<ruby>経緯<rt>けいい</rt></ruby>を<ruby>持<rt>も</rt></ruby>つ。</p>
         <p><ruby>愛嬌<rt class="ruby-all">あいきょう</rt></ruby>があり、<ruby>尻尾<rt>しっぽ</rt></ruby>や<ruby>耳<rt>みみ</rt></ruby>で<ruby>感情<rt>かんじょう</rt></ruby>がよく<ruby>出<rt>で</rt></ruby>る。ギルドの<ruby>仕事<rt>しごと</rt></ruby>はあまり<ruby>忙<rt>いそが</rt></ruby>しくないため、マハムたちがスライム<ruby>魔核<rt>まかく</rt></ruby>を<ruby>売<rt>う</rt></ruby>りに<ruby>来<rt>く</rt></ruby>るたびに<ruby>会話<rt>かいわ</rt></ruby>を<ruby>楽<rt>たの</rt></ruby>しむ。お<ruby>酒<rt>さけ</rt></ruby>に<ruby>弱<rt>よわ</rt></ruby>く、<ruby>祭<rt>まつ</rt></ruby>りではよく<ruby>酔<rt>よ</rt></ruby>っ<ruby>払<rt>ぱら</rt></ruby>う。</p>
@@ -391,6 +222,6 @@
     <a href="../index.html"><ruby>上<rt>うえ</rt></ruby>へ<ruby>戻<rt>もど</rt></ruby>る</a>
     <p style="margin-top:0.5rem;">© 2026 takigawa ebiro</p>
   </footer>
-
+  <script src="menu.js"></script>
 </body>
 </html>
